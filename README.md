@@ -1,3 +1,8 @@
 # CourseProject
 
-Please fork this repository and paste the github link of your fork on Microsoft CMT. Detailed instructions are on Coursera under Week 1: Course Project Overview/Week 9 Activities.
+Course Project for CS 410 FA 22
+
+Deeya Bansal
+Isha Akella
+Sakshi Rane
+Khushi Duddi
