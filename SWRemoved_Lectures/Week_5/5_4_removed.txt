@@ -1,0 +1,77 @@
+ Web Search
+ talk one important applications text retrieval web search engines
+ let first look general challenges opportunities web search
+ many informational retrieval algorithms developed web born
+ web born created best opportunity apply algorithms major application problem everyone care
+ naturally extensions classical search algorithms address new challenges encountered web search
+ general challenges
+ First scalability challenge
+ How handle size web ensure completeness coverage information
+ How serve many users quickly answering queries
+ one major challenge web born scale search relatively small
+ second problem quality information often spams
+ third challenge Dynamics Web
+ new pages constantly create pages may updated quickly makes harder keep indexed fresh
+ challenges solve order deal high quality web searching
+ On hand interesting opportunities leverage include search results
+ There many additional heuristics example using links leverage improve scoring
+ everything talked vector space model general algorithms
+ They applied search applications advantage
+ On hand take advantage special characteristics pages documents specific applications web search
+ Web pages linked obviously linking something leverage
+ challenges opportunities new techniques developed web search due need web search
+ One parallel indexing searching address issue scalability
+ particular Google imaging map reduce influential helpful aspect
+ Second techniques developing addressing problem spams spam detection
+ prevent spam pages ranked high
+ techniques achieve robust ranking
+ use lot signals rank pages easy spam search engine particular trick
+ third line techniques link analysis techniques allow improve results leveraging extra information
+ general web searching use multiple features ranking link analysis
+ exploring kinds crawls layout anchor text describes link another page
+ picture showing basic search engine technologies
+ Basically web left user right side help user get access web information
+ first component Crawler crawl pages second component Indexer take pages create inverted index
+ third component Retriever use inverted index answer user query talking user browser
+ search results given user browser show results allows user interact web
+ talk components
+ First talk crawler called spider software robot something crawling pages web
+ To build toy crawler relatively easy need start set seed pages
+ fetch pages web parse pages figure new links
+ add priority que explore additional links
+ able real crawler actually tricky complicated issues deal
+ For example robustness server respond trap generates dynamically generated webpages might attract crawler keep crawling side fetch dynamic generated pages results issue crawling courtesy want overload one particular server many crawling requests respect robot exclusion protocol
+ need handle different types files images PDF files kinds formats web
+ consider URL extension sometimes CGI scripts internal references etc sometimes JavaScripts page create challenges
+ ideally recognize redundant pages duplicate pages
+ finally may interested discover hidden URLs
+ Those URLs may linked page truncate URL shorter path might able get additional pages
+ Major Crawling Strategies general Breadth-First common naturally balances sever load
+ keep probing particular server many requests
+ parallel crawling natural task easy parallelize
+ variations crawling task one interesting variation called focused crawling
+ case crawl pages particular topic
+ For example pages automobiles right
+ typically start query use query get results major search engine
+ start results gradually crawl
+ one channel crawling find new channels people created people probably creating new pages time
+ challenging new pages actually linked old pages
+ probably find re-crawling old pages interesting challenges solved
+ finally might face scenario incremental crawling repeated crawling right
+ Let say want build web search engine first crawl lot data web
+ cracked data future need crawl updated pages
+ general re-crawl everything right necessary
+ case goal minimize resource overhead using minimum resources update pages
+ actually interesting research question open research question many standard algorithms established yet task
+ general imagine learn past experience
+ two major factors consider first page updated frequently quote page page static page changed months probably re-crawl everyday unlikely changed frequently
+ On hand sports score page gets updated frequently may need re-crawl maybe even multiple times day
+ factor consider page frequently accessed users means high utility page thus important ensure page refresh
+ Compared another page never fetched users year even though page changed lot
+ probably necessary crawl page least urgent maintain freshness frequently accessed page users
+ summarize web search one important applications text retrieval new challenges particularly scalability efficiency quality information
+ There new opportunities particularly rich link information layout etc
+ crawler essential component web search applications general find two scenarios
+ One initial crawling want complete crawling web general search engine focused crawling want target certain type pages
+ another scenario incremental updating crawl data incremental crawling
+ case need optimize resource try use minimum resource get [ INAUDIBLE ]

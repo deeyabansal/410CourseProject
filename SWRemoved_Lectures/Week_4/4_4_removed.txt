@@ -1,0 +1,97 @@
+ talking probabilistic retrieval model
+ particular talk smoothing language model query likelihood retrieval method
+ seen slide previous
+ ranking function based query likelihood
+ Here assume independence generating query word formula look following take sum query words
+ inside sum log probability word given document document image model
+ main task estimate document language model said different methods estimating model lead different retrieval functions
+ looking detail
+ estimate language model Well obvious choice maximum likelihood estimate seen
+ normalize word frequencies document
+ estimate probability look
+ step function
+ Which means words frequency count identical problem
+ another freedom count different probability
+ Note words occurred document 0 probability
+ know model assume earlier
+ Where assume use simple word document formula clear
+ chance assembling word document know good
+ improve Well order assign none 0 probability words observed document take away probability mass words observed document
+ example take away probability mass need extra probability mass words otherwise wo sum 1
+ probabilities must sum 1
+ make transformation improve maximum likelihood estimated assigning non zero probabilities words observed data
+ smoothing smoothing improving estimate considering possibility author asking write words document author might written words
+ think factor smoothed language model accurate representation actual topic
+ Imagine seen abstract research article
+ Let say document abstract
+ assume words abstract probability 0
+ That mean chance sampling word outside abstract formulated query
+ imagine user interested topic subject
+ user might actually choose word chapter use query
+ obviously asked author write author written full text article
+ smoothing language model attempt try recover model whole article
+ course knowledge words observed abstract
+ smoothing actually tricky problem
+ let talk little smooth language model
+ key question probability assigned unseen words many different ways
+ One idea useful retrieval let probability unseen word proportional probability given reference language model
+ That means observe word dataset
+ assume probability kind governed another reference language model construct
+ tell unseen words higher probability
+ case retrieval natural choice take collection language model reference language model
+ That say observe word document assume probability word proportional probability word whole collection
+ formally estimating probability word key document follows
+ word seen document probability counted maximum likelihood estimate P sub c
+ Otherwise word seen document let probability proportional probability word collection
+ coefficient offer control amount probability mass assign unseen words
+ Obviously probabilities must sum 1 alpha sub constrained way
+ plug smoothing formula query likelihood ranking function get
+ formula sum query words written sum vocabulary
+ sum words vocabulary count word query
+ fact taking sample query words
+ common way use convenience transformations
+ said sum query words
+ smoothing method assume words observed method somewhat different form probability
+ Name four foru
+ decompose sum two parts
+ One sum query words matching document
+ That means sum words non zero probability document
+ Sorry non zero count word document
+ They occur document
+ course non zero count query
+ query words matching document
+ On hand sum taking sum words query matching document
+ occur query due term occur document
+ case words probability assumption smoothing
+ That seen words different probability
+ go rewriting second sum difference two sums
+ Basically first sum sum query words
+ know original sum query words
+ query words matched document
+ pretend actually query words
+ take sum query words
+ Obviously sum extra terms sum
+ Because taking sum query words
+ There matched document
+ order make equal subtract another sum
+ sum query words matching document
+ makes sense considering query words
+ subtract query matched document
+ That give query matched document
+ almost reverse process first step
+ might wonder want
+ Well different forms terms inside sums
+ sum words matched query matching document kind term
+ Here another sum set terms matched query terms document
+ inside sum different
+ two sums clearly merged
+ get another form formula looks bottom
+ note interesting formula
+ Because combine two query words matching document one sum
+ sum decomposing two parts
+ two parts look much simpler probabilities unseen words
+ formula interesting sum match query terms
+ vector space model take sum terms intersection query vector document vector
+ already looks little bit vector space model
+ fact even similarity explain slide
+ [ MUSIC ]

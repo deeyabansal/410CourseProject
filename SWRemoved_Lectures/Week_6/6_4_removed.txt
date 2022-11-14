@@ -1,0 +1,89 @@
+ future web search
+ talk possible future trends web search intelligent information retrieval systems general
+ order improve accuracy search engine important consider special cases information need
+ one particular trend could specialized customized search engines called vertical search engines
+ vertical search engines expected effective current general search engines could assume users special group users might common information need search engine customized ser users
+ customization possible personalization
+ search personalized better understanding users
+ Because restrictions domain advantages handling documents better understanding documents
+ For example particular words may ambiguous domain
+ bypass problem ambiguity
+ Another trend expect search engine able learn time
+ lifetime learning lifelong learning course attractive means search engine self-improve
+ As people using search engine become better better already happening search engines learn [ INAUDIBLE ] feedback
+ More users use quality search engine allows popular queries typed many users allow become better sort another feature
+ third trend might integration bottles information access
+ search navigation recommendation filtering might combined form full-fledged information management system
+ beginning course talked push versus pull
+ different modes information access modes combined
+ similarly pull mode querying browsing could combined
+ fact basically [ INAUDIBLE ] search endings
+ querying sometimes browsing clicking links
+ Sometimes got information recommended
+ Although cases information recommended advertising
+ future imagine seamlessly integrate system multi-mode information access convenient people
+ Another trend might systems try go beyond searches support user tasks
+ After reason people want search solve problem make decision perform task
+ For example consumers might search opinions products order purchase product choose good product case beneficial support whole workflow purchasing product choosing product
+ era common search engines already provide good support
+ For example sometimes look reviews want buy click button go shopping site directly get done
+ provide good task support many tasks
+ For example researchers might want find realm literature site literature
+ much support finishing task writing paper
+ general think many opportunities wait
+ following slides talking little bit specific ideas thoughts hopefully help imagining new application possibilities
+ Some might already relevant currently working
+ general think intelligent system especially intelligent information system specified three nodes
+ connect three triangle able specify information system
+ call Data-User-Service Triangle
+ basically three questions ask serving kind data managing kind service provide
+ Right help basically specify system
+ many different ways connect depending connect different kind systems
+ let give examples
+ On top different kinds users
+ On left side different types data information bottom different service functions
+ imagine connect different ways
+ example connect everyone web pages support search browsing get Well web search right What connect UIUC employees organization documents enterprise documents support search browsing enterprise search
+ connect scientist literature information provide kinds service including search browsing alert new random documents mining analyzing research trends provide task support decision support
+ For example might might able provide support automatically generating related work section research paper closer task support
+ Right imagine literature assistant
+ connect online shoppers blog articles product reviews help people improve shopping experience
+ provide example data mining capabilities analyze reviews compare products compare sentiment products provide task support decision support choose product buy
+ Or connect customer service people emails customers imagine system provide analysis emails find major complaints customers
+ imagine system could provide task support automatically generating response customer email
+ Maybe intelligently attach promotion message appropriate detect positive message complaint might take opportunity attach promotion information
+ Whereas complaint might able automatically generate generic response first tell customer expect detailed response later etc
+ All trying help people improve productivity
+ shows opportunities really lot
+ restricted imagination
+ picture shows trend technology characterizes intelligent information system three angles
+ center triangle connects keyword queries search bag words representation
+ That means current search engines basically provides search support users mostly model users based keyword queries sees data bag words representation
+ simple approximation actual information documents
+ current system
+ connects three nodes simple way provides basic search function really understand user really understand much information documents
+ showed trends push node toward advanced function
+ think user node right go beyond keyword queries look user search history model user completely understand user task environment task need context information
+ Okay pushing personalization complete user model
+ major direction research order build intelligent information systems
+ On document side go beyond bag words implementation entity relation representation
+ means recognize people names relations locations etc
+ already feasible natural processing technique
+ Google reason initiative knowledge graph
+ heard good step toward direction
+ get level without initiating robust manner larger scale enable search engine provide much better service
+ future knowledge representation add perhaps inference rules search engine become intelligent
+ calls large-scale semantic analysis perhaps feasible vertical search engines
+ easier make progress particular domain
+ service side need go beyond search support information access general
+ search one way get access information well recommender systems push pull different ways get access random information
+ beyond access need help people digest information information found step analysis information data mining
+ find patterns convert text information real knowledge used application actionable knowledge used decision making
+ furthermore knowledge used help user improve productivity finishing task example decision-making task
+ Right trend
+ basically dimension anticipate future intelligent information systems provide intelligent interactive task support
+ emphasize interactive important optimize combined intelligence users system
+ get help users natural way
+ assume system everything human user machine collaborate intelligent way efficient way combined intelligence high general minimize user overall effort solving problem
+ big picture future intelligent information systems hopefully provide insights make innovations top handled
+ [ MUSIC ]

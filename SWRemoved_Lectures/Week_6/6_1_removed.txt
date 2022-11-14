@@ -1,0 +1,35 @@
+ Learning Rank
+ talking web search
+ particular talk using machine learning combine different features improve ranking function
+ question address combine many features generate single ranking function optimize search results previous lectures talked number ways rank documents
+ talked retrieval models BM25 Query Light Code
+ They generate based course matching documents query
+ talked link based approaches page rank give additional scores help improve ranking
+ question combine features potentially many features ranking useful ranking webpages improve accuracy improve robustness ranking function
+ easy spammer perturb one features promote page
+ general idea learning rank use machine learning combine features optimize weights different features generate optimal ranking function
+ assume given query document pair Q D define number features
+ features vary content based features score document respect query according retrieval function BM25 Query Light Hold punitive commands machine PL2 etcetera
+ link based score page rank score
+ application retrieval models ink text page
+ Those types descriptions links point page
+ clues whether document relevant
+ even include feature whether URL tilde might indicator home page entry page
+ features combined together generate ranking function
+ question course
+ How combine approach simply hypothesize probability document relevant query function features
+ hypothesize probability relevance related features particular form function parameters
+ parameters control influence different features final relevance
+ course assumption
+ Whether assumption really makes sense big question empirically evaluate function
+ hypothesizing relevance related features particular way combine features generate potential powerful ranking function robust ranking function
+ Naturally next question estimate parameters How know features higher weight features lower weight task training learning approach use training data
+ Those data charted users already know relevant judgments
+ already know documents ranked high queries
+ information based real judgments users approximated using click information assume clicked documents better skipped documents clicked documents relevant skipped documents non-relevant
+ general fit hypothesize ranking function training data meaning try optimize retrieval accuracy training data
+ adjust parameters optimize performance functioning training data terms measures MAP NDCG
+ training date look table tuples
+ Each tuple three elements query document judgement
+ looks much relevance judgement talked evaluation retrieval systems
+ [ MUSIC ]

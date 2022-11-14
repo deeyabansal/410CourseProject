@@ -1,0 +1,14 @@
+MP2.1 covers content acquisition and creation of a collection of searchable documents. The outcome of MP2.1 is a collection of documents relevant to CS410.
+Your task for MP2.1 is to use the baseline CS410DL system (briefly described above) to save a certain number of web pages so as to help create a large collection of relevant online documents to CS410 content for building a useful CS410 Digital Library. More information about this baseline CS410DL system (including installation instructions and the URL to the search engine) can be found in this Google document.
+Specifically, please follow the instructions below to complete MP2.1:
+Follow the extension installation instructions in the Google document.
+Become familiar with the extension, the website, and the general functionality.
+Create an account using your NetID and university email. Please make sure to write down your password! (The system at this point cannot help you reset your password.) Using the correct NetID / email is essential for grading.
+Use the "Submit to CS410 DL" functionality to record at least 15 web pages that you found useful while browsing material for CS410 or relevant content on the Web. This could be lecture points, papers, campuswire posts, videos, etc. We encourage you to explore multiple uses of the CS410DL system, ideally spend a few minutes to explore each of the following categories:
+Bookmark some useful course information pages (e.g., some pages/lectures on Coursera or some useful posts on campuswire)
+Save some relevant research papers or technical articles related to CS410 (e.g., you can do a search in Google Scholar with any interesting keywords); please make sure to highlight a lot of relevant content in those articles to enable CS410DL to match them with a query (think about using CS410DL to conveniently take notes from any paper or technical article and share your notes with your classmates)
+Find some interesting relevant videos on Youtube; again, you can search in Youtube with interesting keywords
+Find some relevant development resources related to CS410 such as useful toolkits or online tools; you can search with appropriate keywords in Google
+Find some pages about startups using technologies related to CS410 (e.g., using a query like "text mining startups" to search in Google).
+In general, please try to provide an informative description of any saved page and/or highlight relevant content whenever possible; the extra text helps CS410DL work better as a search engine since at this point, it only matches a query with the text you typed in or highlighted (this enables high relevance whenever there is a match).
+Your submitted content should be available immediately for everyone in CS410 to search for on the search engine website. And grading for the assignment will be updated on Coursera once the assignment is due.

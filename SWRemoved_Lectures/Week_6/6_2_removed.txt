@@ -1,0 +1,88 @@
+ let take look specific method based regression
+ one many different methods fact one simplest methods
+ choose explain idea simple
+ approach simply assume relevance document respect query related linear combination features
+ Here used Xi denote feature
+ Xi Q D feature
+ many features
+ assume features combined linear manner
+ feature controlled parameter beta parameter
+ That weighting parameter
+ larger value mean feature higher weight contribute scoring function
+ specific form function actually involves transformation probability relevance
+ probability relevance
+ know probability relevance within range 0 1
+ could assumed scoring function related linear combination
+ linear regression
+ value linear combination could easily go beyond 1
+ transformation map 0 1 range whole range real values verify
+ allows connect probability variance 0 1 linear combination arbitrary features
+ rewrite probability function get next one
+ equation probability relevance
+ right hand side form
+ form clearly nonnegative still involves linear combination features
+ clear value actually negative linear combination equation
+ value large mean value small
+ therefore whole probability large
+ expect basically mean combination gives high value document likely irrelevant
+ hypothesis
+ Again necessarily best hypothesis simple way connect features probability relevance
+ combination function
+ next task estimate parameters function cache applied
+ without knowing beta values harder apply function
+ let estimate beta values
+ All right let take look simple example
+ example three features
+ One BM25 score document query
+ One PageRank score document might might depend query
+ might topic-sensitive PageRank depend query
+ Otherwise general PageRank really depend query
+ BM25 score anchor test document
+ feature values particular document query pair
+ case document D1 judgment says relevant
+ Here another training instance feature values case relevant
+ oversimplified case two instances sufficient illustrate point
+ use maximum likelihood estimator actually estimate parameters
+ Basically predict relevance status document based feature values
+ That given observed feature values
+ Can predict relevance course prediction using function
+ hypothesize probability relevance related features way
+ values beta predict relevance well
+ What mean predicting relevance well Well mean first case D1 expression right give high values
+ fact hope gave value close 1
+ Why Because relevant document
+ On hand second case D2 hope value small right
+ Why Because non-relevant document
+ let mathematically expressed
+ similar expressing probability document talking probability words talking probability relevance 1 0
+ probability document relevant feature values Well expression
+ need plug Xi
+ get
+ exactly seen replaced Xi specific values
+ example
+
+
+ different feature values combine particular way
+ beta values still unknown
+ gives probability document relevant assume model
+ Okay want maximize probability since relevant document
+ What second document Well want compute probability prediction non-relevant
+ mean compute 1 minus expression since expression actually probability relevance
+ compute non-relevance relevance 1 minus probability relevance
+ Okay whole expression probability predicting two relevance values
+ One 1 one 0
+ whole equation probability observing 1 observing 0
+ Of course probability depends beta values
+ goal adjust beta values make whole thing reach maximum make large possible
+ means compute
+ beta parameter values maximize whole likelihood expression
+ means look function choose betas make large possible make large possible equivalent say make part small possible
+ precisely want
+ training know beta values
+ function well-defined
+ Once beta values known completely specified
+ new query new document simply compute features pair
+ use formula generate ranking score
+ scoring function used rank documents particular query
+ basic idea learning rank
+ [ MUSIC ]

@@ -1,0 +1,90 @@
+ Recommender Systems
+ far talked lot aspects search engines
+ talked problem search ranking problem different methods ranking implementation search engine evaluate search engine etc
+ important know web search engines far important applications text retrieval
+ useful tools help people convert big raw text data small set relevant documents
+ Another reason spend many lectures search engines many techniques used search engines actually useful Recommender Systems topic
+ overall two systems actually well connected
+ many techniques shared
+ slide seen talked two different modes text access
+ Pull Push
+ mentioned recommender systems main systems serve users Push Mode systems take initiative recommend information user pushes information user
+ often works well user stable information need system good
+ Recommender System sometimes called filtering system recommending useful items people discarding filtering useless articles sense kind similar
+ cases system must make binary decision usually dynamic source information items knowledge users ' interest
+ system make decision whether item interesting user interesting system recommend article user
+ basic filtering question really user item Will U item X two ways answer question think
+ one look items U likes X actually items
+ look likes X user looks one users users
+ strategies combined
+ follow first strategy look item similarity case recommending text objects talking content-based filtering content-based recommendation
+ look second strategy compare users case user similarity technique often called collaborative filtering
+ let first look content-based filtering system
+ system look
+ Inside system Binary Classifier knowledge user interests called User Interest Profile
+ maintains profile keep track users interests utility function guide user make decision nice plan utility function moment
+ helps system decide set threshold
+ accepted documents passed threshold according classified
+ There initialization module take user input maybe user specified keywords chosen category
+ feed system initiator profile
+ There typically learning module learn users ' feedback time
+ note case typical users information stable system lot opportunities observe users
+ user taken recommended item viewed signal indicate recommended item may relevant
+ user discarded relevant
+ feedback long term feedback last long time
+ system collect lot information user interest used improve classify
+ criteria evaluating system How know filtering system actually performs well case use ranking evaluation measures map ca afford waiting lot documents rank documents make decision users
+ system must make decision real time general decide whether item threshold
+ words trying decide absolute relevance
+ case one common user strategy use utility function evaluate system
+ show linear utility function
+ That defined example three multiplied number good items delivered minus two multiplied number bad items delivered
+ words could kind treat almost gambling game
+ delete one good item let say win three dollars gain three dollars deliver bad one lose two dollars
+ utility function basically kind measures much money get kind game right clear want maximize utility function strategy delivered many good articles possible minimize delivery bad articles
+ That obvious right one interesting question set coefficients showed three negative two possible coefficients
+ one ask question reasonable think Do think reasonable choice What choices example 10 minus 1 1 minus 10
+ What difference What think How utility function affect systems ' threshold issue
+ Right think two extreme cases
+ ( 10 -1 ) + ( 1 -10 ) one think encourage system one encourage system conservative think get bigger award delivering good document incur small penalty delivering bad one
+ Intuitively encouraged deliver
+ try deliver hope getting good one delivered
+ get big reward
+ hand choose ( 1 -10 ) really get big prize deliver good document
+ On hand big loss deliver bad one
+ imagine system reluctant deliver lot documents
+ absolutely sure
+ utility function designed based specific application
+ three basic problems content-based filtering following first make filtering decision
+ binary decision maker binary classifier
+ Given text document profile description user say yes whether document deleted
+ decision module initialization module seen earlier get system started
+ initialize system based limited text exclusion examples user
+ third model learning model able learn limited relevance judgements counted user preferences deliver documents
+ deliver document user never able know whether user likes
+ accumulate lot documents even entire history
+ All modules optimized maximize utility
+ deal system many different approaches
+ Here talk extend retrieval system search engine information filtering
+ Again spent lot time talking search engines
+ Because actually hard extend search engine information filtering
+ basic idea extending retrieval system information filtering
+ First reuse lot retrieval techniques scoring
+ Right know score documents queries etc
+ match similarity profile text description document
+ use score threshold filtering decision
+ retrieval kind find scores documents apply threshold whether document passing threshold
+ passing threshold say relevant deliver user
+ Another component add course learn history used traditional feedback techniques learn improve scoring
+ know rock hill using scoring improvement
+ develop new approaches learn accept
+ need set initially learn update threshold time
+ system might look generalize vector-space model filtering problems right document vector could fed scoring module already exists search engine implements vector-space model
+ profile treated query essentially profile vector matched document vector generate score
+ score fed thresholding module say yes evaluation based utility filtering results
+ says yes document sent user
+ user could give feedback
+ feedback information used adjust threshold adjust vector representation
+ vector learning essentially query modification feedback case search
+ threshold learning new component need talk little bit
+ [ MUSIC ]

@@ -1,0 +1,104 @@
+ average precision computer one
+ one query
+ generally experiment many different queries avoid variance across queries
+ Depending queries use might make different conclusions
+ Right better using queries
+ use queries take average average precision queries
+ Well naturally
+ Think arithmetic mean always tend think way
+ give called `` Mean Average Position '' MAP
+ case take arithmetic mean average precisions several queries topics
+ mentioned another good call
+ talked different ways combining precision recall
+ conclude arithmetic mean good MAP measure
+
+ think alternative ways aggregating numbers
+ Do automatically assume though
+ Let take arithmetic mean average position queries
+ Let think best way aggregating
+ think different ways naturally probably able think another way geometric mean
+ call kind average gMAP
+ another way
+ think two different ways
+ Of thing
+ natural question ask one better
+ use MAP gMAP Again important question
+ Imagine testing new algorithm comparing ways old algorithms made search engine
+ tested multiple topics
+ got average precision topics
+ thinking looking overall performance
+ take average
+ strategy use first think question well make difference Can think scenarios using one make difference That give different rankings methods
+ means depending way average detect
+ Average average positions
+ get different conclusions
+ makes question becoming even important
+ Right one use Well look difference
+ Different ways aggregating average position
+ realize arithmetic mean sum dominating large values
+ large value mean means query relatively easy
+ high pres average position
+ Whereas gMAP tends affected low values
+ queries good performance
+ average precision low
+ think improving search engine difficult queries gMAP preferred right On hand want
+ Have improved lot
+ Over kinds queries particular popular queries might easy want make perfect maybe MAP preferred
+ answer depends users users tasks pref preferences
+ point think multiple ways solve problem compare think carefully differences
+ one makes sense
+ Often one might make sense one situation another might make sense different situation
+ important pick situations one preferred
+ As special case mean average position think case precisely one rank document
+ happens often example called known item search
+ Where know target page let say find Amazon homepage
+ one relevant document hope find
+ That call `` known item search ''
+ case precisely one relevant document
+ Or another application question answering maybe one answer
+ Are
+ rank answers goal rank one particular answer top right case easily verify average position basically boil reciprocal rank
+ That 1 r r rank position single relevant document
+ document ranked top 1 1 reciprocal rank
+ ranked second 1 2
+ Et cetera
+ take average average precision reciprocal rank set topics give something called mean reciprocal rank
+ popular measure
+ For item search know problem one relevant item
+ r actually meaningful
+ r basically indicating much effort user make order find relevant document
+ ranked top low effort make little effort
+ ranked 100 actually read presumably 100 documents order find
+ sense r meaningful measure reciprocal rank take reciprocal r instead using r directly
+ natural question simply using r imagine design ratio measure performance random system one relevant item
+ might thought using r directly measure
+ After measures user effort right think take average large number topics
+ Again make difference
+ Right one single topic using r using 1 r make difference
+
+ Larger r corresponds small 1 r right difference show show many topics
+ think average Mean Reciprocal Rank versus average
+ What difference Do difference difference change oath systems
+ conclusion
+ turns actually big difference think want think pause video
+ Basically difference take directory
+ Again dominated large values
+ values Those basically large values indicate lower ranked results
+ That means relevant items rank low list
+ sum average dominated
+ Where relevant documents ranked lower portion ranked
+ users perspective care highly ranked documents
+ taking transformation using reciprocal rank
+ Here emphasize difference top
+ know think difference 1 2 make big difference 1 r think 100 1 wo make much difference use
+ use big difference 100 let say 1,000 right
+ desirable
+ On hand 1 2 wo make much difference
+ yet another case may multiple choices thing need figure one makes sense
+ summarize showed precision-recall curve
+ Can characterize overall accuracy ranked list
+ emphasized actual utility ranked list depends many top ranked results user actually examine
+ Some users examine
+ Than others
+ An average person uses standard measure comparing two ranking methods
+ combines precision recall sensitive rank every random document

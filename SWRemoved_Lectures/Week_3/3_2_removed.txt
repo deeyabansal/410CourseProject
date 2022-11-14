@@ -1,0 +1,110 @@
+ basic measures evaluation text retrieval systems
+ discuss design basic measures quantitatively compare two retrieval systems
+ slide seen earlier talked Granville evaluation methodology
+ test faction consists queries documents [ INAUDIBLE ]
+ run two systems data sets contradict evaluator
+ Their performance
+ raise question set results better
+ Is system better system B better let talk accurately quantify performance
+ Suppose total 10 relevant documents collection query
+ relevant judgments show right [ INAUDIBLE ] obviously
+ seen 3 [ INAUDIBLE ] [ INAUDIBLE ] documents
+ imagine Random documents judging query
+ intuitively thought system better much noise
+ particular seen among three results two relevant system B five results three relevant
+ intuitively looks system accurate
+ infusion captured matching holder position simply compute extent retrieval results relevant
+ 100 % position mean retrieval documents relevant
+ case system position two three System B sweet hold 5 shows system better frequency
+ talked System B might prefered units retrieve many random documents possible
+ case compare number relevant documents retrieve another method called recall
+ method uses completeness coverage random documents retrieval result
+ assume ten relevant documents collection
+ got two system
+ recall 2 10
+ Whereas System B called 3 3 10
+ recall system B better
+ two measures turn basic measures evaluating search engine
+ important widely used many test evaluation problems
+ For example look applications machine learning tend precision recall numbers reported kinds tasks
+ Okay let define two measures precisely
+ measures evaluate set retrieved documents means considering approximation set relevant documents
+ distinguish 4 cases depending situation documents
+ document retrieved retrieved right Because talking set results
+ document relevant relevant depending whether user thinks useful document
+ counts documents
+ Each four categories represent number documents retrieved relevant
+ B documents retrieved rather etc
+ No table define precision
+ As ratio relevant retrieved documents total relevant retrieved documents
+ divided sum
+ sum column
+ Singularly recall defined dividing sum b
+ divide
+ sum row instead column
+ All right precision recall focused looking number retrieved relevant documents
+ use different denominators
+ Okay ideal result
+ Well easily ideal case precision recall oil
+
+ That means got 1 % Relevant documents results results returned Relevant
+ At least single Not Relevant document returned
+ reality however high recall tends associated low precision
+ imagine case
+ As go try get many random documents possible tend encounter lot documents precision go
+ Note set defined cut
+ rest although two measures defined retrieve documents actually useful evaluating rank list
+ They fundamental measures task retrieval many tasks
+ often interested precision ten documents web search
+ means look many documents among top ten results actually relevant
+ meaningful measure tells many relevant documents user expect On first page typically show ten results
+ precision recall basic matches need use evaluate search engine Building blocks
+ said tends trailoff precision recall naturally interesting combine
+ one method often used called F-measure [ INAUDIBLE ] mean precision recall defined slide
+ first compute
+ Inverse R P interpret 2 using coefficients depending parameter beta
+ transformation easily form
+ case becomes agent precision recall beta parameter often set 1
+ control emphasis precision recall always set beta 1 end special case F-Measure often called F1
+ popular measure often used combined precision recall
+ formula looks simple
+
+ easy Larger precision larger recall f measure high
+ interesting trade precision recall captured interesting way f1
+ order understand first look natural Why combining using symbol arithmetically efficient That likely natural way combining think want think pause video
+ good F1 Or problem think arithmetic mean sum multiple terms
+ case sum precision recall
+ case sum total value tends dominated large values
+ means high P high R really care whether value low whole sum high
+ desirable one easily perfect recall
+ perfect recall easily
+ Can imagine probably easy imagine simply retrieve documents collection perfect recall
+ give
+ average
+ results clearly useful users even though average using formula relevantly high
+ contrast F 1 reward case precision recall roughly That seminar case extremely high value one
+ means f one encodes different trade
+ example shows actually important
+ Methodology
+ try solve problem might naturally think one solution let say error mechanism
+ important settle source
+ important think whether ways combine
+ think multiple variance important analyze difference think one makes sense
+ case think carefully think F1 probably makes sense
+ Than simple
+ Although cases may different results
+ case seems reasonable
+ pay attention subtle differences might take easy way combine go ahead
+ later find measure seem work well
+ All right
+ methodology actually important general solving problems
+ Try think best solution
+ Try understand problem well know needed measure need combine precision recall
+ use guide finding good way solve problem
+ To summarize talked precision addresses question retrievable results relevant talk Recall
+ Which addresses question relevant documents retrieved
+ two two basic matches text retrieval
+ They used many tasks well
+ talk F measure way combine Precision Precision recall
+ talked tradeoff precision recall
+ turns depend user search tasks discuss point later

@@ -1,0 +1,112 @@
+ let plug model masses ranking function get okay general smoothing
+ general ranking function smoothing subtraction seen
+ specific smoothing method JM smoothing method
+ let value office D
+ value p sub c Right may need decide order figure exact form ranking function
+ need figure course alpha
+ let
+ Well ratio basically right probability c board top probability unseen war words basically 11 times basically alpha easy
+ rewritten
+ Very simple
+ plug
+ value alpha What think lambda right happen plug value lambda
+ What say Does depend document No ignored
+ Right end ranking function shown
+ case easy precisely vector space model part sum matched query terms element query map
+ What think element document Well right
+ document left element
+ let examine inside logarithm
+ Well one plus
+ nonnegative log least 1 right parameter lambda parameter
+ let look
+ TF
+ clearly TF weighting
+ larger count higher weighting
+ IDF weighting given
+ docking lan relationship
+ heuristics captured formula
+ What interesting kind got weighting function automatically making various assumptions
+ Whereas vector space model go heuristic design order get
+ case note specific form
+ whether form actually makes sense
+ All right think denominator hm math document
+ Total number words multiplied probability word given collection right actually interpreted expected account word
+ draw word connection model
+ draw many number words document
+ expected account word w precisely given denominator
+ ratio basically comparing actual count
+ actual count word document expected count given product word fact following distribution clutch
+ counter larger expected counter part ratio larger one
+ actually interesting interpretation right natural intuitive makes lot sense
+ one advantage using kind probabilistic reasoning made explicit assumptions
+ know precisely logarithm
+ probabilities
+ formula intuitively makes lot sense TF-IDF weighting documenting others
+ Let look Dirichlet Prior Smoothing
+ similar case JM smoothing
+ case smoothing parameter mu different lambda saw
+ format looks similar
+ form function looks similar
+ still linear operation
+ compute ratio one find ratio equal
+ interesting another comparison
+ comparing actual count
+ Which expected account world sampled meal worlds according collection world probability
+ note interesting even docking lens lighter JMs model
+ All right course plugged part
+ might wonder docking lens
+ Interestingly docking lens alpha sub plugged part
+ As result get following function sum match query words
+ queer query time frequency
+ interpret element document vector longer single dot product right Because part know n name query right means score function take sum query words adjustment score based document
+ still still clear documents lens modulation lens denominator longer document lower weight
+ tf idf
+ Only time form formula different previous one JMs one
+ intuitively still implements TFIDF waiting document lens rendition form function dictated probabilistic reasoning assumptions made
+ disadvantages approach
+ guarantee form formula actually work well
+ look geo function TF-IDF waiting document lens rendition example unclear whether sub-linear transformation
+ Unfortunately logarithm function
+ right sublinear transformation intentionally
+ That means guarantee end way
+ Suppose logarithm sub-linear transformation
+ As discussed perhaps formula work well
+ example gap formal model relevance model really subject motion tied users
+ mean fix
+ For example imagine logarithm right take risk add one even add double logarithm
+ mean function longer proper risk model
+ consequence modification longer predictable
+ example PM45 remains competitive still open channel use public risk models arrive better model PM25
+ particular use query derive model work consistently better DM 25
+ Currently still
+ Still interesting open question
+ summarize part talked two smoothing methods
+ Jelinek-Mercer fixed coefficient linear interpolation
+ Dirichlet Prior add pseudo counts every word adaptive interpolation coefficient larger shorter documents
+ cases using smoothing methods able reach retrieval function assumptions clearly articulate
+ less heuristic
+ Explaining results show retrieval functions
+ effective comparable BM 25 pm lens adultation
+ major advantage probably smaller lot heuristic design
+ Yet end naturally implemented TF-IDF weighting doc length normalization
+ Each functions precise ones smoothing parameter
+ case course still need set smoothing parameter
+ There methods used estimate parameters
+ overall shows using probabilistic model follow different strategies vector space model
+ Yet end end uh retrievable functions look similar vector space model
+ With advantages assumptions clearly stated
+ form dictated probabilistic model
+ concludes discussion query likelihood probabilistic model
+ let recall assumptions made order derive functions seen
+ Well basically made four assumptions listed
+ first assumption relevance modeled query likelihood
+ second assumption med query words generated independently allows decompose probability whole query product probabilities old words query
+ third assumption made word seen document late probability proportional probability collection
+ That smoothing collection ama model
+ finally made one two assumptions smoothing
+ either used JM smoothing Dirichlet prior smoothing
+ make four assumptions choice take form retrieval function seen earlier
+ Fortunately function nice property implements TF-IDF weighting document machine functions work well
+ sense functions less heuristic compared vector space model
+ many extensions basic model find discussion reference end
+ [ MUSIC ]

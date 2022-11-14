@@ -1,0 +1,146 @@
+ Document Length Normalization Vector Space Model
+ discussion vector space model
+ particular discuss issue document length normalization
+ far lectures vector space model used various signals document assess matching document query
+ particular considered tone frequency
+ count tone document
+ considered global statistics IDF Inverse Document Frequency
+ considered document lengths
+ show two example documents d4 much shorter 100 words
+ D6 hand 5000 words
+ look matching query words d6 matchings query words
+ one might reason d6 may matched query words scattered manner
+ maybe topic d6 really topic query
+ discussion campaign beginning document may nothing managing presidential end
+ general think long documents higher chance matching query
+ fact generate long document randomly assembling words distribution words eventually probably match inquiry
+ sense penalize documents naturally better chance matching query idea document normalization
+ need careful avoiding penalize long documents
+ On one hand want penalize long document
+ hand want over-penalize
+ reasoning document may long different reasons
+ one case document may long uses words
+ example think vortex article research paper
+ use words corresponding abstract
+ case probably penalize matching long documents full paper
+ When compare matching words long document matching words shop abstract
+ Then long papers general higher chance matching clearer words therefore penalize
+ However another case document long document simply content
+ consider another case long document simply concatenate lot abstracts different papers
+ case obviously want over-penalize long document
+ Indeed probably want penalize document long
+ need careful using right degree penalization
+ method working well based recent results called pivoted length normalization
+ case idea use average document length pivot reference point
+ That means assume average length documents score right normalizer 1
+ document longer average document length penalization
+ Whereas shorter even reward
+ illustrated using slide axis x-axis length document
+ On y-axis show normalizer
+ case Pivoted Length Normalization formula normalizer seeing interpolation 1 normalize document length controlled parameter B
+ first divide length document average documents gives sense document compared average documents gives benefit worrying unit length
+ measure length words characters
+ Anyway normalizer interesting property
+ First set parameter b 0 value 1
+ lens normalization
+ b sense controls lens normalization
+ Whereas set b nonzero value normalizer look
+ All right value higher documents longer average document lens
+ Whereas value normalizer shorter smaller shorter documents
+ sense penalization long documents reward short documents
+ degree penalization controlled b set b larger value normalizer look
+ There even penalization long documents reward short documents
+ By adjusting b varies 0 1 control degree length normalization
+ plug length normalization fact vector space model ranking functions already examined
+ Then end following formulas
+ fact state vector space model formulas
+ Let take look
+ first one called pivoted length normalization vector space model reference [ INAUDIBLE ] duration model
+ basically TFI model discussed idea component familiar
+ There query term frequency component
+ middle normalizer tf case use double logarithm discussed achieve sublinear transformation
+ put document length normalizer bottom
+ Right cause penalization long document larger denominator smaller
+ course controlled parameter b
+ b set 0 length normalization
+ Okay one two effective base model formulas
+ next one called BM25 Okapi similar IDF component query IDF component
+ middle normal issue little bit different
+ As explained copy tf transformation sublinear transformation upper bound
+ case put length normalization factor
+ adjusting k achieves similar factor put normalizer denominator
+ Therefore document longer term weight smaller
+ gone n answers talked end reached basically state god functions
+ far talked mainly place document vector vector space
+ played important role determining effectiveness simple function
+ dimensions really examine details
+ For example improve instantiation dimension Vector Space Model assumed bag words representation issue dimension word obviously many choices
+ For example stemmed word words transformed root form computation computing become match
+ get stop word removal
+ remove common words carry content
+ get use phrases define dimensions
+ even use later semantical analysis find clusters words represent late concept one engine
+ use smaller unit character end grams sequences characters dimensions
+ However practice people found bag-of-words representation phrases still effective one efficient
+ still far popular dimension instantiation method
+ used major search engines
+ mention sometimes need language specific domain specific tokenization
+ actually important might variations terms might prevent matching even mean thing
+ languages Chinese challenge segmenting text obtain word band rates sequence characters
+ word might correspond one character two characters even three characters
+ easier English space separate words
+ languages may need Americanize processing figure way boundaries words
+ There possibility improve similarity function
+ far used top product one imagine measures
+ For example measure cosine angle two vectors
+ Or use Euclidean distance measure
+ possible dot product seems still best one reason general
+ fact sufficiently general consider possibilities waiting different ways
+ example cosine measure thought thought product two normalized factors
+ That means first normalize factor take thought product
+ That critical cosine measure
+ mentioned BM25 seems one effective formulas
+ developments improving BM25
+ Although none words changed BM25 fundamental
+ one line work people divide BM25
+ Here F stands field use BM25 documents structures
+ example might consider title field abstract body research article
+ Or even anchor text web page text fields describe links pages combined proper way different fields help improve scoring different documents
+ When use BM25 document obvious choice apply BM25 field combine scores
+ Basically idea BM25F first combine frequency counts terms fields apply BM25
+ advantage avoiding counting first occurrence term
+ Remember sublinear transformation TF first occurrence important contributes large weight
+ fields term might gained lot advantage every field
+ combine word frequencies together transformation one time
+ At time extra occurrences counted fresh first recurrences
+ method working well scoring structure documents
+ line extension called BM25+
+ line risk address problem penalization long documents BM25
+ address problem fix actually quite simple
+ simply add small constant TF normalization formula
+ interesting analytically prove small modification fix problem penalization law documents original BM25
+ new formula called BM25+ empirically analytically shown better BM25
+ summarize said vector space model major take away points
+ First model use similarity relevance
+ Assuming relevance document respect query basically proportional similarity query document
+ naturally implies query document must represented way
+ case present vectors high-dimensional vector space
+ Where dimensions defined words concepts terms general
+ generally need use lot heuristics design ranking function
+ use examples show needs several heuristics including Tf weighting transformation
+ IDF weighting document length normalization
+ major heuristics important heuristics ensure general ranking function work well kinds test
+ finally BM25 pivoted normalization seem effective formulas vector space model
+ say put BM25 category vector space model fact BM25 derived using probabilistic model
+ reason put vector space model first ranking function actually nice interpretation vector space model
+ easily looks much vector space model special waiting function
+ second reason original BM25 somewhat different form IDF
+ form IDF [ INAUDIBLE ] work well standard IDF seen
+ effective retrieval function BM25 probably use heuristic modification IDF
+ To make even look vector space model There additional readings
+ first paper pivoted length normalization
+ excellent example using empirical data analysis suggest need length normalization derive length normalization formula
+ second original paper BM25 proposed
+ third paper thorough discussion BM25 extensions particularly BM25
+ finally last paper discussion improving BM25 correct penalization long documents
+ [ MUSIC ]

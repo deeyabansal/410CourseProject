@@ -1,0 +1,137 @@
+ evaluate ranked list discussion evaluation
+ particular look evaluate ranked list results
+ previous talked precision-recall
+ two basic measures quantitatively measuring performance search result
+ talked ranking framed text retrieval problem ranking problem
+ need evaluate quality ranked list
+ How use precision-recall evaluate ranked list Well naturally look precision-recall different cut-offs
+ Because end approximation relevant documents set given ranked list determined user stops browsing
+ Right assume user securely browses list results user stop point point determine set
+ important cut-off consider compute precision-recall
+ Without knowing exactly user stop consider positions user could stop
+ let look positions
+ Look slide let look user stops first document What precision-recall point What think Well easy document precision one one
+ got one document relevent
+ What recall Well note assuming ten relevant documents query collection one ten
+ What user stops second position Top two
+ Well precision 100 % two two
+ record two ten
+ What user stops third position Well interesting case got additional relevant document record change
+ precision lower got number [ INAUDIBLE ] exactly precision Well two three right recall two ten
+ another point recall different look list well wo happen seeing another relevant document
+ case D5 point recall increased three ten precision three five
+ keep get D8
+ precision four eight eight documents four relevant
+ recall four ten
+ get recall five ten Well list go list
+ know convenience often assume precision zero othe precision zero levels recall beyond search results
+ course pessimistic assumption actual position higher make make assumption order easy way compute another measure called Average Precision discuss later
+ say make assumptions clearly accurate
+ okay purpose comparing text methods
+ relative comparison okay actual measure actual actual number deviates little bit true number
+ As long deviation biased toward particular retrieval method okay
+ still accurately tell method works better
+ important point keep mind
+ When compare different algorithms key avoid bias toward method
+ long avoid
+ okay transformation measures anyway preserve order
+ Okay talk get lot precision-recall numbers different positions
+ imagine plot curve
+ shows x-axis show recalls
+ y-axis show precision
+ precision line marked
+
+
+
+
+ Right different levels recall
+ y-axis different amounts precision
+ plot precision-recall numbers got points picture
+ link points form curve
+ As assumed precision high-level recalls zero
+ zero
+ actual curve probably something discussed matter much comparing two methods
+ underestimated method
+ Okay precision-recall curve compare ranked back list All right means compare two PR curves
+ show two cases
+ Where system showing red system B showing blue crosses
+ All right one better hope system clearly better
+ Why Because level recall level recall precision point system better system B
+ question
+ imagine code look ideal search system Well perfect precision recall points line
+ That ideal system
+ general higher curve better right problem might case
+ actually happens often
+ Like two curves cross
+ case one better What think real problem actually might face
+ Suppose build search engine old algorithm shown blue system B
+ come new idea
+ test
+ results shown red curve
+ question new method better old method Or practically replace algorithm already using search engine another new algorithm use system method replace method B real decision make
+ make replacement search engine behave system whereas system B
+ want spend time think pause video
+ actually useful think
+ As said real decision make building search engine working company cares search
+ thought moment might realize well case hard say
+ users might system users might system B
+ difference Well difference know low level recall region system B better
+ There higher precision
+ high recall region system better
+ means depends whether user cares high recall low recall high precision
+ imagine someone check happening want find something relevant news
+ Well one better What think case clearly system B better user unlikely examining lot results
+ user care high recall
+ On hand think case user starting problem
+ want find whether idea ha started
+ case emphasize high recall
+ want many relevant documents possible
+ Therefore might favor system
+ means one better That actually depends users precisely users task
+ means may necessarily able come one number accurately depict performance
+ look overall picture
+ Yet said practical decision make whether replace another may actually come single number quantify method
+ Or compare many different methods research ideally one number compare easily make lot comparisons
+ reasons desirable one single number match
+ needs number summarize range
+ precision-recall curve right one way summarize whole ranked list whole curve look area underneath curve
+ Right one way measure
+ There ways measure turns particular way matching popular used since long time ago text basically way called average precision
+ Basically take look every different recall point
+ look precision
+ know know one precision
+ another different recall
+ count one recall level look number precision different recall level et cetera
+ know added
+ precisions different points corresponding retrieving first relevant document second third follows et cetera
+ missed many relevant documents cases assume zero precisions
+ finally take average
+ divide ten total number relevant documents collection
+ Note dividing sum four
+ Which number retrieved relevant documents
+ imagine divide four happen think moment
+ common mistake people sometimes overlook
+ Right divide four actually good
+ fact favoring system retrieve random documents case denominator small
+ good matching
+ note denomina denominator ten total number relevant documents
+ basically compute area needs occur
+ standard method used evaluating ranked list
+ Note actually combines recall precision
+ first know precision numbers secondly consider recall missed many many zeros
+ All right combines precision recall
+ furthermore measure sensitive small change position relevant document
+ Let say move relevant document little bit increase means average precision
+ Whereas move relevant document let say move relevant document decrease uh average precision
+ good sensitive ranking every relevant document
+ tell small differences two ranked lists
+ want sometimes one algorithm works slightly better another
+ want difference
+ contrast look precision ten documents
+ look whole set well precision think Well easy four ten right precision meaningful tells user pretty useful right meaningful measure users perspective
+ use measure compare systems good sensitive four relevant documents ranked
+ move around precision ten still
+ Right
+ good measure comparing different algorithms
+ contrast average precision much better measure
+ tell difference different difference ranked list subtle ways

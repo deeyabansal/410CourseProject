@@ -1,0 +1,74 @@
+ talk basic strategy
+ based similarity users predicting rating object active user using ratings similar users active user
+ called memory based approach little bit similar storing user information considering particular user try retrieve rating users similar users user case
+ try use information users predict preference user
+ general idea use notations x sub j denotes rating object j user u n sub average rating object user
+ n needed normalize ratings objects user
+ normalization Well subtract average rating ratings
+ normalize ratings ratings different users comparable
+ Because users might generous generally give high ratings others might critical ratings directly compared aggregate together
+ need normalization
+ Another prediction rating item another user active user u sub based average ratings similar users
+ user u sub user interested recommending items
+ interested recommending sub j
+ interested knowing likely user object
+ How know Where idea look whether similar users user liked object
+ mathematically say well predicted rating user app object user object j basically combination normalized ratings different users fact taking sum users
+ users contribute equally average conjured weights
+ weight controls inference user prediction
+ course naturally weight related similarity ua particular user ui
+ similar contribution user ui make predicting preference ua
+ formula extremely simple
+ sum possible users
+ inside sum ratings well normalized ratings explained
+ ratings need normalized order comparable
+ ratings weighted similarity
+ imagine w similarity user user
+ k Well k simply normalizer
+ one sum weights users
+ means basically consider weight together k coefficients weight sum one users
+ normalization strategy get predictor rating range ratings used make prediction
+ Right basically main idea memory-based approaches collaborative filtering
+ Once make prediction map back rating user actually make add mean rating average rating user u sub predicted value
+ recover meaningful rating user
+ user generous average somewhat high add rating adjusted relatively high rate
+ recommend item user actually really matter interested basically normalized reading meaningful
+ evaluate rather filter approaches typically assume actual ratings user objects unknown prediction compare predicted ratings actual ratings
+ access actual ratings
+ pretend know compare systems predictions actual ratings
+ case obviously systems prediction adjusted match actual ratings user happening basically
+ Okay memory based approach
+ course look formula want write program implement still face problem determining w function Once know w function formula easy implement
+ indeed many different ways compute function weight w specific approaches generally differ computed
+ possibilities imagine many possibilities
+ One popular approach use Pearson correlation coefficient
+ sum commonly rated items
+ formula standard appears correlation coefficient formula shown
+ basically measures whether two users tended give higher ratings similar items lower ratings similar items
+ Another measure cosine measure treat rating vectors vectors vector space
+ measure angle compute cosine angle two vectors
+ measure using vector space model retrieval well
+ imagine many different ways
+ cases note user similarity based preferences items actually use content information items
+ matter items movies books products text documents cabled content allows approach applied wide range problems
+ newer approaches course use information user
+ Clearly know user preferences items
+ actual filtering system collaborative filtering could combine content based filtering
+ could use context information interesting approaches people starting new approaches proposed
+ memory based approach shown work reasonably well easy implement practical applications could starting point strategy works well application
+ obvious ways improve approach mainly improve user similarity measure
+ practical issues deal well
+ example lot missing values
+ What Well set default values average ratings user
+ simple solution
+ advanced approaches actually try predict missing values use predictive values improve similarity
+ fact memory based apology predict missing values right get iterative approach first use preliminary prediction use predictive values improve similarity function
+ heuristic way solve problem
+ strategy obviously affect performance claritative filtering heuristics improve similarity functions
+ Another idea actually similar idea IDF seen text search called Inverse User Frequency IUF
+ idea look two users share similar ratings
+ item popular item viewed many people seen [ INAUDIBLE ] people interested item may interesting rare item viewed many users
+ two users deal item give similar ratings
+ says similarity
+ kind emphasize similarity items viewed many users
+ [ MUSIC ]

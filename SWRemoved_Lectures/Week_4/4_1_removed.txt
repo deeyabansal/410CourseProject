@@ -1,0 +1,93 @@
+ probabilistic models define ranking function based probability document relevant query
+ words introduce binary random variable
+ variable R
+ assume query documents observations random variables
+ Note vector-based models assume vectors assume data observed random variables
+ problem retrieval becomes estimate probability relevance
+ category models different variants
+ classic probabilistic model led BM25 retrieval function discussed vectors-based model form actually similar backwards space model
+ discuss another sub class P class called language modeling approaches retrieval
+ particular discuss query likelihood retrieval model one effective models probabilistic models
+ There another line called divergence randomness model led PL2 function one effective state art retrieval functions
+ query likelihood assumption probability relevance approximated probability query given document relevance
+ intuitively probability captures following probability
+ user likes document likely user enter query q order retrieve document assume user likes relevance value
+ ask question likely particular query user basic idea
+ understand idea let take look general idea basic idea Probabilistic Retrieval Models
+ listed imagined relevance status values relevance judgments queries documents
+ For example line shows q1 query user typed
+ d1 document user seen
+ 1 means user thinks d1 relevant q1
+ R approximated click-through data search engine collect watching interacted search results
+ case let say user clicked document
+ 1
+ Similarly user clicked d2 1
+ words d2 assumed relevant q1
+ On hand d3 non-relevant 0
+ d4 non-relevant d5 relevant forth
+ part maybe data collected different user
+ user typed q1 found d1 actually useful d1 actually non-relevant
+ contrast relevant
+ Or could query typed user different times
+ d2 relevant etc
+ data queries
+ imagine lot data
+ ask question estimate probability relevance compute probability relevance Well intuitively means look entries particular particular q likely one column
+ basically means collect counts
+ first count many times seen q pair table count many times actually seen 1 third column
+ compute ratio
+ let take look specific examples
+ Suppose trying compute probability d1 d2 d3 q1
+ What estimated probability think
+ pause video needed
+ Try take look table
+ try give estimate probability
+ Have seen interested q1 d1 looking two pairs cases well actually one cases user said 1 relevant
+ R = 1 one two cases
+ case 0
+ one two
+ What d1 d2 Well d1 d2 d1 d2 cases case R = 1
+ two two forth
+ approach actually score documents query right score d1 d2 d3 query
+ simply rank based probabilities basic idea probabilistic retrieval model
+ makes lot sense case rank d2 documents
+ Because cases c q1 d2 R = 1
+ user clicked document
+ show lot click-through data search engine learn lot data improve search engine
+ simple example shows even small amount entries already estimate probabilities
+ probabilities give sense document might relevant useful user typing query
+ course problems observe queries documents relevance values right There lot unseen documents general collected data documents shown users
+ even unseen queries predict queries typed users
+ obviously approach wo work apply unseen queries unseen documents
+ Nevertheless shows basic idea probabilistic retrieval model makes sense intuitively
+ case lot unseen documents unseen queries Well solutions approximate way
+ particular case called query likelihood retrieval model approximate another conditional probability
+ p ( q given R=1 )
+ condition part assume user likes document seen user clicked document
+ part shows interested likely user actually enter query
+ How likely query row
+ note made interesting assumption
+ Basically assume whether user types query something whether user likes document
+ words actually make following assumption
+ user formulates query based imaginary relevant document
+ Where look conditional probability obvious making assumption
+ really meant use new conditional probability help score new conditional probability somehow able estimate conditional probability without relying big table
+ Otherwise similar problems making assumption way bypass big table try model user formulates query okay simplify general model derive specific relevant function later
+ let look model work example
+ basically case ask following question
+ Which documents likely imaginary relevant document user mind user formulates query ask question quantify probability probability conditional probability observing query particular document fact imaginary relevant document user mind
+ Here computed query likelihood probabilities
+ likelihood queries given document
+ Once values rank documents based values
+ summarize general idea modern relevance proper risk model assume introduce binary random variable R
+ let scoring function defined based conditional probability
+ talked approximating using query likelihood
+ case ranking function basically based probability query given document
+ probability interpreted probability user likes document pose query q
+ question course compute conditional probability At general compute probability text q text
+ model called Language Model
+ kind models proposed model text
+ specifically interested following conditional probability shown
+ user liked document likely user pose query
+ next giving introduction language models model text probable risk model general
+ [ MUSIC ]

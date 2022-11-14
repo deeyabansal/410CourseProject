@@ -1,0 +1,72 @@
+ summary course
+ map shows major topics covered course
+ key high-level take-away messages
+ First talked natural language content analysis
+ Here main take-away messages natural language processing foundation text retrieval currently NLP robust enough battle wars generally main method used modern search engines
+ often sufficient search tasks obviously complex search tasks need deeper natural language processing techniques
+ talked high level strategies text access talked push versus pull
+ pull talked querying versus browsing
+ general future search engines integrate techniques provide math involved information access
+ talk number issues related search engines
+ talked search problem
+ framed ranking problem
+ talked number retrieval methods
+ start overview vector space model probabilistic model talked vector space model depth
+ later talked language modeling approach probabilistic model
+ many take-away message modeling retrieval function tend look similar generally use various heuristics
+ Most important ones TF-IDF weighting document length normalization
+ TF often transformed sub media transformation function
+ talked implement retrieval system main techniques talked construct inverted index prepare system answer query quickly
+ talked faster search using inverted index
+ talked evaluate text retrieval system mainly introduced Cranfield Evaluation Methodology
+ important evaluation methodology applied many tasks
+ talked major evaluation measures
+ important measures search engine MAP mean average precision nDCG Summarize discount accumulative gain precision recall two basic measures
+ talked feedback techniques
+ talked Rocchio Vector Space Model mixture model language modeling approach
+ Feedback important technique especially considering opportunity learning lot pixels Web
+ talked Web search
+ talked use parallel scene solve scalability issue scene use net reduce
+ Then talked use linking permission model app improve search
+ talked page rank hits major hours analyzing links Web
+ talked learning rank
+ use machine learning combine multiple features improvement scoring
+ Not effectiveness improved using approach improve robustness
+ ranking function easy expand search engine
+ features promote page
+ finally talked future Web search
+ About major reactions might future improving count regeneration engines
+ finally talked recommended systems systems increment push mode
+ talk two approaches one content-based one collaborative filtering combined together
+ obvious missing piece picture user user interface important component search engine
+ Even though current search interface relatively simple actually done lot studies user interfaces visualization example
+ topic learn reading book
+ excellent book kinds studies search using face
+ want know topics talked read additional readings listed
+ short course manage cover basic topics text retrievals search engines
+ resources provide additional information advanced topics give thorough treatment topics talked
+ main source Synthesis Digital Library lot short textbook textbooks long tutorials
+ They tend provide lot information explain topic
+ lot series related cause
+ One information concepts retrieval services
+ One human langauge technology
+ yet another artificial intelligence machine learning
+ There major journals conferences listed tend lot research papers need topic course
+ finally information resources Including readings tool kits etc check URL
+ taken text mining course data mining specialization series naturally next step take course
+ As picture shows mine big text data generally need two kinds techniques
+ One text retrieval covered course
+ techniques help convert raw big text data small relevant text data actually needed specific application
+ human plays important role mining text data text data written humans consume
+ involving humans process data mining important course covered various strategies help users get access relevant data
+ techniques always essential text mining system help provide prominence help users interpret inner patterns user define text data mining
+ general user go back original data better understand patterns
+ text mining cause rather text mining analytics course dealing user following information
+ second step picture convert text data actionable knowledge
+ helping users digest found information find patterns reveal knowledge
+ text knowledge used application systems help decision making help user finish task
+ taken course natural step natural next step take course
+ Thank taking course
+ hope fun found course useful
+ look forward interacting future opportunity
+ [ MUSIC ]

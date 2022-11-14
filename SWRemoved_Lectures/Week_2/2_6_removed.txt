@@ -1,0 +1,116 @@
+ faster search using invert index
+ discussion system implementation
+ particular talk support faster search using invert index
+ let think general scoring function might look
+ course vector space model special case imagine many retrieval functions form
+ form function follows
+ scoring function document D query Q defined first function fa adjustment function consider two factors
+ That assume end f sub f sub q q
+ adjustment factors document query level document query
+ inside function another function called
+ main part scoring function said scoring factors level whole document query
+ For example document [ INAUDIBLE ] aggregate punching combine
+ inside h function functions compute weights contribution matched query term ti
+ g function g gives weight matched query term ti document
+ h function aggregate weights
+ example take sum matched query terms product could another way aggregating
+ finally adjustment functioning consider document level query level factors adjust score example document [ INAUDIBLE ]
+ general form cover many state [ INAUDIBLE ] functions
+ Let look score documents function using virtual index
+ general algorithm works follows
+ First query level document level factors pre-computed indexing time
+ Of course query compute query time document example document [ INAUDIBLE ] pre-computed
+ maintain score accumulator document computer
+ An h aggregation function matching query terms
+ For period term fetch inverted list invert index
+ give documents match query term includes d1 f1 dn fn
+ pair document ID frequency term document
+ Then entry sub j f sub j particular match term particular document sub j
+ compute function g give something weight term computing weight completion matching query term document
+ update score accumulator document allow add accumulator incrementally compute function
+ basically general way allow pseudo computer functions form using inbound index
+ Note attach document match query term
+ Well fast need process documents matched least one query term
+ end adjust score computer function f sub sort
+ let take look specific example
+ case let assume scoring function simple one takes sum f role f count term document
+ simplification help shield algorithm clearly
+ easy extend computation include weights transformation tf [ INAUDIBLE ] IDF [ INAUDIBLE ]
+ let take look specific example queries information security show entries invert index right side
+ Information occurred four documents frequencies security occurred three documents
+ let arrows works first iterate overall query terms fetch first query That information right imagine score accumulators score scores documents
+ imagine allocated needed
+ waiting terms even need score
+ That comes actually score accumulators eventually allocating
+ lets fetch interest entity [ INAUDIBLE ] information first one
+ four accumulators obviously initialize zeros
+ first entry d1 3 3 occurrences information document
+ Since scoring function assume score sum raw counts
+ need add 3 score accumulator account increase score due matching term information document d1
+ go next entry d2 4 add 4 score accumulator d2
+ Of course point allocate score accumulator needed
+ point allocated d1 d2 next one d3 add one allocate another score [ INAUDIBLE ] d3 add one
+ finally d4 gets 5 term information occurred five times document
+ Okay completes processing entries invert index information
+ processed contributions matching information four documents
+ error go next security
+ fetch inverted index entries security
+ case three entries go
+ first d2 3 means security occur three humps d2 Well exactly information
+ time change score [ INAUDIBLE ] d2 since already allocated add 3 existing value 4 get 7 d2
+ D2 score increased match falls information security
+ Go next entry d4 1 score d4 add 1 d4 d4 5 6
+ Finally process d5 3
+ Since yet allocated score accumulated d5 point allocate 1 d5 add 3
+ scores last rule final scores documents
+ scoring function simple TF values
+ actually form addition Well [ INAUDIBLE ] point document
+ summarize right first process information determine query term information processed entries index term
+ Then process security right worst think order processing query terms might make difference especially want keep score accumulators
+ Let say want keep promising score accumulators
+ What think good order go Would process common term first process rare term first answers go process rare term first
+ rare term match documents score contribution higher ideal value higher
+ allows attach diplomacy documents first
+ helps pruning non-promising ones need many documents returned user
+ heuristics improving accuracy
+ Here incorporate idea waiting right [ INAUDIBLE ] incorporate [ INAUDIBLE ] process query time
+ When fetch inverted index fetch document frequency compute IDF
+ Or maybe perhaps IDF value already precomputed indexed documents
+ At time already computed IDF value fetch done time
+ mean process entries information words adjusted IDF IDF information
+ basic idea using inverted index fast research works well kinds formulas general form
+ generally general form covers actually state art retrieval functions
+ tricks improve efficiency general techniques encode caching
+ store results popular queries next time query simply return stored results
+ Similarly slow list inverted index memory popular term
+ query term popular likely soon need factor inverted index term
+ keeping memory help general techniques improving efficiency
+ keep promising accumulators user generally want examine many documents
+ need return high qualities subset documents likely ranked top
+ For purpose prune accumulators
+ store accumulators
+ At point keep highest value accumulators
+ Another technique parallel processing needed really process large data set web data set
+ scale Web-scale really special techniques parallel processing distribute storage files machines
+ list text retrieval toolkits complete list
+ find information URL bottom
+ listed four Lucene one popular toolkits support lot applications nice support applications
+ use build search engine application quickly
+ downside easy extend algorithms implemented advanced algorithms
+ Lemur Indri another toolkit nice support web application Lucene many advanced search algorithms easy extend
+ Terrier yet another toolkit good support application capability advanced algorithms
+ maybe Lemur Lucene maybe rather combining strands useful tool kit
+ MeTA toolkit use problem assignment new toolkit combination text retrieval algorithms text mining algorithms
+ talking models implement number text analysis algorithms implemented toolkit well basic search algorithms
+ summarize discussion System Implementation major takeaway points
+ Inverted index primary data structure supporting search engine key enable faster response user query
+ basic idea preprocess data much want compression appropriate
+ save disk space speed IO processing inverted index general
+ talked construct invert index data ca fit memory
+ talk faster search using index basically exploit invective index accumulate scores documents [ INAUDIBLE ] algorithm
+ exploit Zipf law avoid touching many documents match query term algorithm actually support wide range ranking algorithms
+ basic techniques great potential scaling using distributed file system parallel processing caching
+ Here two additional readings take look time interested learning
+ first one classical textbook efficiency inverted index compression techniques
+ general feel efficient inputs space overhead speed
+ second one newer textbook nice discussion implementing evaluating search engines

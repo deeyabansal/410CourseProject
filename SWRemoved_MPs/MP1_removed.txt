@@ -1,0 +1,165 @@
+ # CS410 MP1 -- Getting Familiar Text Due Sept 4 2022 For students added class * * NO LATE PENALTY * * applied submissions Sept 11 In assignment perform first text mining analysis MeTA toolkit
+ We first provide instructions setting exploring basic functionalities available MeTA
+ Details graded portion assignment found bottom Trying '' section # # Setup We 'll use [ metapy ] https
+ -- -Python bindings MeTA
+ use following commands get started
+ * * Please note students issues using metapy specific versions past
+
+
+
+ To avoid issues please use
+
+
+ Your code tested using
+ * * bash # Ensure pip date pip install -- upgrade pip # install metapy pip install metapy pytoml # # Start Let start importing metapy
+ Open terminal type bash get started # import MeTA bindings import metapy # If 'd like tell MeTA log stderr get progress output running long-running function calls
+
+ Now let create document content experiment doc =
+
+ I said I ca n't believe costs $
+ '' # # Tokenization MeTA provides stream-based interface performing document tokenization
+ Each stream starts Tokenizer object cases use Unicode standard aware ICUTokenizer
+ tok =
+ Tokenizers operate raw text provide Iterable spits individual text tokens
+ Let try running ICUTokenizer see
+
+
+ # could string tokens = [ token token tok ] print tokens One thing likely immediately notice insertion pseudo-XML looking tags
+ These called “ sentence boundary tags ”
+ As side-effect default-construted ICUTokenizer discovers sentences document delimiting sentence boundary tags
+ Let try tokenizing multi-sentence document see looks like
+
+ I said I ca n't believe costs $
+ I could find $ 30
+ ''
+
+ tokens = [ token token tok ] print tokens Most information retrieval techniques likely learning class n't need concern finding boundaries separate sentences document later today 'll explore scenario might matter
+ Let pass flag ICUTokenizer constructor disable sentence boundary tags
+ tok =
+ suppress_tags=True
+
+ tokens = [ token token tok ] print tokens As mentioned earlier MeTA treats tokenization streaming process starts tokenizer
+ It often beneficial modify raw underlying tokens document thus change representation
+ The “ intermediate ” steps tokenization stream represented objects called Filters
+ Each filter consumes content previous filter tokenizer modifies tokens coming stream way
+ Let start using simple filter help eliminate lot noise might encounter tokenizing web documents LengthFilter
+ tok =
+ tok min=2 max=30
+
+ tokens = [ token token tok ] print tokens Here see LengthFilter consuming original ICUTokenizer
+ It modifies token stream emitting tokens minimum length 2 maximum length 30
+ This get rid lot punctuation tokens also excessively long tokens URLs
+ # # Stopword removal stemming Another common trick remove stopwords
+ In MeTA done using ListFilter
+ bash wget -nc https
+ Note wget command download files links
+ Another simpler option open web browser type link address bar download file manually tok =
+ tok
+ ''
+
+
+ tokens = [ token token tok ] print tokens Here 've downloaded common list stopwords created ListFilter reject tokens occur list words
+ You see much difference removing stopwords make size document token stream Another common filter people use called stemmer lemmatizer
+ This kind filter tries modify individual tokens way different inflected forms word reduce representation
+ This lets example find documents “ run ” search “ running ” “ runs ”
+ A common stemmer Porter2 Stemmer MeTA implementation
+ Let try tok =
+ tok
+
+ tokens = [ token token tok ] print tokens # # N-grams Finally 've got token stream configured way 'd like time analyze document consuming token token stream performing actions based tokens
+ In simplest case action simply counting many times tokens occur
+ For clarity let switch back simpler token stream first
+ We write token stream tokenizes ICUTokenizer lowercases token
+ tok =
+ suppress_tags=True tok =
+ tok
+
+ tokens = [ token token tok ] print tokens Now let count often individual token appears stream
+ This representation called “ bag words ” representation “ unigram word counts ”
+ In MeTA classes consume token stream emit document representation called Analyzers
+ ana =
+ 1 tok print
+ unigrams =
+ doc print unigrams If noticed name analyzer might realized count individual tokens groups
+ “ Unigram ” means “ 1-gram ” count individual tokens
+ “ Bigram ” means “ 2-gram ” count adjacent tokens together group
+ Let try
+ ana =
+ 2 tok bigrams =
+ doc print bigrams Now individual “ tokens ” counting pairs tokens
+ Sometimes looking n-grams characters useful
+ tok =
+ ana =
+ 4 tok fourchar_ngrams =
+ doc print fourchar_ngrams # POS tagging Now let explore something little bit different
+ MeTA also natural language processing NLP component currently supports two major NLP tasks part-of-speech tagging syntactic parsing
+ POS tagging task NLP involves identifying type word sentence
+ For example POS tagging used identify nouns sentence verbs adjectives or… This useful first step towards developing understanding meaning particular sentence
+ MeTA places POS tagging component “ sequences ” library
+ Let play sequences first get idea work
+ We 'll start creating sequence
+ seq =
+ Now add individual words sequence
+ Sequences consist list Observations essentially word tag pairs
+ If n't yet know tags Sequence add individual words leave tags unset
+ Words called “ symbols ” library terminology
+ word [ The '' dog '' ran '' across '' '' park ''
+ ]
+ word print seq The printed form sequence shows yet know tags word
+ Let fill using pre-trained POS-tagger model distributed MeTA
+ bash wget -nc https
+ tar xvf
+ tagger =
+ perceptron-tagger/ ''
+ seq print seq Each tag indicates type word particular tagger trained output tags present Penn Treebank tagset
+ But want POS-tag document ? doc =
+
+ I said I ca n't believe costs $
+ '' tok =
+ # keep sentence boundaries tok =
+ tok
+
+ tokens = [ token token tok ] print tokens Now write function take token stream contains sentence boundary tags returns list Sequence objects
+ We include sentence boundary tags actual Sequence objects
+ def extract_sequences tok sequences = [ ] token tok token == ' < > '
+
+ elif token = ' < /s > ' sequences [ -1 ]
+ token return sequences doc =
+
+ I said I ca n't believe costs $
+ ''
+
+ seq extract_sequences tok
+ seq print seq # #
+ file setting pipeline In practice often beneficial combine multiple feature sets together
+ We MultiAnalyzer
+ Let combine unigram words bigram POS tags rewrite rules document feature representation
+ We certainly programmatically become tedious quite quickly
+ Instead let use MeTA configuration file format specify analyzer load one line code
+ MeTA uses TOML configuration files configuration
+ If n't heard TOML n't panic It simple readable format
+ Open text editor copy text careful modify contents
+ Save
+
+ # Add
+ file project directory stop-words =
+ '' [ [ analyzers ] ] method = ngram-word '' ngram = 1 filter = default-unigram-chain '' [ [ analyzers ] ] method = ngram-pos '' ngram = 2 filter = [ { type = icu-tokenizer '' } { type = ptb-normalizer '' } ] crf-prefix = crf '' [ [ analyzers ] ] method = tree '' filter = [ { type = icu-tokenizer '' } { type = ptb-normalizer '' } ] features = [ subtree '' ] tagger = perceptron-tagger/ '' parser = parser/ '' Each [ [ analyzers ] ] block defines another analyzer combine feature representation
+ Since “ ngram-word ” common analyzer defined default filter chains used shortcuts
+ “ default-unigram-chain ” filter chain suitable unigram words ; “ default-chain ” filter chain suitable bigram words
+ To run example need download additional MeTA resources bash wget -nc https
+ tar xvf
+ bash wget -nc https
+ tar xvf
+ We load analyzer configuration file ana =
+
+ ' doc =
+
+ I said I ca n't believe costs $
+ '' print
+ doc # # Trying Finally let test whether analysis Inside repository find
+ ask fill code
+ You required create function tokenizes ICUTokenizer without end/start tags
+
+ use argument suppress_tags=True '' lowercases removes words less 2 5 characters performs stemming produces trigrams input sentence
+ Once edit
+ fill function check whether submission passed tests

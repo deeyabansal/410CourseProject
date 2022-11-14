@@ -1,0 +1,74 @@
+ There interesting challenges threshold learning filtering problem
+ show historical data collect filtering system scores status relevance
+ first one score
+ relevant
+ second one relevant separate
+ Of course lot documents know status never delivered user
+ judgements documents delivered user
+ random sample sensitive data
+ kind biased creates difficultly learning
+ Secondly general little labeled data relevant data challenging machine learning approaches typically require training data
+ extreme case beginning even labeled data well
+ system make decision difficult problem beginning
+ Finally issue exploration versus exploitation tradeoff
+ means want explore document space little bit user might interested documents data labeled
+ words explore space user interests testing whether user might interested documents currently matching user interests well
+ Well could lower threshold little bit deliver near misses user user respond user respond extra document
+ tradeoff one hand want explore hand want really explore much deliver non-relevant Information
+ exploitation means exploit learn user
+ Let say know user interested particular topic want deviate much deviate exploit good
+ might miss opportunity learn another interest user
+ dilemma
+ difficulty problem solve
+ solve problems general think one use empirical utility optimization strategy
+ strategy basically optimize threshold based historical data seen previous slide
+ Right compute utility training data candidate score threshold
+ Pretend cut point
+ What cut different scoring threshold point happen What utility Since training data kind compute utility know relevant status assume know relevant status based approximation click-throughs
+ choose threshold gives maximum utility training data
+ course account exploration talked
+ difficulty biased training sample mentioned
+ general get upper bound true optimal threshold threshold might actually lower
+ possible could discarded item might actually interesting user
+ solve problem Well generally said low threshold explore little bit
+ particular approach called beta-gamma threshold learning
+ idea falling
+ show ranked list training documents seen far ranked positions
+ axis show utility course function depends specify coefficients utility function imagine depending cutoff position utility
+ Suppose cut position utility
+ For example identify cutting cutoff point
+ optimal point theta optimal point achieve maximum utility chosen threshold
+ zero utility threshold
+ cutoff utility zero
+ What mean That means lower threshold little bit reach threshold
+ utility lower still non-active least right high optimal utility
+ gives safe point explore threshold explained desirable explore interest space
+ desirable lower threshold based training
+ means general want set threshold somewhere range
+ Let say use alpha control deviation optimal utility point
+ formula threshold interpolation zero utility threshold optimal utility threshold
+ question set alpha deviate optimal utility point Well depend multiple factors one way solve problem encourage threshold mechanism explore zero point safe point necessarily reach way zero point
+ Rather use parameters define alpha specifically follows
+ beta parameter control deviation optimal threshold based accounting over-fitting training data let say adjustment factor
+ interesting gamma parameter
+ Here formula gamma controlling inference number examples training set
+ formula N denotes number training examples becomes bigger actually encourage less exploration
+ words small try explore
+ means seen examples sure whether exhausted space interest
+ need explore seen many examples user many feel probably explore
+ gives beta gamma exploration right
+ examples seen less exploration need
+ threshold closer optimal threshold basic idea approach
+ approach actually working well evaluation studies particularly effective
+ work arbitrary utility appropriate lower bound
+ explicitly addresses exploration-exploitation tradeoff kind uses zero utility threshold point safeguard exploration-exploitation tradeoff
+ never explore zero utility point
+ take analogy gambling want risk losing money
+ safe spend really conservative strategy exploration
+ problem course approach purely heuristic zero utility lower boundary often conservative course advance machine learning approaches proposed solving problems active research area
+ summarize two strategies recommended systems filtering systems one content based looking item similarity collaborative filtering looking user similarity
+ covered content-based filtering approach
+ next talk collaborative filtering
+ content-based filtering system generally solve several problems relative filtering decision learning etc
+ system actually built based search engine system adding threshold mechanism adding adaptive learning algorithm allow system learn long term feedback user
+ [ MUSIC ]

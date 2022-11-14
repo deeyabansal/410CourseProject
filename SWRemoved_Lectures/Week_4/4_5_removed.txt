@@ -1,0 +1,71 @@
+ showed rewrite query holder function form looks formula slide make assumption smoothing language model based collection language model
+ look rewriting actually give two benefits
+ first benefit helps better understand ranking function
+ particular show formula smoothing collection language model give something TF-IDF weighting length normalization
+ second benefit allows compute query holder efficiently
+ particular main part formula sum match query terms
+ much better take sum words
+ After smooth document damage model essentially non zero problem words
+ new form formula much easier score compute
+ interesting note last term actually independent document
+ Since goal rank documents query ignore term ranking
+ Because documents
+ Ignoring affect order documents
+ Inside sum matched query term contribute weight
+ weight actually interesting looks TF-IDF weighting
+ First already frequency word query vector space model
+ When take thought product word frequency query show sum
+ naturally part correspond vector element documented vector
+ indeed actually encodes weight similar factor TF-IDF weight
+ let examine Can part capturing TF part capturing IDF weighting want pause video think
+ noticed P sub seen related term frequency sense word occurs frequently document made probability tend larger
+ means term really something TF weight
+ noticed term denominator actually achieving factor IDF Why popularity term collection
+ denominator probability collection larger weight actually smaller
+ means popular term
+ actually smaller weight precisely IDF weighting
+ Only different form TF IDF
+ Remember IDF logarithm documented frequency
+ something different
+ intuitively achieves similar effect
+ Interestingly something related length libation
+ Again factor related document length formula What say term related IDF weighting
+ collection probability turns term actually related document length normalization
+ particular F sub might related document length
+ encodes much probability mass want give unseen worlds
+ How much smoothing want Intuitively document long need less smoothing assume data large enough
+ probably observed words author could written
+ document short r sub could expected large
+ need smoothing
+ likey words written yet author
+ term appears paralyze non document sub D tend longer larger long document
+ note alpha sub occurs may actually necessary paralyzing long documents
+ effect clear yet
+ later consider specific smoothing methods turns paralyze long documents
+ Just TF-IDF weighting document length normalization formula vector space model
+ interesting observation means even think specific way smoothing
+ need assume smooth collection memory model formula looks TF-IDF weighting documents length violation
+ What interesting fixed form ranking function
+ heuristically put logarithm
+ fact think logarithm
+ look assumptions made clear used logarithm query scoring
+ turned product sum logarithm probability logarithm
+ Note want heuristically implement TF weighting IDF weighting necessary logarithm
+ Imagine drop logarithm still TF IDF weighting
+ nice problem risk modeling automatically given logarithm function
+ basically fixed form formula really heuristically design case try drop logarithm model probably wo work well keep logarithm
+ nice property problem risk modeling following assumptions probability rules get formula automatically
+ formula particular form case
+ heuristically design formula may necessarily end specific formula
+ summarize talked need smoothing document imaging model
+ Otherwise give zero probability unseen words document good storing query unseen word
+ necessary general improve accuracy estimating model represent topic document
+ general idea smoothing retrieval use connecting memory model give clue unseen words higher probability
+ That probability unseen word assumed proportional probability collection
+ With assumption shown derive general ranking formula query likelihood effect TF-IDF weighting document length normalization
+ rewriting scoring ranking function primarily based sum weights matched query terms vector space model
+ actual ranking function given automatically probability rules assumptions made
+ vector space model heuristically think form function
+ However still need address question exactly smooth document model
+ How exactly use reference model based connection adjust probability maximum micro made topic next batch
+ [ MUSIC ]

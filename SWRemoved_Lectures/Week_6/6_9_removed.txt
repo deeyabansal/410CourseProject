@@ -1,0 +1,37 @@
+ summarize discussion recommender systems sense filtering task recommender task easy sense task actually difficult
+ easy user expectation low
+ case system takes initiative push information user
+ user really make effort recommendation better nothing
+ All right
+ unless recommend noise items useless documents
+ recommend useful information users generally appreciate sense easy
+ However filtering actually much harder task retrieval make binary decision ca afford waiting lot items whether one item better others
+ make decision item
+ Think news filtering
+ As soon news enough decide whether news interesting user
+ wait days well even make accurate recommendation relevant news utility significantly decreased
+ Another reason hard data sparseness think learning problem
+ Collaborative filtering example purely based learning past ratings
+ many ratings really much right yeah mentioned cold start problem
+ actually serious serious problem
+ course strategies proposed soft problem different strategies use alleviate problem
+ use example user information asses similarity instead using preferences users items give additional information available user etc
+ talk two strategies filtering task
+ One content-based look items collaborative filtering look Use similarity
+ obviously combined practical system
+ imagine generally combined
+ give hybrid strategy filtering
+ could recall talked push versus pull two strategies getting access text data
+ recommender system easy help users push mode search engines serving users pull mode
+ Obviously two combined combined
+ two system support user multiple mode information access
+ future could anticipate system useful user
+ either active research area lot new algorithms proposed time
+ particular new algorithms tend use lot context information
+ context could context user could context user
+ Items
+ items isolated
+ They connected many ways
+ users might form social network well rich context leverage order really solve problem well active research area machine learning algorithms applied
+ Here additional readings handbook called Recommender Systems collection lot good articles give overview number specific approaches recommender systems
+ [ MUSIC ]

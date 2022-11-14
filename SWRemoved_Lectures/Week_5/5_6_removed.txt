@@ -1,0 +1,76 @@
+ link analysis web search
+ talk web search particularly focusing link analysis use results improve search
+ main topic look ranking algorithms Web Search
+ previous talked create index
+ index want improve ranking Pages
+ web
+ standard IR models applied
+ fact important building blocks improve supporting web search
+ sufficient
+ mainly following reasons
+ First web tend different information needs example people might search webpage entry page
+ different traditional library search people primarily interested collecting literature Information
+ kind query often called navigational queries
+ purpose navigate particular type page
+ queries might benefit using link information
+ Secondly documents additional information web pages web format lot clues layout title link information
+ provided opportunity use extra context information document improve scoring
+ finally information quality varies lot
+ That means consider many factors improve range algorithm
+ give robust way rank pages making harder spammer manipulate one signal improve ranking page
+ result people made number major extensions ranking algorithms
+ One line exploit links improve scoring
+ main topic
+ People proposed algorithms exploit loudest implicit
+ Feedback information form click throughs course category feedback techniques machine often used
+ general web search ranking algorithms based machine learning algorithms combine kinds features
+ Many based standard virtual models BM25 talked [ INAUDIBLE ] score different parts documents provide additional features based content matching link information useful provide additional scoring signals
+ let look links detail web
+ snapshot part web let say
+ many links link different pages together
+ case look center description link pointing document right side
+ description text called anchor text
+ think text actually quite useful provides extra description page points
+ example someone wants bookmark
+ front page person might say biggest online bookstore link Amazon right description similar user type query box looking page
+ useful managing pages
+ Suppose someone types query online bookstore biggest online bookstore
+ All right query match anchor text page
+ actually provides evidence matching page pointed Amazon
+ entry page
+ match anchor text describes anchor page actually provides good evidence elements page pointed
+ anchor text useful
+ look bottom part picture patterns links links might indicate utility document
+ example right side page received many inlinks
+ means many pages pointing page
+ shows page quite useful
+ On left side another page points many pages
+ director page allow actually lot pages
+ call first case authority page second case half page means link information help intuit
+ One provide extra text matching
+ provide additional scores webpage characterize likely page hub likely page authority
+ people course proposed ideas leverage link information
+ Google PageRank main technique used early days good example algorithm capture page popularity basically score authority
+ intuitions links citations literature
+ think one page pointing another page similar one paper citing another paper
+ course page cited often assume page useful general
+ good intuition
+ PageRank essentially take advantage Intuition implement principal approach
+ Intuitively essentially citation counting link counting
+ improves simple idea two ways
+ One consider indirect citations
+ means look many links
+ look pages pointing
+ pages lot in-links means lot
+ sense get credit
+ pages pointing pointed pages many in-links well get much
+ idea getting indirect citation
+ All right understand idea looking research papers
+ cited let say ten papers ten papers workshop papers papers influential right although got ten in-links good cited ten papers attracted lot citations
+ case consider indirect links page
+ idea good pseudo citations
+ Assume basically every page number zero pseudo citation count
+ Essentially trying imagine many virtual links link pages together actually get pseudo citations everyone
+ reason want
+ Is allow solve problem elegantly linear algebra technique
+ think maybe best way understand PageRank think computer probability random surfer visiting every webpage

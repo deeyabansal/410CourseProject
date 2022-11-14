@@ -1,0 +1,68 @@
+ discussion text retrieval methods
+ particular talk feedback text retrieval
+ diagram shows retrieval process
+ user type query
+ query sent retrieval engine search engine engine return results
+ results issued user
+ user seen results user actually make judgements
+ example user says well good document useful good etc
+ called relevance judgment relevance feedback got feedback information user based judgements
+ useful system knowing exactly interesting user
+ feedback module take input use document collection try improve ranking
+ Typically involve updating query system render results accurately user
+ called relevance feedback
+ feedback based relevance judgements made users
+ judgements reliable users generally want make extra effort unless
+ side involves extra effort user
+ There another form feedback called pseudo relevance feedback blind feedback called automatic feedback
+ case user gotten [ INAUDIBLE ] fact invoke users
+ user involved
+ simply assume top rank documents relevant
+ Let say assumed top 10 relevant
+ use assume documents learn improve query
+ might wonder could help simply assume top rank documents Well imagine top rank documents actually similar relevant documents even relevant
+ They look relevant documents
+ possible learn related terms query set
+ fact may recall talked using language model analyze association learn related words word computer
+ first use computer retrieve documents contain computer
+ imagine query computer
+ result documents contain computer
+ take top n results
+ They match computer well
+ count terms set
+ use background language model choose terms frequent set frequent whole collection
+ make contrast two find related terms word computer
+ As seen
+ related words added original query expand query
+ help bring documents necessarily match computer match words program software
+ effective improving search result
+ course pseudo-relevancy values completely unreliable
+ arbitrarily set cut
+ something called implicit feedback
+ case involve users ask users make judgments
+ Instead observe user interacts search results
+ case look clickthroughs
+ user clicked one
+ user viewed one
+ user skipped one
+ user viewed one
+ clue whether document useful user
+ even assume use snippet document text actually seen user instead actual document entry
+ link saying web search may broken matter
+ user tries fetch document displayed text assume displayed text probably relevant interesting learn information
+ called interesting feedback
+ use information update query
+ important technique used modern
+ think Google Bing collect lot user activities serving
+ observe documents click documents skip
+ information valuable
+ use improve search engine
+ summarize talked three kinds feedback
+ Relevant feedback user makes explicit judgements
+ takes user effort judgment information reliable
+ talk pseudo feedback seem assume top brand marking relevant
+ involve user therefore could actually return results user
+ third implicit feedback use clickthroughs
+ Where involve users user make explicitly fault
+ Make judgement
+ [ MUSIC ]

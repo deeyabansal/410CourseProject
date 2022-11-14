@@ -1,0 +1,86 @@
+ evaluate text retrieval system multiple levels judgements
+ discussion evaluation
+ look evaluate text retrieval system multiple levels judgements
+ far talked binary judgements means document judged relevant relevant
+ earlier talk relevance medal degrees
+ often distinguish high relevant documents useful documents moderately relevant documents
+ They okay useful perhaps
+ adding documents useful
+ imagine ratings pages
+ Then multiple levels ratings
+ For example show example three levels 3 relevant sorry 3 relevant 2 marginally relevant 1 non-relevant
+ evaluate search engine system using judgements Obvious map work average precision work precision recall work rely binary judgements
+ let look top ranked results using judgements
+ Imagine user mostly care top ten results
+ marked rating levels relevance levels documents shown 3 2 1 1 3 etcetera
+ call gain
+ reason call gain measure infusing called NDCG normalized accumulated gain
+ gain basically measure much gain random information user obtain looking document right looking first document user gain 3 points
+ Looking non-relevant document user gain 1 point
+ Looking moderator marginally relevant document user get 2 points etcetera
+ gain measures utility document user perspective
+ Of course assume user stops 10 documents looking cutoff 10 look total gain user
+ Well simply sum call Cumulative Gain
+ user stops position 1 3
+ user looks another document 3+2
+ user looks documents cumulative gain
+ Of course cost spending time examine list
+ cumulative gain gives idea much total gain user user examines documents
+ NDCG another letter D discounted cumulative gain
+ want discounting Well look cumulative gain one deficiency consider rank position documents
+ example looking sum know 1 highly relevant document 1 marginally relevant document 2 non-relevant documents
+ really care ranked
+ Ideally want two ranked top case
+ capture intuition Well say well 3 good 3 top
+ means contribution gain different positions weighted position
+ idea discounting basically
+ say well first one need discounted user assumed always document
+ second one one discounted little bit small possibility user notice
+ divide gain weight based position
+ log 2 2 rank position document
+ go third position discounted even normalizer log 3 forth
+ take sum lower ranked document contribute much highly ranked document
+ means example switch position let say position one get discount put example relevant document opposed
+ Imagine put 3 discounted
+ good put 3
+ idea discounting
+ Okay point got discounted cumulative gain measuring utility ranked list multiple levels judgements
+ happy Well use rank systems
+ still need little bit order make measure comparable across different topics
+ last step way show DCG 10 total sum DCG 10 documents
+ last step called N normalization
+ get normalized DCG
+ Well idea normalize DCG ideal DCG cutoff
+ What ideal DCG Well DCG ideal ranking
+ imagine 9 documents whole collection rated 3
+ means total 9 documents rated 3
+ Then ideal rank lister put 9 documents top
+ 3 followed 2
+ Because best could run 3
+ positions 3
+ Right ideal ranked list
+ computed DCG ideal rank list
+ given formula
+ ideal DCG used normalizer DCG
+
+ idea DCG used normalizer
+ imagine normalization essentially compare actual DCG best DCG possibly get topic
+ want Well map DCG values range 0 1
+ best value highest value every query 1
+ That rank list fact ideal list otherwise general lower one
+ Well transformation normalization really affect relative comparison systems one topic ideal DCG systems ranking systems based DCG exactly rank based normalized DCG
+ difference however multiple topics
+ Because normalization different topics different scales DCG
+ For topic one 9 highly relevant documents DCG get really high imagine another case two relevant documents total whole collection
+ Then highest DCG system could achieve topic high
+ face problem different scales DCG values
+ When take average want average dominated high values
+ Those easy queries
+ normalization avoided problem making queries contribute equal average
+ idea NDCG used measuring rank list based multiple level relevance judgements
+ general way basically measure applied ranked task multiple level judgements
+ scale judgements multiple binary binary much multiple levels 1 0 5 even depending application
+ main idea measure summarize measure total utility top k documents
+ always choose cutoff measure total utility
+ discount contribution lowly ranked document
+ finally normalization ensure comparability across queries

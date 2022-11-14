@@ -1,0 +1,50 @@
+ talked PageRank way capture assault
+ looked examples hub might interesting
+ another algorithm called HITS compute scores authorities hubs
+ intuitions pages widely cited good authorities whereas pages cite many pages good hubs
+ think interesting idea algorithm HITS use reinforcement mechanism kind help improve scoring hubs authorities
+ idea assumed good authorities cited good hubs
+ That means cited many pages good hub scores inquiry says authority
+ similarly good hubs point good authorities
+ pointed lot good authority pages hubs score increased
+ literally reinforced pointed good hubs
+ pointed good authorities get good hubs score whereas authority scores improved pointing good hub
+ algorithms general many applications graph network analysis
+ briefly works
+ first construct matrix time construct adjacent matrix normalize values
+ link 1 link 0
+ Again graph
+ define hubs score page sum authority scores pages appoints
+ whether hub really depends whether pointing lot good authority pages
+ That says first equation
+ second equation define authorities page sum hub scores pages appoint
+ whether good authority depend whether pages pointing good hubs
+ forms iterative reinforcement mechanism
+ three questions written metrics format
+ get hub vector equal product adjacency matrix authority vector basically first equation
+ similarly second equation returned authority vector equal product transpose multiplied hub vector
+ different ways expressing equations
+ interesting look matrix form plug authority equation first one
+ actually eliminated authority vector completely get equations hubs scores
+ hubs score vector equal multiplied transpose multiplied hub score
+ Similarly transformation equation authorities
+ although frame problem computing hubs authorities actually eliminate one obtain equation one
+ difference page random matrix actually multiplication adjacency matrix transpose
+ different page rank
+ mathematically computing problem
+ HITS typically initialize values
+ Let say 1 values iteratively apply equations essentially
+ equivalent multiply metrics transpose
+ arrows exactly PageRank
+ adjacency matrix normalized
+ iteration normalize allow control growth value
+ Otherwise grow larger larger
+ basically get HITS
+ That computer hubs scores authority scores pages
+ scores used branching PageRank scores
+ summarize seen link information useful
+ particular anchor text useful increase text representation page
+ talk PageRank page anchor two major link analysis algorithms
+ Both generate scores web pages used ranking function
+ Note PageRank HITS general algorithms
+ many applications analyzing graphs networks

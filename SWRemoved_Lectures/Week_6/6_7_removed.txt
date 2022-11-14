@@ -1,0 +1,52 @@
+ collaborative filtering
+ discussion recommended systems
+ particular look approach collaborative filtering
+ seen slide talked two strategies answer basic question user U item X previous looked item similarity content-based filtering
+ look user similarity
+ different strategy called collaborative filtering
+ first collaborative filtering make filtering decisions individual user based judgements uses
+ say infer individual interest preferences similar users
+ general idea following
+ Given user u first find similar users U1
+ predict use preferences based preferences similar users U1
+ user similarity judged based similarity preferences common set items
+ exact content item really matter
+ look relation users items
+ means approach general
+ applied items text objects
+ approach work well following assumptions
+ First users interest similar preferences
+ Second users similar preferences probably share interest
+ example interest user information retrieval infer user probably favor SIGIR papers
+ interested information retrieval researching probably favor SIGIR papers
+ That assumption make
+ assumption true help collaborative filtering work well
+ assume people favor See SIGIR papers infer interest probably information retrieval
+ simple examples seems make sense many cases assumption actually make sense
+ another assumption make sufficiently large number user preferences available
+ example lot ratings users movies indicate preferences movies
+ lot data cluttered filtering effective
+ problem often called cold start problem
+ That means many preferences available system could fully take advantage collaborative filtering yet
+ let look filtering problem formal way
+ picture shows general considering lot users showing users U1
+ considering number objects
+ Let say n objects order O1 On
+ assume users able judge objects user could example give ratings items
+ For example items could movies could products users give ratings 1 5
+ shown ratings available combinations
+ users watched movies rated movies obviously wo able watch movies users may actually watch movies
+ general small symmetrics
+ many items many entries unknown values
+ interesting could potentially infer value element matrix based values
+ essential question collaborative filtering assume unknown function
+ That map pair user object rating
+ observed sum values function
+ want infer value function pairs available
+ similar machinery problems know values function training data set
+ hope predict values function test data function approximation
+ pick function based observed ratings
+ setup
+ many approaches solving problem
+ fact active research area reason special conferences dedicated problem major conference devoted problem
+ [ MUSIC ]

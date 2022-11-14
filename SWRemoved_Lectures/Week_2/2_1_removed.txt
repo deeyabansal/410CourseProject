@@ -1,0 +1,127 @@
+ talk improve instantiation vector space model
+ continued discussion vector space model
+ focus improve instantiation model
+ previous seen simple instantiations vector space model come simple scoring function give basically account many unique query terms matched document
+ seen function problem shown slide
+ particular look three documents get score match three unique query words
+ intuitively d4 ranked d3 d2 really relevant
+ problem function could capture following heuristics
+ First give credit d4 matched presidential times d3
+ Second intuitively matching presidential important matching common word occurs everywhere
+ really carry much content
+ let improve model solve two problems
+ worth thinking point problems look back assumptions made instantiating vector space model realize problem really coming assumptions
+ particular placed vectors vector space
+ naturally order fix problems revisit assumptions
+ Perhaps use different ways instantiate vector space model
+ particular place vectors different way
+ let improve
+ One natural thought order consider multiple times term document consider term frequency instead absence presence
+ order consider difference document query term occurred multiple times one query term occurred consider term frequency count term document
+ simplest model modeled presence absence term
+ ignored actual number times term occurs document
+ let add back
+ represent document vector term frequency element
+ say elements query vector document vector 0 1s instead counts word query document
+ bring additional information document seen accurate representation documents
+ let formula look change representation
+ slide still use dot product
+ formula looks similar form
+ fact looks identical
+ inside sum course x different
+ They counts word query document
+ point suggest pause moment think interpret score new function
+ something similar simplest VSM
+ change vector new score different interpretation
+ Can difference consideration multiple occurrences term document
+ More importantly know whether fix problems simplest vector space model
+ let look example
+ suppose change vector representation term frequency vectors
+ let look three documents
+ query vector words occurred exactly query
+ vector still 01 vector
+ fact d2 essentially representing way none words repeated many times
+ As result score still 3
+ true d3 still 3
+ d4 different presidential occurred twice
+ ending presidential document vector 2 instead 1
+ As result score d4 higher
+ 4
+ means using term frequency rank d4 d2 d3 hoped
+ solved problem d4
+ d2 d3 still filtering way
+ They still identical scores fix problem
+ fix problem Intuitively give credit matching presidential matching
+ solve problem general way Is way determine word treated importantly word basically ignored About word really carry much content
+ essentially ignore
+ sometimes call word stock word
+ Those generally frequent occur everywhere
+ Matching really mean anything
+ computationally capture encourage think little bit
+ Can came statistical approaches somehow distinguish presidential think moment realize one difference word occurs everywhere
+ count occurrence word whole collection much higher frequency presidential tends occur documents
+ idea suggests could somehow use global statistics terms information trying down-weight element vector representation d2
+ At time hope somehow increase weight presidential vector d3
+ expect d2 get overall score less 3 d3 get score 3
+ Then able rank d3 top d2
+ systematically Again rely statistical count
+ case particular idea called inverse document frequency
+ seen document frequency one signal used modern retrieval functions
+ discussed previous
+ specific way using
+ Document frequency count documents contain particular term
+ Here say inverse document frequency actually want reward word occur many documents
+ way incorporate vector representation modify frequency count multiplying IDF corresponding word shown
+ penalize common words generally lower IDF reward rare words higher IDF
+ specifically IDF defined logarithm M+1 divided k M total number documents collection k DF document frequency total number documents containing word
+ plot function varying k curve look
+ general give higher value low DF word rare word
+ maximum value function log M+1
+ interesting think minimum value function
+ could interesting exercise
+ specific function may important heuristic simply penalize popular terms
+ turns particular function form worked well
+ whether better form function open research question
+ clear use linear penalization shown line may reasonable standard IDF
+ particular difference standard IDF somehow turning point
+ After point say terms essentially useful
+ They essentially ignored
+ makes sense term occurs frequently let say term occurs 50 % documents term unlikely important basically common term
+ important match word
+ standard IDF basically assumed low weights
+ There difference
+ look linear penalization point still difference
+ intuitively want focus discrimination low DF words rather common words
+ Well course one works better still validated using empirically correlated dataset
+ use users judge results better
+ let solve problem 2
+ let look two documents
+ without IDF weighting term frequency vectors
+ IDF weighting adjust TF weight multiplying IDF value
+ For example adjustment particular adjustment using IDF value smaller IDF value presidential
+ look IDF distinguish two words
+ As result adjustment larger make weight larger
+ score new vectors happen course share weights news campaign matching discriminate
+ result IDF weighting d3 ranked d2 matched rare word whereas d2 matched common word
+ shows IDF weighting solve problem 2
+ effective model general used TF-IDF weighting Well let look documents seen
+ new scores new documents
+ effective new weighting method new scoring function point let overall effective new ranking function TF-IDF weighting
+ Here show five documents seen scores
+ scores first four documents seem quite reasonable
+ They expected
+ However new problem d5 high score simplest vector space model actually high score
+ fact highest score
+ creates new problem
+ actually common phenomenon designing retrieval functions
+ Basically try fix one problem tend introduce problems
+ tricky design effective ranking function
+ best ranking function open research question
+ Researchers still working
+ next lectures talk additional ideas improve model try fix problem
+ summarize talked improve vector space model got improve instantiation vector space model based TD-IDF weighting
+ improvement mostly placement vector give high weight term occurred many times document infrequently whole collection
+ seen improved model indeed looks better simplest vector space model
+ still problems
+ next look address additional problems
+ [ MUSIC ]

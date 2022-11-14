@@ -1,0 +1,150 @@
+ inverted index construction
+ discussion system implementation
+ particular discuss construct inverted index
+ construction inverted index actually easy dataset small
+ easy construct dictionary store postings file
+ problem data able fit memory use special method deal
+ unfortunately retrieval applications dataset large
+ generally loaded memory
+ many approaches solve problem sorting-based method quite common works four steps shown
+ First collect local termID documentID frequency tuples
+ Basically locate terms small set documents
+ collect accounts sort count based terms
+ able local partial inverted index called rounds
+ write temporary file disk merge step 3
+ Do pairwise merging runs eventually merge runs generate single inverted index
+ illustration method
+ On left documents right term lexicon document ID lexicon
+ lexicons map string-based representations document IDs terms integer representations map back integers stream representation
+ reason want interest using integers present IDs integers often easier handle
+ For example integers used index array easy compress
+ one reason tend map strings integers carry strings around
+ approach work Well simple
+ scan documents sequentially parse documents count frequencies terms
+ stage generally sort frequencies document IDs process document sequentially
+ first encounter terms first document
+ Therefore document IDs ones case
+ followed document IDs two natural results process data sequential order
+ At point run memory write disc
+ Before sort use whatever memory
+ sort time sort based term IDs
+ Note using term IDs key sort
+ entries share term grouped together
+ case IDs documents match term 1 grouped together
+ write temporary file
+ allows use memory process makes batch documents
+ documents
+ write lot temporary files disc
+ next stage merge sort basically
+ merge sort
+ Eventually get single inverted index entries sorted based term IDs
+ top older entries documents match term ID 1
+ basically construction inverted index
+ Even though data loaded manner
+ mention earlier hostings large desirable compress
+ let take little bit compressed inverted index
+ Well idea compression general leverage skewed distributions values
+ generally use variable-length encoding instead fixed-length encoding use default program manager C++
+ leverage skewed distributions values compress values Well general use bits encode frequent words cost using longer bit string code rare values
+ case let think compress TF tone frequency
+ picture inverted index look post things lot tone frequencies
+ Those frequencies terms documents
+ think kind values frequent probably able guess small numbers tend occur far frequently large numbers
+ Why Well think distribution words sip slopes many words occur rarely lot small numbers
+ Therefore use fewer bits small highly frequent integers cost using bits larger integers
+ trade course
+ values distributed uniform wo save space tend many small values frequent
+ save average even though sometimes large number use lot bits
+ What document IDs saw postings Well distributed skewed way
+ deal Well turns use trick called d-gap store difference term IDs
+ imagine term matched many documents longest document IDs
+ take gap take difference adjacent document IDs gaps small
+ lot small numbers
+ Whereas term occurred documents gap large large numbers frequent
+ creates skewed distribution allow compress values
+ possible order uncover uncompress document IDs sequentially process data
+ Because stored difference order recover exact document ID first recover previous document ID
+ add difference previous document ID restore current document ID
+ possible needed sequential access document IDs
+ Once look term look document IDs match term sequentially process
+ natural trick actually works
+ many different methods encoding
+ binary code commonly used code program language
+ use basically fixed glance coding
+ Unary code gamma code delta code possibilities many possibilities
+ let look detail
+ Binary coding really equal length coding property randomly distributed values
+ unary coding variable length coding method
+ case integer 1 encoded x -1 1 bit followed 0
+ example 3 encoded 2 1s followed 0 whereas 5 encoded 4 1s followed 0 etc
+ imagine many bits use large number 100 many bits use exactly number 100 Well exactly use 100 bits
+ number bits value number
+ inefficient likely large numbers
+ Imagine occasionally number 1,000 use 1,000 bits
+ works well absolutely sure large numbers mostly often small numbers
+ decode code since variable length encoding methods ca count many bits stop
+ ca say 8-bits 32-bits start another code
+ They variable length rely mechanism
+ case unary easy boundary
+ easily 0 signal end encoding
+ count many 1s seen end hit 0
+ finished one number start another number
+ saw unary coding aggressive
+ rewarding small numbers occasionally big number disaster
+ less aggressive method Well gamma coding one method use unary coding transform form
+ 1 plus floor log x
+ magnitude value much lower original x
+ afford using unary code
+ first unary code coding log x
+ followed uniform code binary code
+ basically uniform code binary code
+ use coder code remaining part value x
+ basically precisely x-1 floor log x unary code basically called flow log x well add one
+ remaining part using uniform code actually code difference x 2 log x
+ easy show difference need use many bits floor log x bits
+ easy understand difference large higher floor log x
+ examples example 3 encoded 101
+ first two digits unary code
+ value 2 10 encodes 2 unary coding
+ means floor log x 1 wo actually use unary codes
+ code 1 plus flow log x since two know flow log x actually 1
+ 3 still larger 2 1
+ difference 1 1 encoded end
+ 101 3
+ similarly 5 encoded 110 followed 01
+ case unary code code 3
+ unary code 110 flow log x 2
+ means compute difference 5 2 2 1
+ 1 end
+ time use 2 bits level flow log x
+ could numbers 5 6 7 share prefix 110
+ order differentiate use 2 bits end differentiate
+ imagine 6 10 end instead 01 10
+ true form gamma code always first odd number bits center 0
+ That end unary code
+ left side 0 1s
+ right side 0 binary coding uniform coding
+ decode code Well first unary coding
+ Once hit 0 got unary code tell many bits read decode uniform code
+ decode gamma code
+ There delta code basically gamma code except replace unary prefix gamma code
+ even less conservative gamma code terms wording small integers
+ means okay occasionally large number
+ okay delta code
+ fine gamma code really big loss unary code
+ operating course different degrees favoring short favoring small integers
+ means appropriate sorting distribution
+ none perfect distributions
+ method works best depend actual distribution dataset
+ For inverted index compression people found gamma coding seems work well
+ uncompress inverted index talk
+ Firstly decode encoded integers
+ think discussed decode unary coding gamma coding
+ What document IDs might compressed using d-gap Well sequential decoding supposed encoded list x1 x2 x3 etc
+ first decode x1 obtain first document ID ID1
+ Then decode x2 actually difference second ID first one
+ add decoder value x2 ID1 recover value ID secondary position
+ advantages converting document IDs integers
+ allows kind compression
+ repeat decode documents
+ Every time use document ID previous position help recover document ID next position

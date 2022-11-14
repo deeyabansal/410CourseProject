@@ -1,0 +1,142 @@
+ Web Indexing
+ talking Web Search talk create Web Scale Index
+ crawl web got lot web pages
+ next step use indexer create inverted index
+ general use information retrieval techniques creating index talked previous lectures new challenges solve
+ For web scale indexing two main challenges scalability efficiency
+ index large actually fit single machine single disk
+ store data virtual machines
+ data large beneficial process data parallel produce index quickly
+ address challenges Google made number innovations
+ One Google File System general File system help programmers manage files stored cluster machines
+ second MapReduce
+ general software framework supporting parallel computation
+ Hadoop well known open source implementation MapReduce
+ used many applications
+ architecture google file system
+ uses simple centralized management mechanism manage specific locations
+ Files maintains file namespace look table know exactly file stored
+ application client talk GFS master obtains specific locations files want process
+ GFS file kind obtained specific location files application client talk specific servers whether data actually sits directly avoid involving node
+ network
+ file system stores files machines system great fixed sizes chunks data files separated
+ Many chunks
+ Each chunk 64 MB pretty big
+ appropriate large data processing
+ chunks replicated ensure reliability
+ something programmer worry taken care file system
+ application perspective programmer normal file
+ programmer know exactly stored invoke high level
+ Operators process file
+ another feature data transfer directly application chunk servers
+ efficient sense
+ On top Google file system Google proposed MapReduce general framework parallel programming
+ useful support task building inverted index
+ framework Hiding lot low-level features program
+ As result programmer make minimum effort create application run large cluster parallel
+ low level details hidden framework including specific network communications load balancing task executed
+ All details hidden programmer
+ There nice feature built fault tolerance
+ one server broken server tasks may finished
+ Then MapReduce mapper know task done
+ automatically dispatches task servers job
+ therefore program worry MapReduce works
+ input data separated number key value pairs
+ exactly value depend data actually fairly general framework allow partition data different parts part processed parallel
+ Each key value pair send map function
+ program right map function course
+ map function process Key Value pair generate number Key Value pairs
+ Of course new key usually different old key given map input
+ key value pairs output map function outputs map functions collected sorting based key
+ result values associated key grouped together
+ got pair key separate values attached key
+ sent reduce function
+ course reduce function handle different key send output values multiple reduce functions handling unique key
+ reduce function process input key set values produce another set key values output
+ output values corrected together form final output
+ general framework MapReduce
+ programmer needs write Map function Reduce function
+ Everything else actually taken care MapReduce framework
+ program really needs minimum work
+ framework input data partitioned multiple parts processing parallel first map process reach reduced stage
+ much reduced 'm [ INAUDIBLE ] process different keys associated values parallel
+ achieves achieves purpose parallel processing large data set
+ let take look simple example
+ Word Counting
+ input containing words output want generate number occurrences word
+ Word Count
+ know kind counting useful example assess popularity word large collection useful achieving factor IDF wading search
+ solve problem Well one natural thought well task done parallel simply counting different parts file parallel end combine counts
+ precisely idea MapReduce
+ parallelize lines input file
+ specifically assume input map function key value pair represents line number string line
+ first line example key one another word word four words line
+ key value pair sent Map Function
+ Map Function count words line
+ case course four words
+ Each world gets count one output slide map function
+ map function really simple look pseudocode looks right side simply needs iterate words line
+ collect function means send word count collector
+ collector try sort key value pairs different Map Functions right function simple programmer specifies function way process part data
+ Of course second line handled different Map Function produce single output
+ Okay output map functions send collector collector internal grouping sorting
+ stage collected match pairs
+ Each pair word count line
+ pairs
+ Then sort based key word
+ collect counts word bye together
+ similarly words
+ Like Hadoop Hello etc
+ word attached number values number counts
+ counts represent occurrences solve word different lights
+ got new pair key set values pair fed reduce function reduce function finish job counting total occurrences word
+ ready got puzzle accounts needs simply add
+ reduce function simple well
+ counter iterate words
+ That array
+ accumulate accounts right finally output P proto account
+ precisely want output whole program
+ ready similar
+ To building Invert index
+ think output index
+ already got dictionary basically
+ got count
+ missing document specific frequency counts words documents
+ modify slightly actually able index parallel one way
+ case assume input Map Function pair key denotes document ID value denoting screen document words document
+ map function something similar seen word campaign example
+ simply groups counts word document together
+ generate set key value pairs
+ Each key word value count word document plus document ID
+ easily need add document ID later inverted index keep formation Map Function keep track sent reduce function later
+ similarly another document D2 processed way
+ end sorting mechanism group together
+ key java associated documents match key
+ Or documents java occurred
+ counts counts java documents
+ collected together
+ fed reduce function
+ reduce function already got input looks inverted index entry
+ word documents contain word frequencies word documents
+ need simply concatenate continuous chunk data
+ done written file system
+ basically reduce function minimal
+ Work
+ pseudo-code [ INAUDIBLE ] construction
+ Here two functions procedure Map procedure Reduce
+ programmer specify two functions program top map reduce
+ basically described
+ case map count occurrences word using AssociativeArray
+ output counts together document ID
+ reduce function hand simply concatenates input given put together one single entry key
+ simple MapReduce function yet allow construct inverted index large scale data processed different machines
+ program take care details
+ parallel index construction web search
+ summarize web scale indexing requires new techniques go beyond
+ Standard traditional indexing techniques
+ Mainly store index multiple machines
+ usually done using filing system Google file system
+ file system
+ secondly requires creating index parallel large takes long time create index documents
+ parallel much faster done using MapReduce framework
+ Note GFS MapReduce frameworks general support many applications

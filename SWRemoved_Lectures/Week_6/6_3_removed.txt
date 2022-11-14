@@ -1,0 +1,32 @@
+ There many Munster learning algorithms regression based approaches generally attempt direct optimizer retrieval method
+ Like MAP nDCG
+ Note optimization object function seen previous slide directly related retrieval measure
+ By maximizing prediction one zero necessarily optimize ranking documents
+ One imagine prediction may bad
+ let say around
+
+ kind middle zero one two documents
+ ranking wrong might larger value E2 E1
+ wo good retrieval perspective even though function bad
+ contrast might another case predicted values around
+ said
+ objective function error larger
+ get order two documents correct actually better result
+ new advanced approaches try correct problem
+ Of course challenge optimization problem harder solve
+ researchers posed many solutions problem read references end know approaches
+ learning ranked approaches general
+ accounts applied many ranking problems retrieval problem
+ people go recommender systems computational advertising summarization many others probably encounter applications
+ To summarize talked using machine learning combine much features including ranking results
+ Actually use machine learning information retrieval started since many decades ago
+ example Rocchio feedback approach talked earlier machine learning approach prior relevance feedback
+ recent use machine learning driven changes environment applications retrieval systems
+ First mostly freedom availability lot training data form critical available
+ data provide lot useful knowledge relevance machine learning methods applied leverage list
+ Secondly freedom need combining many features features available web naturally used improved scoring
+ combining improve robustness ranking desired combating spams
+ Modern search engines use kind machine learning techniques combine many features optimize ranking major feature commercial engines Google Bing
+ topic learning rank still active research topic community expect new results development next years perhaps
+ Here additional readings give information learning rank works advanced methods
+ [ MUSIC ]

@@ -1,0 +1,145 @@
+ practical issues address evaluation text retrieval systems
+ discussion evaluation
+ cover practical issues solve actual evaluation text retrieval systems
+ order create test collection create set queries
+ set documents set relevance judgments
+ turns actually challenging create
+ First documents queries must representative
+ They must represent real queries real documents users handle
+ use many queries many documents order avoid bias conclusions
+ For matching relevant documents queries
+ need ensure exists lot relevant documents query
+ query one relevant option actually
+ informative compare different methods using query much room difference
+ ideally relevant documents clatch yet queries represent real queries care
+ terms relevance judgments challenge ensure complete judgments documents queries
+ Yet minimizing human fault use human labor label documents
+ labor intensive
+ result impossible actually label documents queries especially considering giant data set web
+ actually major challenge difficult challenge
+ For measures challenging want measures accurately reflect perceived utility users
+ consider carefully users care
+ design measures measure
+ measure measuring right thing conclusion misled
+ important
+ talk couple issues
+ One statistical significance test
+ reason use lot queries
+ question sure observe difference simply result particular queries choose
+ sample results average position System System B different experiments
+ bottom mean average position
+ mean look mean average position mean average positions exactly experiments right
+
+ System B
+
+
+ identical
+ Yet look exact average positions different queries
+ look numbers detail realize one case feel trust conclusion given average
+ another case case feel well 'm sure
+ take look numbers moment pause media
+ look average mean average position easily say well System B better right
+ twice much
+ better performance
+ look two experiments look detailed results
+ confident say case one experiment one
+ case
+ Because numbers seem consistently better System B
+ Whereas Experiment 2 sure looking results System better another case System better
+ yet look average System B better
+ think How reliable conclusion look average case intuitively feel Experiment 1 reliable
+ quantitate answer question need statistical significance test
+ idea statistical significance test basically assess variants across different queries
+ big variance means results could fluctuate lot according different queries
+ Then believe unless used lot queries results might change use another set queries
+ Right c high variance reliable
+ let look results second case
+ show two different ways compare
+ One sign test look sign
+ System B better System plus sign
+ When System better minus sign etc
+ Using case well seven cases
+ actually four cases System B better
+ three cases System better intuitively almost random results right take random sample flip seven coins use plus denote head minus denote tail could easily results randomly flipping seven coins
+ fact average larger tell anything
+ ca reliably conclude
+ quantitatively measured p value
+ basically means probability result fact random fluctuation
+ case probability
+
+ means surely random fluctuation
+ Willcoxan test non-parametric test looking signs looking magnitude difference
+ draw similar conclusion say likely random
+ To illustrate let think distribution
+ called distribution
+ assume mean zero
+ Lets say started assumption difference two systems
+ assume random fluctuations depending queries might observe difference
+ actual difference might left side right side right curve kind shows probability actually observe values deviating zero
+ look picture difference observed chance high fact random observation right define region likely observation random fluctuation 95 % outcomes
+ observed may still random fluctuation
+ observe value region difference side difference unlikely random fluctuation
+ All right small probability observe difference random fluctuation
+ case conclude difference must real
+ System B indeed better
+ idea Statical Significance Test
+ takeaway message use many queries avoid jumping conclusion
+ As case say System B better
+ There many different ways Statistical Significance Test
+ let talk problem making judgments said earlier hard judge documents completely unless small data set
+ question afford judging documents collection subset judge solution Pooling
+ strategy used many cases solve problem
+ idea Pooling following
+ first choose diverse set ranking methods
+ Text Retrieval systems
+ hope methods help nominate relevant documents
+ goal pick relevant documents
+ want make judgements relevant documents useful documents users perspectives
+ return top-K documents
+ K vary systems
+ point ask suggest likely relevant documents
+ simply combine top-K sets form pool documents human assessors
+ To judge imagine many systems ten k documents
+ take top-K documents form union
+ course many documents duplicated many systems might retrieved random documents
+ duplicate documents
+ unique documents returned one system
+ idea diverse set ranking methods ensure pool broad
+ include many possible relevant documents possible
+ users human assessors make complete judgments data set pool
+ unjudged documents usually assumed non relevant
+ pool large enough assumption okay
+ pool large actually reconsidered
+ might use strategies deal indeed methods handle cases
+ strategy generally okay comparing systems contribute pool
+ That means participate contributing pool unlikely penalize system problematic documents judged
+ However problematic evaluating new system may contributed pool
+ case new system might penalized might nominated read documents judged
+ documents might assumed non relevant
+ That unfair
+ summarize whole part textual evaluation extremely important
+ Because problem empirically defined problem rely users way tell whether one method works better
+ property experiment design might misguide research applications
+ might draw wrong conclusions
+ seen discussions
+ make sure get right research application
+ main methodology Cranfield evaluation methodology
+ main paradigm used kinds empirical evaluation tasks search engine variation
+ Map nDCG two main measures definitely know appropriate comparing ranking algorithms
+ often research papers
+ Precision 10 documents easier interpret user perspective
+ often useful
+ What covered evaluation strategy A-B Test
+ Where system mix two results two methods randomly
+ show mixed results users
+ Of course users result method
+ users judge results click documents search engine application
+ case search engine check click documents one method contributed click documents
+ user tends click one results one method suggests message may better
+ leverages real users search engine evaluation
+ called A-B Test strategy often used modern search engines commercial search engines
+ Another way evaluate IR textual retrieval user studies covered
+ put references look want know
+ three additional readings
+ three mini books evaluation excellent covering broad review Information Retrieval Evaluation
+ covers things discussed lot others offer

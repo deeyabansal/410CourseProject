@@ -1,0 +1,77 @@
+ specific smoothing methods language models used probabilistic retrieval model
+ discussion language models information retrieval particularly query likelihood retrieval method
+ talk specifically smoothing methods used retrieval function
+ slide previous show query likelihood ranking smoothing collection language model add retrieval function looks following
+ retrieval function based assumptions discussed
+ sum matching query terms
+ inside sum count term query weight term document
+ f weight another constant
+ clearly want implement function using programming language still need figure variables
+ particular need know estimate probability word exactly set alpha
+ order answer question think specific smoothing methods main topic
+ talk two smoothing methods
+ first simple linear interpolation fixed coefficient
+ called Jelinek-Mercer smoothing
+ idea actually simple
+ picture shows estimate document language model using maximum likelihood estimate
+ That gives word counts normalized total number words text
+ idea using method maximize probability observed text
+ As result word network observed text get 0 probability shown
+ idea smoothing rely collection language model word zero probability help decide nonzero probability assigned word
+ note network nonzero probability
+ approach linear interpolation maximum likelihood placement collection language model computed smoothing parameter lambda 0 1
+ smoothing parameter
+ larger lambda smoothing
+ mixing together achieve goal assigning nonzero probabilities word network
+ let works words
+ For example compute smooth probability text
+ maximum likelihood estimated gives 10 100
+ collection probability
+ combine together simple formula
+ word network used zero probability getting non-zero probability value
+ count zero network
+ part nonzero basically method works
+ think easily alpha sub smoothing method basically lambda
+ Because remember coefficient front probability word given collection language model
+ Okay first smoothing method
+ second one similar tie-in coefficient linear interpolation
+ often called Dirichlet Prior Bayesian Smoothing
+ face problem zero probability unseen word network
+ Again use collection language model case combine somewhat different ways
+ formula first seen interpolation maximum likelihood estimate collection language model J-M smoothing method
+ Only coefficient lambda fixed number dynamic coefficient form mu parameter non-negative value
+ set mu constant effect long document actually get smaller coefficient
+ Because long document longer lengths therefore coefficient actually smaller
+ long document less smoothing expect
+ seems make sense fixed coefficient smoothing
+ Of course part form two coefficients sum 1
+ one way understand smoothing
+ Basically means dynamic coefficient interpolation
+ There another way understand formula even easier remember side
+ easier rewrite smoothing method form
+ form easily change made maximum likelihood estimate part
+ normalize count document length
+ form add count every word
+ mean Well basically something related probability word collection
+ multiply parameter mu
+ combine count essentially adding pseudocounts observed text
+ pretend every word got many pseudocount
+ total count sum pseudocounts actual count word document
+ As result total added many pseudocounts
+ Why Because take somewhat one words probability words sum 1 gives mu
+ total number pseudocounts added
+ probabilities still sum 1
+ case easily method essentially add pseudocount data
+ Pretend actually augment data including pseudo data defined collection language model
+ As result counts total counts word
+ result even word zero count let say zero count still nonzero count part
+ method works
+ Let take look specific example
+ text 10 original count actually observe add pseudocount
+ probability text form
+ Naturally probability network part
+ alpha sub
+ Can want think pause video
+ notice part basically alpha sub
+ case alpha sub depend document length depends document whereas linear interpolation J-M smoothing method constant
+ [ MUSIC ]

@@ -1,0 +1,131 @@
+ let take look detail
+ random surfing model page assume random surfer choose next page visit
+ small graph
+ That course simplification complicated web
+ let say four documents d1 d2 d3 d4
+ let assume random surfer random walker pages
+ random surfer could decide randomly jumping page follow link visit next page
+ random surfer d1 probability random surfer follow links
+ two outlinks one pointing d3 pointing d4
+ random surfer could pick two reach d3 d4
+ assumes random far might get bore sometimes
+ random surfing decide ignore actual links simply randomly jump page web
+ able reach pages even though link actually want page
+ assume random surfing model
+ Imagine random surfer really surfing ask question likely average surfer actually reach particular page d1 d2 d3
+ That average probability visiting particular page probability precisely page ranker computes
+ page rank score document average probability surfer visits particular page
+ intuitively basically capture inlink account Because page lot inlinks higher chance visited
+ Because opportunities server follow link come page
+ random surfing model actually captures ID counting inlinks
+ Note considers interacting links Because page point lot inlinks
+ That mean random surfer likely reach one therefore increase chance visiting
+ nice way capture indirect direct links
+ mathematically compute problem day order need take look problem computing
+ first let take look transition metrics
+ metrics values indicating likely random surfer go one page another
+ rule stands starting page
+ For example rule one indicate probability four pages d1
+ 2 non 0 entries 1/2
+ look graph d1 pointing d3 d4
+ There link d1 d2
+ got 0s first 2 columns
+ d3 d4
+ general M matrix M sub ij probability di dj
+ obviously rule values sum 1 surfer go precisely one pages
+ transition metric
+ compute probability surfer visiting page Well look surf model basically compute probability reaching page follows
+ left hand side probability visiting page dj time plus 1 next time point
+ On right hand side equation involves probability page di time
+ subscript indicates probability server document time
+ equation basically captures two possibilities reaching dj time plus 1
+ What two possibilities Well one random surfing one following link explained
+ first part captures probability random surfer reach page following link
+ random surfer chooses strategy probability 1 minus alpha assume
+ factor 1 minus alpha
+ main party realist sum possible pages surfer could time
+ There n pages sum possible n pages
+ Inside sum product two probabilities
+ One probability surfer di time p sub di
+ transition probability di dj
+ order reach dj page surfer must first di time
+ follow link go di dj
+ probability probability di time multiplied probability page target page dj
+ second part similar sum difference transition probability uniform transition probability
+ 1 n part captures probability reaching page random jumping
+ form exactly allows PageRank essentially assumed smoothing transition matrix
+ think 1 n coming another transition matrix elements 1 n uniform matrix
+ Then clearly essentially merge two parts form
+ imagine different metrics combination uniform metrics every 1
+ sense PageRank uses idea smoothing ensuring zero entry transition matrix
+ course time dependent calculation probabilities
+ imagine compute average probabilities average probabilities probably sets file equation without considering time index
+ let drop time index assume equal
+ give equations page equation
+ look variables equations precisely n variables
+ basically means system n equations n variables linear equations
+ basically problem boils solve system equations
+ show equations metric form
+ vector p equals matrix transpose matrix multiplied vector
+ still remember knowledge learned linear algebra realize precisely equation eigenvector
+ When multiply metrics vector get value matter solved using iterative algorithm
+ equations back basically taken previous slide
+ relation page ran sports different pages
+ iterative approach power approach simply start randomly initialized vector
+ repeatedly update p multiplying metrics p factor
+ show concrete example
+
+ assume alpha
+ example show slide original transition matrix
+ That includes graph actual links smoothing transition metrics uniform transition metrics representing random jumping
+ combine together liner interpolation form another metric
+ essentially imagine web looks captured
+ They virtual links pages
+ page initialize p vector first computed updating p vector using metrics multiplication
+ rewrite metric multiplication terms individual equations
+ basically updating formula particular pages page score
+ want compute value updated score d1
+ basically multiply rule column take third product two
+ give value value
+ updated vector started initial values guys
+ revise scores generate new set scores updating formula one
+ repeatedly apply converges
+ matrix 0 values guaranteed converge
+ point PageRank scores pages
+ typically go sets initial values 1
+ interestingly updating formula interpreted propagating scores graph Or look formula compare graph imagine might able interpret essentially propagating scores graph
+ hope indeed imagine values initialized pages
+ values say 1 4
+ use metrics update scores
+ look equation one basically combine scores pages possibly lead reaching page
+ look pages pointing page combine score propagate sum scores document d1
+ To look scores present probability random surfer visiting pages reached d1
+ propagation simulate probability reaching page d1
+ two interpretations
+ One matrix multiplication
+ repeat multiplying metrics
+ think propagating scores repeatedly web
+ practice combination PageRank score actually efficient
+ Because matrices fast ways transform equation
+ avoid actually literally computing values elements
+ Sometimes may normalize equation give somewhat different form equation ranking pages change
+ results potential problem zero-outlink problem
+ case page outlink probability pages sum 1
+ Basically probability reaching next page page sum 1 mainly lost probability mass
+ One assume probability surfer try follow links link follow
+ one possible solution simply use page specific damping factor could easily fix
+ Basically say alpha
+ page outlink
+ case surfer randomly jump another page instead trying follow link
+ There many extensions PageRank one extension topic-specific PageRank
+ Note PageRank merely use query information
+ make PageRank specific however
+ example top specific page rank simply assume surfer bored
+ surfer randomly jumping page web
+ Instead jump pages relevant query
+ For example query sports assume random jumping randomly jump sports page
+ By buy PageRank topic sports
+ know current theory sports use specialized PageRank score rank documents
+ That better use generic PageRank score
+ PageRank channel used many applications network analysis particularly example social networks
+ imagine compute PageRank scores social network link might indicate friendship relation get meaningful scores people

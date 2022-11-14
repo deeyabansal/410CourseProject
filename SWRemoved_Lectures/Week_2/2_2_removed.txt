@@ -1,0 +1,76 @@
+ discussion vector space model
+ particular talk TF transformation
+ previous derived TF idea weighting formula using vector space model
+ assumed model actually works pretty well examples shown slide except d5 received high score
+ Indeed received highest score among documents
+ document intuitive non-relevant desirable
+ talk use TF transformation solve problem
+ Before discuss details let take look formula simple TF-IDF weighting ranking function
+ document received high score
+ formula look formula carefully involves sum matched query terms
+ inside sum matched query term particular weight
+ weight TF-IDF weighting
+ idea component two variables
+ One total number documents collection
+ document frequency
+ number documents contained
+ word
+ variables involved formula include count query term
+ W query count word document
+ look document hard realize reason received high score high count campaign
+ count campaign document 4 much higher documents contributed high score document
+ treating amount lower score document need somehow restrict contribution matching term document
+ think matching terms document carefully actually realize probably reward multiple occurrences generously
+ mean first occurrence term says lot matching term zero count count one
+ increase means lot
+ Once word document likely document talking word
+ extra occurrence top first occurrence go one two say well second occurrence kind confirmed accidental managing word
+ sure document talking word
+ imagine seen let say 50 times word document
+ adding one extra occurrence test evidence already sure document word
+ thinking way seems restrict contribution high count term idea TF Transformation
+ transformation function turn real count word term frequency weight word document
+ show x axis count axis show term frequency weight
+ previous breaking functions actually imprison rate use kind transformation
+ example 0/1 bit vector recantation actually use transformation function shown
+ Basically count 0 0 weight otherwise weight 1
+ flat
+ using term count TF weight Well linear function exactly weight count
+ seen desirable
+ want something
+ example algorithm function ca sublinear transformation looks
+ control influence really high weight lower inference
+ Yet retain inference small counts
+ Or might want even bend curve applying logarithm twice
+ people tried methods
+ indeed working better linear form transformation
+ far works best seems special transformation called BM25 transformation
+ BM stands best matching
+ transformation parameter k
+ k controls upper bound function
+ easy function upper bound look x divided x + k k non-active number numerator never able exceed denominator right upper bounded k+1
+ difference transformation function logarithm transformation
+ Which upper bound
+ Furthermore one interesting property function vary k actually simulate different transformation functions
+ Including two extremes shown
+ That 0/1 bit transformation linear transformation
+ example set k 0 function value 1
+ precisely recover 0/1 bit transformation
+ set k large number hand look linear transformation function
+ sense transformation flexible
+ allows control shape transformation
+ nice property upper bound
+ upper bound useful control inference particular term
+ prevent spammer increasing count one term spam queries might match term
+ words upper bound might ensure terms counted aggregate weights compute score
+ As said transformation function worked well far
+ summarize main point need Sublinear TF Transformation needed capture intuition diminishing return higher term counts
+ avoid dominance one single term others
+ BM25 transformation talked interesting
+ far one best-performing TF Transformation formulas
+ upper bound robust effective
+ plugging function TF-IDF weighting vector space model
+ Then end following ranking function BM25 TF component
+ already close state odd ranking function called BM25
+ discuss improve formula next
+ [ MUSIC ]

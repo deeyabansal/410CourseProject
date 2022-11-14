@@ -1,0 +1,180 @@
+ implementation text retrieval systems
+ discuss implement text retrieval method build search engine
+ main challenge manage lot text data enable query answered quickly respond many queries
+ typical text retrieval system architecture
+ documents first processed tokenizer get tokenized units example words
+ words tokens processed indexer create index data structure search engine use quickly answer query
+ query similar processing step
+ Tokenizer apprised query well text processed way
+ units matched
+ query representation given Scorer use index quickly answer user query scoring documents ranking
+ results given user
+ user look results provided feedback explicit judgements documents good documents bad
+ Or implicit feedback user anything extra
+ End user look results skip click result view
+ interacting signals used system improve ranking accuracy assuming viewed documents better skipped ones
+ search engine system divided three parts
+ first part indexer second part Scorer responds users query third part Feedback mechanism
+ typically Indexer done offline manner pre-process correct data build inventory index introduce moment
+ data structure used online module scorer process user query dynamically quickly generate search results
+ feedback mechanism done online offline depending method
+ implementation indexer scorer standard main topic next lectures
+ feedback mechanism hand variations depends method used
+ usually done algorithms specific way
+ Let first talk tokenizer
+ Tokernization normalized lexical units form semantically similar words matched
+ language English stemming often used map inflectional forms words root form
+ example computer computation computing matched root form compute
+ way different forms computing matched
+ normally good idea increase coverage documents matched query
+ always beneficial sometimes subtlest difference computer computation might still suggest difference coverage content
+ cases stemming seems beneficial
+ When tokenize text languages example Chinese might face special challenges segmenting text find word boundaries
+ Because obvious boundary space separate
+ course use language specific processing techniques
+ Once tokenization index text documents convert documents data structure enable faster search
+ basic idea precompute much basically
+ commonly used index call Inverted index
+ used many search engines support basic search algorithms
+ Sometimes indices example document index might needed order support feedback said
+ kind techniques really standard vary lot according feedback methods
+ To understand want use inverted index useful think respond single term query quickly
+ want use time think pause video
+ think pre process text data quickly respond query one word
+ Where thought question might realize best simply create list documents match every term vocabulary
+ way basically pre-construct answers
+ term simply fetch random list documents term return list user
+ fastest way respond single term
+ idea invert index actually basically
+ pre-constructed search index allows quickly find documents match particular term
+ let take look example
+ three documents documents seen previous lectures
+ Suppose want create inverted index documents
+ Then want maintain dictionary dictionary one entry term store basic statistics term
+ For example number documents match term total number code frequency term means kind duplicate occurrences term
+ example news term occur three documents count documents three
+ might realize needed count documents document frequency computing statistics used vector space model
+ Can think weighting heuristic need count
+ Well idea right inverse document frequency
+ IDF property term compute right
+ document count easy compute idea either time old index
+ At random time query
+ addition basic statistics store documents matched news entries stored file called Postings
+ case matched three documents store information three documents
+ document id document 1 frequency 1
+ tf one news second document 1 et cetera
+ list get documents match term news know frequency news documents
+ query one word news easily look table find entry go quicker postings fetch documents matching
+ let take look another term
+ time let take look word presidential
+ occur one document document 3
+ document frequency 1 occurred twice document
+ frequency count two frequency count used reachable method might use frequency assess popularity term collection
+ Similarly pointer postings case one entry term occurred one document
+ document id 3 occurred twice
+ basic idea inverted index
+ actually pretty simple right With structure easily fetch documents match term
+ basis scoring documents query
+ sometimes want store positions terms
+ many cases term occurred document
+ one position example case
+ case term occurred twice two positions
+ position information useful checking whether matching query terms actually within small window let say five words ten words
+ Or whether matching two query terms fact phrase two words
+ That checked quickly using position
+ inverted index good fast search Well talked possibility using two answer single-term query
+ easy
+ What multiple term queries Well let first look special cases Boolean query
+ Boolean query basically Boolean expression
+ want value document match term term B
+ one conjunctive query
+ Or want web documents match term term B
+ That disjunctive query
+ answer query using inverted index Well think bit obvious simply fetch documents match term fetch documents match term B
+ take intersection answer query B
+ Or take union answer query B
+ easy answer
+ quick
+ multi-term keyword query talked vector space model example match query document generate score
+ score based aggregated term weights
+ case Boolean query scoring actually done similar way
+ Basically similar disjunctive Boolean query
+ Basically B
+ take union documents match least one query term aggregate term weights
+ basic idea using inverted index scoring documents general
+ talk detail later
+ let look question index good idea Basically efficient sequentially scanning documents
+ obvious approach
+ compute score document sort
+ straightforward method slow imagine wealth lot documents
+ take long time answer query
+ question invert index much faster Well word distribution text
+ common phenomena word distribution text
+ There languages independent patterns seem stable
+ patterns basically characterized following pattern
+ words common words occur frequently text
+ account large percent occurrences words
+ words occur rarely
+ There many words occur let say document collection
+ many
+ true frequent words one corpus rare another
+ That means although general phenomenon applicable observed many cases exact words common may vary context context
+ phenomena characterized called Zipf Law
+ law says rank word multiplied frequency word roughly constant
+ formally use F ( w ) denote frequency r ( w ) denote rank word
+ Then formula
+ basically says thing mathematical term
+ Where C basically constant parameter alpha might adjusted better fit empirical observations
+ plot word frequencies sorted order easily
+ x axis basically word rank
+ r ( w ) axis word frequency F ( w )
+ curve shows product two roughly constant
+ look words They separated three groups
+ middle intermediary frequency words
+ words tend occur quite documents frequent words
+ rare
+ tend often used queries tend high TF-IDF weights
+ intermediate frequency words
+ look left part curve highest frequency words
+ They covered frequently
+ They usually words Etc
+ Those words frequent fact two frequent discriminated generally useful retrieval
+ often removed called stop words removal
+ use pretty much kind words collection kind infer words might stop words
+ Those basically highest frequency words
+ occupy lot space inverted index
+ imagine posting entries word long
+ therefore remove words save lot space inverted index
+ show tail part lot rare words
+ Those words occur frequently many words
+ Those words actually useful search user happens interested topic
+ rare often true users necessarily interested words
+ retain allow match document accurately
+ They generally high IDF
+ kind data structures use store inverted index Well two parts right
+ recall dictionary postings
+ dictionary modest size although web still large compare postings distinct
+ need fast random access entries look query term quickly
+ therefore prefer keep dictionary memory possible
+ collection large feasible collection large general possible
+ vocabulary size large obviously ca
+ general
+ data structures often use storing dictionary direct access
+ There structures hash table b-tree ca store everything memory use disk
+ try build structure allow quickly look entries
+ For postings huge
+ general direct access specific entry
+ generally look sequence document IDs frequencies documents matches query term
+ read entries sequentially
+ therefore large generally store postings disc stay disc contain information document IDs term frequency term positions etcetera
+ large compression often desirable
+ save disc space course one benefit compression occupy much space
+ help improving speed
+ Can Well know input output cost lot time
+ comparison time taken CPU
+ CPU much faster IO takes time compressing inverter index opposing files become smaller entries readings memory process query term smaller reduce amount tracking IO save lot time
+ Of course processing data uncompress data memory
+ said CPU fast
+ still save time
+ compression save disc space speed loading index
+ [ MUSIC ]

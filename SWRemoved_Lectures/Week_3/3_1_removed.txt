@@ -1,0 +1,93 @@
+ Evaluation Text Retrieval Systems previous lectures talked number Text Retrieval Methods different kinds ranking functions
+ know one works best order answer question compare means evaluate retrieval methods
+ main topic
+ First lets think evaluation already give one reason
+ That use evaluation figure retrieval method works better
+ important advancing knowledge
+ Otherwise know whether new idea works better old idea
+ beginning course talked problem text retrieval
+ compare data base retrieval
+ There mentioned text retrieval empirically defined problem
+ evaluation must rely users
+ Which system works better judged users
+ becomes challenging problem get users involved evaluation How fair comparison different method go back reasons evaluation
+ listed two reasons
+ second reason basically said another reason assess actual utility Text Regional system
+ Imagine building annual applications interesting knowing well search engine works users
+ case matches must reflect utility actual users real occasion
+ typically done using user starters using real search engine
+ second case second reason measures actually need collated utility actually use
+ Thus accurately reflect exact utility users
+ measure needs good enough tell method works better
+ usually done test collection
+ main idea talking course
+ important comparing different algorithms improving search engine system general
+ let talk measure
+ There many aspects searching measure evaluate
+ listed three major aspects
+ One effectiveness accuracy
+ How accurate search results case measuring system capability ranking relevant documents top non relevant ones
+ second efficiency
+ How quickly get results How much computing resources needed answer query case need measure space time overhead system
+ third aspect usability
+ Basically question useful system new user tasks
+ Here obviously interfaces many things important typically user studies
+ course talk mostly effectiveness accuracy measures
+ Because efficiency usability dimensions really unique search engines
+ needed without software systems
+ good coverage causes
+ evaluate search engine quality accuracy something unique text retrieval talk lot
+ main idea people proposed using test set evaluate text retrieval algorithm called Cranfield Evaluation Methodology
+ one actually developed long time ago developed 1960s
+ methodology laboratory test system components
+ Its sampling methodology useful search engine evaluation
+ evaluating virtually kinds empirical tasks example natural language processing fields problem empirical find typically need use methodology
+ big data challenging use machine learning everywhere
+ methodology popular first developed search engine application 1960s
+ basic idea approach build reusable test collection define measures
+ Once test collection built used test different algorithms
+ define measures allow quantify performance system algorithm
+ exactly work Well sample collection documents adjusted simulate real document collection search application
+ sample set queries topics
+ little simulator uses queries
+ Then relevance judgments
+ judgments documents returned queries
+ Ideally made users formulated queries
+ Because people know exactly documents used
+ finally matches quantify well system result matches ideal ranked list
+ That constructed base user relevance judgements
+ methodology useful starting retrieval algorithms test reused many times
+ provide fair comparison methods
+ criteria dataset used compare different algorithms
+ allows compare new algorithm old algorithm divided many years ago using standard
+ illustration works said need queries showing
+ Q1 Q2 etc
+ need documents called document caching right side need relevance judgments
+ basically binary judgments documents respect query
+ example D1 judged relevant Q1 D2 judged relevant well D3 judged relevant
+ Q1 etc
+ created users
+ Once basically test collection
+ two systems want compare run system queries documents system return results
+ Let say queries Q1 results
+ Here show R sub results system
+ remember talked task computing approximation relevant document set
+ R sub system approximation
+ R sub B system B approximation relevant documents
+ let take look results
+ better imagine user one let take look results
+ differences documents returned systems
+ look results feel maybe better sense many number element documents
+ among three documents returned two relevant
+ good precise
+ On hand one council say maybe B better got documents
+ got three instead two
+ one better quantify Well obviously question highly depends user task
+ depends users well
+ might even imagine users may system better
+ user interested getting random documents
+ Right case user read million users relevant documents
+ On hand one imagine user might need many random documents possible
+ For example literature survey might sigma category might find system B better
+ case define measures quantify
+ might need define multiple measures users different perspectives looking results

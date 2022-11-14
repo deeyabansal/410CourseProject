@@ -1,0 +1,99 @@
+ query likelihood probabilistic retrieval model
+ discussion probabilistic retrieval model
+ particular talk query light holder retrieval function
+ query light holder retrieval model idea model
+ How user likes document pose particular query case imagine user likes particular document presidential campaign news
+ assume user use document basis impose query try retrieve document
+ imagine use process works follows
+ Where assume query generated assembling words document
+ example user might pick word presidential document use query word
+ user pick another word campaign second query word
+ course assumption made user pose query
+ Whether user actually followed process may different question assumption allowed formerly characterize conditional probability
+ allows rely big table showed earlier use empirical data estimate probability
+ use idea derive retrieval function implement program language
+ assumption made query word independent sample
+ word basically obtained document
+ let works exactly
+ Well since completing query likelihood probability probability particular query sequence words
+ make assumption word generated independently
+ result probability query product probability query word
+ compute probability query word Well based assumption word picked document user mind
+ know probability word relative frequency word document
+ example probability presidential given document
+ Would count presidential document divided total number words document document
+ assumptions actually simple formula retrieval
+ use rank documents
+ model work Let take look
+ Here example documents seen
+ Suppose query presidential campaign formula top
+ score document Well simple
+ count many times seen presidential many times seen campaigns etc
+ 44 seen presidential twice
+ 2 length document 4 multiplied 1 length document 4 probability campaign
+ similarly get probabilities two documents
+ look numbers formulas scoring documents seems make sense
+ Because assume d3 d4 length looks nominal rank d4 d3 d2
+ expect looks captures TF query state seems work well
+ However try different query one presidential campaign update might problem
+ Well problem Well think update
+ none documents mentioned update
+ according assumption user pick word document generate query probability obtaining word update Would 0
+ causes problem cause documents zero probability generating query
+ fine zero probability d2 non-relevant okay 0 d3 d4 longer distinguish
+ What worse ca even distinguish d2
+ obviously desirable
+ [ INAUDIBLE ] result think caused problem examine assumptions made derive ranking function
+ examine assumptions carefully realize caused problem take moment think
+ What think reason update zero probability fix think moment realize made assumption every query word must drawn document user mind
+ order fix assume user could drawn word necessarily document
+ improved model
+ An improvement say well instead drawing word document let imagine user actually draw word document model
+ show model
+ assume document generated using unigram language model
+ model necessarily assign zero probability update fact assume model assign zero probability word
+ thinking way generation process little bit different
+ user model mind instead particular document
+ Although model estimated based document
+ user generate query using singular process
+ Namely pick word example presidential another word campaign
+ difference time pick word update even though update occur document potentially generate query word update
+ query updated 1 times 0 probabilities
+ fix problem
+ reasonable thinking user looking general way unique language model instead fixed document
+ compute query likelihood make sum wide involved two steps
+ first one compute model call document language model
+ For example shown two pulse models major based two documents
+ given query data mining algorithms thinking compute likelihood query
+ making independence assumptions could probability product probability query word
+ documents score two documents rank
+ basic idea query likelihood retrieval function
+ generally ranking function look following
+ Here assume query n words w1 wn scoring function
+ ranking function probability observe query given user thinking document
+ assume product probabilities individual words
+ based independent assumption
+ actually often score document query using log query likelihood shown second line
+ avoid lot small probabilities mean multiply together
+ could cause flow might loose precision transforming value algorithm function
+ maintain order documents yet avoid flow problem
+ take longer transformation course product become sum second line
+ sum query words inside sum one probability word given document
+ rewrite sum different form
+ first sum sum query words query word
+ sum sum possible words
+ put counter word query
+ Essentially considering words query word query count 0
+ still considering n words
+ using different form take sample words vocabulary
+ course word might occur multiple times query
+ That count
+ part log probability word given document language model
+ retrieval function actually know count word query
+ thing know document language model
+ Therefore converted retrieval problem include problem estimating document language model
+ compute probability query word given document
+ different estimation methods lead different ranking functions
+ different way place document vector space leads different ranking function vector space model
+ Here different ways estimate lead different ranking function query likelihood
+ [ MUSIC ]

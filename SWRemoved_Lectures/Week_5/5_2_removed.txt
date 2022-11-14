@@ -1,0 +1,120 @@
+ talking feedback text retrieval
+ Particularly talk feedback vector space model
+ As discussed case feedback task text retrieval system removed examples improved retrieval accuracy
+ positive examples
+ Those documents assume relevant charged relevant
+ All documents viewed users
+ negative examples
+ Those documents known non-relevant
+ They documents skipped users
+ general method vector space model feedback modify query vector
+ want place query vector better position make accurate
+ mean exactly Well think query vector mean something vector elements
+ general mean might add new terms
+ Or might weight old terms assign weights new terms
+ As result general query terms
+ often call query expansion
+ effective method vector space model feedback called Rocchio Feedback actually proposed several decades ago
+ idea quite simple
+ illustrate idea using two dimensional display documents collection query vector
+ query vector center documents
+ use query back use narrative function find similar documents basically circle documents basically top-ranked documents
+ process relevant documents relevant documents example relevant etc
+ minuses negative documents
+ goal trying move query back position improve retrieval accuracy
+ By looking diagram think Where move query vector improve retrieval accuracy Intuitively want move query vector want think pause video
+ think picture realize order work well case want query vector close positive vectors possible
+ That means ideally want place query vectors somewhere
+ Or want move query vector closer point
+ exactly point Well want relevant documents rank top want center relevant documents right Because draw circle around one get relevant documents
+ means move query vector towards centroid relevant document vectors
+ basically idea Rocchio
+ Of course consider centroid negative documents want move away negative documents
+ match talking moving vector closer vec away vectors
+ means formula
+ Here original query vector average basically centroid vector relevant documents
+ When take average vectors computing centroid vectors
+ Similarly average non-relevant document
+ essentially non-relevant documents
+ three parameters alpha beta gamma
+ They controlling amount movement
+ When add two vectors together moving query vector closer centroid
+ add together
+ When subtracted part kind move query vector away centroid
+ main idea Rocchio feedback
+ done get new query vector used score documents
+ new query vector reflect move original query vector toward relevant centroid vector away non-relevant value
+ Okay let take look example
+ example seen earlier
+ Only deemed display actual documents
+ showed vector representation documents
+ five documents read documents right
+ displayed red
+ term vectors
+ assumed weights
+ lot terms zero weights course
+ negative arguments
+ There two
+ There another one
+ Rocchio method first compute centroid category
+ let look centroid vector positive documents simply easy
+ add one corresponding element
+ take average
+ add corresponding elements take average
+
+ end one
+ average vector two centroid two
+ Let look centroid negative documents
+ basically
+ take average three elements
+ corresponding elements three vectors forth
+ end one
+ Rocchio feedback method combine original query vector
+ let combine together
+ Well basically
+ parameter alpha controlling original query times weight one
+ beta control inference positive centroid weight
+
+ That comes
+ All right
+ negative weight gamma
+ way come course negative centroid
+ exactly terms one term
+ new vector
+ use new query vector one rank documents
+ imagine happen right Because movement one matches red documents much better moved vector closer
+ penalize black documents non relevent documents
+ precisely wanted feedback
+ course apply method practice one potential problem original query four terms zero
+ query explaining merging many times non zero weights
+ calculation involve terms
+ practice often truncate matter retain terms highest weights
+ let talk use method practice
+ mentioned often truncated vector
+ Consider small number words highest weights centroid vector
+ efficiency concern
+ said negative examples non-relevant examples tend useful especially compared positive examples
+ think
+ One reason negative documents tend distract query directions
+ take average really tell exactly moving
+ Whereas positive documents tend clustered together
+ point consistent direction
+ means sometimes use negative examples
+ note cases difficult queries results negative negative feedback useful
+ Another thing avoid over-fitting
+ That means keep relatively high weight original query terms
+ Why Because sample feedback Is relatively small sample
+ want overly trust small sample
+ original query terms still important
+ Those terms heightened user user decided terms important
+ order prevent over-fitting drifting prevent topic drifting due bias toward feed backing symbols
+ generally keep pretty high weight original terms safe
+ especially true pseudo relevance feedback
+ method used relevance feedback pseudo-relevance feedback
+ case pseudo-feedback prime beta set smaller value relevant examples assumed relevant
+ They reliable relevance feedback
+ case relevance feedback obviously could use larger value
+ parameters set empirically
+ Rocchio Method usually robust effective
+ still popular method feedback
+ [ MUSIC ]

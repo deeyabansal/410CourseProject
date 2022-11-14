@@ -1,0 +1,151 @@
+ talk language model
+ talk simplest language model called unigram language model happens useful model text retrieval
+ finally class use language model
+ What language model Well probability distribution word sequences
+ show one
+ model gives sequence Today Wednesday probability
+
+ give Today Wednesday small probability non-grammatical
+ probabilities given sentences sequences words vary lot depending model
+ Therefore clearly context dependent
+ ordinary conversation probably Today Wednesday popular among sentences
+ Imagine context discussing apply math maybe eigenvalue positive higher probability
+ means used represent topic text
+ model regarded probabilistic mechanism generating text
+ often called generating model
+ mean imagine mechanism visualised stochastic system generate sequences words
+ ask sequence send sequence device want might generate example Today Wednesday could generated sequences
+ example many possibilities right sense view data basically sample observed generating model
+ model useful Well mainly quantify uncertainties natural language
+ Where uncertainties come Well one source simply ambiguity natural language discussed earlier
+ Another source complete understanding lack knowledge understand language
+ case uncertainties well
+ let show examples questions answer language model interesting applications different ways
+ Given John feels likely happy opposed habit next word sequence words obviously useful speech recognition happy habit similar acoustic sound acoustic signals
+ look language model know John feels happy far likely John feels habit
+ Another example given observe baseball three times game news article likely sports obviously related text categorization information retrieval
+ given user interested sports news likely user use baseball query clearly related query likelihood discussed previous
+ let look simplest language model called unigram language model
+ case assume generate text generating word independently
+ means probability sequence words product probability word
+ normally independent right single word language make far likely observe model seen language
+ assumption necessarily true make assumption simplify model
+ model precisely N parameters N vocabulary size
+ one probability word probabilities must sum 1
+ strictly speaking actually N-1 parameters
+ As said text assumed assembled drawn word distribution
+ example ask device model stochastically generate words instead sequences
+ instead giving whole sequence Today Wednesday gives one word
+ get kinds words
+ assemble words sequence
+ still allow compute probability Today Wednesday product three probabilities
+ As even though asked model generate sequences actually allows compute probability sequences model needs N parameters characterize
+ That means specify probabilities words model behavior completely specified
+ Whereas make assumption specify probabilities kinds combinations words sequences
+ making assumption makes much easier estimate parameters
+ let specific example
+ Here show two unigram language models probabilities
+ high probability words shown top
+ first one clearly suggests topic text mining high probability related topic
+ second one related health
+ ask question likely observe particular text two models suppose sample words form document
+ Let say take first distribution sample words What words think generated making text maybe mining maybe another word Even food small probability might still able show
+ general high probability words likely show often
+ imagine general text looks text mining
+ fact small probability might able actually generate actual text mining paper
+ actually meaningful although probability small
+ extreme case might imagine might able generate text mining paper accepted major conference
+ case probability even smaller
+ non-zero probability assume none words non-zero probability
+ Similarly second topic imagine generate food nutrition paper
+ That mean generate paper text mining distribution
+ probability small maybe smaller even generating paper accepted major conference text mining
+ point keeping distribution talk probability observing certain kind text
+ Some texts higher probabilities others
+ let look problem different way
+ Suppose available particular document
+ case many abstract text mining table word counts
+ total number words 100
+ question ask estimation question
+ ask question model one distribution used generate text assuming text generated assembling words distribution
+ guess What decide probabilities text mining
+
+ Suppose view second try think best guess
+ lot people guessed well best guess text probability 10 100 seen text 10 times total 100 words
+ simply normalize counts
+ fact word justified intuition consistent mathematical derivation
+ called maximum likelihood estimator
+ estimator assume parameter settings give observe data maximum probability
+ That means change probabilities probability observing particular text data somewhat smaller
+ simple formula
+ Basically need look count word document divide total number words document document lens
+ Normalize frequency
+ consequence course assign zero probabilities unseen words
+ observed word incentive assign non-zero probability using approach
+ Why Because take away probability mass observed words
+ obviously maximize probability particular observed text data
+ one still question whether best estimate
+ Well answer depends kind model want find right estimator gives best model based particular data
+ interested model explain content full paper abstract might second thought right thing words body article zero probabilities even though observed abstract
+ cover little bit later class query likelihood model
+ let take look possible uses language models
+ One use simply use represent topics
+ show general English background texts
+ use text estimate language model model might look
+ Right top common words
+ common words rare words bottom
+ background language model
+ represents frequency words English general
+ background model
+ let look another text maybe time look computer science research papers
+ collection computer science research papers mentioned use maximum likelihood estimator simply normalize frequencies
+ case get distribution looks
+ On top looks similar words occur everywhere common
+ go words related computer science computer software text etc
+ although might words example computer imagine probability much smaller probability
+ many words common general English
+ distribution characterizes topic corresponding text
+ look even smaller text
+ case let look text mining paper
+ another distribution expected occur top
+ sooner text mining association clustering words relatively high probabilities
+ contrast distribution text relatively small probability
+ means based different text data different model model captures topic
+ call document language model call collection language model
+ later used retrieval function
+ let look another use model
+ Can statistically find words semantically related computer find words Well first thought let take look text match computer
+ take look documents contain word computer
+ Let build language model
+ words
+ Well surprisingly common words top always
+ case language model gives conditional probability seeing word context computer
+ common words naturally high probabilities
+ computer software relatively high probabilities
+ use model say words semantically related computer
+ ultimately get rid common words
+ How turns possible use language model
+ suggest think
+ know words common want kind get rid What model tell Well maybe think
+ background language model precisely tells information
+ tells common general
+ use background model know words common words general
+ surprising observe context computer
+ Whereas computer small probability general surprising seen computer probability true software
+ use two models somehow figure words related computer
+ For example simply take ratio group probabilities normalize topic language model probability word background language model
+ take ratio top computer ranked followed software program words related computer
+ Because occur frequently context computer frequently whole collection whereas common words high probability
+ fact ratio 1 really related computer
+ By taking sample text contains computer really occurrences general
+ shows even simple language models limited analysis semantics
+ talked language model basically probability distribution text
+ talked simplest language model called unigram language model word distribution
+ talked two uses language model
+ One represent topic document collection general
+ discover word associations
+ next talk language model used design retrieval function
+ Here two additional readings
+ first textbook statistical natural language processing
+ second article survey statistical language models lot pointers research work
+ [ MUSIC ]

@@ -1,0 +1,154 @@
+ discussion feedback text retrieval
+ particular talk feedback language modeling approaches
+ derive query likelihood ranking function making various assumptions
+ As basic retrieval function formulas worked well
+ think feedback information little bit awkward use query likelihood perform feedback lot times feedback information additional information query
+ assume query generated assembling words language model query likelihood method
+ kind unnatural sample words form feedback documents
+ As result researchers proposed way generalize query likelihood function called Kullback-Leibler divergence retrieval model
+ model actually make query likelihood retrieval function much closer vector space model
+ Yet form language model regarded generalization query likelihood sense cover query likelihood special case
+ case feedback achieved simply query model estimation updating
+ similar Rocchio updates query vector
+ let KL-divergence retrieval model
+ top query likelihood retrieval function one
+ KL-divergence called cross entropy retrieval model basically generalize frequency part language model
+ basically difference given probabilistic model characterize user looking versus count query words
+ difference allows plug various different ways estimate
+ estimated many different ways including using feedback information
+ called KL-divergence interpreted matching KL-divergence two distributions
+ One query model denoted distribution
+ One document language model smooth collection language model course
+ talk detail find references
+ called cross entropy fact ignore terms KL-divergence function end actually cross entropy
+ terms information theory
+ anyway purposes two formulas look almost identical except probability word given query language model
+ sum words document nonzero probability query model
+ kind generalization sum matching query words
+ easily recover query likelihood retrieval function simply setting query model relative frequency word query
+ easy plug eliminate query length constant
+ get exactly
+ equivalence
+ KL-divergence model regarded generalization query likelihood cover query likelihood special case
+ allow much
+ use KL-divergence model feedback
+ picture shows first estimate document language model estimate query language model compute KL-divergence
+ often denoted D
+ basically means exactly vector space model compute vector document compute another vector query compute distance
+ Only vectors special forms probability distributions
+ get results find feedback documents
+ Let assume mostly positive documents although could consider kinds documents
+ could Rocchio compute another language model called feedback language model
+ Again another vector computing centroid vector Rocchio
+ model combined original query model using linear interpolation give update model Rocchio
+ parameter alpha control amount feedback
+ set zero essentially feedback
+ set one get full feedback ignore original query
+ generally desirable right unless absolutely sure seen lot relevant documents query terms important
+ course main question compute theta F big question rest easy
+ talk one approaches many approaches course
+ approach based generative model 'm show works
+ use generative mixture model
+ picture shows model feedback model want estimate
+ basis feedback documents
+ Let say observing positive documents
+ clicked documents users random documents judged users simply top ranked documents assume relevant
+ imagine compute centroid documents using language model
+ One approach simply assume documents generated language model
+ As could normalize word frequency get word distribution
+ question whether distribution good feedback
+ Well imagine top ranked word What think Well words common words
+ As always language model top ranked words actually common words etc
+ good feedback adding lot words query interpolate original query model
+ good need something
+ particular trying get rid common words
+ seen actually one way using background language model case learning associations words words related word computer
+ could another way talk another approach principled approach
+ case say well said common words documents belong topic model right assume well words generated background language model generate words example
+ use maximum likelihood estimate note words must generated model model forced assign high probabilities word occurs frequently
+ Note order reduce probability model another model one help explain word
+ case appropriate use background language model achieve goal model assign high probabilities common words
+ approach assume machine generating words work follows
+ source control
+ Imagine flip coin decide distribution use
+ With probability lambda coin shows head use background language model
+ sample word model
+ With probability 1 minus lambda decide use known topic model estimate
+ generate word
+ make assumption whole thing one model call mixture model two distributions mixed together
+ actually know distribution used
+ think whole thing one model still ask words still give word random manner
+ course word show depend distribution distribution
+ addition depend lambda say lambda high always use background distribution get different words
+ Then say well lambda small use
+ parameters model
+ thinking way basically exactly
+ use maximum likelihood estimator adjust model estimate parameters
+ Basically adjust parameter best explain data
+ difference asking model known explain
+ rather ask whole model mixture model explain data
+ Because got help background model assign high probabilities words
+ As result assign higher probabilities words common high probability
+ common
+ common high probabilities according maximum likelihood estimate method
+ rare get much help background model
+ As result topic model must assign high probabilities
+ high probability words according topic model common rare background
+ basically little bit idea weighting
+ allow achieve effect removing topic words meaningless feedback
+ mathematically compute likelihood local likelihood feedback documents
+ note another parameter lambda assume lambda denotes noise feedback document
+ let say set parameter
+ Let say 50 % words noise 90 % noise
+ assumed fixed
+ assume fixed probabilities parameters simple unigram language model
+ n parameters n number words
+ likelihood function look
+ similar global likelihood function except inside logarithm sum
+ sum consider two distributions
+ one used depend lambda form
+ mathematically function theta unknown variables
+ function
+ All values known except guy
+ choose probability distribution maximize log likelihood idea maximum likelihood estimate mathematical problem
+ solve optimization problem
+ essentially try theta values find one gives whole thing maximum probability
+ well-defined math problem
+ Once done obtain theta F interpolated original query model feedback
+ examples feedback model learned web document collection
+ pseudo-feedback use top ten documents use mixture model
+ query airport security
+ What first retrieve ten documents web database course pseudo-feedback
+ feed mixture model ten document set
+ words learned using approach
+ probability word given feedback model cases
+ cases highest probability words include relevant words query
+ airport security example query words still show high probabilities case naturally occur frequently top ranked documents
+ beverage alcohol bomb terrorist etc
+ relevant topic combined original query help much accurately documents
+ help bring documents mention words maybe example airport bomb example
+ pseudo-feedback works
+ shows model really works picks related words query
+ What interesting look two tables compare case lambda set small value common words
+ means well use background model often
+ Remember lambda confuses probability using background model generate text
+ rely much background model still use topic model account common words
+ Whereas set lambda high value use background model often explain words
+ Then burden expanding common words feedback documents topic model
+ result topic model discriminative
+ contains relevant words without common words
+ added original query achieve feedback
+ summarize talked feedback language model approach
+ general feedback learn examples
+ examples assumed examples pseudo-examples assume top ten documents assumed relevant
+ They could based user interactions feedback based clickthroughs implicit feedback
+ talked three major feedback scenarios relevance feedback pseudo feedback implicit feedback
+ talked use Rocchio feedback vector space model use query model estimation feedback language model
+ briefly talked mixture model basic idea
+ There many methods
+ For example relevance model effective model estimating query model
+ read methods references listed end
+ two additional readings
+ first one book systematic review discussion language models information retrieval
+ second one important research paper relevance based language models effective way computing query model
+ [ MUSIC ]

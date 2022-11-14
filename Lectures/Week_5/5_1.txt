@@ -1,0 +1,32 @@
+So in this lecture, we will continue with the discussion of text retrieval methods.
+Play video starting at ::18 and follow transcript0:18
+In particular, we're going to talk about the feedback in text retrieval.
+Play video starting at ::24 and follow transcript0:24
+This is a diagram that shows the retrieval process.
+Play video starting at ::30 and follow transcript0:30
+We can see the user would type in a query.
+Play video starting at ::37 and follow transcript0:37
+And then, the query would be sent to a retrieval engine or search engine, and the engine would return results. These results would be issued to the user.
+Play video starting at ::49 and follow transcript0:49
+Now, after the user has seen these results, the user can actually make judgements. So for example, the user says, well, this is good and this document is not very useful and this is good again, etc. Now, this is called a relevance judgment or relevance feedback because we've got some feedback information from the user based on the judgements. And this can be very useful to the system, knowing what exactly is interesting to the user. So the feedback module would then take this as input and also use the document collection to try to improve ranking. Typically it would involve updating the query so the system can now render the results more accurately for the user. So this is called relevance feedback. The feedback is based on relevance judgements made by the users. Now, these judgements are reliable but the users generally don't want to make extra effort unless they have to. So the down side is that it involves some extra effort by the user.
+Play video starting at :1:57 and follow transcript1:57
+There's another form of feedback called pseudo relevance feedback, or blind feedback, also called automatic feedback. In this case, we can see once the user has gotten [INAUDIBLE] or in fact we don't have to invoke users. So you can see there's no user involved here.
+Play video starting at :2:14 and follow transcript2:14
+And we simply assume that the top rank documents to be relevant. Let's say we have assumed top 10 as relevant.
+Play video starting at :2:25 and follow transcript2:25
+And then, we will then use this assume the documents to learn and to improve the query.
+Play video starting at :2:34 and follow transcript2:34
+Now, you might wonder, how could this help if we simply assume the top rank of documents? Well, you can imagine these top rank of documents are actually similar to relevant documents even if they are not relevant. They look like relevant documents. So it's possible to learn some related terms to the query from this set. In fact, you may recall that we talked about using language model to analyze what association, to learn related words to the word of computer.
+Play video starting at :3:9 and follow transcript3:09
+And there, what we did is we first use computer to retrieve all the documents that contain computer. So imagine now the query here is a computer. And then, the result will be those documents that contain computer. And what we can do then is to take the top n results. They can match computer very well. And we're going to count the terms in this set. And then, we're going to then use the background language model to choose the terms that are frequent in this set but not frequent in the whole collection. So if we make a contrast between these two what we can find is that related to terms to the word computer. As we have seen before. And these related words can then be added to the original query to expand the query. And this would help us bring the documents that don't necessarily match computer but match other words like program and software. So this is very effective for improving the search result.
+Play video starting at :4:18 and follow transcript4:18
+But of course, pseudo-relevancy values are completely unreliable. We have to arbitrarily set a cut off. So there's also something in between called implicit feedback. In this case, what we do is we do involve users, but we don't have to ask users to make judgments. Instead, we're going to observe how the user interacts with the search results. So in this case we'll look at the clickthroughs. So the user clicked on this one. And the user viewed this one. And the user skipped this one. And the user viewed this one again.
+Play video starting at :4:50 and follow transcript4:50
+Now, this also is a clue about whether the document is useful to the user. And we can even assume that we're going to use only the snippet here in this document, the text that's actually seen by the user instead of the actual document of this entry. The link they are saying web search may be broken but it doesn't matter. If the user tries to fetch this document because of the displayed text we can assume these displayed text is probably relevant is interesting to you so we can learn from such information. And this is called interesting feedback. And we can, again, use the information to update the query. This is a very important technique used in modern. Now, think about the Google and Bing and they can collect a lot of user activities while they are serving us. So they would observe what documents we click on, what documents we skip. And this information is very valuable. And they can use this to improve the search engine.
+Play video starting at :5:59 and follow transcript5:59
+So to summarize, we talked about the three kinds of feedback here. Relevant feedback where the user makes explicit judgements. It takes some user effort, but the judgment information is reliable. We talk about the pseudo feedback where we seem to assume top brand marking will be relevant. We don't have to involve the user therefore we could do that, actually before we return the results to the user.
+Play video starting at :6:24 and follow transcript6:24
+And the third is implicit feedback where we use clickthroughs.
+Play video starting at :6:29 and follow transcript6:29
+Where we involve the users, but the user doesn't have to make it explicitly their fault. Make judgement. [MUSIC]
+: Added to Selection. Press [⌘ + S] to save as a note
