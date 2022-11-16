@@ -1,0 +1,215 @@
+ Natural Language Content Analysis
+ As picture really first step process text data
+ Text data natural languages
+ computers understand natural languages extent order make use data
+ topic
+ cover three things
+ First natural language processing main technique processing natural language obtain understanding
+ second state art NLP stands natural language processing
+ Finally cover relation natural language processing text retrieval
+ First NLP Well best way explain think text foreign language understand
+ order understand text basically computers facing
+ looking simple sentence dog chasing boy playground
+ problems understanding sentence
+ imagine computer order understand
+ Well general following
+ First know dog noun chasing verb etc
+ called lexical analysis part-of-speech tagging need figure syntactic categories words
+ first step
+ After figure structure sentence
+ example shows dog go together form noun phrase
+ wo dog go first
+ structures right
+ structure shows might get look sentence try interpret sentence
+ Some words go together first go together words
+ show noun phrases intermediate components verbal phrases
+ Finally sentence
+ get structure
+ need something called semantic analysis parsing
+ may parser accompanying program automatically created structure
+ At point know structure sentence still know meaning sentence
+ go semantic analysis
+ mind usually map sentence already know knowledge base
+ For example might imagine dog looks
+ There boy activity
+ computer use symbols denote
+ use symbol ( d1 ) denote dog
+ ( b ) 1 denote boy ( p ) 1 denote playground
+ chasing activity happening relationship chasing connects symbols
+ computer obtain understanding sentence
+ representation could infer things might indeed naturally think something else read text called inference
+ example believe someone chased person might scared rule computers could infer boy maybe scared
+ extra knowledge infer based understanding text
+ even go understand person say sentence
+ use language
+ called pragmatic analysis
+ order understand speak actor sentence right say something basically achieve goal
+ There purpose
+ use language
+ case person said sentence might reminding another person bring back dog
+ That could one possible intent
+ To reach level understanding require steps computer go steps order completely understand sentence
+ Yet humans trouble understanding instantly get everything
+ There reason
+ That large knowledge base brain use common sense knowledge help interpret sentence
+ Computers unfortunately hard obtain understanding
+ They knowledge base
+ They still incapable reasoning uncertainties makes natural language processing difficult computers
+ fundamental reason natural language processing difficult computers simply natural language designed computers
+ Natural languages designed communicate
+ There languages designed computers
+ For example programming languages
+ Those harder right natural languages designed make communication efficient
+ As result omit lot common sense knowledge assume everyone knows
+ keep lot ambiguities assume receiver hearer could know decipher ambiguous word based knowledge context
+ There need demand different words different meanings
+ could overload word different meanings without problem
+ Because reasons makes every step natural language processing difficult computers ambiguity main difficulty
+ common sense reasoning often required hard
+ let give examples challenges
+ Consider word level ambiguity
+ word different syntactic categories
+ For example design noun verb
+ word root may multiple meanings
+ square root math sense root plant
+ might able think meanings
+ There syntactical ambiguities
+ For example main topic natural language processing actually interpreted two ways terms structure
+ Think moment figure
+ usually think processing natural language could think say language processing natural
+ example synaptic ambiguity
+ What different structures applied sequence words
+ Another common example ambiguous sentence following
+ man saw boy telescope
+ case question telescope
+ called prepositional phrase attachment ambiguity PP attachment ambiguity
+ generally problem ambiguities lot background knowledge help disambiguate ambiguity
+ Another example difficulty anaphora resolution
+ think sentence John persuaded Bill buy TV
+ question refer John Bill something use background context figure
+ Finally presupposition another problem
+ Consider sentence quit smoking
+ obviously implies smoked
+ imagine computer wants understand subtle differences meanings
+ use lot knowledge figure
+ maintain large knowledge base meanings words connected common sense knowledge world
+ difficult
+ result steep perfect fact far perfect understanding natural language using computers
+ slide sort gains simplified view state art technologies
+ part speech tagging pretty well showed 97 % accuracy
+ number obviously based certain dataset take literally
+ shows pretty well
+ still perfect
+ terms parsing partial parsing pretty well
+ That means get noun phrase structures verb phrase structure segment sentence dude correct terms structure
+ evaluation results seen 90 % accuracy terms partial parsing sentences
+ Again say numbers relative dataset
+ datasets numbers might lower
+ Most existing work evaluated using news dataset
+ lot numbers less biased toward news data
+ Think social media data accuracy likely lower
+ terms semantical analysis far able complete understanding sentence
+ techniques allow partial understanding sentence
+ could mention
+ For example techniques allow extract entities relations mentioned text articles
+ For example recognizing dimensions people locations organizations etc text
+ called entity extraction
+ may able recognize relations
+ For example person visited place person met person company acquired another company
+ Such relations extracted using computer current Natural Language Processing techniques
+ They perfect well entities
+ Some entities harder others
+ word sense disintegration extend
+ figure whether word sentence certain meaning another context computer could figure different meaning
+ Again perfect something direction
+ sentiment analysis meaning figure whether sentence positive negative
+ especially useful review analysis example
+ examples semantic analysis
+ help obtain partial understanding sentences
+ giving complete understanding showed sentence
+ still help gain understanding content
+ useful
+ terms inference yet probably general difficulty inference uncertainties
+ general challenge artificial intelligence
+ probably complete semantical representation natural [ INAUDIBLE ] text
+ hard
+ Yet domains perhaps limited domains lot restrictions word uses may able perform inference extent
+ general really reliably
+ Speech act analysis far done analysis special cases
+ roughly gives idea state art
+ talk little bit ca ca even 100 % part speech tagging
+ looks simple task think example two uses may different syntactic categories try make fine grained distinctions
+ easy figure differences
+ hard general complete parsing
+ sentence saw example
+ ambiguity hard disambiguate imagine example use lot knowledge context sentence background order figure actually telescope
+ although sentence looks simple actually pretty hard
+ cases sentence long imagine four five prepositional phrases even possibilities figure
+ harder precise deep semantic analysis
+ example
+ sentence `` John owns restaurant
+ '' How define owns exactly word something understand hard precisely describe meaning computers
+ result robust general Natural Language Processing techniques process lot text data
+ shallow way meaning superficial analysis
+ For example parts speech tagging partial parsing recognizing sentiment
+ deep understanding really understanding exact meaning sentence
+ On hand deep understanding techniques tend scale well meaning fill restricted text
+ restrict text domain use words techniques tend work well
+ They may work well based machine learning techniques data similar training data program trained
+ generally work well data different training data
+ pretty much summarizes state art Natural Language Processing
+ Of course within short amount time ca really give complete view NLP big field
+ expect multiple courses Natural Language Processing topic
+ relevance topic talk useful know background case happen exposed
+ mean Text Retrieval Well Text Retrieval dealing kinds text
+ hard restrict text certain domain
+ often dealing lot text data
+ means NLP techniques must general robust efficient
+ implies use fairly shallow NLP techniques text retrieval
+ fact search engines use something called bag words representation
+ probably simplest representation possibly think
+ That turn text data simply bag words
+ Meaning keep individual words ignore orders words
+ keep duplicated occurrences words
+ called bag words representation
+ When represent text way ignore lot valid information
+ That makes harder understand exact meaning sentence lost order
+ yet representation tends actually work pretty well search tasks
+ partly search task difficult
+ matching query words text document chances document topic although exceptions
+ comparison tasks example machine translation require understand language accurately
+ Otherwise translation wrong
+ comparison tasks relatively easy
+ Such representation often sufficient representation major search engines Google Bing using
+ Of course put parentheses course many queries answered well current search engines require replantation go beyond bag words replantation
+ That require natural language processing done
+ There another reason used sophisticated NLP techniques modern search engines
+ retrieval techniques actually naturally solved problem NLP
+ one example word sense disintegration
+ Think word Java
+ could mean coffee could mean program language
+ look word anome ambiguous user uses word query usually words
+ For example 'm looking usage Java applet
+ When applet implies Java means program language
+ contest help naturally prefer documents Java referring program languages
+ Because documents probably match applet well
+ Java occurs documents means coffee never match applet small probability
+ case retrieval techniques naturally achieve goal word
+ Another example technique called feedback talk later lectures
+ technique allow add additional words query additional words could related query words
+ words help matching documents original query words occurred
+ achieves extent semantic matching terms
+ techniques helped bypass difficulties natural language processing
+ However long run still need deeper natural language processing techniques order improve accuracy current search engines
+ particularly needed complex search tasks
+ Or question answering
+ Google recently launched knowledge graph one step toward goal knowledge graph contain entities relations
+ beyond simple bag words replantation
+ technique help improve search engine utility significantly although open topic research exploration
+ sum talked NLP talked state techniques
+ What
+ finally explain bag words replantation remains dominant replantation used modern search engines even though deeper NLP needed future search engines
+ want know take look additional readings
+ cited one good starting point
+ Thanks
+ [ MUSIC ]

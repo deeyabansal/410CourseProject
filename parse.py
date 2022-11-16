@@ -64,6 +64,7 @@ def delete_mp_stop_words(filename):
 if __name__ == '__main__':
     # print("Removing timings")
     # for i in range(1, 7):
+    #     delete_timings("Lectures/Week_1/1_" + str(i) + ".txt")
     #     delete_timings("Lectures/Week_2/2_" + str(i) + ".txt")
     #     delete_timings("Lectures/Week_3/3_" + str(i) + ".txt")
     # for i in range(1, 8):
@@ -75,6 +76,7 @@ if __name__ == '__main__':
         
     # print("Removing Stop Words")
     # for i in range(1, 7):
+    #     delete_stop_words("Parsed_Lectures/Week_1/1_" + str(i) + "_parsed.txt")
     #     delete_stop_words("Parsed_Lectures/Week_2/2_" + str(i) + "_parsed.txt")
     #     delete_stop_words("Parsed_Lectures/Week_3/3_" + str(i) + "_parsed.txt")
     # for i in range(1, 8):
@@ -86,6 +88,6 @@ if __name__ == '__main__':
 
     # file = open("SWRemoved_Lectures/Week_2/2_1_removed.txt")
     delete_mp_stop_words("MPs/MP1.txt")
-    #print("Ranking Function")
-   # metapy.index.OkapiBM25(k1=2.75,b=0.65,k3=0)
+    # print("Ranking Function")
+    # metapy.index.OkapiBM25(k1=2.75,b=0.65,k3=0)
     

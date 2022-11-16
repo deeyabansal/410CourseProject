@@ -1,0 +1,150 @@
+ talk instantiate vector space model get specific ranking function
+ discussion vector space model one particular approach design ranking function
+ talk use general framework vector space model guidance instantiate framework derive specific ranking function
+ cover symbolist instantiation framework
+ discussed previous vector space model really framework
+ say
+ As discussed previous vector space model really framework
+ say many things
+ example shows say define dimension
+ say place document vector space
+ say place query vector vector space
+ finally say measure similarity query vector document vector
+ imagine order implement model say specifically compute vectors
+ What exactly xi exactly yi determine place document vector place query vector
+ course need say exactly similarity function
+ provide definition concepts define dimensions xi yi namely weights terms queries document able place document vectors query vectors well defined space
+ specify similarity function well defined ranking function
+ let think instantiation
+ Actually suggest pause point spend couple minutes think
+ Suppose asked implement idea
+ come idea vector space model still figured compute vectors exactly define similarity function
+ What think couple minutes proceed
+ let think simplest ways instantiating vector space model
+ First define dimension Well obvious choice use word vocabulary define dimension
+ show N words vocabulary
+ Therefore N dimensions
+ Each word defines one dimension
+ basically bag words let look place vectors space
+ Again simplest strategy use Bit Vector represent query document
+ means element xi yi taking value either zero 1
+ When 1 means corresponding word present document query
+ When 0 mean absent
+ imagine user types words query query vector 1 many many zeros
+ document vector generally 1 course
+ many zeros since vocabulary generally large
+ Many words really occur document
+ Many words occasionally occur document
+ lot words absent particular document
+ placed documents query vector space
+ Let look measure similarity
+ commonly used similarity measure Dot Product
+ Dot Product two vectors simply defined sum products corresponding elements two vectors
+ product x1 y1
+
+ x2 multiplied y2
+ finally xn multiplied yn
+ take sum
+ Dot Product
+ represent general way using sum
+ one many different ways measuring similarity
+ defined dimensions defined vectors defined similarity function
+ finally simplest vector space model based bit vector [ INAUDIBLE ] dot product similarity bag words [ INAUDIBLE ]
+ formula looks
+ formula
+ actually particular retrieval function ranking function right finally implement function using program language rank documents query
+ point pause think interpreted score
+ gone process modeling retrieval problem using vector space model
+ make assumptions place vectors vector space define similarity
+ end got specific retrieval function shown
+ next step think whether retrieval function actually makes sense right Can expect function actually perform well used rank documents user queries worth thinking value calculating
+ end get number
+ number mean Is meaningful spend couple minutes sort think
+ course general question believe good ranking function Would actually work well think interpret value
+ Is actually meaningful Does mean something related well document matched query
+ order assess whether simplest vector space model actually works well let look example
+ show sample documents sample query
+ query news presidential campaign
+ five documents
+ They cover different terms query
+ look documents moment may realize documents probably relevant others probably relevant
+ asked rank documents rank basically ideal ranking
+ When humans examine documents try rank
+ think moment take look slide
+ perhaps pausing
+ think agree d4 d3 probably better others really cover query well
+ They match news presidential campaign
+ looks documents probably better others
+ They ranked top
+ three d2 d1 d5 really relevant
+ say d4 d3 relevant documents d1 d2 d5 non-relevant
+ let simplest vector space model could could something closer
+ let first think actually use model score documents
+ All right
+ Here show two documents d1 d3
+ query
+ vector space model course want first compute vectors documents query
+ showed vocabulary well
+ end dimensions thinking
+ think vector query Note assuming use zero 1 indicate whether term absent present query document
+ zero,1 bit vectors
+ think query vector Well query four words
+ four words 1
+ rest zeros
+ documents
+ d1 two rows news
+ two 1 rest zeroes
+ Similarly two vectors let compute similarity
+ use Do Product
+ use Dot Product multiply corresponding elements right two formal product two generate another product two generate yet another product forth
+ easily actually care zeroes whenever zero product zero
+ take sum pairs zero entries gone
+ As long one zero product zero
+ fact counting many pairs 1 1
+ case seen two result 2
+ mean Well means number value scoring function simply count many unique query terms matched document
+ Because term matched document two one
+ zero document side
+ Similarly document term term query zero query vector
+ count
+ result scoring function basically measures many unique query terms matched document
+ interpret score
+ take look d3
+ case result 3 d3 matched three distinctive query words news presidential campaign whereas d1 matched two
+ case seems reasonable rank d3 top d1
+ simplest vector space model indeed
+ looks pretty good
+ However examine model detail likely find problems
+ 'm show scores five documents
+ easily verify correct basically counting number unique query terms matched document
+ note measure actually makes sense right basically means document matches unique query terms document assumed relevant
+ seems make sense
+ problem note three documents d2 d3 d4
+ tied 3 score
+ problem look carefully seems d4 ranked d3 d3 mentions presidential d4 mentioned multiple times
+ case d3 presidential could dimension
+ d4 clearly presidential campaign
+ Another problem d2 d3 score
+ look three words matched case d2 matched news campaign
+ case d3 matched news presidential campaign
+ intuitively reads better matching presidential important matching even though presidential query
+ intuitively d3 ranked d2
+ model
+ means model still good enough
+ solve problems
+ To summarize talked instantiate vector space model
+ mainly need three things
+ One define dimension
+ second decide place documents vectors vector space place query vector space vector
+ third define similarity two vectors particularly query vector document vector
+ talked various simple way instantiate vector space model
+ Indeed probably simplest vector space model derive
+ case use word define dimension
+ use zero 1 bit vector represent document query
+ case basically care word presence absence
+ ignore frequency
+ use Dot Product similarity function
+ instantiation showed scoring function basically score document based number distinct query words matched document
+ showed simple vector space model still work well need improve
+ topic cover next
+ [ MUSIC ]

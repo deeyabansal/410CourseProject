@@ -1,0 +1,201 @@
+ picture shows overall plan lectures
+ last talked high level strategies text access
+ talked push versus pull
+ Such engines main tools supporting pull mode
+ Starting talk search engines work detail
+ first text retrieval problem
+ talk three things
+ First define Text Retrieval
+ Second make comparison Text Retrieval related task Database Retrieval
+ Finally talk Document Selection versus Document Ranking two strategies responding user query
+ Text Retrieval task familiar using web search engines time
+ text retrieval basically task system respond user query With relevant documents
+ Basically supporting query one way implement poll mode information access
+ situation following
+ collection text retrieval documents
+ documents could webpages web literature articles digital library
+ Or maybe text files computer
+ user typically give query system express information need
+ system return relevant documents users
+ Relevant documents refer documents useful user typed query
+ All task phone call information retrieval
+ literally information retrieval broadly include retrieval non-textual information well example audio video etc
+ worth noting Text Retrieval core information retrieval sense medias video retrieved exploiting companion text data
+ example current image search engines actually match user query companion text data image
+ problem called search problem
+ technology often called search technology industry
+ ever take course databases useful pause point think differences text retrieval database retrieval
+ two tasks similar many ways
+ important differences
+ spend moment think differences two
+ Think data information managed search engine versus managed database system
+ Think different queries typically specify database system versus queries typed users search engine
+ finally think answers
+ What difference two Okay think information data managed two systems text retrieval
+ data unstructured free text
+ databases structured data clear defined schema tell column names people column ages etc
+ unstructured text obvious names people mentioned text
+ Because difference text information tends ambiguous talk processing chapter whereas databases
+ tend find semantics
+ results important difference queries partly due difference information data
+ test queries tend ambiguous
+ Whereas research queries typically well-defined
+ Think SQL query clearly specify records returned
+ well-defined semantics
+ Keyword queries electronic queries tend incomplete really specify documents retrieved
+ Whereas complete specification returned
+ differences answers different
+ Being case text retrieval looking rather documents
+ database search retrieving records match records sequel query precisely
+ case text retrieval right answers query well specified discussed
+ unclear right answers query
+ important consequences textual retrieval empirically defined problem
+ problem empirically defined mathematically prove one method better another method
+ That means must rely empirical evaluation involving users know method works better
+
+ need one lectures cover issue evaluation
+ Because important topic Sir Jennings
+ Without knowing evaluate heroism properly way tell whether got better whether one system better another
+ let look problem formal way
+ slide shows formal formulation text retrieval problem
+ First vocabulary set set words language
+ considering one language reality web might multiple natural languages
+ texts kinds languages
+ simplicity assume one kind language
+ As techniques used retrieving data multiple languages Are less similar techniques used retrieving documents one end although important difference principle methods similar
+ Next query sequence words
+ query defined sequence words
+ Each q sub word vocabulary
+ document defined way sequence words
+ sub ij word vocabulary
+ typically documents much longer queries
+ cases documents may short
+ think might example case
+ hope think Twitter search
+ Tweets short
+ general documents longer queries
+ collection documents collection large
+ think web
+ could large
+ goal text retrieval find set relevant documents denote R ' ( q ) depends query
+ general subset documents collection
+ Unfortunately set relevant documents generally unknown user-dependent sense query typed different users expect relevant documents may different
+ query given user hint document set
+ indeed user generally unable specify exactly set especially case web search connection large user complete knowledge whole production
+ best search system compute approximation relevant document set
+ denote R ' ( q )
+ formerly task compute R ' ( q ) approximation relevant documents
+ imagine asked write program
+ What think moment
+ Right input
+ query documents
+ compute answers query set documents useful user
+ solve problem general two strategies use
+ first strategy document selection binary classification function binary classifier
+ That function take document query input give zero one output indicate whether document relevant query
+ case document
+ relevant document set defined follows
+ basically documents value 1 function
+ case system must decide document relevant
+ Basically say whether one zero
+ called absolute relevance
+ Basically needs know exactly whether useful user
+ Alternatively another strategy called document ranking
+ case system make call whether document random
+ rather system use real value function f
+ That simply give value indicate document likely relevant
+ make call whether document relevant
+ rather say document likely relevant
+ function used random documents let user decide stop user looks document
+ threshold theta determine documents approximation set
+ assume documents ranked threshold set effect documents deliver user
+ theta cutoff determined user
+ got collaboration user sense really make cutoff
+ user kind helped system make cutoff
+ case system needs decide one document likely relevant another
+ needs determine relative relevance opposed absolute relevance
+ probably already sense relative relevance easier determine absolute relevance
+ Because first case say exactly whether document relevant
+ turns ranking indeed generally preferred document selection
+ let look two strategies detail
+ picture shows works
+ left side documents use pluses indicate relevant documents
+ true relevant documents consists set true relevant documents consists process documents
+ document selection function basically classify two groups relevant documents non-relevant ones
+ Of course classified perfect make mistakes
+ approximation relevant documents got number documents
+ similarly relevant document misclassified non-relevant
+ case document ranking system seems simply ranks documents descending order scores
+ let user stop wherever user wants stop
+ user wants examine documents user scroll stop [ INAUDIBLE ]
+ user wants read random documents user might stop top position
+ case user stops d4
+ fact delivered four documents user
+ said ranking generally preferred one reasons classifier case document selection unlikely accurate
+ Why Because clue usually query
+ query may accurate sense could overly constrained
+ For example might expect relevant documents talk topics using specific vocabulary
+ result might match relevant documents
+ Because collection others discussed topic using vocabularies right case problem relevant documents return case over-constrained query
+ On hand query under-constrained example query sufficient descriptive words find random documents
+ may actually end delivery thought words sufficient help find right documents
+ turns sufficient many distractions documents using similar words
+ case delivery
+ Unfortunately hard find right position two extremes
+ Why Because whether users looking information general user good knowledge information found
+ case user good knowledge vocabularies used relevent documents
+ hard user pre-specify right level constraints
+ Even classifier accurate still want rend relevant documents generally equally relevant
+ Relevance often matter degree
+ must prioritize documents user examine
+ note prioritization important user digest content user generally look document sequentially
+ therefore make sense users relevant documents
+ ranking
+ reasons ranking generally preferred
+ preference theoretical justification given probability ranking principle
+ end reference
+ principle says returning ranked list documents descending order probability document relevant query optimal strategy following two assumptions
+ First utility document ( user ) Is independent utility document
+ Second user assumed browse results sequentially
+ easy understand assumptions needed order justify Site ranking strategy
+ Because documents independent evaluate utility document separate
+ allow computer score document independently
+ rank documents based scrolls
+ second assumption say user indeed follow rank list
+ user follow ranked list examine documents sequentially obviously ordering optimal
+ two assumptions theoretically justify ranking strategy fact best could
+ put one question
+ Do two assumptions hold suggest pause moment think
+ think examples suggest assumptions necessarily true
+ think moment may realize none assumptions Is actually true
+ For example case independence assumption might documents similar exactly content
+ look alone relevant
+ user already seen one assume generally useful user another similar duplicated one
+ clearly utility document dependent documents user seen
+ cases might scenario one document may useful user three particular documents put together
+ They provide answers user question
+ collective relevance suggests value document might depend documents
+ Sequential browsing generally make sense ranked list
+ even rank list evidence showing users always go strictly sequentially entire list
+ They sometimes look bottom example skip
+ think complicated interfaces could possibly use two dimensional phase
+ Where put additional information screen sequential browsing restricted assumption
+ point none assumptions really true less
+ probability ranking principle establishes solid foundation ranking primary pattern search engines
+ actually basis lot research work information retrieval
+ many hours designed based assumption despite assumptions necessarily true
+ address problem post processing Of ranked list example remove redundancy
+ summarize main points take away following
+ First text retrieval empirically defined Problem
+ means algorithm better must judged users
+ Second document ranking generally preferred
+ help users prioritize examination search results
+ bypass difficulty determining absolute relevance Because get help users determining make cut flexible
+ suggests main technical challenge designing search engine design effective ranking function
+ words need define value function F query document pair
+ How design function main topic following lectures
+ There two suggested additional readings
+ first classical paper probability ranking principle
+ second one must-read anyone research information retrieval
+ classic IR book excellent coverage main research results early days time book written
+ Chapter six book in-depth discussion Probability Ranking Principle Probably retrieval models general

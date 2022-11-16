@@ -1,0 +1,71 @@
+ overview text retrieval methods
+ previous introduced problem text retrieval
+ explained main problem design ranking function rank documents query
+ give overview different ways designing ranking function
+ problem following
+ query sequence words document sequence words
+ hope define function f compute score based query document
+ main challenge hear design good ranking function rank relevant documents top non-relevant ones
+ Clearly means function must able measure likelihood document relevant query q
+ That means way define relevance
+ particular order implement program computational definition relevance
+ achieve goal designing retrieval model gives formalization relevance
+ many decades researchers designed many different kinds retrieval models
+ fall different categories
+ First one family models based similarity idea
+ Basically assume document similar query another document say first document relevant second one
+ case ranking function defined similarity query document
+ One well known example case vector space model cover detail later
+ second kind models called probabilistic models
+ family models follow different strategy assume queries documents observations random variables
+ assume binary random variable called R indicate whether document relevant query
+ define score document respect query probability random variable R equal 1 given particular document query
+ There different cases general idea
+ One classic probabilistic model another language model yet another divergence randomness model
+ later talk one case language model
+ third kind model based probabilistic inference
+ idea associate uncertainty inference rules quantify probability show query follows document
+ Finally family models using axiomatic thinking
+ Here idea define set constraints hope good retrieval function satisfy
+ case problem seek good ranking function satisfy desired constraints
+ Interestingly although different models based different thinking end retrieval function tends similar
+ functions tend involve similar variables
+ let take look common form state art retrieval model examine common ideas used models
+ First models based assumption using bag words represent text explained natural language processing
+ Bag words representation remains main representation used search engines
+ assumption score query presidential campaign news respect document based scores computed based individual word
+ means score depend score word presidential campaign news
+ Here three different components corresponding well document matches query words
+ Inside functions number heuristics used
+ example one factor affects function many times word presidential occur document called term frequency TF
+ might denote c presidential
+ general word occurs frequently document value function larger
+ Another factor long document use document length scoring
+ general term occurs long document many times significant occurred number times short document
+ Because long document term expected occur frequently
+ Finally factor called document frequency
+ That want look often presidential occurs entire collection call document frequency df presidential
+ models might use probability characterize information
+ show probability presidential collection
+ trying characterize popularity term collection
+ general matching rare term collection contributing overall score matching common term
+ captures main ideas used pretty much older state art original models
+ natural question model works best turns many models work equally well
+ list four major models generally regarded state art original models pivoted length normalization BM25 query likelihood PL2
+ When optimized models tend perform similarly
+ discussed detail reference end
+ Among BM25 probably popular
+ likely used virtually search engines often method discussed research papers
+ talk method later lectures
+ summarize main points made first design good ranking function pre-requires computational definition relevance achieve goal designing appropriate retrieval model
+ Second many models equally effective single winner yet
+ Researchers still active working problem trying find truly optimal retrieval model
+ Finally state art ranking functions tend rely following ideas
+ First bag words representation
+ Second TF document frequency words
+ Such information used weighting function determine overall contribution matching word document length
+ often combined interesting ways discuss exactly combined rank documents lectures later
+ There two suggested additional readings time
+ first paper find detailed discussion comparison multiple state art models
+ second book chapter gives broad review different retrieval models
+ [ MUSIC ]

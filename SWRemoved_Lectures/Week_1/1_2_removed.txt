@@ -1,0 +1,88 @@
+ previous talked natural language content analysis
+ explained state natural language processing techniques still good enough process lot unrestricted text data robust manner
+ As result bag words remains popular applications search engine
+ talk high-level strategies help users get access text data
+ important step convert raw big text data small random data
+ That actually needed specific application
+ main question address text information system help users get access relevant text data cover two complimentary strategies push versus pull
+ talk two ways implement pull mode querying versus browsing
+ first push versus pull
+ two different ways connect users right information right time
+ difference takes initiative party takes initiative
+ pull mode users take initiative start information access process
+ case user typically use search engine fulfill goal
+ For example user may type query browse results find relevant information
+ usually appropriate satisfying user ad hoc information need
+ An ad hoc information need temporary information need
+ For example want buy product suddenly need read reviews related product
+ cracked information purchased product
+ generally longer need information temporary information need
+ case hard system predict need proper users take initiative search engines useful
+ Today many people many information needs time
+ speaking Google probably processing many queries
+ mostly adequate
+ Information needs
+ pull mode
+ contrast push mode system take initiative push information user recommend information user
+ case usually supported recommender system
+ appropriate
+ user stable information
+ For example may research interest topic interest tends stay
+ rather stable
+ Your hobby another example
+ stable information need case system interact learn interest monitor information stream
+ system seen relevant items interest system could take initiative recommend information
+ example news filter news recommended system could monitor news stream identify interesting news simply push news articles
+ mode information access may property system good knowledge users need happens search context
+ example search information web search engine might infer might interested something related
+ Formation
+ recommend information reminds example advertisement placed search page
+ two high level strategies two modes text access
+ let look pull mode detail
+ pull mode distinguish two ways help users
+ Querying versus browsing
+ querying user enter query
+ Typical keyword query search engine system return relevant documents use
+ works well user knows exactly keywords used
+ know exactly looking tend know right keywords
+ query works well time
+ know sometimes work well
+ When know right keywords use query want browse information topic area
+ use browsing useful
+ case case browsing users simply navigate relevant information following paths supported structures documents
+ system maintain kind structures user could follow structures navigate
+ really works well user wants explore information space user know keywords using query
+ Or simply user finds inconvenient type query
+ even user knows query type user using cellphone search information
+ still harder enter query
+ case browsing tends convenient
+ relationship browsing querying best understood making imagine site seeing
+ Imagine touring city
+ know exact address attraction
+ Taking taxi perhaps fastest way
+ go directly site
+ know exact address may need walk around
+ Or take taxi nearby place walk around
+ turns exactly information studies
+ know exactly looking use right keywords query find information
+ That usually fastest way find information
+ know exact keywords use Well clearly probably wo well
+ related pages
+ need walk around information space meaning following links browsing
+ finally get relevant page
+ want learn
+ likely lot browsing looking around area want interesting attractions related
+ [ INAUDIBLE ]
+ analogy tells good support query really good support browsing
+ order browse effectively need map guide need map
+ Of Chicago city Chicago need topical map tour information space
+ construct topical map fact interesting research question might bring interesting browsing experience web applications
+ summarize talked two high level strategies text access ; push pull
+ Push tends supported Recommender System Pull tends supported Search Engine
+ Of course sophisticated [ INAUDIBLE ] information system combine two
+ pull mode [ INAUDIBLE ] Querying Browsing
+ Again generally want combine two ways help assist support querying nad browsing
+ want know relationship pull push read article
+ give excellent discussion relationship machine filtering information retrieval
+ Here informational filtering similar information recommendation push mode information access
+ [ MUSIC ]

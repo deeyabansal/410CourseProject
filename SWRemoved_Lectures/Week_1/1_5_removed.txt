@@ -1,0 +1,81 @@
+ vector space retrieval model
+ give introduction basic idea
+ last talked different ways designing retrieval model give different arranging function
+ talk specific way designing ramping function called vector space retrieval model
+ give brief introduction basic idea
+ Vector space model special case similarity based models discussed
+ Which means assume relevance roughly similarity document query
+ whether assumption true actually question
+ order solve search problem convert vague notion relevance precise definition implemented program analogy
+ process make number assumptions
+ first assumption make
+ Basically assume document similar query another document
+ Then first document assumed relevant second one
+ basis ranking documents approach
+ Again questionable whether really best definition randoms
+ As later ways model randoms
+ basic idea vectors base retrieval model actually easy understand
+ Imagine high dimensional space dimension corresponds term
+ issue three dimensional space three words programming library presidential
+ term defines one dimension
+ consider vectors three dimensional space
+ assume documents query placed vector space
+ example document might represented vector d1
+ means document probably covers library presidential really talk programming
+ What mean terms representation document That means look document perspective vector
+ ignore everything else
+ Basically vector root condition document
+ Of course document information
+ For example orders words [ INAUDIBLE ] model assume [ INAUDIBLE ] words [ INAUDIBLE ]
+ presentation really d1 simply suggests [ INAUDIBLE ] library
+ different another document might recommended different vector d2
+ case document covers programming library talk presidential
+ remind Well probably guess topic likely program language library software lab library
+ shows using vector space reproduction actually capture differences topics documents
+ imagine vectors
+ For example d3 pointing direction might presidential program
+ fact place documents vector space
+ pointing kinds directions
+ similarly place query space another vector
+ measure similarity query vector every document vector
+ case example easily d2 seems closest query vector
+ therefore d2 rendered others
+ basically main idea vector space model
+ precise vector space model framework
+ framework make following assumptions
+ First represent document query term vector
+ term basic concept
+ For example word phrase even n gram characters
+ Those sequence characters inside word
+ Each term assumed defined one dimension
+ Therefore n terms vocabulary define N-dimensional space
+ query vector consist number elements corresponding weights different terms
+ Each document vector similar
+ number elements value element indicating weight corresponding term
+ Here assume N dimensions
+ Therefore N elements corresponding weight particular term
+ relevance case assumed similarity two vectors
+ Therefore ranking function defined similarity query vector document vector
+ ask write program implement approach search engine
+ realize far clear
+ said lot things detail therefore impossible actually write program implement
+ That said framework
+ refined order actually suggest particular ranking function implement computer
+ framework say Well actually said many things required order implement function
+ First say define select basic concepts exactly
+ clearly assume concepts orthogonal
+ Otherwise redundancy
+ For example two synonyms somehow distinguish two different concepts
+ Then defining two different dimensions clearly cause redundancy
+ Or emphasizing matching concept match two dimensions actually matched one semantic concept
+ Secondly say exactly place documents query space
+ Basically show examples query document vectors
+ exactly vector particular document point equivalent define term weights How compute lose element values vectors important question term weight query vector indicates importance term
+ depending assign weight might prefer terms matched others
+ Similarly total word document meaningful
+ indicates well term characterizes document
+ got wrong clearly represent document accurately
+ Finally define similarity measure given
+ questions must addressed operational function actually implement using program language
+ solve problems main topic next
+ [ MUSIC ]
