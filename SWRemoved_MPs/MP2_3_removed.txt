@@ -1,0 +1,124 @@
+ # CS410 MP2 -- -Search Engines In 4-part MP get familiar building evaluating Search Engines
+ # # Part 3 # # # Due Sept 25 2022 In part use MeTA toolkit following - create search engine dataset - investigate effect parameter values standard retrieval function - write InL2 retrieval function - investigate effect parameter value InL2 Also free edit files * * except * * -
+ # # Setup We 'll use [ metapy ] https
+ -- -Python bindings MeTA
+ If installed metapy far use following commands get started
+ bash # Ensure pip date pip install -- upgrade pip # install metapy pip install metapy pytoml Read [ C++ Search Tutorial ] https
+
+ Read * Initially setting config file Relevance judgements *
+ Read [ Search Tutorial ] https
+ We provided following files - Cranfield dataset MeTA format
+ -
+ Queries one per line -
+ Relevance judgements queries -
+ A file containing stopwords indexed
+ -
+ A config file paths set files including index ranker settings
+ # # Indexing data To index data using metapy use following
+ import metapy idx =
+
+ ' # # Search index You examine data inside cranfield directory get sense dataset queries
+ To examine index built previous section
+ You use metapy functions
+ # Examine number documents
+ # Number unique terms dataset
+ # The average document length
+ # The total number terms
+ Here list rankers
+ class comment header files shows optional parameters set config file - [ Okapi BM25 ] https
+ method = * * bm25 * * '' - [ Pivoted Length Normalization ] https
+ method = * * pivoted-length * * '' - [ Absolute Discount Smoothing ] https
+ method = * * absolute-discount * * '' - [ Jelinek-Mercer Smoothing ] https
+ method = * * jelinek-mercer * * '' - [ Dirichlet Prior Smoothing ] https
+ method = * * dirichlet-prior * * '' In metapy rankers called
+ k1 b k3 k1 b k3 function arguments
+
+ ranker =
+
+
+ k3=500
+
+ delta
+ lambda
+ mu # # Varying parameter Choose one retrieval functions one parameters ’ choose BM25 + k3 ’ interesting
+ For example could choose Dirichlet Prior mu
+ Change * * ranker * * method parameters
+ In example set * * bm25 * *
+ Use least 10 different values parameter chose ; try choose values find maximum MAP
+ Here tutorial evaluation parameter setting code included *
+ * # Build query object initialize ranker query =
+ ranker =
+
+
+ k3=500 # To IR evaluation need use queries file relevance judgements
+ ev =
+
+ ' # Load query_start
+ default zero found open
+ ' ' r ' fin cfg_d =
+ fin query_cfg = cfg_d [ 'query-runner ' ] query_start =
+ 'query-id-start ' 0 # We loop queries file add result IREval object ev
+ num_results = 10 open
+ ' query_file query_num line enumerate query_file
+
+ results =
+ idx query num_results avg_p =
+ results query_start + query_num num_results print Query { } average precision { } ''
+ query_num + 1 avg_p
+ # # Writing InL2 You implement retrieval function called InL2
+ It described [ ] http
+ ? id=582416 paper For assignment concern writing function worry derivation
+ InL2 formulated [ image ] https
+ ? export=view & id=1_Q2CTMe6o2RP9PGf8HPsggai9LVyVmEU Please use link image display https
+ ? export=view & id=1_Q2CTMe6o2RP9PGf8HPsggai9LVyVmEU [ image ] https
+ ? export=view & id=1gcbywLx0ZEU3eqxlDtLk6o4Yxd788IiK Please use link image display https
+ ? export=view & id=1gcbywLx0ZEU3eqxlDtLk6o4Yxd788IiK It uses following variables - < em > Q D < /em > current query document term - < em > N < /em > total number documents corpus C - < em > avgdl < /em > average document length - < em > c > 0 < /em > parameter Determine function captures TF IDF document length normalization properties
+ Where anywhere represented formula ? You ’ need answers
+ To implement InL2 define ranking function shown
+ You need create new file template included *
+ * You need modify function * * score_one * *
+ Do forget call InL2 ranker editing return statement * load_ranker * function inside
+
+ The parameter function score_data sd object
+ See object [ ] https
+
+ As see sd variable contains information need write scoring function
+ The function ’ writing represents one term large InL2 sum
+ class InL2Ranker
+ '' '' Create new ranking function used
+ '' '' def __init__ self
+
+ = some_param # You * * call base class constructor super InL2Ranker self
+ def score_one self sd '' '' You need override function return score single term
+ For fields available score_data sd object @ see https
+ '' '' return
+ +
+ /
+ *
+ +
+ # # Varying InL2 ’ parameter Perform parameter analysis InL2 ’ < em > c < /em > parameter
+ # # Statistical significance testing Modifying code Varying parameter '' section create file average precision data
+ Use BM25 ranker create file called
+
+ Then use ranker InL2 create file called
+
+ Each files simply list APs queries
+ We want test whether difference two optimized retrieval functions statistically significant
+ If ’ using R simply R bm25 =
+
+ ' $ V1 inl2 =
+
+ ' $ V1
+ bm25 inl2 paired=T You ’ use R ; even write script calculate answer
+ In use [ function ] https
+ The output significance test give p-value
+ If p-value less
+ chosen significance level say significant difference two average precision lists
+ That means less 5 % chance difference mean AP scores due random fluctuation
+ Write p-value file called * *
+ * *
+ * * * Do include anything else file number * * * # # Grading Your grade based - implementing InL2 parameter correctly --
+ 70 points - uploading
+ p-value
+ --
+ 30 points

@@ -1,0 +1,21 @@
+
+ covers annotation collection created
+ create set queries corresponding relevance judgments
+ The outcome
+ test set used quantitatively evaluate search engine algorithm For
+ use CS410 DL Search Engine website relevance judgments given query
+ Upon searching query see something like UI updated mid-morning 9/12 Your job examine search results provide relevance judgments
+ result answers query
+ After select Relevant '' Not Relevant '' returned results click Submit Relevance Judgments '' notify status submission
+ For full credit least 5 queries least 10 relevance judgments number returned results
+ That different query mark relevant/not relevant least ten results
+ The judged results need contiguous
+ We ask avoid trivial queries
+ Specific queries like intuitive videos bm25 '' startups nlp '' encouraged
+ Try come queries reflect actual information needs reading judging results also help better understand course material
+ Grading assignment updated assignment due
+ You able track number submitted judgments Your Submissions '' page
+ If least five judgments receive full credit
+ Note need use LiveDataLab anything GitHub
+ Everything
+ done via CS410 Digital Library

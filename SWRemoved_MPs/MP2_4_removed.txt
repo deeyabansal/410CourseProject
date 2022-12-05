@@ -1,0 +1,80 @@
+ # CS410 MP2 -- -Search Engines In 4-part MP get familiar building evaluating Search Engines
+ # Part 4 In final part MP2 participate search competition create Search Engine using MeTA similar Part 2
+ Your ranker evaluated using NDCG scores 3 relevance datasets Cranfield dataset APNews dataset Faculty dataset collected annotated classmates
+ * * The evaluation results displayed leaderboard LiveDataLab
+ Only latest submission results displayed
+ Also grader use default
+
+ files provided
+ So changing files make impact scores
+ Please modify
+ potentially notice changes scores
+ * * # # Due Oct 2 2022 11:59 pm CDT * * NOTE * * If 've completed Part2 familiar basics Setup Indexing Searching Data
+ We 've included sections README convenience
+ So feel free skip directly Competition Tasks section # # Setup We 'll use [ metapy ] https
+ -- -Python bindings MeTA
+ If installed metapy far use following commands get started
+ bash # Ensure pip date pip install -- upgrade pip # install metapy pip install metapy pytoml If EWS machine bash module load python3 # install metapy local directory pip install metapy pytoml -- user Read [ C++ Search Tutorial ] https
+
+ Read * Initially setting config file Relevance judgements *
+ Read [ Search Tutorial ] https
+ If cloned repo correctly assignment directory look like - MP2_part4/ assignment folder - MP2_part4/cranfield/ Cranfield dataset MeTA format
+ -
+ Queries one per line copy cranfield directory
+ -
+ Relevance judgements queries copy cranfield directory
+ -
+ A file containing stopwords indexed
+ -
+ A config file paths set files including index ranker settings
+ # # Indexing data To index data using metapy use either 2 3
+ import metapy idx =
+
+ ' # # Search index You examine data inside cranfield directory get sense dataset queries
+ To examine index built previous section
+ You use metapy functions
+ # Examine number documents
+ # Number unique terms dataset
+ # The average document length
+ # The total number terms
+ Here list rankers
+ class comment header files shows optional parameters set config file - [ Okapi BM25 ] https
+ method = * * bm25 * * '' - [ Pivoted Length Normalization ] https
+ method = * * pivoted-length * * '' - [ Absolute Discount Smoothing ] https
+ method = * * absolute-discount * * '' - [ Jelinek-Mercer Smoothing ] https
+ method = * * jelinek-mercer * * '' - [ Dirichlet Prior Smoothing ] https
+ method = * * dirichlet-prior * * '' In metapy rankers called
+ k1 b k3 k1 b k3 function arguments
+
+ ranker =
+
+
+ k3=500
+
+ delta
+ lambda
+ mu # # Competition Tasks *
+ * contains starter code evaluate performance OkapiBM25 ranker cranfield dataset using NDCG
+ You modify file competition
+ You free use metapy ranker fine-tune various parameter settings even use implementation ranking functions
+ Feel free improvise create rankers You may use provided cranfield dataset evaluate rankers/parameter settings locally remember leaderboard ranking based performance 3 datasets please make sure overfit
+ To see well perform leaderboard need edit * * load_ranker * * function inside * *
+ * * return ranker
+ restrictions number submissions
+ # # Grading You beat baseline '' leaderboard get full credit
+
+ Overall Score '' greater Overall Score baseline
+ The last column Leaderboard indicates whether completed requirement 1 0
+ The leaderboard also shows details performance NDCG @ 10
+ Overall Score '' computed
+ * NDCG @ 10 APNews +
+ * NDCG @ 10 Cranfield +
+ * NDCG @ 10 Faculty dataset
+ # # Bonus Top ranked Search Competition Leaderboard Try get top position competition leaderboard
+ The higher rank extra credit receive
+ The rank based Overall Score ''
+ Our grading formula competition max 0 5- Rank-1 /10 Rank position student
+ This means 50 students receive extra credit greater 0
+ Students score receive extra credit
+ You immediately see extra credit score since depends final rank leaderboard deadline
+ We add extra credit score later

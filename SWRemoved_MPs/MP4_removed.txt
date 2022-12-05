@@ -1,0 +1,38 @@
+ MP4 Neural Ranking Methods In MP explore use Neural Network based methods ranking information retrieval
+ The goal assignment get familiar popular approaches appling neural methods information retrieval
+ For two portions assignment need generate candidate rankings discussion evaluate performance factors may impacting
+ To complete assignment code 3 candidate ranking files 2 discussion files
+ Details include file found deliverables portions
+ IMPORTANT MAKE SURE TO READ THIS For candidate ranking files create ranking top 20 documents Otherwise files large For candidate ranking match TREC format ranking line format # QUERY_ID\t0 DOCUMENTID\tRANK\tSCORE\trun_id
+ Remeber query ids start 1 document IDs 0 ranking 0
+ The score run_id impact scoring useful debugging
+ Retrieval Using Bi-Encoders Vector Database While term based retireval based methods effective commonly effective understanding semantic differences common text
+ Bi encoders dual encoders popular method incredibly efficient
+ Using sentence transformers Approximate Nearest Neighbor Index FAISS search semantically CS410 document corpus
+ The goal portion assignement retrieve documents using bi encoder vector datasbase produce candidate ranking
+ Please candidate ranking associated scores queries collection found data folder
+ What differences relevance see ? wide variations ?
+ Your outputed ranking match TREC format # QUERY_ID\t0 DOCUMENTID\tRANK\tSCORE\trunid use TRECEVAL notebook explore well diferent models perform
+ To help explore bi-encoders work used vector databases checkout ot Bi-Encoder notebook
+ Details format submissions evaluate found Evaluation notebook
+ To avoid long inference times gone ahead generate sets embeddings document query corpus
+ If want explore look models found sentence transformer library
+ Deliverables For portion assignment 2 things candidate ranking file matching TREC format discussed brief paragraph discuss model representation used performance relevance varies depth
+ For candidate ranking files create ranking top 20 documents The files part submission named follows
+
+ Reranking using Cross Encoders While bi-encoders effective always produce relevant candidate sets
+ A common approach improve use cross encoder rerank candidate sets generated either bi-encoders term based systems like BM25
+ A brief summary use cross encoder found CrossEncoder notebook
+ In part 1 generated ranking candidates using bi-encoders
+ Using set BM25 candidates found data/bm25-top1000 improve ranking using cross encoders
+ For portion assignment need write reranking function uses cross encoder rerank given set documents query
+ Running cross encoder computationally expensive bi-encoder pick resonable depth rerank candidates
+ Try cross encoders found hub
+ How performance differ ? How size reranking set impact well cross encoders work ? Deliverables For portion assignment two candidate TREC ranking files bi-encoder-rerank bm25rerank brief paragraph discusses went reranking inputs models used reranking impacted performance similarities difference see re-ranking bi-encoders BM25
+ The files part submission named follows
+
+
+ Tips Suggestions To learn use ANN retrieval suggest checking demo
+ Another great resource Pinecone To learn models used semantic search check SBERT To learn TREC Eval ir-measure wrapper check website The BM25 candidate set generated using pyserini
+ It one popular based search libraries
+ If want explore experiments ranking methods work together check examples repo

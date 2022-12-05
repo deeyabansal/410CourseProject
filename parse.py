@@ -61,33 +61,38 @@ def delete_mp_stop_words(filename):
                 rewriteFile.write(" "+r) 
             rewriteFile.close()
 
-if __name__ == '__main__':
-    # print("Removing timings")
-    # for i in range(1, 7):
-    #     delete_timings("Lectures/Week_1/1_" + str(i) + ".txt")
-    #     delete_timings("Lectures/Week_2/2_" + str(i) + ".txt")
-    #     delete_timings("Lectures/Week_3/3_" + str(i) + ".txt")
-    # for i in range(1, 8):
-    #     delete_timings("Lectures/Week_4/4_" + str(i) + ".txt")
-    # for i in range(1, 9):
-    #     delete_timings("Lectures/Week_5/5_" + str(i) + ".txt")
-    # for i in range(1, 11):
-    #     delete_timings("Lectures/Week_6/6_" + str(i) + ".txt")
-        
-    # print("Removing Stop Words")
-    # for i in range(1, 7):
-    #     delete_stop_words("Parsed_Lectures/Week_1/1_" + str(i) + "_parsed.txt")
-    #     delete_stop_words("Parsed_Lectures/Week_2/2_" + str(i) + "_parsed.txt")
-    #     delete_stop_words("Parsed_Lectures/Week_3/3_" + str(i) + "_parsed.txt")
-    # for i in range(1, 8):
-    #     delete_stop_words("Parsed_Lectures/Week_4/4_" + str(i) + "_parsed.txt")
-    # for i in range(1, 9):
-    #     delete_stop_words("Parsed_Lectures/Week_5/5_" + str(i) + "_parsed.txt")
-    # for i in range(1, 11):
-    #     delete_stop_words("Parsed_Lectures/Week_6/6_" + str(i) + "_parsed.txt")
 
-    # file = open("SWRemoved_Lectures/Week_2/2_1_removed.txt")
-    delete_mp_stop_words("MPs/MP1.txt")
-    # print("Ranking Function")
-    # metapy.index.OkapiBM25(k1=2.75,b=0.65,k3=0)
+
+if __name__ == '__main__':
+    print("Removing timings of Lectures")
+    for i in range(1, 7):
+        delete_timings("Lectures/Week_1/1_" + str(i) + ".txt")
+        delete_timings("Lectures/Week_2/2_" + str(i) + ".txt")
+        delete_timings("Lectures/Week_3/3_" + str(i) + ".txt")
+    for i in range(1, 8):
+        delete_timings("Lectures/Week_4/4_" + str(i) + ".txt")
+    for i in range(1, 9):
+        delete_timings("Lectures/Week_5/5_" + str(i) + ".txt")
+    for i in range(1, 11):
+        delete_timings("Lectures/Week_6/6_" + str(i) + ".txt")
+        
+    print("Removing Stop Words of Lectures")
+    for i in range(1, 7):
+        delete_stop_words("Parsed_Lectures/Week_1/1_" + str(i) + "_parsed.txt")
+        delete_stop_words("Parsed_Lectures/Week_2/2_" + str(i) + "_parsed.txt")
+        delete_stop_words("Parsed_Lectures/Week_3/3_" + str(i) + "_parsed.txt")
+    for i in range(1, 8):
+        delete_stop_words("Parsed_Lectures/Week_4/4_" + str(i) + "_parsed.txt")
+    for i in range(1, 9):
+        delete_stop_words("Parsed_Lectures/Week_5/5_" + str(i) + "_parsed.txt")
+    for i in range(1, 11):
+        delete_stop_words("Parsed_Lectures/Week_6/6_" + str(i) + "_parsed.txt")
+
+    print("Removing Stop Words from MPs")
+    mps = [1, 3, 4]
+    for i in mps:
+        delete_mp_stop_words("MPs/MP" + str(i) + ".txt")
+    for i in range(1, 5):
+        delete_mp_stop_words("MPs/MP2_" + str(i) + ".txt")
+
     

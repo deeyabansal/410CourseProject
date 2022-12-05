@@ -1,0 +1,62 @@
+ # MP3 Implementing PLSA Algorithm # # DUE OCT 23 2022 11:59pm In MP implement PLSA algorithm discussed lectures [
+ ] https
+ [
+ ] https
+ Text Mining course
+ You required implement PLSA algorithm background model run tests assuming background model implemented
+ You provided two data sets data folder
+
+
+ You assume line separate document
+ The
+ data set contains 1000 lines
+ Each line document
+ The first 100 documents labeled topic document belongs either 0 “ Seattle ” 1 “ Chicago ”
+ Each first 100 document generated sampling completely topic labelled
+ generated one topic
+ The rest 900 documents generated mixture model topic “ Seattle ” “ Chicago ”
+ Run code test EM algorithm returns reasonable results
+ The
+ data set made research paper abstracts DBLP
+ Each line document
+ Make sure test code simpler data set
+ running
+
+ You provided code skeleton
+
+ Do change anything def __init__ function
+ But feel free change anything main function test code
+ Some suggested tips 1
+ Using matrices strongly encouraged writing nested for-loops calculation painful 2
+ libraries numpy scipy useful matrix based calculations # # # # Writing PLSA Algorithm The original PLSA model contain background model
+ This MP also based original PLSA model worry background model
+ However lectures PLSA background model attempt map formulas lecture slides directly code
+ Instead would need adjust formulas slides assuming zero probability background model would chosen
+ That set λ < sub > B < /sub > zero
+ If see E-step would essentially compute distribution k topics z=1
+ k given word
+ p z=i|w
+ The M-step would also simpler p Z=B|w also zero words due fact λ < sub > B < /sub > =0
+ If still confused please take look Section 3 Chase Geigle note EM [ 2 ] note
+ The main data structures involved implementation EM algorithm three matrices 1
+ T topics words set parameters characterizing topic content denoted & theta ; < sub > < /sub >
+ Each element probability particular word particular topic
+ 2
+ D documents topics set parameters modeling coverage topics document denoted p < sub > ij < /sub >
+ Each element probability particular topic covered particular document
+ 3
+ Z hidden variables For every document need one Z represents probability word document generated particular topic document word-by-topic '' matrix encoding p Z|w particular document
+ Z matrix compute E-step based matrices T D represent parameters
+ Note need compute different Z document need allocate matrix Z every document
+ If M-step simply use Z matrices together word counts document re-estimate parameters
+ updating matrices T D based Z
+ Thus high level happening algorithm * T D initialized
+ * E-step computes Z based T
+ * M-step uses Z update T
+ * We iterate likelihood n't change much would use T D output
+ Note Zs also useful imagine applications Zs ?
+ # # # # Resources [ 1 ] [ Cheng ’ note ] http
+ EM algorithm [ 2 ] [ Chase Geigle ’ note ] http
+ EM algorithm includes derivation EM algorithm see section 4 [ 3 ] [ Qiaozhu Mei ’ note ] http
+ EM algorithm PLSA includes different derivation EM algorithm
+ THIS MP IS CODING AND DEBUGGING HEAVY PLEASE DO N'T LEAVE IT TILL THE LAST MINUTE

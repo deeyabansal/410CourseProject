@@ -1,14 +1,4 @@
-  #print(stop_words)
-    # new_words = []
-    # for word in file:
-    #     if word in stop_words:
-    #         continue
-    #     else:
-    #         new_words.append(word)
-    # print (new_words)
-    # Use this to read file content as a stream: 
-    # for r in words: 
-    #     if not r in stop_words: 
-    #         appendFile = open('filteredtext.txt','a') 
-    #         appendFile.write(" "+r) 
-    #         appendFile.close()
+# things to do:
+#  - adding lectures from week 7-12
+#  - file name from ranking instead of scores
+#  - terminal prompt

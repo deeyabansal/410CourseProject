@@ -1,0 +1,22 @@
+
+ covers content acquisition creation collection searchable documents
+ The outcome
+ collection documents relevant CS410
+ Your task
+ use baseline CS410DL system briefly described save certain number web pages help create large collection relevant online documents CS410 content building useful CS410 Digital Library
+ More information baseline CS410DL system including installation instructions URL search engine found Google document
+ Specifically please follow instructions complete
+ Follow extension installation instructions Google document
+ Become familiar extension website general functionality
+ Create account using NetID university email
+ Please make sure write password The system point help reset password
+ Using correct NetID / email essential grading
+ Use Submit CS410 DL '' functionality record least 15 web pages found useful browsing material CS410 relevant content Web
+ This could lecture points papers campuswire posts videos etc
+ We encourage explore multiple uses CS410DL system ideally spend minutes explore following categories Bookmark useful course information pages
+ pages/lectures useful posts campuswire Save relevant research papers technical articles related CS410
+ search Google Scholar interesting keywords ; please make sure highlight lot relevant content articles enable CS410DL match query think using CS410DL conveniently take notes paper technical article share notes classmates Find interesting relevant videos Youtube ; search Youtube interesting keywords Find relevant development resources related CS410 useful toolkits online tools ; search appropriate keywords Google Find pages startups using technologies related CS410
+ using query like text mining startups '' search Google
+ In general please try provide informative description saved page and/or highlight relevant content whenever possible ; extra text helps CS410DL work better search engine since point matches query text typed highlighted enables high relevance whenever match
+ Your submitted content available immediately everyone CS410 search search engine website
+ And grading assignment updated assignment due
