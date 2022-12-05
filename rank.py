@@ -58,7 +58,7 @@ def ranking(mp_num):
   
     order = sort_order(doc_scores, ordered_doc_scores)
     pairs = sorted_pairs(order, start, end)
-    print_lectures(pairs)
+    return print_lectures(pairs)
     file.close
 
 
@@ -95,10 +95,28 @@ def sorted_pairs(order, start, end):
 
 def print_lectures(pairs):
     result = [tup[1] for tup in pairs]
-    for i in result:
-        print(i)
+    # for i in result:
+    #     print(i)
+    return result
 
-
+# Create lecture week boudaries for each MP
+# returns max week an MP could reference
+def mp_lecture_bounds(mp_num):
+    if mp_num == "1":
+        return 2
+    elif mp_num == "2_1":
+        return 3
+    elif mp_num == "2_2":
+        return 4
+    elif mp_num == "2_3":
+        return 5
+    elif mp_num == "2_4":
+        return 6
+    elif mp_num == "3":
+        return 7
+    elif mp_num == "4":
+        return 12
+        
 
 def check_valid_input(inp):
     if len(inp) == 1 and (inp == "1" or inp == "3" or inp == "4"):
@@ -111,4 +129,34 @@ def check_valid_input(inp):
 
 if __name__ == '__main__':
     print("---------------------------------------------------------------------------------------------------------------------------------")
-    ranking('4')
+    #ranking('4')
+
+    yo = []
+    end = len(yo)
+    while True:
+        var = input("Enter MP: ")
+        # check if they want to exit
+        if var.lower() == "no":
+            print("Good luck!")
+            break
+        
+        # change how many relevant lectures are shown
+        if var.lower() == "help":
+            uh = input("How many lectures would you like to see? ")
+            if int(uh) < len(yo):
+                end = int(uh)
+            else:
+                end = len(yo)
+            continue
+        
+        # check if valid MP
+        if check_valid_input(var) == False:
+            print("That MP does not exist.")
+            continue
+
+        # print out relevant lecture
+        print("The most relevant lectures are: ")
+        # call ranking function and print names
+        yo = ranking(var)
+        for i in yo:
+            print(i)

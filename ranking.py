@@ -47,23 +47,7 @@ def ranking():
 
     #https://www.analyticsvidhya.com/blog/2021/05/build-your-own-nlp-based-search-engine-using-bm25/
 
-# Create lecture week boudaries for each MP
-# returns max week an MP could reference
-def mp_lecture_bounds(mp_num):
-    if mp_num == "1":
-        return 2
-    elif mp_num == "2_1":
-        return 3
-    elif mp_num == "2_2":
-        return 4
-    elif mp_num == "2_3":
-        return 5
-    elif mp_num == "2_4":
-        return 6
-    elif mp_num == "3":
-        return 7
-    elif mp_num == "4":
-        return 12
+
 
 
 if __name__ == '__main__':
