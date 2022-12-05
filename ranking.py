@@ -47,16 +47,8 @@ def ranking():
 
     #https://www.analyticsvidhya.com/blog/2021/05/build-your-own-nlp-based-search-engine-using-bm25/
 
-
-if __name__ == '__main__':
-    print("---------------------------------------------------------------------------------------------------------------------------------")
-    #metapy.index.OkapiBM25(k1=2.75,b=0.65,k3=0)
-    ranking()
-
-
-
 # Create lecture week boudaries for each MP
-# returns max week
+# returns max week an MP could reference
 def mp_lecture_bounds(mp_num):
     if mp_num == "1":
         return 2
@@ -72,3 +64,12 @@ def mp_lecture_bounds(mp_num):
         return 7
     elif mp_num == "4":
         return 12
+
+
+if __name__ == '__main__':
+    print("---------------------------------------------------------------------------------------------------------------------------------")
+    #metapy.index.OkapiBM25(k1=2.75,b=0.65,k3=0)
+    ranking()
+
+
+
