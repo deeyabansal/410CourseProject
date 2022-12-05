@@ -1,0 +1,124 @@
+ ordinal logistic regression sentiment analysis
+ problem set typical sentiment classification problem
+ Or specifically rating prediction
+ opinionated text document input want generate output rating range 1 k discrete rating categorization problem
+ k categories
+ could use regular text categorization technique solve problem
+ solution consider order dependency categories
+ Intuitively features distinguish category 2 1 rather rating 2 1 may similar distinguish k k-1
+ For example positive words generally suggest higher rating
+ When train categorization problem treating categories independent capture
+ solution Well general order classify many different approaches
+ talk one called ordinal logistic regression
+ let first think use logistical regression binary sentiment
+ categorization problem
+ suppose wanted distinguish positive negative two category categorization problem
+ predictors represented X features
+ M features together
+ feature value real number
+ representation text document
+ two values binary response variable 0 1
+ 1 means X positive 0 means X negative
+ course standard two category categorization problem
+ apply logistical regression
+ may recall logistical regression assume log probability Y equal one assumed linear function features shown
+ allow write probability Y equals one given X equation seeing bottom
+ logistical function relates probability probability y=1 feature values
+ course beta parameters direct application logistical regression binary categorization
+ What multiple categories multiple levels Well use binary logistical regression problem solve multi level rating prediction
+ idea introduce multiple binary class files
+ case asked class file predict whether rating j rating lower j
+ Yj equal 1 means rating j
+ When 0 means rating Lower j
+ basically want predict rating range 1-k first one classifier distinguish k versus others
+ classifier one
+ another classifier distinguish
+ At k-1 rest
+ That Classifier 2
+ end need Classifier distinguish 2 1
+ altogether k-1 classifiers
+ course solve problem logistical regression program straight forward seen previous slide
+ Only parameters
+ Because classifier need different set parameters
+ logistical regression classifies index J corresponds rating level
+ used J replace beta 0
+
+ Make notation consistent show ordinal logistical regression
+ basically k minus one regular logistic regression classifiers
+ Each set parameters
+ approach ratings follows
+ After trained k-1 logistic regression classifiers separately course take new instance invoke classifier sequentially make decision
+ first let look classifier corresponds level rating
+ classifier tell whether object rating K
+ probability according logistical regression classifier larger point five say yes
+ rating
+ large twenty-five Well means rating K right need invoke next classifier tells whether K minus one
+ least K minus one
+ probability larger twenty-five say well k-1
+ What says Well means rating even k-1
+ keep invoking classifiers
+ hit end need decide whether two one
+ help solve problem
+ Right classifier actually give prediction rating range 1
+ unfortunately strategy optimal way solving problem
+ specifically two problems approach
+ equations
+ seen
+ first problem many parameters
+ There many parameters
+ count many parameters exactly may interesting exercise
+ To
+ might want pause video try figure solution
+ How many parameters classifier many classifiers Well classifier n plus one parameters k minus one classifiers together total number parameters k minus one multiplied n plus one
+ That lot
+ lot parameters classifier lot parameters general need lot data actually help training data help decide optimal parameters complex model
+ ideal
+ second problems problems k minus 1 plus fives really independent
+ problems actually dependent
+ general words positive make rating higher classifiers
+ For classifiers
+ able take advantage fact
+ idea ordinal logistical regression precisely
+ key idea improvement k-1 independent logistical regression classifiers
+ idea tie beta parameters
+ means assume beta parameters
+ parameters indicated inference weights
+ assume beta values K- 1 parameters
+ encodes intuition positive words general make higher rating likely
+ intuitively assumptions reasonable problem setup
+ order categories
+ fact allow two positive benefits
+ One reduce number families significantly
+ allow share training data
+ Because parameters similar equal
+ training data different classifiers shared help set optimal value beta
+ data help choose good beta value
+ consequence well formula look similar seen beta parameter one index corresponds feature
+ longer index corresponds level rating
+ means tie together
+ one set better values classifiers
+ However classifier still distinct R value
+ R parameter
+ Except different
+ course needed predict different levels ratings
+ R sub j different depends j different j different R value
+ rest parameters beta
+ ask question many parameters Again interesting question think
+ think moment param far fewer parameters
+ Specifically M plus K minus one
+ Because M beta values plus K minus one values
+ let look basically basically main idea ordinal logistical regression
+ let use method actually assign ratings
+ turns idea tying parameters beta values
+ end similar way make decisions
+ specifically criteria whether predictor probabilities least
+ equivalent whether score object larger equal negative authors j shown
+ scoring function taking linear combination features divided beta values
+ means simply make decision rating looking value scoring function bracket falls
+ general decision rule thus score particular range values assign corresponding rating text object
+ approach score object using features trained parameter values
+ score compared set trained alpha values range score
+ using range decide rating object getting
+ Because ranges alpha values correspond different levels ratings way train alpha values
+ Each tied level rating
+ [ MUSIC ]

@@ -1,0 +1,50 @@
+ evaluation text clustering
+ far talked multiple ways text clustering know method works best evaluation
+ talk evaluation one must go back clustering bias introduced beginning
+ Because two objects similar depending look must clearly specify perspective similarity
+ Without problem clustering well defined
+ perspective important evaluation
+ look slide two different ways cluster shapes ask question one best one better actually way answer question without knowing whether cluster based shapes cluster based sizes
+ precisely perspective clustering bias crucial evaluation
+ general evaluate text clusters two ways one direct evaluation indirect evaluation
+ direct evaluation want answer following questions close system-generated clusters ideal clusters generated humans closeness assessed multiple perspectives help characterize quality cluster result multiple angles sometimes desirable
+ want quantify closeness allow easily compare different measures based performance figures
+ finally case essentially inject clustering bias using humans basically humans bring need desire clustering bias
+ exactly Well general procedure look
+ Given test set consists lot text objects humans create ideal clustering result ask humans partition objects create gold standard
+ use judgments based need particular application generate think best clustering results used compare system generated clusters test set
+ ideally want system results human generated results general
+ quantify similarity system-generated clusters gold standard clusters
+ similarity measure multiple perspectives give various meshes quantitatively evaluate cluster clustering result
+ commonly used measures include purity measures whether cluster similar object cluster gold standard
+ normalized mutual information commonly used measure basically measures based identity cluster object system generally
+ How well predict cluster object gold standard vice versa mutual information captures correlation cluster labels normalized mutual information often used quantifying similarity evaluation purpose F measure another possible measure
+ thorough discussion evaluation evaluation issues beyond scope course
+ suggested reading end take look know
+ want discuss high level ideas allow think evaluation applications
+ second way evaluate text clusters indirect evaluation
+ case question answer useful clustering results intended applications course application specific question usefulness depend specific applications
+ case clustering bias imposed independent application well counts best cluster result dependent application
+ procedure wise create test set text objects intended application quantify performance system
+ case care contribution clustering application often baseline system compare
+ could current system something hope add clustering improve baseline system could using different clustering method
+ trying experiment hope better idea word clustering
+ case baseline system work add clustering algorithm baseline system produce clustering system
+ compare performance clustering system baseline system terms performance measure particular application
+ case call indirect evaluation clusters explicit assessment quality clusters rather assess contribution clusters particular application
+ summarize text clustering useful unsupervised general text mining technique particularly useful obtaining overall picture text content
+ often needed explore text data often first step deal lot text data
+ second application second kind applications discover interesting clustering structures text data structures meaningful
+ There many approaches used form text clustering discussed model based approaches narrative based approaches
+ general strong clusters tend show matter method used
+ effectiveness method highly depends whether desired clustering bias captured appropriately done either using right generating model model design appropriate clustering right similarity function expressly define bias
+ Deciding optimal number customers difficult problem order cluster methods unsupervised algorithm training guide select best number clusters
+ sometimes may methods automatically determine number clusters general implied application clustering bias specified
+ Without clearly defining clustering bias impossible say optimal number cluster important keep mind
+ say sometimes use application determine number clusters example clustering search results obviously want generate 100 clusters number dictated interface design
+ situations might able use fitness data assess whether got good number clusters explain data well
+ vary number clusters watch well fit data
+ general add components mixed model fit data better always set probability using new component zero
+ ca general fit data worse question add components able significantly improve fitness data used determine right number clusters
+ finally evaluation clustering results kind done directly indirectly often order get good sense well method works
+ suggested reading particularly useful better understand matches calculated clustering general

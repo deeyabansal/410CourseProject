@@ -1,0 +1,244 @@
+ continued discussion Discriminative Classifiers Text Categorization
+ introduce yet another Discriminative Classifier called Support Vector Machine SVM
+ Which popular classification method shown effective text categorization
+ introduce classifier let think simple case two categories
+ two topic categories 01 02
+ want classify documents two categories represent document feature factor x
+ idea classifier design linear separator similar seen regression right say sign function value positive say objective category one
+ Otherwise say category 2
+ makes 0 decision boundary categories
+ generally hiding marginal space
+ corresponds hyper plain
+ shown simple case two dimensional space X1 X2 case corresponds line
+ line defined three parameters beta zero beta one beta two
+ line heading direction shows increase X1 X2 increase
+ know beta one beta two different assigns one negative positive
+ let assume beta one negative beta two Is positive
+ interesting examine data instances two sides slide
+ data instance visualized circles one class diamonds class
+ one question take point one ask question value expression classifier data point think Basically evaluate value using function
+ said value positive say category one negative category two
+ Intuitively line separates two categories expect points one side positive points side negative
+ Our question assumption mentioned let examine particular point one
+ think sine expression Well examine sine simply look expression
+ compare let say value line let compare point
+ While identical X1 one higher value X2
+ let look sin coefficient X2
+ Well know positive
+ means f value point higher f value point line means positive right know general points side function value positive verify points side negative
+ kind linear classifier linear separator separate points two categories
+ natural question linear separator best get one line separate two classes
+ line course determined vector beta coefficients
+ Different coefficients give different lines
+ could imagine lines job
+ Gamma example could give another line counts separator instances
+ Of course lines wo separate bad lines
+ question multiple lines separate clauses align best fact imagine many different ways choosing line
+ logistical regression classifier seen earlier actually uses criteria determine line linear separate well
+ uses conditional likelihood training determines line best
+ SVM look another criteria determining line best
+ time criteria tied classification arrow
+ basic idea choose separator maximize margin
+ margin choose dotted lines indicate boundaries data points class
+ margin simply distance line separator closest point class
+ margin side shown define margin side
+ order separator maximize margin kind middle two boundaries want separator close one side intuition makes lot sense
+ basic idea SVM
+ choose linear separator maximize margin
+ slide changed notation 'm use beta denote parameters
+ instead 'm use w although w used denote words confused
+ W actually width certain width
+ 'm using lowercase b denote beta 0 biased constant
+ instances represent x use vector form multiplication
+ transpose w vector multiply future vector
+ b bias constant w set weights one way feature
+ features weights represent vector
+ similarly data instance text object represented feature vector number elements
+ Xi feature value
+ For example word count verify
+ Multiply two vectors together take dot product get form linear separator seen
+ different way representing
+ use way consistent notations people usually use talk SVM
+ way better connect slides readings might
+ Okay maximize margins separator means boundary separator determined data points data points call support vectors
+ illustrated two support vectors one class two class
+ quotas define margin basically imagine know supportive vectors center separator line determined
+ data points actually really matter much
+ change data points wo really affect margin separator stay
+ Mainly affected support vector machines
+ Sorry mainly affected support vectors called support vector machine
+ Okay next question course set optimize line How actually find line separator equivalent finding values w b determine exactly separator
+ simplest case linear SVM simple optimization problem
+ let recall classifier linear separator weights features main goal remove weights w b
+ classifier say X category theta 1 positive
+ Otherwise say category
+ assumption setup
+ linear SVM seek parameter values optimize margins training error
+ training data basically classifiers
+ set training points know x vector know corresponding label
+ define two values values 0 1 seen rather -1 positive 1 corresponding two categories shown
+ might wonder define 0 1 instead -1 1
+ purely mathematical convenience moment
+ goal optimization first make sure labeling training data correct
+ means norm label instance x 1 classified value large
+ choose threshold 1
+ use another threshold easily fit constant parameter values b w make right-hand side 1
+ hand -1 means different class want classifier give small value fact negative value want value less equal -1
+ two different instances different kinds cases
+ How combine together convenient chosen -1 category turns either combine two one constraint
+ multiplied classifier value must larger equal 1
+ obviously 1 constraint left-hand side
+ -1 equivalent inequality
+ one actually captures constraints unified way convenient way capturing constraints
+ What second goal Well maximize margin want ensure separator well training data
+ among cases separate data choose separator largest margin
+ margin assumed related magnitude weight
+ w transform multiplied w give basically sum squares weights
+ small value expression means w must small
+ assumed constraint getting data training set classified correctly
+ objective tied maximization margin simply minimize w transpose multiplied w often denote phi
+ basically optimization problem
+ variables optimize weights b constraints
+ linear constraints objective function quadratic function weights
+ quadratic program linear constraints standard algorithm variable solving problem
+ solve problem obtain weights w b
+ give well-defined classifier
+ use classifier classify new text objects
+ previous formulation allow error classification sometimes data may linear separator
+ That means may look nice seen previous slide line separate
+ happen allowed errors Well principle stay
+ want minimize training error try maximize margin
+ case soft margin data points may completely separable
+ turns easily modify SVM accommodate
+ similar seen introduced extra variable xi
+ fact one data instance model error allow instance
+ optimization problem similar
+ specifically added something optimization problem
+ First added error constraint allow Allow classifier make mistakes
+ Xi allowed error
+ set Xi 0 go back original constraint
+ want every instance classified accurately
+ allow non-zero allow errors
+ fact length Xi large error large
+ naturally want happen
+ want minimize Xi
+ Xi needs minimized order control error
+ result objective function add original one W basically ensuring minimize weights minimize errors
+ Here simply take sum instances
+ Each one Xi model error allowed instance
+ combine together basically want minimize errors
+ parameter C constant control trade-off minimizing errors maximizing margin
+ C set zero go back original object function maximize margin
+ really optimize training errors Xi set large value make constraints easy satisfy
+ That good course C set non-zero value positive value
+ C set large value object function dominated mostly training errors optimization margin play secondary role
+ happens happen try best minimize training errors take care margin affects generalization factors classify future data
+ good
+ particular parameter C actually set carefully
+ case k-nearest neighbor need optimize number neighbors
+ Here need optimize
+ general achievable cross-validation
+ Basically look empirical data value C set order optimize performance
+ modification problem still quadratic programming linear constraints optimizing algorithm actually applied solve different version program
+ Again obtained weights bias classifier ready classifying new objects
+ basic idea SVM
+ summarize text categorization methods introduce many methods generative models
+ Some discriminative methods
+ tend perform similarly optimized
+ still clear winner although one pros cons
+ performance might vary different data sets different problems
+ one reason feature representation critical methods require effective feature representation
+ design effective feature set need domain knowledge humans definitely play important role although new machine learning methods algorithm representation learning help learning features
+ another common thing might performing similarly data set different mistakes
+ performance might similar mistakes make might different
+ means useful compare different methods particular problem maybe combine multiple methods improve robustness wo make mistakes
+ assemble approaches combine different methods tend robust useful practice
+ Most techniques introduce use supervised machine learning general method
+ means methods actually applied text categorization problem
+ As long humans help annotate training data sets design features supervising machine learning classifiers easily applied problems solve categorization problem allow characterize content text concisely categories
+ Or predict sum properties real world variables associated text data
+ computers course trying optimize combinations features provided human
+ said many different ways combining optimize different object functions
+ order achieve good performance require effective features plenty training data
+ general rule improve feature representation provide training data generally better
+ Performance often much affected effectiveness features choice specific classifiers
+ feature design tends important choice specific classifier
+ design effective features Well unfortunately application-specific
+ really much general thing say
+ analysis categorization problem try understand kind features might help distinguish categories
+ general use lot domain knowledge help design features
+ another way figure effective features error analysis categorization results
+ could example look category tends confused categories
+ use confusion matrix examine errors systematically across categories
+ look specific instances mistake made features prevent mistake
+ allow obtain insights design new features
+ error analysis important general get insights specific problem
+ finally leverage machine learning techniques
+ example feature selection technique really talked important
+ trying select useful features actually train full classifier
+ Sometimes training classifier help identify features high values
+ There ways ensure sparsity
+ Of model meaning recognize widths
+ For example SVM actually tries minimize weights features
+ force features force use small number features
+ There techniques dimension reduction
+ reduce high dimensional feature space low dimensional space typically clustering features various ways
+ metrics factorization used job techniques actually similar talking models discuss
+ talking morals psa lda actually help reduce dimension features
+ Like imagine words original feature
+ matched topic space
+ say k topics
+ document represented vector k values corresponding topics
+ let topic define one dimension k dimensional space instead original high dimensional space corresponding words
+ often another way learn effective features
+ Especially could use categories supervise learning low dimensional structures
+ original worth features combined amazing dimension features lower dimensional space features provide multi resolution often useful
+ Deep learning new technique developed machine learning
+ particularly useful learning representations
+ deep learning refers deep neural network another kind classifier intermediate features embedded models
+ That highly non-linear transpire recent events allowed train complex network effectively
+ technique shown quite effective speech recognition computer reasoning recently applied text well
+ shown promise
+ one important advantage approach relationship featured design learn intermediate replantations compound features automatically
+ valuable learning effective replantation text recalibration
+ Although text domain words exemplary representation text content human imaging communication
+ generally sufficient For representing content many tasks
+ need new representation people invented new word
+ think value deep learning text processing tends lower [ INAUDIBLE ]
+ speech revenue anchored corresponding design worked features
+ people still promising learning effective features especially complicated tasks
+ Like analysis shown effective provide beyond words
+ regarding training examples
+ generally hard get lot training examples involves human labor
+ ways help
+ one assume low quality training examples used
+ called pseudo training examples
+ For example take reviews internet might overall ratings
+ train categorizer meaning want positive negative
+ categorize reviews two categories
+ Then could assume five star reviews positive training samples
+ One star negative
+ course sometimes even five star reviews mention negative opinions training sample high quality still useful
+ Another idea exploit unlabeled data techniques called semi-supervised machine learning techniques allow combine labeled data unlabeled data
+ case easy next model used For text plus read categorization
+ imagine lot unlabeled text data categorization actually clustering text data learn categories
+ try somehow align categories
+ With categories defined training data already know documents category
+ fact use Algorithm actually combine
+ That allow essentially pick useful words label data
+ think another way
+ Basically use let say classify unlabeled text documents assume high confidence Classification results actually liable
+ Then suddenly training data enabler know labeled category one labeled category two
+ All though label completely reliable still useful
+ let assume actually training label examples combine true training examples improved categorization method
+ idea powerful
+ When enabled data training data different might need use advanced machine learning techniques called domain adaptation transfer learning
+ Borrow training examples related problem may different
+ Or categorization password follow different distribution working
+ basically two domains different need careful overfit training domain
+ yet still want use signals related training data
+ example training categorization news might give Effective plus class vine topics tweets
+ still learn something news help look writing tweets
+ mission learning techniques help effectively
+ Here suggested reading find details methods covered
+ [ MUSIC ]

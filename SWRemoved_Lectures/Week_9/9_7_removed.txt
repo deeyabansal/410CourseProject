@@ -1,0 +1,119 @@
+ probabilistic latent Semantic Analysis PLSA
+ introduce probabilistic latent semantic analysis often called PLSA
+ basic topic model one useful topic models
+ kind models general used mine multiple topics text documents
+ PRSA one basic topic models
+ let first examine power e-mail detail
+ Here show sample article blog article Hurricane Katrina
+ show simple topics
+ For example government response flood city New Orleans
+ Donation background
+ article use words distributions
+ first example criticism government response followed discussion flooding city donation et cetera
+ background words mixed
+ overall topic analysis try decode topics behind text segment topics figure words distribution figure first topics How know topic government response
+ There topic flood city
+ tasks top model
+ discovered topics color words separate different topics
+ Then lot things summarization segmentation topics clustering sentences etc
+ formal definition problem mining multiple topics text shown
+ slide seen earlier
+ input collection number topics vocabulary set course text data
+ output two kinds
+ One topic category characterization
+ Theta
+ Each theta word distribution
+ second topic coverage document
+ pi sub j
+ tell document covers
+ Which topic extent
+ hope generate output
+ Because many useful applications
+ idea PLSA actually similar two component mixture model already introduced
+ difference two topics
+ Otherwise essentially
+ illustrate generate text multiple topics naturally cases Probabilistic modelling want figure likelihood function
+ ask question probability observing word mixture model look picture compare picture seen earlier difference added topics
+ one topic besides background topic
+ topics
+ Specifically k topics
+ All topics assume exist text data
+ consequence switch choosing topic multiway switch
+ Before two way switch
+ think flipping coin
+ multiple ways
+ First flip coin decide whether talk background
+ background lambda sub B versus non-background
+ 1 minus lambda sub B gives probability actually choosing non-background topic
+ After made decision make another decision choose one K distributions
+ K way switch
+ characterized pi sum one
+ difference designs
+ Which little bit complicated
+ decide distribution use rest generate word using one distributions shown
+ lets look question likelihood
+ probability observing word distribution What think seen problem many times recall generally sum
+ Of different possibilities generating word
+ let first look word generated background mode
+ Well probability word generated background model lambda multiplied probability word background mode
+ Model right
+ Two things must happen
+ First chosen background model probability lambda sub b
+ Then second must actually obtained word w background probability w given theta sub b
+ Okay similarly figure probability observing word another topic
+ Like topic theta sub
+ notice product three terms
+ choice topic theta sub k happens two things happen
+ One decide talk background
+ probability 1 minus lambda sub B
+ Second actually choose theta sub K among K topics
+ probability theta sub K pi
+ similarly probability generating word second
+ topic first topic seeing
+ end probability observing word sum cases
+ stress important formula know really key understanding topic models indeed lot mixture models
+ make sure really understand probability w indeed sum terms
+ next likelihood function interested knowing parameters
+ All right estimate parameters
+ firstly let put together complete likelihood function PLSA
+ first line shows probability word illustrated previous slide
+ important formula said
+ let take closer look
+ actually commands important parameters
+ first lambda sub b
+ represents percentage background words believe exist text data
+ known value set empirically
+ Second background language model typically assume known
+ use large collection text use text available estimate world distribution
+ next next stop formula
+ [ COUGH ] Excuse
+ two interesting kind parameters important parameters
+ That
+ one pi
+ coverage topic document
+ word distributions characterize topics
+ next line simply plug calculate probability document
+ familiar form sum count word document
+ log probability
+ little bit complicated two component
+ Because components sum involves terms
+ line likelihood whole collection
+ similar accounting documents collection
+ unknown parameters already said two kinds
+ One coverage one word distributions
+ Again useful exercise think
+ Exactly many parameters
+ How many unknown parameters try think question help understand model detail
+ allow understand output generate use PLSA analyze text data precisely unknown parameters
+ obtained likelihood function shown next worry parameter estimation
+ usual think maximum likelihood estimator
+ constrained optimization problem seen
+ Only collection text parameters estimate
+ still two constraints two kinds constraints
+ One word distributions
+ All words must probabilities sum one one distribution
+ topic coverage distribution document cover precisely k topics probability covering topic sum 1
+ point though basically well defined applied math problem need figure solutions optimization problem
+ There function many variables
+ need figure patterns variables make function reach maximum
+ > > [ MUSIC ]

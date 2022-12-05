@@ -1,0 +1,81 @@
+ looking text mining problem closely problem similar general data mining except focusing text data
+ text mining algorithms help turn text data actionable knowledge use real world especially decision making completing whatever tasks require text data support
+ Because general many real world problems data mining tend kinds data non-textual
+ general picture include non-text data well
+ reason might concerned joint mining text non-text data
+ course focus text mining touch joint analysis text data non-text data
+ With problem definition look landscape topics text mining analytics
+ slide shows process generating text data detail
+ More specifically human sensor human observer look word perspective
+ Different people looking world different angles pay attention different things
+ person different times might pay attention different aspects observed world
+ humans able perceive world perspective
+ human sensor form view world
+ called Observed World
+ Of course different Real World perspective person taken often biased
+ Observed World represented example entity-relation graphs general way using knowledge representation language
+ general basically person mind world
+ really know exactly looks course
+ human express person observed using natural language English
+ result text data
+ Of course person could used different language express observed
+ case might text data mixed languages different languages
+ main goal text mining Is actually revert process generating text data
+ hope able uncover aspect process
+ Specifically think mining example knowledge language
+ means looking text data English may able discover something English usage English patterns English
+ one type mining problems result knowledge language may useful various ways
+ look picture mine knowledge observed world
+ much mining content text data
+ look text data try get essence extracting high quality information particular aspect world interested
+ For example everything said particular person particular entity
+ regarded mining content describe observed world user mind person mind
+ look imagine mine knowledge observer
+ using text data infer properties person
+ properties could include mood person sentiment person
+ note distinguish observed word person text data ca describe person observed objective way
+ description subjected sentiment general imagine text data contain factual descriptions world plus subjective comments
+ possible text mining mine knowledge observer
+ Finally look picture left side picture certainly say something real world
+ Right indeed text mining infer real world variables
+ often called predictive analytics
+ want predict value certain interesting variable
+ picture basically covered multiple types knowledge mine text general
+ When infer real world variables could use results mining text data intermediate results help prediction
+ For example mine content text data might generate summary content
+ summary could used help predict variables real world
+ course still generated original text data want emphasize often processing text data generate features help prediction important
+ show results mining tasks including mining content text data mining knowledge observer helpful prediction
+ fact non-text data could use non-text data help prediction course depends problem
+ general non-text data important prediction tasks
+ For example want predict stock prices changes stock prices based discussion news articles social media example using text data predict real world variables
+ case obviously historical stock price data important prediction
+ example non-text data useful prediction
+ combine kinds data make prediction
+ non-text data used analyzing text supplying context
+ When look text data alone mostly looking content and/or opinions expressed text
+ text data generally context associated
+ For example time location associated text data
+ useful context information
+ context provide interesting angles analyzing text data
+ For example might partition text data different time periods availability time
+ analyze text data time period make comparison
+ Similarly partition text data based locations meta data associated form interesting comparisons areas
+ sense non-text data actually provide interesting angles perspectives text data analysis
+ help make context-sensitive analysis content language usage opinions observer authors text data
+ could analyze sentiment different contexts
+ fairly general landscape topics text mining analytics
+ course selectively cover topics
+ actually hope cover general topics
+ First cover natural language processing briefly understanding text data determines represent text data text mining
+ Second talk mine word associations text data
+ word associations form use lexical knowledge language
+ Third talk topic mining analysis
+ one way analyze content text useful ways analyzing content
+ one useful techniques text mining
+ Then talk opinion mining sentiment analysis
+ regarded one example mining knowledge observer
+ finally cover text-based prediction problems try predict real world variable based text data
+ slide serves road map course
+ use outline topics cover rest course
+ [ MUSIC ]

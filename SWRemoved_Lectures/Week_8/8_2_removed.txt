@@ -1,0 +1,90 @@
+ syntagmatic relation discovery conditional entropy
+ discussion word association mining analysis
+ talk conditional entropy useful discovering syntagmatic relations
+ Earlier talked using entropy capture easy predict presence absence word
+ address different scenario assume know something text segment
+ question suppose know eats occurred segment
+ How help predict presence absence water meat particular want know whether presence eats helped predict presence meat
+ frame using entrophy mean interested knowing whether knowing presence eats could reduce uncertainty meats
+ Or reduce entrophy random variable corresponding presence absence meat
+ ask question know absents eats Would help predict presence absence meat questions addressed using another concept called conditioning entropy
+ explain concept let first look scenario know nothing segment
+ probabilities indicating whether word meat occurs occur segment
+ entropy function looks slide
+ suppose know eats present know value another random variable denotes eats
+ change probabilities conditional probabilities
+ Where look presence absence meat given know eats occurred context
+ result replace probabilities corresponding conditional probabilities entropy function get conditional entropy
+ equation conditional entropy
+ Conditional presence eats
+ essentially entropy function seen except probabilities condition
+ tells entropy meat known eats occurring segment
+ course define conditional entropy scenario eats
+ know occur segment entry condition entropy capture instances meat condition
+ putting different scenarios together completed definition conditional entropy follows
+ Basically consider scenarios value eats zero one gives probability eats equal zero one
+ Basically whether eats present absent
+ course conditional entropy meat particular scenario
+ expanded entropy following equation
+ Where involvement conditional probabilities
+ general discrete random variables x conditional entropy larger entropy variable x
+ basically upper bound conditional entropy
+ That means knowing information segment want able increase uncertainty
+ reduce uncertainty
+ intuitively makes sense know information always help make prediction
+ hurt prediction case
+ interesting think minimum possible value conditional entropy know maximum value entropy X
+ minimum think hope reach conclusion minimum possible value zero
+ interesting think situation achieve
+ let use conditional entropy capture syntagmatic relation
+ course conditional entropy gives directly one way measure association two words
+ Because tells extent predict one word given know presence absence another word
+ look intuition conditional entropy capturing syntagmatic relations useful think special case listed
+ That conditional entropy word given
+ listed conditional entropy middle
+
+ value means know meat occurs sentence
+ hope predict whether meat occurs sentence
+ course 0 incident anymore
+ Once know whether word occurs segment already know answer prediction
+ zero
+ conditional entropy reaches minimum
+ let look cases
+ case knowing trying predict meat
+ case knowing eats trying predict meat
+ Which one think smaller No doubt smaller entropy means easier prediction
+ Which one think higher Which one smaller Well uncertainty first case really tell much meat
+ knowing occurrence really help reduce entropy much
+ stays fairly close original entropy meat
+ Whereas case eats eats related meat
+ knowing presence eats absence eats help predict whether meat occurs
+ help reduce entropy meat
+ expect sigma term namely one smaller entropy
+ means stronger association meat eats
+ know w meat conditional entropy reach minimum 0
+ kind words either reach maximum Well stuff really related meat
+ example close maximum entropy meat
+ suggests use conditional entropy mining syntagmatic relations hours look follows
+ For word W1 enumerate overall words W2
+ compute conditional entropy W1 given W2
+ thought candidate ascending order conditional entropy favor world small entropy
+ Meaning helps predict time word W1
+ take top ring candidate words words potential syntagmatic relations W1
+ Note need use threshold find words
+ stresser number top candidates take absolute value conditional entropy
+ allow mine strongly correlated words particular word W1
+ algorithm help mine strongest K syntagmatical relations entire collection
+ Because order ensure conditional entropies comparable across different words
+ case discovering mathematical relations targeted word W1 need compare conditional entropies W1 given different words
+ case comparable
+ All right
+ conditional entropy W1 given W2 conditional entropy W1 given W3 comparable
+ They measure hard predict W1
+ think two pairs share W2 condition try predict W1 W3
+ Then conditional entropies actually comparable
+ think question
+ Why comfortable Well different outer bounds
+ Right outer bounds precisely entropy W1 entropy W3
+ different upper bounds
+ really compare way
+ address problem

@@ -1,0 +1,105 @@
+ word association mining analysis
+ talk mine associations words text
+ example knowledge natural language mine text data
+ Here outline
+ first talk word association explain discovering relations useful finally talk general ideas mine word associations
+ general two word relations quite basic
+ One called paradigmatic relation
+ syntagmatic relation
+ B paradigmatic relation substituted
+ That means two words paradigmatic relation semantic class syntactic class
+ general replace one without affecting understanding sentence
+ That means still valid sentence
+ For example cat dog two words paradigmatic relation class animal
+ general replace cat dog sentence sentence still valid sentence make sense
+ Similarly Monday Tuesday paradigmatical relation
+ second kind relation called syntagmatical relation
+ case two words relation combined
+ B syntagmatic relation combined sentence means two words semantically related
+ example cat sit related cat sit somewhere
+ Similarly car drive related semantically combined convey meaning
+ However general replace cat sit sentence car drive sentence still get valid sentence meaning sentence become somewhat meaningless
+ different paradigmatic relation
+ two relations fact fundamental generalized capture basic relations units arbitrary sequences
+ definitely generalized describe relations items language
+ B words phrases example
+ even complex phrases non-phrase
+ think general problem sequence mining think units sequence data
+ Then think paradigmatic relation relations applied units tend occur singular locations sentence sequence data elements general
+ occur similar locations relative neighbors sequence
+ Syntagmatical relation hand related co-occurrent elements tend show sequence
+ two complimentary basic relations words
+ interested discovering automatically text data
+ Discovering worded relations many applications
+ First relations directly useful improving accuracy many NLP tasks part knowledge language
+ know two words synonyms example help lot tasks
+ grammar learning done using techniques
+ Because learn paradigmatic relations form classes words syntactic classes example
+ learn syntagmatic relations able know rules putting together larger expression based component expressions
+ learn structure go else
+ Word relations useful many applications text retrieval mining
+ For example search text retrieval use word associations modify query used introduce additional related words query make query effective
+ often called query expansion
+ Or use related words suggest related queries user explore information space
+ Another application use word associations automatically construct top map browsing
+ words nodes associations edges
+ user could navigate one word another find information information space
+ Finally word associations used compare summarize opinions
+ For example might interested understanding positive negative opinions iPhone 6
+ order look words strongly associated feature word battery positive versus negative reviews
+ Such syntagmatical relations help show detailed opinions product
+ discover associations automatically intuitions
+ let first look paradigmatic relation
+ Here essentially take advantage similar context
+ simple sentences cat dog
+ generally occur similar context definition paradigmatic relation
+ On right side kind extracted expressly context cat dog small sample text data
+ taken away cat dog sentences context
+ course different perspectives look context
+ For example look words occur left part context
+ call left context
+ What words occur cat dog case clearly dog cat similar left context
+ generally say cat cat say dog dog
+ makes similar left context
+ Similarly look words occur cat dog call right context similar case
+ Of course extreme case eats
+ general many words course ca follow cat dog
+ even look general context
+ might include words sentence sentences around word
+ even general context similarity two words
+ suggestion discover paradigmatic relation looking similarity context words
+ example think following questions
+ How similar context cat context dog contrast similar context cat context computer intuitively imagine context cat context dog similar context cat context computer
+ That means first case similarity value high context cat dog second similarity context cat computer low paradigmatic relationship imagine words occur computer general
+ different words occur cat
+ basic idea covering paradigmatic relation
+ What syntagmatic relation Well explore correlated occurrences based definition syntagmatic relation
+ Here sample text
+ interested knowing words correlated verb eats words go eats
+ look right side slide taken away two words around eats
+ taken away word left word right sentence
+ ask question words tend occur left eats words tend occur right eats thinking question help discover syntagmatic relations syntagmatic relations essentially captures correlations
+ important question ask syntagmatical relation whenever eats occurs words tend occur question whether words tend co-occur together
+ Meaning whenever eats tend words
+ eats probably words often either
+ intuition help discover syntagmatic relations
+ consider example
+ How helpful occurrence eats predicting occurrence meat Right
+ All right knowing whether eats occurs sentence generally help predict whether meat occurs indeed
+ eats occur sentence increase chance meat occur
+ contrast look question bottom helpful occurrence eats predicting occurrence text Because eats text really related knowing whether eats occurred sentence really help predict weather text occurs sentence
+ contrast question eats meat
+ helps explain intuition behind methods discovering syntagmatic relations
+ Mainly need capture correlation occurrences two words
+ summarize general ideas discovering word associations following
+ For paradigmatic relation present word context
+ compute context similarity
+ assume words high context similarity paradigmatic relation
+ For syntagmatic relation count many times two words occur together context sentence paragraph document even
+ compare co-occurrences individual occurrences
+ assume words high co-occurrences relatively low individual occurrences syntagmatic relations attempt occur together usually occur alone
+ Note paradigmatic relation syntagmatic relation actually closely related paradigmatically related words tend syntagmatic relation word
+ They tend associated word suggests join discovery two relations
+ general ideas implemented many different ways
+ course wo cover cover least methods effective discovering relations
+ [ MUSIC ]

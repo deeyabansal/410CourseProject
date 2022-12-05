@@ -1,0 +1,160 @@
+ specific technique Contextual Text Mining called Contextual Probabilistic Latent Semantic Analysis
+ discussing Contextual Text Mining
+ introduce Contextual Probablitistic Latent Semantic Analysis exchanging POS contextual text mining
+ Recall contextual text mining hope analyze topics text consideration context associate topics property context interesting
+ approach contextual probabilistic latent semantic analysis CPLSA main idea express add interesting context variables generating model
+ Recall generate text generally assume start wIth topics assemble words topics
+ add context variables coverage topics content topics tied context
+ Or words let context Influence coverage content topic
+ consequences enable discover contextualized topics
+ Make topics interesting meaningful
+ Because topics interpreted specifically particular context interested
+ For example particular time period
+ As extension PLSA model CPLSA following changes
+ Firstly model conditional likelihood text given context
+ That clearly suggests generation text depend context allows bring context generative model
+ Secondly makes two specific assumptions dependency topics context
+ One assume depending context depending different time periods different locations assume different views topic different versions word descriptions characterize topic
+ assumption allows discover different variations topic different contexts
+ assume topic coverage depends context
+ That means depending time location might cover topics differently
+ Again dependency allow capture association topics specific contexts
+ still use EM algorithm solve problem parameter estimation
+ case estimated parameters naturally contain context variables
+ particular lot conditional probabilities topics given certain context
+ allows contextual text mining
+ basic idea
+ time introduce model detail references look know detail
+ Here want explain high level ideas detail
+ Particularly want explain generation process
+ Of text data context associated model
+ assume still multiple topics
+ For example topics might represent themes government response donation Or city New Orleans
+ example context Hurricane Katrina hit New Orleans
+ assume different views associated topics
+ shown View 1 View 2 View 3
+ Each view different version word distributions
+ views tied context variables
+ For example tied location Texas time July 2005 occupation author sociologist
+ right side assume document context information
+ time known July 2005
+ location Texas etc
+ context information hope model well
+ model text
+ one idea model variations top content various content
+ gives different views water distributions
+ bottom theme coverage top Coverage might vary according context case location Texas people might want cover red topics
+ That New Orleans
+ That visualized
+ certain time period maybe Particular topic covered
+ variation considered CPLSA
+ generate searcher document With context first choose view
+ view course could contexts
+ Let say taken view depends time
+ middle
+ specific version word distributions
+ probabilities words topic
+ chosen view situation similar happened standard ( ( PRSA ) ) assume got word distribution associated topic right next choose coverage bottom choose particular coverage coverage fixed PLSA assigned particular document
+ Each document one coverage distribution
+ consider context distribution topics coverage Topics vary depending context influenced coverage
+ example might pick particular coverage
+ Let say case picked document specific coverage
+ coverage word distributions generate document exactly way PLSA
+ means use coverage choose topic choose one three topics
+ Let say picked yellow topic
+ Then draw word particular topic top
+ Okay might get word government
+ next time might choose different topic get donate etc
+ Until generate words
+ basically process PLSA
+ main difference obtain coverage
+ word distribution let context influence choice words extra switches tied contacts control choices different views topics choices coverage
+ naturally model parameters estimate
+ estimate parameters involve context able understand context specific views topics context specific coverages topics
+ precisely want contextual text mining
+ simple results
+ From using model
+ Not necessary exactly model similar models
+ slide sample results comparing news articles Iraq War Afghanistan War
+ 30 articles Iraq wa r 26 articles Afghanistan war
+ case goal review common topic
+ covered sets articles differences variations topic two collections
+ case context explicitly specified topic collection
+ results show common theme corresponding Cluster 1 column
+ common theme indicting United Nations involved Wars
+ common topic covered sets articles
+ indicated high probability words shown united nations
+ know background course surprising topic indeed relevant wars
+ look column interesting next two cells word distributions actually tell collection specific variations topic United Nations
+ indicates Iraq War United Nations involved weapons factions whereas Afghanistan War involved maybe aid Northern Alliance
+ different variation topic United Nations
+ shows bringing context
+ case different walls different collection texts
+ topical variations tied contexts review differences coverage United Nations two wars
+ similarly look second cluster Class two killing people surprising know background wars
+ All wars involve killing people imagine familiar text collections
+ lot text articles technique reveal common topics covered sets articles
+ used review common topics multiple sets articles well
+ look course column cluster two variations killing people corresponds different contexts another example results obtained blog articles Hurricane Katrina
+ case visualization trends topics time
+ top one shows temporal trends two topics
+ One oil price one flooding city New Orleans
+ topics obtained blog articles Hurricane Katrina
+ people talk topics
+ end teaching topics
+ visualisation shows technique conditional distribution time
+ Given topic
+ allows plot conditional probability curve seeing
+ initially two curves tracked well
+ later topic New Orleans mentioned oil price
+ turns time period another hurricane hurricane Rita hit region
+ apparently triggered discussion flooding city
+ bottom curve shows coverage topic flooding city block articles different locations
+ shows shift coverage might related people migrating state Louisiana Texas example
+ case time used context review trends topics
+ additional results spacial patterns
+ case topic government response
+ criticism slow response government case Hurricane Katrina
+ discussion covered different locations
+ visualizations show coverage different weeks event
+ initially covered mostly victim states South gradually spread locations
+ week four shown bottom left pattern similar first week top left
+ Hurricane Rita hit region
+ technique allow use location context examine issues topics
+ course moral completely general apply connections text
+ To review spatial temporal patterns
+ His view found another application kind model look use model event impact analysis
+ looking research articles information retrieval
+ IR particularly SIGIR papers
+ topic focusing retrieval models
+ top words high probability model left
+ hope examine impact two events
+ One start TREC Text Retrieval Conference
+ major evaluation sponsored
+ government launched 1992 around time
+ known made impact topics research information retrieval
+ publication seminal paper Croft Porte
+ language model approach information retrieval
+ known made high impact information retrieval research
+ hope use kind model understand impact
+ idea simply use time context
+ use events divide time periods period
+ For event another event
+ compare differences topics
+ variations etc
+ case results show track study retrieval models mostly vector space model Boolean model etc
+ Trec apparently study retrieval models involved lot words
+ That seems suggest different retrieval tasks example email used enterprise search tasks subtopical retrieval another task later introduced Trec
+ On bottom variations correlated propagation language model paper
+ Before classic probability risk model logic model Boolean
+ 1998 clear dominance language model probabilistic models
+ words language model estimation parameters etc
+ technique use events context understand impact event
+ Again technique generals use analyze impact event
+ Here suggested readings
+ first paper simple staging psi label cross-collection comparison
+ perform comparative text mining allow extract common topics shared multiple collections
+ variations collection
+ second one main paper CPLSA model
+ Was discussion lot applications
+ third one lot details special temporal patterns Hurricane Katrina example

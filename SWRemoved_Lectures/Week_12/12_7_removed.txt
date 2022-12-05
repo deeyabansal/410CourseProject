@@ -1,0 +1,190 @@
+ using time series context potentially discover causal topics text
+ discussing Contextual Text Mining
+ particular look time series context analyzing text potentially discover causal topics
+ As usual started motivation
+ case hope use text mining understand time series
+ Here seeing Dow Jones Industrial Average stock price curves
+ sudden drop
+ Right
+ one interested knowing might caused stock market crash
+ Well know background might able figure look time stamp data help think
+ question get clues companion news stream lot news data generated period
+ might actually discover crash
+ After happened time September 11 attack
+ time sudden rise topic September 11 happened news articles
+ Here another scenario want analyze Presidential Election
+ time series Presidential Prediction Market
+ For example write trunk market stocks candidate
+ believe one candidate win tend buy stock candidate causing price candidate increase
+ nice way actual survey people opinions candidates
+ suppose something drop price one candidate
+ might want know might caused sudden drop
+ Or social science study might interested knowing method election issues really matter people
+ case look companion news stream ask question
+ Are clues news stream might provide insight example might discover mention tax cut increasing since point
+ maybe related drop price
+ cases special cases general problem joint analysis text time series data discover causal topics
+ input case time series plus text data produced time period companion text stream
+ different standard topic models text collection
+ That time series serves context
+ output want generate topics whose coverage text stream strong correlations time series
+ For example whenever topic managing price tends go etc
+ call topics Causal Topics
+ Of course strictly speaking causal topics
+ never able verify whether causal true causal relationship
+ That put causal quotation marks
+ least correlating topics might potentially explain cause humans certainly analyze topics understand issue better
+ output contain topics topic modeling
+ hope topics regular topics
+ topics certainly explain data best text rather explain data text
+ Meaning reprehend meaningful topics text
+ Cement importantly correlated external hand series given context
+ understand solve problem let first adjust solve problem reactive topic model example PRSA
+ apply text stream extension CPRSA Contextual PRSA
+ Then discover topics correlation discover coverage time
+ one simple solution choose topics set strongest correlation external time series
+ approach good
+ Why Because awareness pictured topics discover PRSA LDA
+ means choice topics limited
+ know models try maximize likelihood text data
+ topics tend major topics explain text data well
+ aAnd necessarily correlated time series
+ Even get best one correlated topics might still interesting causal perspective
+ work site better approach proposed
+ approach called Iterative Causal Topic Modeling
+ idea iterative adjustment topic discovered topic models using time series induce product
+ illustration work works
+ Take text stream input apply regular topic modeling generate number topics
+ Let say four topics
+ Shown
+ use external time series assess topic causally related correlated external time series
+ something rank
+ might think topic one topic four correlated topic two topic three
+ could stopped simple approached talked earlier get topics call causal topics
+ explained topics unlikely good general topics explain whole text connection
+ They necessary
+ best topics correlated time series
+ approach first zoom word level look word top ranked word listed topic
+ Let say take Topic 1 target examined
+ know Topic 1 correlated time series
+ Or least best could get set topics far
+ look words topic top words
+ topic correlated Time Series must words highly correlated Time Series
+ example might discover W1 W3 positively correlated Time Series W2 W4 negatively correlated
+ topic good mix words different correlations
+ separate words
+ get red words indicate positive correlations
+ W1 W3
+ get another sub topic
+ want
+ That represents negatively correlated words W2 W4
+ subtopics variations topics based correlation analysis topics still quite related original topic Topic 1
+ already deviating use time series information bias selection words
+ sense well expect sense correlated time series original Topic 1
+ Because Topic 1 mixed words separate
+ two subtopics expected better coherent time series
+ However may coherent mention
+ idea go back topic model using prior guide topic modeling
+ say ask topic models discover topics similar two subtopics
+ cause bias toward correlate topics time series
+ Of course apply topic models get another generation topics
+ ran base time series set highly correlated topics
+ analyze components work topic try
+ level correlation
+ get even correlated subtopics fed process prior drive topic model discovery
+ whole process heuristic way optimizing causality coherence ultimate goal
+ Right pure topic models good maximizing topic coherence topics meaningful
+ use causality test correlation measure might get set words strongly correlate time series may necessarily mean anything
+ might cementric connected
+ extreme top
+ ideal get causal topic scored high topic coherence causal relation
+ approach regarded alternate way maximize sine engines
+ apply topic models maximizing coherence
+ decompose topic model words sets words strong correlated time series
+ select strongly correlated words time series
+ pushing model back causal dimension make better causal scoring
+ apply selected words prior guide topic modeling go back optimize coherence
+ Because topic models ensure next generation topics coherent iterate optimized way shown picture
+ think component seen framework measure causality
+ Because rest talking
+ let little bit discussion
+ show
+ let say topic government response
+ talking get coverage topic time
+ time series X sub
+ give time series represents external information
+ non text time series Y sub
+ stock prices
+ question Xt cause Yt Well words want match causality relation two
+ Or maybe measure correlation two
+ There many measures use framework
+ For example pairs correlation common use measure
+ got consider time lag try capture causal relation
+ Using somewhat past data using data past try correlate data points represents future example
+ introducing lag hopefully capture causal relation even using correlation measures person correlation
+ common use measure causality Granger Causality Test
+ idea test actually quite simple
+ Basically regressive model use history information Y predict
+ best could without information
+ build model
+ add history information X model
+ To improve prediction Y
+ statistically significant difference
+ Then say X causal inference Y otherwise causal improvement prediction Y
+ hand difference insignificant mean X really cause relation
+ basic idea
+ time explain detail could read read cited reference know measure
+ convenient used measure
+ Has many applications
+ next let look simple results generated approach
+ data New York Times time period June 2000 December 2011
+ time series used stock prices two companies
+ American Airlines Apple goal inject sum time series contest whether actually get topics wise time series
+ Imagine use input use context
+ Then topics New York times discovered PRSA general topics people talk news
+ All right
+ Those major topics news event
+ topics indeed biased toward time series
+ particularly look underlined words American Airlines result airlines airport air united trade terrorism etc
+ clearly topics correlated external time series
+ On right side topics clearly related Apple right
+ computer technology software internet com web etc
+ means time series effectively served context bias discovery topics
+ From another perspective results help people talked case
+ people people talked topics might correlated stock prices
+ topics serve starting point people look issues find true causal relations
+ Here results analyzing Presidential Election time series
+ time series data Iowa Electronic market
+ prediction market
+ data
+ New York Times May 2000 October 2000
+ That 2000 presidential campaign election
+ top three words significant topics New York Times
+ look topics indeed quite related campaign
+ Actually issues much related important issues presidential election
+ mention text data filtered using articles mention candidate names
+ subset news articles
+ Very different previous experiment
+ results clearly show approach uncover important issues presidential election
+ tax cut oil energy abortion gun control known important issues presidential election
+ supported literature political science
+ discussing Wikipedia right
+ basically results show approach effectively discover possibly causal topics based time series data
+ two suggested readings
+ One paper iterative topic modeling time series feedback
+ Where find details approach works
+ second one reading Granger Casuality text
+ end let summarize discussion Text-based Prediction
+ Text-based prediction generally useful big data applications involve text
+ Because help inform new knowledge world
+ knowledge go beyond discussed text
+ As result support optimizing decision making
+ wider spread application
+ Text data often combined non-text data prediction
+ purpose prediction purpose generally combine non-text data text data together much cruel possible prediction
+ result analysis text non-text necessary useful
+ analyze text data together non-text data help
+ non-text data provide context mining text data discussed number techniques contextual text mining
+ hand text data help interpret patterns discovered non-text data called pattern annotation
+ general active research topic new papers published
+ many open challenges solved

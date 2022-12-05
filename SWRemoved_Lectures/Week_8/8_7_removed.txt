@@ -1,0 +1,140 @@
+ Probabilistic Topic Models topic mining analysis
+ talking topic mining analysis
+ introduce probabilistic topic models
+ slide seen earlier discussed problems using term topic
+ solve problems intuitively need use words describe topic
+ address problem lack expressive power
+ When words use describe topic describe complicated topics
+ To address second problem need introduce weights words
+ allows distinguish subtle differences topics introduce semantically related words fuzzy manner
+ Finally solve problem word ambiguity need split ambiguous word disambiguate topic
+ turns done using probabilistic topic model
+ spend lot lectures talk topic
+ basic idea improve replantation topic one distribution
+ older replantation
+ Where replanted topic one word one term one phrase
+ use word distribution describe topic
+ sports
+ use word distribution theoretical speaking words vocabulary
+ example high probability words sports game basketball football play star etc
+ sports related terms
+ course give non-zero probability word Trouble might related sports general much related topic
+ general imagine non zero probability words
+ words read small probabilities
+ probabilities sum one
+ forms distribution words
+ intuitively distribution represents topic assemble words distribution tended words ready dispose
+ special case probability mass concentrated entirely one word sports
+ basically degenerates symbol foundation topic one word
+ distribution topic representation general involve many words describe topic model several differences semantics topic
+ Similarly model Travel Science respective distributions
+ distribution Travel top words attraction trip flight etc
+ Whereas Science scientist spaceship telescope genomics know science related terms
+ mean sports related terms necessarily zero probabilities science
+ general imagine words zero probabilities
+ particular topic words small probabilities
+ words shared topics
+ When say shared means even probability threshold still one word occurring much topics
+ case mark black
+ travel example occurred three topics different probabilities
+ highest probability Travel topic
+
+ much smaller probabilities Sports Science makes sense
+ similarly Star occurred Sports Science reasonably high probabilities
+ Because might actually related two topics
+ replantation addresses three problems mentioned earlier
+ First uses multiple words describe topic
+ allows describe fairly complicated topics
+ Second assigns weights terms
+ model several differences semantics
+ bring related words together model topic
+ Third probabilities word different topics disintegrate sense word
+ text decode underlying topic address three problems new way representing topic
+ course problem definition refined slightly
+ slight similar seen except added refinement topic
+ topic word distribution word distribution know probabilities sum one words vocabulary
+ constraint
+ still another constraint topic coverage namely pis
+ Pi sub ij must sum one document
+ solve problem Well let look problem computation problem
+ clearly specify input output illustrate side
+ Input course text data
+ C collection generally assume know number topics
+ Or hypothesize number try bind k topics even though know exact topics exist collection
+ V vocabulary set words determines units treated basic units analysis
+ cases use words basis analysis
+ means word unique
+ output consist first set topics represented theta
+ Each theta word distribution
+ want know coverage topics document
+
+ That pi ijs seen
+ given set text data compute distributions coverages seen slide
+ course may many different ways solving problem
+ theory write [ INAUDIBLE ] program solve problem introduce general way solving problem called generative model
+ fact general idea principle way using statistical modeling solve text mining problems
+ dimmed picture seen order show generation process
+ idea approach actually first design model data
+ design probabilistic model model data generated
+ Of course based assumption
+ actual data necessarily generating way
+ gave probability distribution data seeing slide
+ Given particular model parameters denoted lambda
+ template actually consists parameters interested
+ parameters general control behavior probability risk model
+ Meaning set parameters different values give data points higher probabilities others
+ case course text mining problem precisely topic mining problem following plans
+ First theta word distribution snd set pis document
+ since n documents n sets pis set pi
+ pi values sum one
+ say first pretend already word distributions coverage numbers
+ generate data using distributions
+ model data way assume data actual symbols drawn model depends parameters
+ one interesting question think many parameters total obviously already n multiplied K parameters
+ For pi
+ k theta
+ theta actually set probability values right distribution words
+ leave exercise figure exactly many parameters
+ set model fit model data
+ Meaning estimate parameters infer parameters based data
+ words adjust parameter values
+ Until give data set maximum probability
+ said depending parameter values data points higher probabilities others
+ What interested parameter values give data set highest probability illustrate problem picture
+ On X axis illustrate lambda parameters one dimensional variable
+ oversimplification obviously suffices show idea
+ Y axis shows probability data observe
+ probability obviously depends setting lambda
+ varies change value lambda
+ What interested find lambda star
+ That maximize probability observed data
+ estimate parameters
+ parameters note precisely hoped discover text data
+ treat parameters actually outcome output data mining algorithm
+ general idea using generative model text mining
+ First design model parameter values fit data well
+ After fit data recover parameter value
+ use specific parameter value output algorithm
+ treat actually discovered knowledge text data
+ By varying model course discover different knowledge
+ summarize introduced new way representing topic namely representing word distribution advantage using multiple words describe complicated
+ allow assign weights words several variations semantics
+ talked task topic mining answers
+ When define topic distribution
+ importer clashing text articles number topics vocabulary set output set topics
+ Each word distribution coverage topics document
+ formally represented theta pi
+ two constraints parameters
+ first constraints worded distributions
+ worded distribution probability words must sum 1 words vocabulary
+ second constraint topic coverage document
+ document allowed recover topic outside set topics discovering
+ coverage k topics sum one document
+ introduce general idea using generative model text mining
+ idea first design model model generation data
+ simply assume generative way
+ inside model embed parameters interested denoted lambda
+ infer likely parameter values lambda star given particular data set
+ take lambda star knowledge discovered text problem
+ adjust design model parameters discover various kinds knowledge text
+ As later lectures

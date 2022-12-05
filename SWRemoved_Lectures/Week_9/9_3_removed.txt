@@ -1,0 +1,74 @@
+ lets look another behaviour Mixed Model case lets look response data frequencies
+ seeing basically likelihood function two word document case solution text
+ probability
+ probability
+
+ interesting think scenario start adding words document
+ happen add many document change game right Well picture likelihood function look Well start likelihood function two words right As add words know
+ multiply likelihood function additional terms account additional
+ occurrences
+ Since case additional terms multiply term
+ Right For probability
+ another occurrence multiply term forth
+ Add many terms number add document '
+ obviously changes likelihood function
+ interesting think change solution optimal solution intuitively know original solution pulling 9 versus pulling longer optimal new function
+ Right question change
+ What general sum one
+ know must take away probability mass one word add probability mass word
+ question word reduce probability word larger probability
+ particular let think probability
+ Should increased
+ Or decrease less
+ What think might want pause video moment think
+ question
+ Because understanding important behavior mixture model
+ indeed maximum likelihood estimator
+ look formula moment seems another object Function influenced text
+ Before computer
+ imagine make sense actually assign smaller probability text lock
+ To make room larger probability
+ Why Because repeated many times
+ increase little bit positive impact
+ Whereas slight decrease text relatively small impact occurred one right means another behavior observe
+ That high frequency words generated high probabilities distributions
+ surprise maximizing likelihood data
+ word occurs makes sense give word higher probability impact likelihood function
+ fact general phenomenon maximum likelihood estimator
+ case occurrences term encourages unknown distribution theta sub assign somewhat higher probability word
+ interesting think impact probability Theta sub B
+ probability choosing one two component models
+ far assuming model equally likely
+ gives
+
+ look likelihood function try picture happen increase probability choosing background model
+ terms different form probability even larger background high probability word coefficient front
+
+ even larger
+ When larger overall result larger
+ makes less important theta sub increase probability
+ Because already large
+ impact increasing probability somewhat regulated coefficient point
+ larger background becomes less important increase value
+ means behavior high frequency words tend get high probabilities effected regularized somewhat probability choosing component
+ likely component chosen
+ important higher values frequent words
+ various small probability chosen incentive less
+ summarize discussed mixture model
+ discussed estimation problem mixture model particular discussed general behavior estimator means expect estimator capture infusions
+ First every component model attempts assign high probabilities high frequent words data
+ collaboratively maximize likelihood
+ Second different component models tend bet high probabilities different words
+ avoid competition waste probability
+ allow collaborate efficiently maximize likelihood
+ probability choosing component regulates collaboration competition component models
+ allow component models respond change example frequency theta point data
+ talked special case fixing one component background word distribution right distribution estimated using collection documents large collection English documents using one distribution normalized frequencies terms give probabilities words
+ use specialized mixture model show effectively get rid one word component
+ make cover topic discriminative
+ example imposing prior model parameter prior basically means one model must exactly background language model recall talked Bayesian estimation prior allow favor model consistent prior
+ fact consistent say model impossible
+ zero prior probability
+ That effectively excludes scenario
+ issue talk later
+ [ MUSIC ]

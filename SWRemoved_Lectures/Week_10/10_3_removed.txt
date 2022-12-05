@@ -1,0 +1,54 @@
+ continuing discussion Generative Probabilistic Models text clustering
+ talking text clustering particularly Generative Probabilistic Models
+ slide seen earlier written likelihood function document two distributions two component mixed model document clustering
+ generalize include k clusters
+ look formula think question generalize realize need add terms seen
+ add thetas probabilities thetas probabilities generating thetas
+ precisely use general presentation mixture model document clustering
+ cases follow steps using generating model first think data
+ case data collection documents end documents denoted sub talk models think modelling
+ case design mixture k unigram language models
+ little bit different topic model similar parameters
+ set theta denote distributions corresponding k unigram language models
+ p theta probability selecting k distributions generate document
+ note although goal find clusters actually used general notion probability cluster later allow assign document cluster highest probability able generate document
+ result recover interesting properties later
+ model basically make following assumption generation document
+ first choose theta according probability theta generate words document using distribution
+ Note important use distribution words document
+ different topic model
+ likelihood function seeing
+ take look formula used different notation second line equation
+ notation changed use unique word vocabulary product instead particular position document
+ X subject W change notation change allows show estimation formulas easily
+ seen change topic model presentation basically still product probabilities words
+ likelihood function talk parameter estimation
+ Here simply use maximum likelihood estimator
+ standard way things
+ familiar
+ different model
+ estimated parameters allocate clusters documents Well let take look situation closely
+ repeated parameters mixture model
+ think get estimating model actually get information need clustering right theta example represents content cluster actually by-product help summarize cluster
+ look top terms cluster word distribution tell cluster
+ p theta interpreted indicating size cluster tells likely cluster used generate document
+ likely cluster used generate document assume larger cluster size
+ Note unlike PLSA probability theta dependent
+ may recall topic chose document actually depends
+ That means document potentially different choice topics generic choice probability documents
+ course even particular document still infer topic likely generate document
+ sense still document dependent probability clusters
+ let look key problem assigning documents clusters assigning clusters documents
+ computer c sub take one values range one k indicate cluster assigned
+ first might think way use likelihood assign cluster corresponding topic theta likely used generate
+ means choose one distributions gives highest probability
+ words distribution content matches [ INAUDIBLE ]
+ Intuitively makes sense however approach consider size clusters available better way use likelihood together prior case prior p theta
+ together use base formula compute posterior probability theta given
+ choose theta
+ posterior probability following formula bottom slide
+ case choose theta large P theta means large cluster high probability generating
+ favor cluster large consistent document
+ intuitively makes sense chance document large cluster generally higher small cluster
+ means estimate parameters model easily solve problem document clustering
+ next discuss actually compute estimate model

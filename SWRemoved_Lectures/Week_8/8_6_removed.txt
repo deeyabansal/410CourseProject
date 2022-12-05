@@ -1,0 +1,110 @@
+ topic mining analysis
+ talk using term topic
+ slide seen earlier define task topic mining analysis
+ raised question exactly define topic theta offer one way define initial idea
+ Our idea defining topic simply term
+ term word phrase
+ general use terms describe topics
+ first thought define topic one term
+ For example might terms sports travel science
+ define topic way analyze coverage topics document
+ Here example might want discover extent document one covers sports
+ found 30 % content document one sports
+ 12 % travel etc
+ might discover document two cover sports
+ coverage zero etc
+ course discussed task definition topic mining analysis two tasks
+ One discover topics
+ second analyze coverage
+ let first think discover topics represent topic term
+ means need mine k topical terms collection
+ course many different ways
+ talk natural way likely effective
+ first parse text data collection obtain candidate terms
+ Here candidate terms words phrases
+ Let say simplest solution take word term
+ words become candidate topics
+ Then design scoring function match good term topic
+ design function Well many things consider
+ For example use pure statistics design scoring function
+ Intuitively favor representative terms meaning terms represent lot content collection
+ mean want favor frequent term
+ However simply use frequency design scoring function highest scored terms general terms functional terms etc
+ Those terms occur frequently English
+ want avoid words top want penalize words
+ general favor terms fairly frequent frequent
+ particular approach could based TF-IDF weighting retrieval
+ TF stands term frequency
+ IDF stands inverse document frequency
+ talked ideas lectures discovery word associations
+ statistical methods meaning function defined mostly based statistics
+ scoring function general
+ applied language text
+ apply approach particular problem might able leverage domain-specific heuristics
+ For example news might favor title words actually general
+ might want favor title words authors tend use title describe topic article
+ dealing tweets could favor hashtags invented denote topics
+ naturally hashtags good candidates representing topics
+ Anyway design scoring function discover k topical terms simply picking k terms highest scores
+ course might encounter situation highest scored terms similar
+ They semantically similar closely related even synonyms
+ desirable
+ want coverage content collection
+ remove redundancy
+ one way greedy algorithm sometimes called maximal marginal relevance ranking
+ Basically idea go list based scoring function gradually take terms collect k topical terms
+ first term course picked
+ When pick next term look terms already picked try avoid picking term similar
+ considering ranking term list considering redundancy candidate term respect terms already picked
+ thresholding get balance redundancy removal high score term
+ Okay get k topical terms
+ regarded topics discovered connection
+ Next let think compute topic coverage pi sub ij
+ looking picture sports travel science topics
+ suppose give document
+ How pick coverage topic document Well one approach simply count occurrences terms
+ example sports might occurred four times document travel occurred twice etc
+ normalize counts estimate coverage probability topic
+ general formula collect counts terms represent topics
+ simply normalize coverage topic document add one
+ forms distribution topics document characterize coverage different topics document
+ always think idea solving problem ask question good one Or best way solving problem let examine approach
+ general empirical evaluation using actual data sets well works
+ Well case let take look simple example
+ text document NBA basketball game
+ terms content sports
+ simply count words represent topics find word sports actually occur article even though content sports
+ count sports zero
+ That means coverage sports estimated zero
+ course term science occur document estimate zero
+ okay
+ sports certainly okay know content sports
+ estimate problem
+ What worse term travel actually occurred document
+ estimate coverage topic travel got non-zero count
+ estimated coverage non-zero
+ obviously desirable
+ simple example illustrates problems approach
+ First count words belong topic need consider related words
+ ca simply count topic word sports
+ case occur
+ many related words basketball game etc
+ need count related words
+ second problem word star actually ambiguous
+ probably means basketball star imagine might mean star sky
+ case star might actually suggest perhaps topic science
+ need deal well
+ Finally main restriction approach one term describe topic really describe complicated topics
+ For example specialized topic sports harder describe using word one phrase
+ need use words
+ example illustrates general problems approach treating term topic
+ First lacks expressive power
+ Meaning represent simple general topics represent complicated topics might require words describe
+ Second incomplete vocabulary coverage meaning topic represented one term
+ suggest terms related topic
+ Even talking sports many terms related
+ allow easily count related terms order conversion coverage topic
+ Finally problem word sense disintegration
+ topical term related term ambiguous
+ For example basketball star versus star sky
+ next talk solve problem topic

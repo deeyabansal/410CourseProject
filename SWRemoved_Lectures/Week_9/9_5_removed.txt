@@ -1,0 +1,105 @@
+ indeed general idea Expectation-Maximization EM Algorithm
+ EM algorithms introduce hidden variable help solve problem easily
+ case hidden variable binary variable occurrence word
+ binary variable indicate whether word generated 0 sub 0 sub
+ show possible values variables
+ For example background z value one
+ text hand
+ Is topic zero z etc
+ course observe z values imagine
+ Values z attaching words
+ call hidden variables
+ idea talked predicting word distribution used generate word predictor value hidden variable EM algorithm work follows
+ First initialize parameters random values
+ case parameters mainly probability
+ word given theta sub
+ initial addition stage
+ initialized values allow use base roll take guess z values guess values
+ ca say sure whether textt background
+ guess
+ given formula
+ called E-step
+ algorithm try use E-step guess z values
+ After invoke another called M-step
+ step simply take advantage inferred z values group words distribution ground including well
+ normalize count estimate probabilities revise estimate parameters
+ let illustrate group words believed come zero sub text mining algorithm example clustering
+ group together help re-estimate parameters interested
+ help estimate parameters
+ Note set parameter values randomly
+ guess somewhat improved estimate
+ Of course know exactly whether zero one
+ really split hard way
+ rather softer split
+ happened
+ adjust count probability believe word generated using theta sub
+ come Well come right From E-step
+ EM Algorithm iteratively improve uur initial estimate parameters using E-step first M-step
+ E-step augment data additional information z
+ M-step take advantage additional information separate data
+ To split data accounts collect right data accounts re-estimate parameter
+ new generation parameter repeat
+ E-step
+ To improve estimate hidden variables
+ lead another generation re-estimated parameters
+ For word distribution interested
+ Okay said bridge two really variable z hidden variable indicates likely water top water distribution theta sub
+ slide lot content may need
+ Pause reader digest
+ basically captures essence EM Algorithm
+ Start initial values often random themself
+ invoke E-step followed M-step get improved setting parameters
+ repeated Hill-Climbing algorithm gradually improve estimate parameters
+ As explain later guarantee reaching local maximum log-likelihood function
+ lets take look computation specific case formulas EM
+ Formulas superscripts n indicate generation parameters
+ Like example n plus one
+ That means improved
+ From improvement
+ setting assumed two numerals equal probabilities background model null
+ relevance statistics Well word counts
+ assume four words counts
+ background model assigns high probabilities common words
+ first iteration picture happen
+ Well first initialize values
+ probability interested normalized uniform distribution words
+ E-step give guess distribution used
+ That generate word
+ different probabilities different words
+ Why Well words different probabilities background
+ even though two distributions equally likely
+ initial audition say uniform distribution difference background distribution different guess probability
+ words believed likely topic
+ hand less likely
+ Probably background
+ z values know M-step probabilities used adjust counts
+ four must multiplied
+ order get allocated accounts toward topic
+ done multiplication
+ Note guess says 100 % one point zero get full count word topic
+ general one point zero
+ get percentage counts toward topic
+ Then simply normalize counts new generation parameters estimate
+ compare older one
+ compare one probability different
+ Not words believed come topic higher probability
+ Like one text
+ course new generation parameters allow adjust inferred latent variable hidden variable values
+ new generation values E-step based new generation parameters
+ new inferred values Zs give another generation estimate probabilities word
+ forth actually happen compute probabilities using EM Algorithm
+ As last row show log-likelihood likelihood increasing iteration
+ note log-likelihood negative probability 0 1 take logarithm becomes negative value
+ interesting note last column
+ inverted word split
+ probabilities word believed come one distribution case topical distribution right
+ might wonder whether useful
+ Because main goal estimate word distributions
+ primary goal
+ hope discriminative order distribution
+ last column bi-product
+ actually useful
+ think
+ want use example estimate extent document covered background words
+ add take average kind know extent covered background versus content explained well background
+ [ MUSIC ]

@@ -1,0 +1,88 @@
+ compute maximum estimate using EM algorithm
+ e step introduce hidden variables topics hidden variable z topic indicator take two values
+ specifically take k plus one values b noting background
+ locate denote k topics right
+ e step recall augmented data predicting values hidden variable
+ predict word whether word come one k plus one distributions
+ equation allows predict probability word w document generated topic zero sub j
+ bottom one predicted probability word generated background
+ Note use document index word
+ Why Because whether word particular topic actually depends document
+ Can Well pi
+ pi tied document
+ Each document potentially different pi right
+ pi affect prediction
+ pi
+ depends document
+ might give different guess word different documents desirable
+ cases using Baye Rule explained basically assessing likelihood generating word division normalize
+ What step Well may recall step take advantage inferred z values
+ To split counts
+ collected right counts re-estimate parameters
+ case re-estimate coverage probability
+ re-estimated based collecting words document
+ count word document
+ sum words
+ look extent word belongs topic theta sub j
+ part guess step
+ tells likely word actually theta sub j
+ multiply together get discounted count located topic theta sub j
+ normalize topics get distribution topics indicate coverage
+ similarly bottom one estimated probability word topic
+ case using exact count discounted account ] tells extend allocate word [ INAUDIBLE ] normalization different
+ Because case interested word distribution simply normalize words
+ different contrast normalize amount topics
+ useful take comparison two
+ give different distributions
+ tells improve parameters
+ explained formula maximum estimate based allocated word counts [ INAUDIBLE ]
+ phenomena actually general phenomena EM algorithms
+ m-step general computer expect account event based e-step result count four particular normalize typically
+ terms computation EM algorithm actually keep accounting various events normalize
+ thinking way concise way presenting EM Algorithm
+ actually helps better understand formulas
+ 'm go detail
+ algorithm first initialize unknown perimeters randomly right
+ case interested coverage perimeters pi awarded distributions [ INAUDIBLE ] randomly normalize
+ initialization step repeat likelihood converges
+ know whether likelihood converges compute likelihood step compare current likelihood previous likelihood
+ change much say stopped right
+ step e-step m-step
+ e-step augment data predicting hidden variables
+ case hidden variable z sub w indicates whether word w topic background
+ topic topic
+ look e-step formulas essentially actually normalizing counts sorry probabilities observing word distribution
+ basically prediction word topic zero sub j based probability selecting theta sub j word distribution generate word
+ Multiply probability observing word distribution
+ said proportional implementation EM algorithm keep counter quantity end normalizes
+ normalization topics get probability
+ m-step collect
+ Allocated account topic
+ split words among topics
+ normalize different ways obtain real estimate
+ example normalize among topics get re-estimate pi coverage
+ Or re-normalize based words
+ give word distribution
+ useful think algorithm way implemented use variables keep track quantities case
+ normalize variables make distribution
+ put constraint one
+ intentionally leave exercise
+ normalizer one slightly different form essentially one seen one
+ general envisioning EM algorithms accumulate counts various counts normalize
+ summarize introduced PLSA model
+ Which mixture model k unigram language models representing k topics
+ added pre-determined background language model help discover discriminative topics background language model help attract common terms
+ select maximum estimate cant discover topical knowledge text data
+ case PLSA allows discover two things one k worded distributions one representing topic proportion topic document
+ detailed characterization coverage topics documents enable lot photo analysis
+ For example aggregate documents particular pan period assess coverage particular topic time period
+ That allow generate temporal chains topics
+ aggregate topics covered documents associated particular author categorize topics written author etc
+ addition cluster terms cluster documents
+ fact topic regarded cluster
+ already term clusters
+ higher probability words regarded belonging one cluster represented topic
+ Similarly documents clustered way
+ assign document topic cluster covered document
+ remember pi indicate extent topic covered document assign document topical cluster highest pi
+ general many useful applications technique

@@ -1,0 +1,89 @@
+ Paradigmatics Relation Discovery
+ talk discover particular kind word association called paradigmatical relation
+ By definition two words paradigmatically related share similar context
+ Namely occur similar positions text
+ naturally idea discovering relation look context word try compute similarity contexts
+ example context word cat
+ Here taken word cat context seeing remaining words sentences contain cat
+ thing another word dog
+ general capture context try assess similarity context cat context word dog
+ question formally represent context define similarity function
+ first note context actually contains lot words
+ regarded pseudo document imagine document different ways looking context
+ For example look word occurs word cat
+ call context Left1 context
+ All right case words big et cetera
+ words occur left word cat
+ say cat cat big cat cat et cetera
+ Similarly collect words occur right word cat
+ call context Right1 words eats ate et cetera
+ Or generally look words window text around word cat
+ Here let say take window 8 words around word cat
+ call context Window8
+ course words left right bag words general represent context
+ word based representation actually give interesting way define perspective measuring similarity
+ Because look similarity Left1 words share words left context kind ignored words general context
+ gives one perspective measure similarity similarly use Right1 context capture narrative another perspective
+ Using Left1 Right1 course allow capture similarity even strict criteria
+ general context may contain adjacent words eats non-adjacent words Saturday Tuesday words context
+ flexibility allows match similarity somewhat different ways
+ Sometimes useful might want capture similarity base general content
+ That give loosely related paradigmatical relations
+ Whereas use words immediately left right word likely capture words much related syntactical categories semantics
+ general idea discovering paradigmatical relations compute similarity context two words
+ example measure similarity cat dog based similarity context
+ general combine kinds views context
+ similarity function general combination similarities different context
+ course assign weights different similarities allow focus particular kind context
+ naturally application specific main idea discovering pardigmatically related words computer similarity context
+ next let exactly compute similarity functions
+ answer question useful think bag words representation vectors vector space model
+ familiar information retrieval textual retrieval techniques realize vector space model used frequently modeling documents queries search
+ find convenient model context word paradigmatic relation discovery
+ idea approach view word vocabulary defining one dimension high dimensional space
+ N words total vocabulary N dimensions illustrated
+ bottom frequency vector representing context eats occurred 5 times context ate occurred 3 times et cetera
+ vector placed vector space model
+ general represent pseudo document context cat one vector d1 another word dog might give different context d2
+ measure similarity two vectors
+ viewing context vector space model convert problem paradigmatical relation discovery problem computing vectors similarity
+ two questions address first compute vector compute xi yi
+ question compute similarity
+ general many approaches used solve problem developed information retrieval
+ shown work well matching query vector document vector
+ adapt many ideas compute similarity context documents purpose
+ let first look one plausible approach try match similarity context based expected overlap words call EOWC
+ idea represent context word vector word weight equal probability randomly picked word document vector word
+ words xi defined normalized account word wi context interpreted probability actually pick word d1 randomly picked word
+ course xi sum one normalized frequencies means vector actually probability distribution words
+ vector d2 computed way give two probability distributions representing two contexts
+ addresses problem compute vectors next let define similarity approach
+ Well simply define similarity dot product two vectors defined sum products corresponding elements two vectors
+ interesting similarity function actually nice interpretation
+ Dot product fact gives probability two randomly picked words two contexts identical
+ That means try pick word one context try pick another word another context ask question identical two contexts similar expect frequently two words picked two contexts identical
+ different chance seeing identical words picked two contexts small
+ intuitively makes sense right measuring similarity contexts
+ might want take look exact formulas interpreted probability two randomly picked words identical
+ stare formula check inside sum basically case gives probability overlap particular word wi
+ xi gives probability pick particular word d1 yi gives probability picking word d2
+ pick word two contexts identical pick right
+ That one possible approach EOWC extracted overlap words context
+ always assess whether approach work well
+ course ultimately test approach real data gives really semantically related words
+ Really give paradigmatical relations analytically analyze formula little bit
+ first said make sense right formula give higher score overlap two contexts
+ exactly want
+ analyze formula carefully might potential problems specifically two potential problems
+ First might favor matching one frequent term well matching distinct terms
+ dot product one element high value element shared contexts contributes lot overall sum might indeed make score higher another case two vectors actually lot overlap different terms
+ term relatively low frequency may desirable
+ Of course might desirable cases
+ case intuitively prefer case match different terms context confidence saying two words indeed occur similar context
+ rely one term little bit questionable may robust
+ second problem treats every word equally right
+ match word matching word eats intuitively know matching really surprising occurs everywhere
+ matching strong evidence matching word eats occur frequently
+ another problem approach
+ next chapter talk address problems
+ [ MUSIC ]

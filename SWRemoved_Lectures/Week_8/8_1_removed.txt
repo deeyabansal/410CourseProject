@@ -1,0 +1,94 @@
+ syntagmatic relation discovery entropy
+ talking word association mining
+ particular talk discover syntagmatic relations
+ start introduction entropy basis designing measures discovering relations
+ By definition syntagmatic relations hold words correlated co-occurrences
+ That means one word occurs context tend occurrence word
+ take specific example
+ ask question whenever eats occurs words tend occur Looking sentences left words might occur together eats cat dog fish right
+ take look right side show eats words question
+ Can predict words occur left right Right force think words associated eats
+ associated eats tend occur context eats
+ More specifically prediction problem take text segment sentence paragraph document
+ ask question particular word present absent segment Right ask word
+ Is W present absent segment interesting words actually easier predict words
+ take look three words shown meat unicorn one think easier predict think moment might conclude easier predict tends occur everywhere
+ say well sentence
+ Unicorn relatively easy unicorn rare rare
+ bet occur sentence
+ meat somewhere terms frequency
+ makes harder predict possible occurs sentence segment accurately
+ may occur sentence let study problem formally
+ problem formally defined predicting value binary random variable
+ Here denote X sub w w denotes word random variable associated precisely one word
+ When value variable 1 means word present
+ When 0 means word absent
+ naturally probabilities 1 0 sum 1 word either present absent segment
+ There choice
+ intuition concept earlier formally stated follows
+ random random variable difficult prediction
+ question one quantitatively measure randomness random variable X sub w How general quantify randomness variable need measure called entropy measure introduced information theory measure randomness X
+ There connection information beyond scope course
+ purpose treat entropy function function defined random variable
+ case binary random variable although definition easily generalized random variable multiple values
+ function form looks sum possible values random variable
+ Inside sum value product probability random variable equals value log probability
+ note negative sign
+ entropy general non-negative
+ mathematically proved
+ expand sum equation looks second one
+ Where explicitly plugged two values 0 1
+ sometimes 0 log 0 generally define 0 log 0 undefined
+ entropy function
+ function give different value different distributions random variable
+ clearly depends probability random variable taking value 1 0
+ plot function probability random variable equal 1
+ function looks
+ At two ends means probability X equals 1 small large entropy function low value
+ When
+ middle reaches maximum
+ plot function probability X taking value 0 function show exactly curve imagine
+ two probabilities symmetric completely symmetric
+ interesting question think general kind X entropy reach maximum minimum
+ particular think special cases
+ For example one case might random variable always takes value 1
+ probability 1
+ Or random variable equally likely taking value one zero
+ case probability X equals 1
+
+ one higher entropy easier look problem thinking simple example using coin tossing
+ think random experiments tossing coin gives random variable represent result
+ head tail
+ define random variable X sub coin 1 coin shows head 0 coin shows tail
+ compute entropy random variable
+ entropy indicates difficult predict outcome coin toss
+ think two cases
+ One fair coin completely fair
+ coin shows head tail equally likely
+ two probabilities half
+ Right equal one half
+ Another extreme case completely biased coin coin always shows heads
+ completely biased coin
+ let think entropies two cases
+ plug values entropies follows
+ For fair coin entropy reaches maximum 1
+ For completely biased coin 0
+ intuitively makes lot sense
+ Because fair coin difficult predict
+ Whereas completely biased coin easy predict
+ always say well head
+ Because head time
+ shown curve follows
+ fair coin corresponds middle point uncertain
+ completely biased coin corresponds end point probability
+ entropy 0
+ let use entropy word prediction
+ Let think problem predict whether W present absent segment
+ Again think three words particularly think entropies
+ assume high entropy words harder predict
+ quantitative way tell word harder predict
+ look three words meat unicorn clearly expect meat higher entropy unicorn
+ fact look entropy close zero
+ Because occurs everywhere
+ completely biased coin
+ Therefore entropy zero

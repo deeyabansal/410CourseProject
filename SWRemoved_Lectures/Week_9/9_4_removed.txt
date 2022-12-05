@@ -1,0 +1,77 @@
+ expectation-maximization algorithm called EM algorithm
+ discussion probabilistic topic models
+ particular introduce EM algorithm family useful algorithms computing maximum likelihood estimate mixture models
+ familiar scenario using two component mixture model try factor background words one topic word distribution
+ interested computing estimate try adjust probability values maximize probability observed document
+ Note assume parameters known
+ thing unknown word probabilities given theta sub
+ look compute maximum likelihood estimate
+ let start idea separating words text data two groups
+ One group explained background model
+ group explained unknown topic word distribution
+ After basic idea mixture model
+ suppose actually know word distribution mean example words known background word distribution
+ On hand words text mining clustering etc known topic word distribution
+ color shown blue
+ blue words assumed topic word distribution
+ already know separate words problem estimating word distribution extremely simple
+ think moment realize well simply take words known word distribution theta sub normalize
+ indeed problem easy solve known words distribution precisely fact making model longer mixture model already observe distribution used generate part data
+ actually go back single word distribution problem
+ case let call words known theta pseudo document prime need normalize words counts word w_i
+ That fairly straightforward
+ dictated maximum likelihood estimator
+ idea however work practice really know word distribution gives idea perhaps guess word written
+ Specifically given parameters infer distribution word
+ let assume actually know tentative probabilities words theta sub
+ parameters known mixture model let consider word `` text ''
+ question think `` text '' likely generated theta sub theta sub b words want infer distribution used generate text
+ inference process typical Bayesian inference situation prior two distributions
+ prior Well prior probability distribution
+ prior given two probabilities
+ case prior saying model equally likely imagine perhaps different prior possible
+ called prior guess distribution used generate word even reserve word
+ call prior
+ observe word know word observed
+ Our best guess say well equally likely
+ All right
+ flipping coin
+ Bayesian inference typically learn update belief observed evidence
+ evidence Well evidence word text
+ know interested word text
+ text regarded evidence use Bayes rule combine prior data likelihood end combine prior likelihood basically probability word text distribution
+ cases text possible
+ Note even background still possible small probability
+ intuitively guess case
+ many others guess text probably theta sub
+ likely theta sub
+ Why probably text much higher probability theta sub background model small probability
+ By say well text likely theta sub
+ guess distribution used generate text depend high probability text word distribution
+ tend guess distribution gives word higher probability likely maximize likelihood
+ choose word higher likelihood
+ words compare two probabilities word given distributions
+ guess must affected prior
+ need compare two priors
+ Why Because imagine adjust probabilities say probability choosing background model almost 100 percent
+ kind strong prior affect guess
+ might think well wait moment maybe text could background well
+ Although probability small prior high
+ end combine two base formula provides solid principled way making kind guess quantify
+ specifically let think probability word generated fact theta sub
+ Well order texts generated theta sub two things must happen
+ First theta sub must selected selection probability
+ Secondly actually observed text distribution
+ multiply two together get probability text fact generated theta sub
+ Similarly background model probability generating text another product similar form
+ introduced latent variable z denote whether word background topic
+ When z zero means topic theta sub
+ When one means background theta sub b
+ probability text generated
+ Then simply normalize estimate probability word text theta sub theta sub b
+ Then equivalently probability z equal zero given observed evidence text
+ application Bayes rule
+ step crucial understanding EM algorithm able first initialize parameter values somewhat randomly take guess z values
+ Which distributing used generate word initialized parameter values allow complete specification mixture model allows apply Bayes rule infer distribution likely generate word
+ prediction essentially helped separate words two distributions
+ Although ca separate sure separate probabilistically shown

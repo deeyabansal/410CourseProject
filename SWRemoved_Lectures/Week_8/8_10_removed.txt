@@ -1,0 +1,87 @@
+ continued discussion probabilistic topic models
+ discussing probabilistic models
+ talk simple case interested mining one topic one document
+ simple setup interested analyzing one document trying discover one topic
+ simplest case topic model
+ input longer k number topics know one topic collection one document
+ output longer coverage assumed document covers topic 100 %
+ main goal discover world probabilities single topic shown
+ As always think using generating model solve problem start thinking kind data model perspective model data data representation
+ design specific model generating data perspective
+ Where perspective means want take particular angle looking data model right parameters discovering knowledge want
+ thinking microfunction write microfunction capture formally likely data point obtained model
+ likelihood function parameters function
+ argue interest estimating parameters example maximizing likelihood lead maximum likelihood estimated
+ estimator parameters become output mining hours means take estimating parameters knowledge discover text
+ let look steps simple case
+ Later look procedure complicated cases
+ data case document sequence words
+ Each word denoted x sub
+ Our model Unigram language model
+ word distribution hope denote topic goal
+ many parameters many words vocabulary case
+ convenience use theta sub denote probability word w sub
+ obviously theta sub sum 1
+ likelihood function look Well probability generating whole document given model
+ Because assume independence generating word probability document product probability word
+ since word might repeated occurrences
+ rewrite product different form
+ line rewritten formula product unique words vocabulary w sub 1 w sub
+ different previous line
+ Well product different positions words document
+ transformation need introduce counter function
+ denotes count word one document similarly count words n document words might repeated occurrences
+ word occur document
+ zero count therefore corresponding term disappear
+ useful form writing likelihood function often use later
+ want pay attention get familiar notation
+ change product different words vocabulary
+ end course use theta sub express likelihood function look
+ Next find theta values probabilities words maximize likelihood function
+ lets take look maximum likelihood estimate problem closely
+ line copied previous slide
+ likelihood function
+ goal maximize likelihood function
+ find often easy maximize local likelihood instead original likelihood
+ purely mathematical convenience logarithm transformation function becomes sum instead product
+ constraints probabilities
+ sum makes easier take derivative often needed finding optimal solution function
+ please take look sum
+ form function often later general topic models
+ sum words vocabulary
+ inside sum count word document
+ macroed logarithm probability
+ let solve problem
+ point problem purely mathematical problem find optimal solution constrained maximization problem
+ objective function likelihood function constraint probabilities must sum one
+ one way solve problem use Lagrange multiplier approace
+ command beyond scope course since Lagrange multiplier useful approach give brief introduction interested
+ approach construct Lagrange function
+ function combine objective function another term encodes constraint introduce Lagrange multiplier lambda additional parameter
+ idea approach turn constraint optimization sense unconstrained optimizing problem
+ interested optimizing Lagrange function
+ As may recall calculus optimal point achieved derivative set zero
+ necessary condition
+ sufficient though
+ partial derivative respect theta equal
+ part comes derivative logarithm function lambda simply taken
+ set zero easily theta sub related lambda way
+ Since know theta must sum one plug constraint
+ allow solve lambda
+ net sum counts
+ allows solve optimization problem eventually find optimal setting theta sub
+ look formula turns actually intuitive normalized count words document ns sum counts words document
+ mess obtained something intuitive intuition want maximize data assigning much probability mass possible observed words
+ might notice general result maximum likelihood raised estimator
+ general estimator normalize counts sometimes counts done particular way later
+ basically analytical solution optimization problem
+ general though likelihood function complicated able solve optimization problem closed form formula
+ Instead use numerical algorithms cases later
+ imagine get use maximum likelihood estimator estimate one topic single document Let imagine document text mining paper
+ might something looks
+ On top high probability words tend common words often functional words English
+ followed content words really characterize topic well text mining etc
+ end probability words really related topic might extraneously mentioned document
+ As topic representation ideal right That high probability words functional words really characterizing topic
+ question get rid common words topic next module
+ talk use probabilistic models somehow get rid common words

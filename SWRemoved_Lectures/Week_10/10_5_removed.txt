@@ -1,0 +1,125 @@
+ similarity-based approaches text clustering
+ discussion text clustering
+ particular cover different kinds approaches generative models similarity-based approaches
+ general idea similarity-based clustering explicitly specify similarity function measure similarity two text objects
+ contrast generative model implicitly define clustering bias using particular object function [ INAUDIBLE ] function
+ whole process driven optimizing [ INAUDIBLE ] explicitly provide view think similar
+ often useful allows inject particular view similarity clustering program
+ similarity function aim optimally partitioning partitioning data clusters different groups
+ try maximize inter-group similarity minimize inter-group similarity
+ That ensure objects put group similar objects put different groups similar
+ general goals clustering often trade achieving goals
+ many different methods similarity based clustering general think distinguish two strategies high level
+ One progressively construct hierarchy clusters often leads hierarchical clustering
+ distinguish two ways construct hierarchy depending whether started collection divide connection
+ Or started individual objectives gradually group together one bottom-up called agglomerative
+ Well gradually group similar objects larger larger clusters
+ Until group everything together top-down divisive case gradually partition whole data set smaller smaller clusters
+ general strategy start initial tentative clustering iteratively improve
+ often leads flat clustering one example k-Means said many different clustering methods available
+ full coverage clustering methods beyond scope course
+ talk two representative methods detail one Hierarchical Agglomerative Clustering HAC k-Means
+ first get agglomerative hierarchical clustering case given similarity function measure similarity two objects
+ gradually group similar objects together bottom-up fashion form larger larger groups
+ always form hierarchy stop stopping criterion met
+ could either number clusters achieved threshold similarity reached
+ There different variations mainly differ ways compute group similarity
+ Based individual objects similarity let illustrate induced structure based similarity
+ start text objects measure similarity
+ Of course based provided similarity function pair highest similarity
+ group together pair next one group
+ Maybe two highest similarity gradually group together
+ every time pick highest similarity similarity pairs group
+ give binary tree eventually group everything together
+ depending applications use whole hierarchy structure browsing example
+ Or choose cutoff let say cut get four clusters use threshold cut
+ Or cut high level get two clusters general idea think implement algorithm
+ realize everything specified except compute group similarity
+ given similarity function two objects group groups together need assess similarity two groups
+ There different ways three popular methods
+ Single-link complete-link average-link given two groups single-link algorithm
+ Is define group similarity similarity closest pair two groups
+ Complete-link defines similarity two groups similarity farthest system pair
+ Average-link defines similarity average similarity pairs two groups
+ much easier understand methods illustrating two groups g1 g2 objects group
+ know compute similarity two objects question compute similarity two groups general base similarities objects two groups
+ terms single-link looking closest pair case two paired objects defined similarities two groups
+ As long close say two groups close optimistic view similarity
+ complete link hand sense pessimistic taking similarity two farthest pair similarity two groups
+ make sure two groups high similarity
+ Then every pair two groups objects two groups ensured high similarity
+ average link takes average pairs
+ different ways computing group similarities lead different clustering algorithms
+ general give different results useful take look differences make comparison
+ First single-link expected generally loose clusters reason long two objects similar two groups bring two groups together
+ think similar parties people means two groups people partying together
+ As long group person well connected group
+ two leaders two groups good relationship bring together two groups
+ case cluster loose guarantee members two groups actually close
+ Sometimes may far away case based individual decisions could sensitive outliers
+ complete-link opposite situation expect clusters tight
+ based individual decision sensitive outliers
+ Again analogy party people complete-link mean two groups come together
+ They want ensure even people unlikely talk comfortable
+ Always talking ensure whole class coherent
+ average link clusters group decision insensitive outliers practice one best
+ Well depend application sometimes need lose clusters
+ aggressively cluster objects together maybe single-link good
+ times might need tight clusters complete-link might better
+ general empirically evaluate methods application know one better
+ next let look another example method similarity-based clustering
+ case called k-Means clustering represent text object term vector
+ assume similarity function defined two objects start tentative clustering results selecting k randomly
+ selected vectors centroids k clusters treat centers represent represent cluster
+ gives initial tentative cluster iteratively improve
+ process centroids Decide
+ assign vector cluster whose centroid closest current vector
+ basically measure distance vector centroids one closest one
+ put object cluster tentative assignment objects clusters
+ partition objects k clusters based tentative clustering centroids
+ Then re-compute centroid based locate object cluster
+ adjust centroid repeat process similarity-based objective function
+ case within cluster sum squares converges theoretically show
+ process actually minimize within cluster sum squares define object function
+ Given k clusters shown process converge local minimum
+ think process moment might remind Algorithm mixture model
+ Indeed algorithm similar Algorithm mixture model clustering
+ More specifically initialize parameters Algorithm random initialization similar
+ Algorithm may recall repeat E-step M-step improve parameter estimation
+ case improve clustering result iteratively two steps
+ fact two steps similar Algorithm locate vector one clusters based tentative clustering
+ similar inferring distribution used generate document mixture model
+ essentially similar E-step difference well difference
+ make probabilistic allocation case E-step brother make choice
+ make call upon closest cluster two say cluster two
+ choice say assume set belonging cluster two
+ probability put one object precisely one cluster
+ E-step however probability location split counts
+ say exactly distribution used generate data point
+ next adjust centroid similar M-step re-estimate parameters
+ That better estimate parameter better clustering result adjusting centroid
+ note centroid based average vectors cluster
+ similar M-step counts pull together counts normalize
+ difference course difference E-step consider probabilities count points
+ case k-Means make count objects allocated cluster
+ subset data points Algorithm principle consider data points based probabilistic allocations
+ nature similar maximizing well defined object functions
+ guaranteed convert local minimum summarize discussion clustering methods
+ first discussed model based approaches mainly mixture model
+ Here use implicit similarity function define clustering bias
+ There explicit define similarity function model defines clustering bias clustering structure built generative model
+ That use potentially different model recover different structure
+ Complex generative models used discover complex clustering structures
+ talk full easily design generate model generate hierarchical clusters
+ use prior customize clustering algorithm example control topic one cluster multiple clusters
+ However one disadvantage approach easy way directly control similarity measure
+ Sometimes want hard inject special definition similarity model
+ talked similarity-based approaches approaches flexible actually specify similarity functions
+ one major disadvantage objective function always clear
+ k-Means algorithm clearly defined objective function similar model based approach
+ hierarchical clustering algorithm hand harder specify objective function
+ clear exactly optimized approaches generate term clusters
+ document clusters term clusters general generated representing term text content
+ For example take context term representation term done semantic relation learning
+ certainly cluster terms based actual text [ INAUDIBLE ]
+ Of course term clusters generated using generative models well seen

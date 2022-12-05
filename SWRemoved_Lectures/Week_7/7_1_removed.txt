@@ -1,0 +1,90 @@
+ [ SOUND ] give overview Text Mining Analytics
+ First let define term text mining term text analytics
+ title course called Text Mining Analytics
+ two terms text mining text analytics actually roughly
+ really really distinguish use interchangeably
+ reason chosen use terms title subtle difference look two phrases literally
+ Mining emphasizes process
+ gives error rate medical view problem
+ Analytics hand emphasizes result problem mind
+ look text data help solve problem
+ said treat two terms roughly
+ think literature probably find
+ really distinguish course
+ Both text mining text analytics mean want turn text data high quality information actionable knowledge
+ cases problem dealing lot text data hope
+ Turn text data something useful raw text data
+ distinguish two different results
+ One high-quality information actionable knowledge
+ Sometimes boundary two clear
+ want say little bit two different angles result text field mining
+ case high quality information refer concise information topic
+ Which might much easier humans digest raw text data
+ For example might face lot reviews product
+ concise form information concise summary major opinions features product
+ Positive let say battery life laptop
+ kind results useful help people digest text data
+ minimize human effort consuming text data sense
+ kind output actually knowledge
+ Here emphasize utility information knowledge discover text data
+ actionable knowledge decision problem actions take
+ For example might able determine product appealing better choice shocking decision
+ outcome could called actionable knowledge consumer take knowledge make decision act
+ case text mining supplies knowledge optimal decision making
+ two clearly distinguished necessarily make distinction
+ Text mining related text retrieval essential component many text mining systems
+ text retrieval refers finding relevant information large amount text data
+ taught another separate MOOC text retrieval search engines
+ Where discussed various techniques text retrieval
+ taken MOOC find overlap
+ useful To know background text retrieval understanding topics text mining
+ taken MOOC fine MOOC text mining analytics repeat key concepts relevant text mining
+ high level explain relation text retrieval text mining
+ Text retrieval useful text mining two ways
+ First text retrieval preprocessor text mining
+ Meaning help turn big text data relatively small amount relevant text data
+ Which often needed solving particular problem
+ sense text retrieval helps minimize human effort
+ Text retrieval needed knowledge provenance
+ roughly corresponds interpretation text mining turning text data actionable knowledge
+ Once find patterns text data actionable knowledge generally verify knowledge
+ By looking original text data
+ users text retrieval support go back original text data interpret pattern better understand analogy verify whether pattern really reliable
+ high level introduction concept text mining relationship text mining retrieval
+ Next let talk text data special kind data
+ interesting view text data data generated humans subjective sensors
+ slide shows analogy text data non-text data
+ humans subjective sensors physical sensors network sensor thermometer
+ general sensor monitor real world way
+ sense signal real world report signal data various forms
+ For example thermometer watch temperature real world report temperature particular format
+ Similarly geo sensor sense location report
+ location specification example form longitude value latitude value
+ network sends monitor network traffic activities network reported
+ Some digital format data
+ Similarly think humans subjective sensors
+ That observe real world perspective
+ humans express observed form text data
+ sense human actually subjective sensor sense happening world express observed form data case text data
+ looking text data way advantage able integrate types data together
+ indeed needed data mining problems
+ looking general problem data mining
+ general Be dealing lot data world related problem
+ general dealing non-text data text data
+ course non-text data usually produced physical senses
+ non-text data different formats
+ Numerical data categorical relational data multi-media data video speech
+ non text data often important problems
+ text data important mostly contain lot symmetrical content
+ often contain knowledge users especially preferences opinions users
+ treating text data data observed human sensors treat data together framework
+ data mining problem basically turn data turn data actionable knowledge take advantage change real world course better
+ means data mining problem basically taking lot data input giving actionable knowledge output
+ Inside data mining module number different kind mining algorithms
+ different kinds data generally need different algorithms mining data
+ For example video data might require computer vision understand video content
+ facilitate effective mining
+ lot general algorithms applicable kinds data algorithms course useful
+ Although particular kind data generally want develop special algorithm
+ course cover specialized algorithms particularly useful mining text data
+ [ MUSIC ]

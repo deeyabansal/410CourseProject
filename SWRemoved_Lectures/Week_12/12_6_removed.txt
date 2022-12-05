@@ -1,0 +1,132 @@
+ mine text data social network context
+ discussing contextual text mining
+ particular look social network others context
+ first motivation using network context analysis text context text article form network
+ For example authors research articles might form collaboration networks
+ authors social media content might form social networks
+ For example Twitter people might follow
+ Or Facebook people might claim friends others etc
+ context connects content others
+ Similarly locations associated text connected form geographical network
+ general imagine metadata text data form kind network relations
+ benefit jointly analyzing text social network context network context general
+ use network impose constraints topics text
+ example reasonable assume authors connected collaboration networks tend write similar topics
+ heuristics used guide analyzing topics
+ Text help characterize content associated subnetwork
+ say kinds data network text help
+ example difference opinions expressed two subnetworks reviewed type joint analysis
+ briefly could use model called network supervised topic model
+ slide give general ideas
+ next slide give details
+ general part course enough time cover frontier topics detail
+ provide references allow read topic know details
+ still useful know general ideas
+ know know might able use
+ general idea network supervised topic model following
+ Let start viewing regular topic models
+ Like LDA sorting optimization problem
+ Of course case optimization objective function likelihood function
+ often use maximum likelihood estimator obtain parameters
+ parameters give useful information want obtain text data
+ For example topics
+ want maximize probability tests given parameters generally denoted number
+ main idea incorporating network think constraints imposed based network
+ general idea use network impose constraints model parameters lambda
+ For example text adjacent nodes network similar cover similar topics
+ Indeed many cases tend cover similar topics
+ may able smooth topic distributions graph network adjacent nodes similar topic distributions
+ share common distribution topics
+ Or slight variations topic distributions coverage
+ technically simply add network use regularizers likelihood objective function shown
+ instead optimize probability test data given parameters lambda optimize another function
+ function combines likelihood regularizer function called R
+ regularizer defines parameters lambda Network
+ tells basically kind parameters preferred network constraint perspective
+ easily effect implementing idea imposing prior model parameters
+ Only necessary probabilistic model idea
+ combine two one single objective function
+ advantage idea quite general
+ Here top model generative model text
+ PLSA LEA current topic models
+ similarly network network
+ Any graph connects text objects
+ regularizer regularizer
+ flexible capturing different heuristics want capture
+ finally function F vary many different ways combine
+ general idea actually quite quite powerful
+ offers general approach combining different types data single optimization framework
+ general idea really applied problem
+ paper reference particular instantiation called NetPLSA started
+ case instantiating PLSA incorporate simple constraint imposed network
+ prior neighbors network must similar topic distribution
+ They must cover similar topics similar ways
+ basically says English
+ technically modified objective function
+ Let define texts actually network graph G
+ look formula actually recognize part fairly familiarly
+ Because fairly familiar
+ recognize part likelihood test given topic model Well look part precisely PLSA log-likelihood want maximize estimate parameters PLSA alone
+ second equation shows additional constraints parameters
+ particular measure difference topic coverage node u node
+ two adjacent nodes network
+ want distributions similar
+ computing square differences want minimize difference
+ note negative sign front sum whole sum
+ makes possible find parameters maximize PLSA log-likelihood
+ That means parameters fit data well respect constraint network
+ negative sign mentioned
+ Because negative sign maximize object function actually minimize statement term
+ look picture results weight edge u v
+ space network
+ weight says well two nodes strong collaborators researchers
+ two strong connections two people social network
+ weight
+ Then means important topic coverages similar
+ basically says
+ finally parameter lambda
+ new parameter control influence network constraint
+ easily lambda set 0 go back standard PLSA
+ lambda set larger value let network influence estimated models
+ effect basically PLSA
+ try make topic coverages two nodes strongly connected similar
+ ensure coverages similar
+ several results paper
+ slide shows record results using PLSA
+ data DBLP data bibliographic data research articles
+ experiments using four communities applications
+ IR information retrieval
+ DM stands data mining
+ ML machinery web
+ There four communities articles hoping topic mining help uncover four communities
+ assembled topics seen generated PLSA
+ PLSA unable generate four communities correspond intuition
+ reason mixed together many words shared communities
+ easy use four topics separate
+ use topics perhaps coherent topics
+ interesting use NetPLSA network collaboration network case authors used impose constraints
+ case use four topics
+ Ned Pierre said gave much meaningful topics
+ topics correspond well four communities
+ first information retrieval
+ second data mining
+ Third machine learning
+ fourth web
+ separation mostly influence network leverage collaboration network information
+ Essentially people form collaborating network kind assumed write similar topics
+ coherent topics
+ listen text data alone based occurrences wo get coherent topics
+ Even though topic model PLSA LDA able pick co-occurring words
+ general topics generate represent words co-occur
+ still generate coherent results NetPLSA showing network contest useful
+ similar model could useful characterize content associated subnetwork collaborations
+ general view text mining context network treat text living rich information network environment
+ means connect related data together big network
+ text data associated lot structures network
+ For example text data associated nodes network basically discussed NetPLSA
+ text data associated age well paths even subnetworks
+ way represent texts big environment context information powerful
+ Because allows analyze data information together
+ general analysis text using entire network information related text data
+ one suggested reading
+ paper NetPLSA find details model make model

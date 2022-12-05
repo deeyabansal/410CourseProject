@@ -1,0 +1,101 @@
+ text categorization
+ talk text categorization
+ important technique text data mining analytics
+ relevant discovery various different kinds knowledge shown
+ First related topic mining analysis
+ analyzing text data based predefined topics
+ Secondly related opinion mining sentiment analysis discovery knowledge observer human sensor
+ Because categorize authors example based content articles written right general categorize observer based content produce
+ Finally related text-based prediction
+ Because often use text categorization techniques predict variables real world remotely related text data
+ important technique text data mining
+ overall plan covering topic
+ First talk text categorization interested talk text categorization evaluate categorization results
+ problem text categorization defined follows
+ given set predefined categories possibly forming hierarchy
+ often set training examples training set labeled text objects means text objects already enabled known categories
+ task classify text object one predefined categories
+ picture slide shows happens
+ When text categorization lot text objects processed categorization system system general assign categories documents
+ As shown right categorization results often assume availability training examples documents tag known categories
+ examples important helping system learn patterns different categories
+ help system know recognize categories new text objects seen
+ specific examples text categorization
+ fact many examples
+ first text objects vary categorize document passage sentence collections text
+ As case clustering units analyzed vary lot creates lot possibilities
+ Secondly categories vary
+ Allocate general two major kinds categories
+ One internal categories
+ categories categorize content text object
+ For example topic categories sentiment categories generally content text objects throughout categorization content
+ kind external categories characterize entity associated text object
+ For example authors entities associated content produce
+ use content determining author written part example called author attribution
+ Or mininal categories associate text data long minimal connection entity text data
+ For example might collect lot reviews restaurant lot reviews product text data help infer properties product restaurant
+ case treat categorization problem
+ categorize restaurants categorize products based corresponding reviews
+ example external category
+ Here specific examples applications
+ News categorization common started lot
+ News agencies assign predefined categories categorize news generated everyday
+ virtual article categorizations important aspect
+ For example biomedical domain MeSH annotations
+ MeSH stands Medical Subject Heading ontology terms characterize content literature articles detail
+ Another example application spam email detection filtering right often spam filter help distinguish spams legitimate emails clearly binary classification problem
+ Sentiment categorization product reviews tweets yet another kind applications categorize comparing positive negative positive negative neutral
+ send categories assign two text content
+ Another application automatic email routing sorting might want automatically sort emails different folders one application text categorization folder category
+ results another important kind applications routing emails right person handle helpdesk email messaging generally routed particular person handle
+ Different people tend handle different kinds requests
+ many cases person manually assign messages right people
+ imagine ca able automatically text categorization system help routing request
+ class file incoming request one categories category actually corresponds person handle request
+ finally author attribution mentioned yet another application another example using text actually infer properties entities
+ many variants problem formulation
+ first simplest case binary categorization two categories
+ many examples information retrieval search engine
+ Applications one distinguishing relevant documents non-relevant documents particular query
+ Spam filtering distinguishing spams non-spams two categories
+ Sometimes classifications opinions two categories positive negative
+ general case K-category categorization many applications could two categories
+ topic categorization often example multiple topics
+ Email routing another example may multiple folders route email right person handle multiple people classify
+ cases two kinds categories
+ Another variation hierarchical categorization categories form hierarchy
+ Again topical hierarchy common
+ Yet another variation joint categorization
+ That multiple categorization tasks related hope kind join categorization
+ Further leverage dependency tasks improve accuracy individual task
+ Among binary categorizations fundamental part simple probably actually used perform categorization tasks
+ For example K-category categorization task actually performed using binary categorization
+ Basically look category separately binary categorization problem whether object category meaning categories
+ hierarchical categorization done progressively flat categorization level
+ first categorize objects let say small number high-level categories inside category categorized sub-categories etc
+ text categorization important Well already showed several applications general several reasons
+ One text categorization helps enrich text representation achieve understanding text data useful text analysis
+ categorization text represented multiple levels
+ keyword conditions often used lot text processing tasks
+ add categories provide two levels transition
+ Semantic categories assigned directly indirectly useful application
+ example semantic categories could already useful attribution might directly useful
+ Another example semantic categories facilitate aggregation text content another case applications text categorization
+ For example want know overall opinions product could first categorize opinions individual view positive negative allow easy aggregate sentiment tell 70 % views positive 30 % negative etc
+ without categorization much harder aggregate opinions provide concise way coding text sense based vocabulary
+ sometimes may applications text categorizations called text coded encoded control vocabulary
+ second kind reasons use text categorization infer properties entities text categories allows infer properties entities associate text data
+ means use text categorization discover knowledge world
+ general long associate entity text data always text data help categorize corresponding entities
+ used single information network connect entities text data
+ obvious entities directly connected authors
+ imagine author affiliations author age things actually connected text data indirectly
+ Once made connection make prediction values
+ general way allow use text mining text categorization discover knowledge world
+ Very useful especially big text data analytics often using text data extra sets data extracted humans infer certain decision factors often together non-textual data
+ Specifically text example think examples inferring properties entities
+ For example discovery non-native speakers language
+ done categorizing content speakers
+ Another example predict party affiliation politician based political speech
+ example using text data infer knowledge real world
+ nature problems defined text categorization problem

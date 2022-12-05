@@ -1,0 +1,77 @@
+ first one text clustering
+ talk text clustering
+ important technique topic mining analysis
+ particular start basic questions clustering
+ text clustering interested text clustering
+ following lectures talk text clustering
+ How evaluate clustering results text clustering Well clustering actually general technique data mining might learned courses
+ idea discover natural structures data
+ another words want group similar objects together
+ case objects course text objects
+ For example documents terms passages sentences websites go group similar text objects together
+ let example well really text objects used shapes denote objects grouped together
+ ask natural structures natural groups look might agree group objects based chips locations two dimensional space
+ got three clusters case
+ may much agreement three clusters really depends perspective look objects
+ Maybe seen thing different way might get different clusters
+ another example ambiguity clearly
+ main point problem actually well defined
+ problem lies define similarity
+ mean similar objects problem clearly defined order well defined clustering problem
+ problem general two objects similar depending look
+ example kept two words car horse
+ two words similar Well depends look physical properties car horse different look functionally car horse transportation tools
+ sense may similar
+ really depends perspective look objects
+ ought make clustering problem well defined
+ user must define perspective assessing similarity
+ call perspective clustering bias
+ define clustering problem important specify perspective similarity defining similarity used group similar objects
+ otherwise similarity well defined one different ways group objects
+ let look example
+ seeing objects shapes similar seen first slide ask group objects might feel previous slide
+ For example might think well steer group ships give cluster looks
+ However might feel well maybe objects grouped based sizes
+ give different way cluster data look size look similarity size
+ clearly depending perspective get different clustering result
+ clearly tells order evaluate clustering without must use perspective
+ Without perspective hard define best clustering result
+ many examples text clustering setup
+ example cluster documents whole text collection
+ case documents units clustered
+ may able cluster terms
+ case terms objects
+ cluster terms used define concept theme topic
+ fact topic models seen previous lectures give cluster terms sense take terms high probabilities word distribution
+ Another example cluster text segments example passages sentences segments extract former larger text objects
+ For example might extract order text segments topic let say using topic model
+ got text objects cluster segments got discover interesting clusters might ripple subtopics
+ case combining text clustering techniques
+ general lot text mining accurate combined flexible way achieve goal sophisticated mining analysis text data
+ cluster fairly large text objects mean text objects may contain lot documents
+ example might cluster websites
+ Each website actually compose multiple documents
+ Similarly cluster articles written author example
+ trigger articles published one unit clustering
+ way might group authors together based whether published papers similar
+ For text clusters cluster generate hierarchy
+ That general cluster text object different levels
+ generally text clustering interesting Well useful technique text mining particularly exploratory text analysis
+ typical scenario getting lot text data let say email messages customers time period literature articles etc
+ hope get sense overall content connection example might interested getting sense major topics typical representative documents connection
+ clustering help achieve goal
+ sometimes want link similar text objects together
+ objects might duplicated content example
+ case technique help remove redundancy remove duplicate documents
+ Sometimes topic linking together complete coverage topic
+ may used text clustering create structure text data sometimes create hierarchy structures useful problems
+ may use text clustering induce additional features represent text data cluster documents together treat cluster feature
+ say document cluster feature value one
+ document cluster feature value zero
+ helps provide additional discrimination might used text classification discuss later
+ general many applications text clustering
+ thought two specific ones
+ One cluster search results example [ INAUDIBLE ] search engine cluster results user overall structure results return fall query
+ query ambiguous particularly useful clusters likely represent different senses ambiguous word
+ Another application understand major complaints customers based emails right
+ case cluster email messages find major clusters understand major complaints

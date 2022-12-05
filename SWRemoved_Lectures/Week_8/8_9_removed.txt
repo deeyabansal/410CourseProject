@@ -1,0 +1,96 @@
+ let talk problem little bit specifically let talk two different ways estimating parameters
+ One called Maximum Likelihood estimate already mentioned
+ Bayesian estimation
+ maximum likelihood estimation define best meaning data likelihood reached maximum
+ formally given expression define estimate arg max probability x given theta
+ arg max means actually function turn
+ argument gives function maximum value adds value
+ value arg max value function
+ rather argument made function reaches maximum
+ case value arg max theta
+ theta makes probability X given theta reach maximum
+ estimate due makes sense often useful seeks premise best explains data
+ problem data small data points small data points
+ sample small trust data entirely try fit data biased
+ case text data let say observed 100 words contain another word related text mining
+ maximum likelihood estimator give word zero probability
+ Because giving non-zero probability take away probability mass observer word
+ Which obviously optimal terms maximizing likelihood observer data
+ zero probability unseen words may reasonable sometimes
+ Especially want distribution characterize topic text mining
+ one way address problem actually use Bayesian estimation actually look data prior knowledge parameters
+ assume prior belief parameters
+ case course look data look prior
+ prior defined P theta means impose preference certain theta others
+ using Bayes Rule shown combine likelihood function
+ With prior give posterior probability parameter
+ full explanation Bayes rule things related Bayesian reasoning outside scope course
+ gave brief introduction general knowledge might useful
+ Bayes Rule basically defined allows write one conditional probability X given Y terms conditional probability Y given X
+ two probabilities different order two variables
+ often rule used making inferences variable let take look
+ assume p ( X ) Encodes prior belief X
+ That means observe data belief X believe X values higher probability others
+ probability X given Y conditional probability posterior belief X
+ Because belief X values observed Y
+ Given observed Y believe X believe values higher probabilities others two probabilities related one regarded probability observed evidence Y given particular X
+ think X hypothesis prior belief hypothesis choose
+ observed Y update belief updating formula based combination prior
+ likelihood observing Y X indeed true much detour Bayes Rule
+ case interested inferring theta values
+ prior includes prior knowledge parameters
+ data likelihood tell parameter value explain data well
+ posterior probability combines represents compromise two preferences
+ case maximize posterior probability
+ To find theta maximize posterior probability estimator called Maximum Posteriori MAP estimate
+ estimator general estimator maximum likelihood estimator
+ Because define prior noninformative prior meaning uniform theta values
+ No preference basically go back maximum likelihood estimated
+ Because case mainly determined likelihood value
+ informative prior bias towards different values map estimator allow incorporate
+ problem course define prior
+ There free lunch want solve problem knowledge knowledge
+ knowledge ideally reliable
+ Otherwise estimate may necessarily accurate maximum likelihood estimate
+ let look Bayesian estimation detail
+ show theta values one dimension value simplification course
+ interested variable theta optimal
+ first Prior
+ Prior tells variables likely others believe
+ For example values likely values places
+ Prior theta likelihood
+ case theta tells values theta likely
+ means loose syllables best expand theta
+ combine two get posterior distribution compromise two
+ say somewhere in-between
+ look interesting point made
+ point represents mode prior means likely parameter value according prior observe data
+ point maximum likelihood estimator represents theta gives theta maximum probability
+ point interesting posterior mode
+ likely value theta given posterior
+ represents good compromise prior mode maximum likelihood estimate
+ general Bayesian inference interested distribution parameter additives
+ distribution values
+ Here P theta given X
+ problem Bayesian inference infer posterior regime infer interesting quantities might depend theta
+ show f theta interesting variable want compute
+ order compute value need know value theta
+ Bayesian inference treat theta uncertain variable
+ think possible variables theta
+ Therefore estimate value function f extracted value f according posterior distribution theta given observed evidence X
+ As special case assume f theta equal theta
+ case get expected value theta basically posterior mean
+ That gives one point theta sometimes posterior mode always
+ gives another way estimate parameter
+ general illustration Bayesian estimation influence
+ later useful topic mining want inject sum prior knowledge topics
+ summarize used language model basically probability distribution text
+ called generative model text data
+ simplest language model Unigram Language Model basically word distribution
+ introduced concept likelihood function probability data given model
+ function important given particular set parameter values function tell X data point higher likelihood higher probability
+ Given data sample X use function determine parameter values maximize probability observed data maximum livelihood estimate
+ talk Bayesian estimation inference
+ case must define prior parameters p theta
+ interested computing posterior distribution parameters proportional prior likelihood
+ distribution allow infer derive theta

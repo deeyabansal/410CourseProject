@@ -1,0 +1,81 @@
+ syntagmatic relation discovery mutual information
+ discussing syntagmatic relation discovery
+ particular talk another concept information series called mutual information used discover syntagmatic relations
+ Before talked problem conditional entropy conditional entropy computed different pairs words
+ really comparable makes harder cover strong synagmatic relations globally corpus
+ introduce mutual information another concept information series allows sometimes normalize conditional entropy make comparable across different pairs
+ particular mutual information order find ( X : Y ) matches entropy reduction X obtained knowing Y
+ More specifically question interested much entropy X obtain knowing Y
+ mathematically defined difference original entropy X condition Y X given Y
+ might defined reduction entropy Y knowing X
+ normally two conditional interface H X given Y entropy Y given X equal interestingly reduction entropy knowing one actually equal
+ quantity called Mutual Information order buy
+ function interesting properties first non-negative
+ easy understand original entropy always lower possibility reduced conditional entropy
+ words conditional entropy never exceed original entropy
+ Knowing information always help potentially hurt predicting x
+ signal property symmetric additional entropy symmetrical mutual information third property reaches minimum zero two random variables completely independent
+ That means knowing one tell anything last property verified simply looking equation reaches 0 conditional entropy X [ INAUDIBLE ] Y exactly original entropy X
+ means knowing help X Y completely independent
+ fix X rank different Ys using conditional entropy give order ranking based mutual information function H ( X ) fixed X fixed
+ ranking based mutual entropy exactly ranking based conditional entropy X given Y mutual information allows compare different pairs x
+ mutual information general general useful
+ let examine intuition using mutual information Syntagmatical Relation Mining
+ question ask forcing relation mining whenever `` eats '' occurs words tend occur question framed mutual information question words high mutual information eats computer missing information eats words
+ basically base conditional words strongly associated eats high point
+ Whereas words related lower mutual information
+ For give example
+ mutual information `` eats '' `` meats '' `` meats '' `` eats '' information symmetrical expected higher mutual information eats knowing really help predictor
+ similar knowing eats help predicting well
+ easily mutual information word largest equal entropy word case reduction maximum knowing one allows predict completely
+ conditional entropy zero therefore mutual information reaches maximum
+ larger equal machine volume eats words
+ words picking word computer picking eats word
+ get information larger computation eats
+ let look compute mute information
+ order often use different form mutual information mathematically rewrite mutual information form shown slide
+ Where essentially formula computes called KL-divergence divergence
+ another term information theory
+ measures divergence two distributions
+ look formula sum many combinations different values two random variables inside sum mainly comparison two joint distributions
+ numerator joint actual observed joint distribution two random variables
+ bottom part denominator interpreted expected joint distribution two random variables independent two random variables independent joined distribution equal product two probabilities
+ comparison tell whether two variables indeed independent
+ indeed independent expect two numerator different denominator mean two variables independent helps measure association
+ sum simply take consideration combinations values two random variables
+ case random variable choose one two values zero one four combinations
+ look form mutual information shows mutual information matches divergence actual joint distribution expected distribution independence assumption
+ larger divergence higher mutual information
+ let look exactly probabilities involved formula mutual information
+ probabilities involve easy verify
+ Basically first [ INAUDIBLE ] probabilities corresponding presence absence word
+ w1 two probabilities shown
+ They sum one word either present absent
+ segment similarly second word two probabilities representing presence absences word well
+ finally lot joined probabilities represent scenarios co-occurrences two words shown
+ sum one two words four possible scenarios
+ Either occur case variables value one one occurs
+ There two scenarios
+ two cases one random variables equal one zero finally scenario none occurs
+ two variables taking value zero
+ probabilities involved calculation mutual information
+ Once know calculate probabilities easily calculate mutual information
+ interesting know actually relations constraint among probabilities already saw two right previous slide seen marginal probabilities words sum one seen constraint says two words four scenarios co-occurrency additional constraints listed bottom
+ For example one means add probabilities observe two words occur together probabilities first word occurs second word occur
+ get exactly probability first word observed
+ words word observed
+ When first word observed two scenarios depending whether second word observed
+ probability captures first scenario second word actually observed captures second scenario second word observed
+ first word easy equations follow reasoning
+ equations allow compute probabilities based probabilities simplify computation
+ specifically know probability word present case know know probability presence second word easily compute absence probability right easy use equation take care computation probabilities presence absence word
+ let look [ INAUDIBLE ] distribution
+ Let assume available probability occurred together
+ easy actually compute rest probabilities based
+ Specifically example using equation compute probability first word occurred second word know probabilities boxes similarly using equation compute probability observe second word
+ Word
+ finally probability calculated using equation known known already known right
+ easier calculate
+ calculated
+ slide shows need know compute three probabilities shown boxes naming presence word co-occurence words segment
+ [ MUSIC ]

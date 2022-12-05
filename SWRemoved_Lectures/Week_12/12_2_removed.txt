@@ -1,0 +1,125 @@
+ continued discussion Latent Aspect Rating Analysis
+ Earlier talked solve problem LARA two stages
+ first segmentation different aspects
+ use latent regression model learn aspect ratings later weight
+ possible develop unified generative model solving problem model generational over-rating based text
+ model generation text natural solution use topic model
+ given entity assume aspects described word distributions
+ Topics
+ use topic model model generation reviewed text
+ assume words review text drawn distributions
+ way assumed generating model PRSA
+ plug latent regression model use text predict overrating
+ means first predict aspect rating combine aspect weights predict overall rating
+ give unified generated model model generation text overall ready condition text
+ time discuss model detail many cases part cause discuss cutting edge topics reference site find details
+ 'm show simple results get using kind generated models
+ First rating decomposition
+ decomposed ratings three hotels overall rating
+ look overall rating ca really tell much difference hotels
+ decomposing ratings aspect ratings hotels higher ratings dimensions value others might score better dimensions location
+ give detailed opinions aspect level
+ ground-truth shown parenthesis allows whether prediction accurate
+ always accurate mostly still reflecting trends
+ second result compare different reviewers hotel
+ table shows decomposed ratings two reviewers hotel
+ Again high level overall ratings
+ look overall ratings really get much information difference two reviewers
+ decompose ratings clearly high scores different dimensions
+ shows model review differences opinions different reviewers detailed understanding help understand better reviewers better feedback hotel
+ something interesting sense byproduct
+ problem formulation really
+ design generating model component
+ sentimental weights words different aspects
+ highly weighted words versus negatively loaded weighted words four dimensions
+ Value rooms location cleanliness
+ top words clearly make sense bottom words make sense
+ shows approach learn sentiment information directly data
+ kind lexicon useful general word long let say may different sentiment polarities different context
+ say battery life laptop long positive
+ say rebooting time laptop long bad right even reviews product laptop word long ambiguous could mean positive could mean negative
+ kind lexicon learn using kind generated models show whether word positive particular aspect
+ clearly useful fact lexicon directly used tag reviews hotels tag comments hotels social media Tweets
+ interesting since almost completely unsupervised well assuming reviews whose overall rating available allow learn form potentially larger amount data internet reach sentiment lexicon
+ results validate preference words
+ Remember model infer wether reviewer cares service price
+ know whether inferred weights correct poses difficult challenge evaluation
+ show interesting way evaluating
+ What prices hotels different cities prices hotels favored different groups reviewers
+ top ten reviewers highest inferred value aspect ratio
+ example value versus location value versus room etcetera
+ top ten reviewers highest ratios measure
+ means reviewers tend put lot weight value compared dimensions
+ means really emphasize value
+ bottom ten hand reviewers
+ lowest ratio mean Well means reviewers put higher weights aspects value
+ people cared another dimension care much value sense least compared top ten group
+ ratios computer based inferred weights model
+ average prices hotels favored top ten reviewers indeed much cheaper favored bottom ten
+ provides indirect way validating inferred weights
+ means weights random
+ They actually meaningful
+ comparison average price three cities actually top ten tend average price whereas bottom half care lot things service room condition tend hotels higher prices average
+ results build lot interesting applications
+ For example direct application generate rated aspect summary decomposition generated summaries aspect
+ positive sentences negative sentences aspect
+ informative original review overall rating review text
+ Here results aspects covered reviews ratings
+ mp3 reviews results show model discover interesting aspects
+ Commented low overall ratings versus higher overall per ratings
+ care different aspects
+ Or comment different aspects
+ help discover example consumers ' trend appreciating different features products
+ For example one might discovered trend people tend larger screens cell phones light weight laptop etcetera
+ Such knowledge useful manufacturers design next generation products
+ Here interesting results analyzing users rating behavior
+ average weights along different dimensions different groups reviewers
+ left side weights viewers expensive hotels
+ They gave expensive hotels 5 Stars average rates tend service
+ suggests people expensive hotels good service surprising
+ That another way validate inferred weights
+ look right side look column 5 Stars
+ reviewers cheaper hotels gave cheaper hotels five stars
+ As expected put weight value cheaper hotels
+ look expensive hotels cheaper hotels tended weights condition room cleanness
+ shows using model infer information hard obtain even read reviews
+ Even read reviews hard infer preferences emphasis
+ case text mining algorithms go beyond humans review interesting patterns data
+ course useful
+ compare different hotels compare opinions different consumer groups different locations
+ course model general
+ applied reviews overall ratings
+ useful technique support lot text mining applications
+ Finally results applying model personalized ranking recommendation entities
+ infer reviewers weights different dimensions allow user actually say care
+ example query shows 90 % weight value 10 % others
+ means care aspect
+ care getting cheaper hotel
+ My emphasis value dimension
+ query use reviewers believe similar preference recommend hotels
+ How know Well infer weights reviewers different aspects
+ find reviewers whose weights precise course inferred rates similar
+ use reviewers recommend hotels call personalized rather query specific recommendations
+ non-personalized recommendations shown top top results generally much higher price lower group reviewer cared value dictated query tended really favor low price hotels
+ yet another application technique
+ shows text mining understand users better
+ handle users better solve users better
+ summarize discussion opinion mining general important topic lot applications
+ text sentiment analysis readily done using text categorization
+ standard technique tends enough
+ need enriched feature implementation
+ need consider order categories
+ talk ordinal regression problem
+ assume generating models powerful mining latent user preferences
+ particular generative model mining latent regression
+ embed interesting preference information send weights words model result learn useful information fitting model data
+ approaches proposed evaluated
+ For product reviews context opinion holder opinion target clear
+ easy analyze
+ course lot practical applications
+ opinion mining news social media important difficult analyzing review data mainly opinion holders opinion targets interested
+ calls natural management processing techniques uncover accurately
+ Here suggested readings
+ first two small books use topic find lot discussion variations problem techniques proposed solving problem
+ next two papers generating models rating aspect rating analysis
+ first one solving problem using two stages second one unified model topic model integrated regression model solve problem using unified model

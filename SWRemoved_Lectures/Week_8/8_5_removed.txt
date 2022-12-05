@@ -1,0 +1,56 @@
+ topic mining analysis
+ talk motivation task definition
+ talk different kind mining task
+ As road map covered mining knowledge language namely discovery word associations paradigmatic relations syntagmatic relations
+ starting talk mining another kind knowledge content mining trying discover knowledge main topics text
+ call topic mining analysis
+ talk motivation task definition
+ first let look concept topic
+ topic something understand think actually easy formally define
+ Roughly speaking topic main idea discussed text data
+ think theme subject discussion conversation
+ different granularities
+ For example talk topic sentence
+ topic article aa topic paragraph topic research articles research library right different grand narratives topics obviously different applications
+ Indeed many applications require discovery topics text analyzed
+ Here examples
+ For example might interested knowing Twitter users talking Are talking NBA sports talking international events
+ Or interested knowing research topics
+ For example one might interested knowing current research topics data mining different five years ago involves discovery topics data mining literatures want discover topics literature past
+ make comparison
+ might interested knowing people products iPhone 6 dislike involves discovering topics positive opinions iPhone 6 negative reviews
+ Or perhaps interested knowing major topics debated 2012 presidential election discovering topics text analyzing talk lot techniques
+ general view topic knowledge world
+ text data expect discover number topics topics generally provide description world
+ tells something world
+ About product person etc
+ non-text data context analyzing topics
+ For example might know time associated text data locations text data produced authors text sources text etc
+ All meta data context variables associated topics discover use context variables help analyze patterns topics
+ For example looking topics time able discover whether trending topic topics might fading away
+ Soon looking topics different locations
+ might know insights people opinions different locations
+ mining topics important
+ let look tasks topic mining analysis
+ general involve first discovering lot topics case k topics
+ know topics covered documents extent
+ example document one might Topic 1 covered lot Topic 2 Topic k covered small portion
+ topics perhaps covered
+ Document two hand covered Topic 2 well cover Topic 1 covers Topic k extent
+ right generally two different tasks sub-tasks first discover k topics collection text laid
+ What k topics Okay major topics text
+ second task figure documents cover topics extent
+ formally define problem follows
+ First input collection N text documents
+ Here denote text collection C denote text article
+ generally need input number topics
+ may techniques automatically suggest number topics
+ techniques discuss useful techniques often need specify number topics
+ output k topics discover order theta sub one theta sub
+ want generate coverage topics document sub denoted pi sub j
+ pi sub ij probability document sub covering topic theta sub j
+ obviously document set values indicate extent document covers topic
+ assume probabilities sum one
+ Because document wo able cover topics outside topics discussed discovered
+ question define theta sub define topic problem completely defined define exactly theta
+ next lectures talk different ways define theta

@@ -1,0 +1,114 @@
+ Evaluation Text Categorization
+ talked many different methods text categorization
+ know method works better particular application know best way solving problem To understand know evaluate categorization results
+ first general thoughts evaluation
+ general evaluation kind empirical tasks categorization use methodology developed 1960s information retrieval researchers
+ Called Cranfield Evaluation Methodology
+ basic idea humans create test correction already know every document tagged desired categories
+ Or case search query documents retrieved called ground truth
+ ground truth test correction reuse collection test many different systems compare different systems
+ turn components system happen
+ Basically provides way control experiments compare different methods
+ methodology virtually used tasks involve empirically defined problems
+ case compare systems categorization results categorization ground truth created humans
+ compare systems decisions documents get category categories assigned documents humans
+ want quantify similarity decisions equivalently measure difference system output desired ideal output generated humans
+ obviously highest similarity better results
+ similarity could measured different ways
+ lead different measures
+ sometimes desirable match similarity different perspectives better understanding results detail
+ For example might interested knowing category performs better category easy categorize etc
+ general different categorization mistakes however different costs specific applications
+ areas might serious others
+ ideally model differences read many papers categorization generally
+ Instead use simplified measure often okay consider cost variation compare methods interested knowing relative difference methods
+ okay introduce bias long bias already particular method expect effective method perform better less effective one even though measure perfect
+ first measure introduce called classification accuracy basic measure percentage correct decisions
+ categories denoted c1 ck n documents denoted d1
+ pair category document look situation
+ system said yes pair basically assigned category document
+ Or denoted Y M systems decision
+ similarly look human decisions human assigned category document plus sign
+ That means human
+ think assignment correct incorrect minus
+ combinations Ns yes nos minus pluses
+ There four combinations total
+ two correct ( + ) n ( - ) two kinds errors
+ measure classification accuracy simply count many decisions correct
+ normalize total number decisions made
+ know total number decisions n multiplied
+ number correct decisions basically two kinds
+ One plusses
+ n minus
+ put together count
+ convenient measure give one number characterize performance method
+ higher better course
+ method problems
+ First treated decisions equally
+ reality decision errors serious others
+ For example may important get decisions right documents others
+ Or maybe important get decisions right categories others call detailed evaluation results understand strands different methods understand performance methods
+ detail per category per document basis
+ One example shows clearly decision errors different causes spam filtering could retrieved two category categorization problem
+ Missing legitimate email result one type error
+ letting spam come folder another type error
+ two types errors clearly different important miss legitimate email
+ okay occasionally let spam email come inbox
+ error first missing legitimate email high cost
+ serious mistake classification error classification accuracy address issue
+ There another problem imbalance test set
+ Imagine skew test set instances category one 98 % instances category one
+ Only 2 % category two
+ case simple baseline accurately performs well baseline
+ Sign similar put instances major category
+ That get 98 % accuracy case
+ appearing effective reality obviously good result
+ general use classification accuracy measure want ensure causes balance
+ one equal number instances example class minority categories causes tend overlooked evaluation classification accuracy
+ address problems course evaluate results ways different ways
+ As said beneficial look multiple perspectives
+ example look perspective document perspective based document
+ question good decisions document general cases decisions think four combinations possibilities depending whether system said yes depending whether human said correct incorrect said yes
+ four combinations first human systems said yes true positives system says yes positive
+ system says yes positive
+ human confirm indeed correct becomes true positive
+ When system says yes human says incorrect false positive FP
+ system says human says yes false negative
+ missed one assignment
+ When system human says correctly assume true negatives
+ All right measures better characterize performance using four numbers two popular measures precision recall
+ proposed information retrieval researchers 1960s evaluating search results become standard measures use everywhere
+ system says yes ask question many correct What percent correct decisions system says yes That called precision
+ true positive divided cases system says yes positives
+ measure called recall measures whether document categories
+ case divide true positive true positives false negatives
+ cases human Says document category
+ represents categories got recall tells whether system actually indeed assigned categories document
+ gives detailed view document aggregate later
+ interested documents tell well documents subsets
+ might interesting others example
+ allows analyze errors detail well
+ separate documents certain characteristics others look errors
+ might pattern kind document long document
+ well shock documents
+ gives insight inputting method
+ Similarly look per-category evaluation
+ case look good decisions particular category
+ As previous case define precision recall
+ basically answer questions different perspective
+ system says yes many correct That means looking category documents assigned category indeed category right recall tell category actually assigned documents That category
+ sometimes useful combine precision recall one measure often done using f measure
+ harmonic mean precision
+ Precision recall defined slide
+ controlled parameter beta indicate whether precision important recall
+ When beta set 1 measure called F1 case take equal weight upon procedure recall
+ F1 often used measure categorization
+ cases combine results always think best way combining case know thought could combined arithmetic mean right
+ still give range values obviously reason f1 popular actually useful think difference
+ think indeed difference undesirable property arithmatic
+ Basically obvious think case system says yes category document pairs
+ try compute precision recall case
+ happen
+ basically kind measure arithmetic mean reasonable F1 minus one [ INAUDIBLE ] trade two values equal
+ There extreme case 0 one letter one
+ Then F1 low mean still reasonably high

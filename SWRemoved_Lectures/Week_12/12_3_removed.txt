@@ -1,0 +1,105 @@
+ Text-Based Prediction
+ start talking mining different kind knowledge slide
+ Namely use text data infer values variables real world may directly related text
+ Or remotely related text data
+ different content analysis topic mining directly characterize content text
+ different opinion mining sentiment analysis still characterizing mostly content
+ Only focus subject content reflects know opinion holder
+ provides limited review predict
+ following lectures talk predict Information world
+ How get sophisticated patterns text together kind data useful first take look big picture prediction data mining general call data mining loop
+ picture seeing right multiple sensors including human sensors report seen real world form data
+ Of course data form non-text data text data
+ goal predict values important real world variables matter
+ For example someone house condition weather etc
+ variables important might want act
+ might want make decisions based
+ get data predicted values Well general first data mining analysis data
+ Because general treat data collected prediction problem set
+ much interested joint mining non-text text data combine data together
+ analysis generally multiple predictors interesting variable
+ call features
+ features put predictive model actually predict value interesting variable
+ allows change world
+ basically general process making prediction based data including test data
+ important emphasize human actually plays important role process
+ Especially involvement text data
+ human first involved mining data
+ control generation features
+ help understand text data text data created consumed humans
+ Humans best consuming interpreting text data
+ course lot text data machines help need text data mining
+ Sometimes machines patterns lot data humans may
+ general human play important role analyzing text data applications
+ Next human must involved predictive model building adjusting testing
+ particular lot domain knowledge problem prediction build predictive model
+ next course predictive values variables humans involved taking actions change word make decisions based particular values
+ finally interesting human could involved controlling sensors
+ adjust sensors collect useful data prediction
+ call data mining loop
+ Because perturb sensors collect new data useful data obtain data prediction
+ data generally help improve predicting accuracy
+ loop humans recognize additional data need collected
+ machines course help humans identify data collected next
+ general want collect data useful learning
+ actually subarea machine learning called active learning
+ How identify data points helpful machine learning programs label right general loop data acquisition data analysis
+ Or data mining prediction values
+ take actions change word observe happens
+ decide additional data collected adjusting sensors
+ Or prediction arrows note additional data need acquire order improve accuracy prediction
+ big picture actually general reflecting lot important applications big data
+ useful keep mind looking text mining techniques
+ text mining perspective interested text based prediction
+ Of course sometimes texts alone make predictions
+ useful prediction human behavior human preferences opinions
+ general text data put together non-text data
+ interesting questions first design effective predictors generate effective predictors text question addressed extent previous lectures talked kind features design text data
+ addressed extent talking knowledge mine text
+ example topic mining useful generate patterns topic based indicators predictors fed predictive model
+ topics intermediate recognition text
+ That allow design high level features predictors useful prediction variable
+ may generated original text data provides much better implementation problem serves effective predictors
+ similarly similar analysis lead predictors well
+ data mining text mining algorithms used generate predictors
+ question join mine text non-text data together question addressed yet
+ following lectures address problem
+ Because generate much enriched features prediction
+ allows review lot interesting knowledge world
+ patterns generated text non-text data sometimes already useful prediction
+ put together many predictors really help improving prediction
+ Basically text-based prediction actually serve unified framework combine many text mining analysis techniques
+ Including topic mining content mining techniques segment analysis
+ goal mainly evoke values real-world variables
+ order achieve goal preparations
+ subtasks
+ one subtask could mine content text data topic mining
+ could mine knowledge observer
+ sentiment analysis opinion
+ help provide predictors prediction problem
+ course add non-text data directly predicted model non-text data helps provide context text analyst
+ improves topic mining opinion analysis
+ improvement often leads effective predictors problems
+ enlarge space patterns opinions topics mine text discuss later
+ joint analysis text non-text data actually understood two perspectives
+ One perspective non-text help testimony
+ Because non-text data provide context mining text data provide way partition data different ways
+ leads number type techniques contextual types mining
+ mine text context defined non-text data
+ reference large body work direction
+ need highlight next lectures
+ perspective text data help non-text data mining well
+ text data help interpret patterns discovered non-text data
+ Let say discover frequent patterns non-text data
+ use text data associated instances pattern occurs well text data associated instances pattern look
+ gives two sets text data
+ difference
+ difference text data interpretable text content easy digest
+ difference might suggest meaning pattern found non-text data
+ helps interpret patterns
+ technique called pattern annotation
+ reference listed detail
+ references mentioned
+ first reference pattern annotation
+ second Qiaozhu Mei dissertation contextual text mining
+ contains large body work contextual text mining techniques

@@ -1,0 +1,110 @@
+ mixture unigram language models
+ discussing probabilistic topic models
+ particular introduce mixture unigram language models
+ slide seen earlier
+ Where talked get rid background words top one document
+ want solve problem useful think end problem
+ Well obviously words frequent data using maximum likelihood estimate
+ Then estimate obviously assign high probability words order maximize likelihood
+ order get rid mean something differently
+ particular say distribution explain words tax data
+ What say common words explained distribution
+ one natural way solve problem think using another distribution account common words
+ way two distributions mixed together generate text data
+ let model call background topic model generate common words
+ way target topic theta generating common handle words characterised content document
+ work Well small modification previous setup one distribution
+ Since two distributions decide distribution use generate word
+ Each word still sample one two distributions
+ Text data still generating way
+ Namely look generating one word time eventually generate lot words
+ When generate word however first decide two distributions use
+ controlled another probability probability theta sub probability theta sub B
+ probability enacting topic word distribution
+ probability enacting background word distribution denoted theta sub B
+ On case give example set
+
+ basically flip coin fair coin decide want use
+ general probabilities equal
+ might bias toward using one topic
+ process generating word first flip coin
+ Based probabilities choosing model let say coin shows head means use topic two word distribution
+ Then use word distribution generate word
+ Otherwise might slow path
+ use background word distribution generate word
+ case model uncertainty associated use word distribution
+ still think model generating text data
+ model called mixture model
+ let
+ case probability observing word w showed words
+ `` '' `` text ''
+ cases setup model interested computing likelihood function
+ basic question probability observing specific word know word observed two distributions consider two cases
+ Therefore sum two cases
+ first case use topic distribution generate word
+ case probably theta sub probability choosing model multiplied probability actually observing word model
+ Both events must happen order observe
+ first must choosing topic theta sub actually sampled word distribution
+ similarly second part accounts different way generally word background
+ obviously probability text similar right two ways generating text
+ case product probability choosing particular word multiplied probability observing word distribution
+ whether actually general form
+ might want make sure really understood expression
+ convince indeed probability obsolete text
+ summarize observed
+ probability word mixture model general sum different ways generating word
+ case product probability selecting component model
+ Multiplied probability actually observing data point component model
+ something quite general occurring often later
+ basic idea mixture model retrieve thesetwo distributions together one model
+ used box bring components together
+ view whole box one model generative model
+ give probability word
+ way determines probability quite different one distribution
+ basically complicated mixture model
+ complicated one distribution
+ called mixture model
+ said treat generative model
+ often useful think likelihood function
+ illustration seen dimmer illustration generated model
+ mathematically model nothing define following generative model
+ Where probability word assumed sum two cases generating word
+ form seeing general form seen calculation earlier
+ Well use symbol w denote water still basically first sum
+ Right sum due fact water generated much ways two ways case
+ inside sum term product two terms
+ two terms first probability selecting component D Second probability actually observing word component model
+ general description mixture models
+ want make sure understand really basis understanding kinds top models
+ setup model
+ write functioning
+ next question estimate parameter parameters
+ Given data
+ Well general use text data estimate model parameters
+ estimation allow discover interesting knowledge text
+ case discover Well presented parameters two kinds parameters
+ One two worded distributions result topics coverage topic
+ coverage topic
+ determined probability C less D probability theta one
+ interesting think special cases send one want happen Well zero right look likelihood function degenerate special case one distribution
+ Okay easily verify assuming one two
+ Zero
+ sense mixture model general previous model one distribution
+ cover special case
+ summarize talked mixture two Unigram Language Models data considering One document
+ model mixture model two components two unigram LM models specifically theta sub intended denote topic document theta sub B representing background topic set attract common words common words assigned high probability model
+ parameters collectively called Lambda show think question many parameters talking exactly
+ usually good exercise allows model depth complete understanding model
+ mixing weights course
+ likelihood function look Well looks similar
+ document first product words document exactly
+ difference inside sum instead one
+ might recalled one
+ sum mixture model
+ mixture model introduce probability choosing particular component distribution
+ another way writing using product unique words vocabulary instead product positions document
+ form look different unique words commutative formed computing maximum likelihood estimate later
+ maximum likelihood estimator usual find parameters maximize likelihood function
+ constraints course two kinds
+ One probabilities [ INAUDIBLE ] must sum 1 choice [ INAUDIBLE ] must sum 1
+ [ MUSIC ]

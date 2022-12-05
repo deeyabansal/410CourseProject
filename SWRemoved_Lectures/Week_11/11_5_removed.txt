@@ -1,0 +1,157 @@
+ Opinion Mining Sentiment Analysis covering Motivation
+ start talking mining different kind knowledge
+ Namely knowledge observer humans generated text data
+ particular talk opinion mining sentiment analysis
+ As discussed earlier text data regarded data generated humans subjective sensors
+ contrast devices video recorder report happening real world objective generate viewer data example
+ main difference test data data video data rich opinions content tends subjective generated humans
+ actually unique advantaged text data compared data office great opportunity understand observers
+ mine text data understand opinions
+ Understand people preferences people think something
+ following lectures mainly mine analyze opinions buried lot text data
+ let start concept opinion
+ easy formally define opinion mostly define opinion subjective statement describing person believes thinks something
+ highlighted quite words
+ worth thinking little bit words
+ help better understand opinion
+ helps define opinion formally
+ Which always needed computation resolve problem opinion mining
+ let first look key word subjective
+ contrast objective statement factual statement
+ Those statements proved right wrong
+ key differentiating factor opinions tends easy prove wrong right reflects person thinks something
+ contrast objective statement usually proved wrong correct
+ For example might say computer screen battery
+ something check
+ either battery
+ contrast think sentence laptop best battery laptop nice screen
+ statements subjective hard prove whether wrong correct
+ opinion subjective statement
+ next lets look keyword person
+ indicates opinion holder
+ Because talk opinion opinion held someone
+ notice something
+ target opinion
+ opinion expressed something
+ course believes thinks implies opinion depend culture background context general
+ Because person might think different different context
+ People different background may think different ways
+ analysis shows multiple elements need include order characterize opinion
+ basic opinion representation Well include least three elements right Firstly specify opinion holder
+ whose opinion Second must specify target opinion third course want opinion content
+ exactly opinion identify get basic understanding opinion already useful sometimes
+ want understand want enriched opinion representation
+ means want understand example context opinion situation opinion expressed
+ For example time expressed people understand opinion sentiment understand opinion tells opinion holder feeling
+ For example opinion positive negative Or perhaps opinion holder happy sad understanding obvious beyond Extracting opinion content needs analysis
+ let take simple example product review
+ case actually expressed opinion holder expressed target
+ obviously whats opinion holder reviewer often clear whats opinion target product review example iPhone 6
+ When review posted usually ca information easier
+ content course review text general easy obtain
+ product reviews fairly easy analyze terms obtaining basic opinion representation
+ course want get information might know Context example
+ review written 2015
+ Or want know sentiment review positive
+ additional understanding course adds value mining opinions
+ case task relatively easy opinion holder opinion target already identified
+ let take look sentence news
+ case implicit holder implicit target
+ tasker general harder
+ identify opinion holder governor Connecticut
+ identify target
+ one target Hurricane Sandy another target mentioned hurricane 1938
+ opinion Well negative sentiment indicated words bad worst
+ identify context New England case
+ unlike playoff review elements must extracted using natural RAM processing techniques
+ task Is much harder
+ need deeper natural language processing
+ examples suggest lot work easy done product reviews
+ That indeed happened
+ Analyzing assembling news still quite difficult difficult analysis opinions product reviews
+ interesting variations
+ fact examine variations opinions systematically
+ First let think opinion holder
+ holder could individual could group people
+ Sometimes opinion committee
+ Or whole country people
+ Opinion target accounts vary lot
+ one entity particular person particular product particular policy ect
+ could group products
+ Could products company general
+ Could specific one attribute though
+ An attribute entity
+ For example battery iPhone
+ could someone else opinion
+ one person might comment another person Opinion etc
+ lot variation cause problem vary lot
+ opinion content course vary lot surface identify one-sentence opinion one-phrase opinion
+ longer text express opinion whole article
+ furthermore identify variation sentiment emotion damage feeding opinion holder
+ distinguish positive versus negative mutual happy versus sad separate
+ Finally opinion context vary
+ simple context different time different locations
+ could complex contexts background topic discussed
+ opinion expressed particular discourse context interpreted different ways expressed another context
+ context [ INAUDIBLE ] entire discourse context opinion
+ From computational perspective mostly interested opinions extracted text data
+ turns differentiate distinguish different kinds opinions text data computation perspective
+ First observer might make comment opinion targeting observe word case author opinion
+ For example phone
+ opinion author
+ contrast text might report opinions others
+ person could Make observation another person opinion reported opinion
+ example believe loves painting
+ opinion really really expressed another person
+ mean author loves painting
+ clearly two kinds opinions need analyzed different ways sometimes product reviews although mostly opinions false reviewer
+ Sometimes reviewer might mention opinions friend friend
+ Another complication may indirect opinions inferred opinions obtained
+ By making inferences expressed text might necessarily look opinion
+ For example one statement might phone ran battery one hour
+ way factual statement either true false right even verify statement one infer negative opinions quality battery phone feeling opinion holder battery
+ opinion holder clearly wished battery last longer
+ interesting variations need pay attention extract opinions
+ reason indirect opinions often useful extract whatever person said product sometimes factual sentences useful
+ practical viewpoint sometimes necessarily extract subject sentences
+ Instead sentences opinions useful understanding person understanding product commend
+ task opinion mining defined taking textualized input generate set opinion representations
+ Each representation identify opinion holder target content context
+ Ideally infer opinion sentiment comment context better understand
+ opinion
+ often elements representation already known
+ gave good example case product use opinion holder opinion target often expressly identified
+ turns one simplest opinion mining tasks
+ interesting think tasks might simple
+ Because cases easily build applications using opinion mining techniques
+ talked opinion mining defined task
+ Let talk little bit opinion mining important useful
+ identify three major reasons three broad reasons
+ first help decision support
+ help optimize decisions
+ often look people opinions look read reviews order make decisions buying product using service
+ interested others opinions decide vote example
+ policy makers may want know people opinions designing new policy
+ one general kind applications
+ broad course
+ second application understand people important
+ For example could help understand people preferences
+ could help better serve people
+ For example optimize product search engine optimize recommender system know people interested people think product
+ help advertising course targeted advertising know kind people tend kind plot
+ third kind application called voluntary survey
+ important research used done surveys manual surveys
+ Question answer
+ People need feel informs answer questions
+ directly related humans sensors usually aggregate opinions lot humans kind assess general opinion
+ useful business intelligence manufacturers want know products advantages others
+ What winning features products winning features competitive products
+ Market research understanding consumers oppinions
+ create useful directive
+ Data-driven social science research benefit text mining understand people opinions
+ aggregate lot opinions social media lot popular information actually study questions
+ For example study behavior people social media social networks
+ regarded voluntary survey done people
+ general gain lot advantage prediction task leverage text data extra data problem
+ use text based prediction techniques help make predictions improve accuracy prediction
+ [ MUSIC ]

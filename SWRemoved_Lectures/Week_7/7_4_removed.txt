@@ -1,0 +1,27 @@
+ specific examples ca part speech tagging still easy 100 % correctly
+ example turned highway verses turned fan two offs actually somewhat differentness active categories difficult get complete parsing correct
+ Again example man saw boy telescope actually difficult parse depending context
+ Precise deep semantic analysis hard
+ For example define meaning precisely difficult sentence John owns restaurant
+ state summarized follows
+ Robust general NLP tends shallow deep understanding scale
+ For reason course techniques cover general shallow techniques analyzing text data mining text data generally based statistical analysis
+ robust general category shallow analysis
+ techniques advantage able applied text data natural topic
+ downside give use deeper understanding text
+ For rely deeper natural language analysis
+ That typically require human effort annotate lot examples analysis computers use machine learning techniques learn training examples task
+ practical applications generally combine two kinds techniques general statistical methods backbone basis
+ applied text data
+ top use humans take data use supervised machine learning tasks well especially important tasks bring humans loop analyze text data precisely
+ course cover general statistical approaches generally require much human effort
+ practically useful deeper analysis techniques require lot human effort annotate text
+ summarize main points take first NLP foundation text mining
+ obviously better understand text data better text mining
+ Computers far able understand natural language
+ Deep NLP requires common sense knowledge inferences
+ Thus working limited domains feasible large scale text mining
+ Shallow NLP based statistical methods done large scale main topic course generally applicable lot applications
+ They sense useful techniques
+ practice use statistical NLP basis humans help needed various ways
+ [ MUSIC ]

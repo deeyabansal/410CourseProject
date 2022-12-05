@@ -1,0 +1,99 @@
+ methods text categorization
+ discuss text categorization
+ First many methods text categorization
+ method idea determine category based rules design carefully reflect domain knowledge category prediction problem
+ example want topic categorization news articles say well news article mentions word game sports three times
+ That say sports things allow deterministically decide category document put
+ strategy work well following conditions hold
+ First categories must well defined allows person clearly decide category based clear rules
+ certainly categories half easy distinguished based surface features text
+ means official features keywords punctuations whatever easily identify text data
+ For example special vocabulary known occur particular category
+ effective easily use vocabulary padding vocabulary recognize category
+ sufficient knowledge designing words case effective
+ domains sometimes
+ However general several problems approach
+ First label intensive requires lot manual work
+ Obviously ca kinds categorization problems
+ scratch different problem
+ problem given rules need
+ scale well
+ Secondly handle uncertainty rules often rules Are 100 % reliable
+ Take example looking occurrences words texts trying decide topic
+ actually hard 100 % correct rule
+ example say well game sports basketball Then sure sports
+ one imagine types articles mention cures may exactly sports marginally touching sports
+ main topic could another topic different topic sports
+ one disadvantage approach
+ finally rules maybe inconsistent lead robustness
+ More specifically sometimes results categorization may different depending rule applied
+ case facing uncertainty
+ decide order applying rules combination results contradictory
+ problems approach
+ turns problems solved alleviated using machine learning
+ machine learning methods automatic
+ still put automatic quotation marks really completely automatic cause still require many work
+ More specifically use human experts help two ways
+ First human experts must annotate data cells category labels
+ tell computer documents receive categories
+ called training data
+ secondly human experts need provide set features represent text object
+ That potentially provide clue category
+ need provide basic features computers look
+ case tax natural choice words
+ using feature common choice start course sophisticated features phrases even parts ancients tags even syntax structures
+ human experts provide use machine running learn soft rules categorization training data
+ soft rules means get decided category assigned document use using rule deterministic
+ might use something similar saying matches games sports many times likely sports
+ say exactly sure instead use probabilities weights
+ combine much evidences
+ learning process basically figure features useful separating different categories
+ figure optimally combine features minimize errors categorization training data
+ training data important
+ basis learning
+ trained classifier applied new text object predict likely category
+ simulate prediction human Would assign text object
+ human make judgement
+ use machine learning text categorization talk problem general setting supervisement
+ set learn classifier map value X
+ Into map Y X text objects Y categories set categories
+ class phi take value x input generate value output
+ hope output right category x
+ correct course judged based training data
+ general goal machine learning problems supervised learning problems given examples input output function
+ computer figure function behaves based examples
+ try able compute values future x seen
+ general methods rely discriminative features text objects distinguish different categories
+ features important provided humans
+ combine multiple features weight map weights optimized minimize errors training data
+ learning processes optimization problem
+ An objective function often tied errors training data
+ Different methods tend vary ways measuring errors training data
+ They might optimize different objective function often called loss function cost function
+ They tend vary ways combining features
+ linear combination example simple often used
+ powerful nonlinear combinations
+ nonlinear models might complex training tradeoffs well
+ lead different variations many variations learning methods
+ general distinguish two kinds classifiers high level
+ One called generative classifiers
+ called discriminative classifiers
+ generative classifiers try learn data looks category
+ attempts model joint distribution data label x factored product distribution labels
+ joint probability sorry conditional probability X given Y Y
+ first model distribution labels model data generate particular label
+ estimate models compute conditional probability label given data based probability data given label
+ label distribution using Bayes Rule
+ important thing conditional probability label used directly decide label likely
+ approaches objective function actually likelihood
+ model data generated
+ indirectly captures training errors
+ model data category accurately classify accurately
+ One example Naïve Bayes classifier case
+ kind approaches called discriminative classifies classifies try learn features separate categories
+ direct attack problem categorization separation classes
+ sorry problem
+ discriminative classifiers attempt model conditional probability label given data point directly
+ objective function tends directly measure errors categorization training data
+ Some examples include logistical regression support vector machines k-nearest neighbors
+ cover classifiers detail next lectures

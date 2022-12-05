@@ -1,0 +1,238 @@
+ use generative probabilistic models text categorization
+ There general two kinds approaches text categorization using machine learning
+ One generating probabilistic models
+ discriminative approaches
+ talk generative models
+ next talk discriminative approaches
+ problem text categorization actually similar document clustering
+ assume document belongs one category one cluster
+ main difference clustering really know predefined categories clusters
+ fact goal text clustering
+ want find clusters data
+ case categorization given categories
+ kind pre-defined categories based categories training data allocate document one categories sometimes multiple categories
+ similarity two problems actually get document clustering models text categorization
+ understand use generated models text categorization perspective clustering
+ slide talked text clustering assume multiple topics represented word distributions
+ Each topic one cluster
+ estimated model faced problem deciding cluster document belong
+ question boils decide theta used generate
+ suppose L words represented xi
+ compute probability particular topic word distribution zeta used generate document Well general use base wall make influence prior information need consider topic cluster higher prior likely document cluster
+ favor cluster
+ likelihood part part
+ whether topic word distribution explain content document well
+ want pick topic high values
+ specifically multiply together choose topic highest product
+ rigorously
+ choose topic maximize
+ posterior probability top given document gets posterior one p prior
+ That belief topic likely observe document
+ conditional probability posterior probability topic observed document
+ base wall allows update probability based prior shown details prior related posterior left-hand side
+ related well word distribution explains document two related way
+ find topic higher posterior probability equivalent maximize product seen multiple times course
+ change probability document product probability word made assumption independence generating word
+ something seen document clustering
+ clearly assign document category based information word distributions categories prior categories
+ idea directly adapted categorization
+ precisely Naive Bayes Classifier
+ really information except looking categorization problem
+ assume theta represents category accurately means word distribution characterizes content documents category accurately
+ Then precisely text clustering
+ Namely assign document category highest probability generating document
+ words maximize posterior probability well
+ related prior [ INAUDIBLE ] seen previous slide
+ naturally decompose [ INAUDIBLE ] product
+ change notation write product product words vocabulary even though document contain words
+ product still accurately representing product words document count
+ When word occur document
+ count 0 time disappear
+ actively product words document
+ basically Naive Bayes Classifier score category document function
+ may notice involves product lot small probabilities
+ cause four problem
+ one way solve problem thru take logarithm function changes often categories
+ helps preserve precision
+ often function actually use score category choose category highest score function
+ called Naive Bayes Classifier keyword base understandable applying base rule go posterior probability topic product likelihood prior
+ called naive made assumption every word document generated independently indeed naive assumption reality generating independently
+ Once word words likely occur
+ For example seen word text
+ Than mixed category clustering likely appear text
+ assumption allows simplify problem
+ actually quite effective many text categorization tasks
+ know kind model make assumption
+ could example assume words may dependent
+ make bigram analogy model trigram analogy model
+ course even use mixture model model document looks category
+ nature using base rule classification
+ actual generating model documents category vary
+ talk simple case perhaps simplest case
+ question make sure theta actually represents category accurately clustering learned category distributions category data
+ case make sure theta represents indeed category
+ Well think question likely come idea using training data
+ Indeed textbook typically assume training data available documents unknown generator category
+ words documents known categories assigned course human experts must
+ T1 represents set documents known generator category 1
+ T2 represents documents known generated category 2 etc
+ look picture model really simplified unigram language model
+ longer mixed modal Because already know distribution used generate documents
+ There uncertainty mixing different categories
+ estimation problem course simplified
+ general imagine want estimate probabilities marked
+ probability estimate order relation
+ Well two kinds
+ one prior probability theta indicates popular category likely observed document category
+ kind water distributions want know words high probabilities category
+ idea use observe training data estimate two probabilities
+ general separately different categories
+ That documents known generated specific category
+ know sense irrelevant categories dealing
+ statistical estimation problem
+ observed data model want guess parameters model
+ want take best guess parameters
+ problem seen several times course
+ thought problem seen life based classifier
+ useful pause video moment think solve problem
+ let state problem
+ let think category 1 know one word distribution used generate documents
+ generate word document independently know observed set n sub 1 documents set Q1
+ documents generated category 1
+ Namely generated using word distribution
+ question guess estimate probability word distribution guess entire probability category Of course singular probability depends likely documents categories think moment use training data including documents known k categories estimate parameters spend time think help understand following slides
+ spend time make sure try solve problem best solve problem
+ thought realize following
+ First bases estimating prior probability category
+ Well whether observed lot documents form category
+ Intuitively seen lot documents sports medical science
+ Then guess probability sports category larger prior category larger
+ basis estimating probability category Well assuming words observed frequently documents known generated category likely higher probability
+ maximum Naive Bayes made
+ Indeed made probability category answer question category popular Then simply normalize count documents category
+ N sub denotes number documents category
+ simply normalize counts make probability
+ words make probability proportional size training intercept category size set sub
+ word distribution Well
+ Again time category
+ let say considering category theta
+ word higher probability Well simply count word occurrences documents known generated theta
+ put together counts word set
+ normalize counts make distribution words make probabilities words 1
+ case proportional count word collection training documents T sub denoted c w T sub
+ may notice often write probable estimate form proportional certain numbers
+ often sufficient constraints distributions
+ normalizer dictated constraint
+ case useful think constraints two kinds probabilities figure answer question know normalize accounts
+ good exercise work obvious
+ There another issue Naive Bayes smoothing
+ fact smoothing general problem older estimate language morals
+ happen observed small amount data smoothing important technique address outsmarts
+ case training data small data set small use maximum likely estimator often face problem zero probability
+ That means event observed estimated probability zero
+ case seen word training documents let say category
+ Then estimator zero probability one category generally accurate
+ smoothing make sure zero probability
+ reason smoothing way bring prior knowledge generally true lot situations smoothing
+ When data set small tend rely prior knowledge solve problem
+ case [ INAUDIBLE ] says word zero probability
+ smoothing allows inject prior initial order real zero probability
+ There third reason sometimes obvious explain moment
+ help achieve discriminative weighting terms
+ called IDF weighting inverse document frequency weighting seen mining word relations
+ smoothing Well general add pseudo counts events make sure event 0 count
+ one possible way smoothing probability category simply add small non active constant delta count
+ Let pretend every category actually extra number documents represented delta
+ denominator add k multiplied delta want probability 1
+ total added delta k times k categories
+ Therefore sum add k multiply delta total pseudocount add estimate
+ interesting think influence data obvious data smoothing parameter
+ Meaning larger data smoothing means rely pseudocounts
+ might indeed ignore actual counts delta set infinity
+ Imagine happen approaches positively infinity Well say every category infinite amount documents
+ distinction become uniform
+ What delta 0 Well go back original estimate based observed training data estimate estimate probability category
+ word distribution
+ case sometimes find useful use nonuniform seudocount word
+ add pseudocounts word mule multiplied probability word given background language model theta sub b
+ background model general estimated using logic collection tests
+ Or case use whole set training data estimate background language model
+ use one use larger test data available somewhere else
+ use background language model pseudocounts find words receive pseudocounts
+ words Well common words get high probability background average model
+ pseudocounts added words higher
+ Real words hand smaller pseudocounts
+ addition background model cause nonuniform smoothing word distributions
+ bring probability common words higher level background model
+ helps make difference probability words smaller across categories
+ Because every category help background four words get high probabilities
+ Therefore always important category documents contain lot occurrences words estimate influenced background model
+ consequence categorization words tend influence decision much words small probabilities background language model
+ Those words get help background language model
+ difference primary differences occurrences training documents different categories
+ another smoothing parameter mu controls amount smoothing delta probability
+ easily understand add mu denominator represents sum pseudocounts add words
+ view non negative constant [ INAUDIBLE ] set control smoothing
+ interesting special cases think well
+ First let think mu approaches infinity happen Well case estimate approach background language model attempt background language model
+ bring every word distribution background language model essentially remove difference categories
+ Obviously want
+ special case thing background model suppose actually set two uniform distribution
+ let say 1 size vocabulary
+ one probability smoothing formula similar one top add delta
+ add constant pseudocounts every word
+ general Naive Bayes categorization small thing
+ probabilities compute score category
+ For document choose category highest score discussed earlier
+ useful understand whether Naive Bayes scoring function actually makes sense
+ understand understand adding background model actually achieve effect IDF weighting penalize common words
+ suppose two categories score based ratio probability right
+ Lets say scoring function two categories right score document two categories
+ score based probability ratio
+ ratio larger means likely category one
+ larger score likely document category one
+ using Bayes ' rule write ratio follows seen
+ generally take logarithm ratio avoid small probabilities
+ give formula second line
+ something really interesting scoring function deciding two categories
+ look function several parts
+ first part actually log probability ratio
+ category bias
+ really depend document
+ says category likely favor category slightly right second part sum words right words observed document general consider words vocabulary
+ collect evidence category likely right inside sum product two things
+ first count word
+ count word serves feature represent document
+ collect document
+ second part weight feature weight word right weight tells extent observing word helps contribute decision put document category one
+ remember higher scoring function likely category one
+ look ratio basically sorry weight basically based ratio probability word two distributions
+ Essentially comparing probability word two distributions
+ higher according theta 1 according theta 2 weight positive
+ therefore means observe word say likely category one
+ observe word likely document classified theta 1
+ hand probability word theta 1 smaller probability word theta 2 word negative
+ Therefore negative evidence supporting category one
+ That means observe word likely document actually theta 2
+ formula makes little sense right aggregate evidence document take sum words
+ call features collected document help make decision
+ feature weight tells feature support category one support category two
+ estimated log probability ratio naïve Bayes
+ finally constant bias
+ formula actually formula generalized accommodate features introduce symbols
+ To introduce beta 0 denote Bayes fi denote feature beta sub denote weight feature
+ generalisation general represent document feature vector fi course case fi count word
+ general put features think relevant categorization
+ For example document length font size count patterns document
+ scoring function defined sum constant beta 0 sum feature weights features
+ f sub feature value multiply value corresponding weight beta sub take sum
+ aggregate evidence collect features
+ course parameters
+ parameters Well betas
+ betas weights
+ proper setting weights expect scoring function work well classify documents case naive Bayes
+ clearly naive Bayes classifier special case general classifier
+ Actually general form close classifier called logistical regression actually one conditional approaches discriminative approaches classification
+ talk approaches later want note strong connection close connection two kinds approaches
+ slide shows naive Bayes classifier connected logistic regression
+ discriminative classifiers tend use general form bottom accommodate features solve problem

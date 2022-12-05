@@ -1,0 +1,61 @@
+ textual representation
+ discuss textual representation discuss natural language processing allow represent text many different ways
+ Let take look example sentence
+ represent sentence many different ways
+ First always represent sentence string characters
+ true languages store computer
+ When store natural language sentence string characters perhaps general way representing text since always use approach represent text data
+ unfortunately using representation help semantic analysis often needed many applications text mining
+ reason even recognizing words
+ string keep spaces ASCII symbols
+ perhaps count frequent character English text correlation characters ca really analyze semantics
+ Yet general way representing text use represent natural language text
+ try little bit natural language processing word segmentation obtain representation text form sequence words
+ identify words dog chasing etc
+ level representation certainly lot things mainly words basic units human communication natural language powerful
+ By identifying words example easily count frequent words document whole collection etc
+ words used form topics combine related words together words positive words negative sentiment analysis
+ representing text data sequence words opens lot interesting analysis possibilities
+ However level representation slightly less general string characters languages Chinese actually easy identify word boundaries language text sequence characters space
+ rely special techniques identify words
+ language course might make mistakes segmenting words
+ sequence words representation robust string characters
+ English easy obtain level representation time
+ go naturally language processing add part speech tags
+ count example frequent nouns kind nouns associated kind verbs etc
+ opens little bit interesting opportunities analysis
+ Note use plus sign representing text sequence part speech tags necessarily replace original word sequence written
+ Instead add additional way representing text data data represented sequence words sequence part speech tags
+ enriches representation text data thus enables interesting analysis
+ go pausing sentence often obtain syntactic structure
+ course open interesting analysis example writing styles correcting grammar mistakes
+ go semantic analysis might able recognize dog animal recognize boy person playground location
+ analyze relations example dog chasing boy boy playground
+ add entities relations entity relation recreation
+ At level even interesting things
+ For example count easily frequent person mentioning whole collection news articles whenever mention person tend mentioning another person etc
+ useful representation related knowledge graph may heard Google semantic way representing text data
+ However less robust sequence words even syntactical analysis always easy identify entities right types might make mistakes relations even harder find might make mistakes
+ makes level representation less robust yet useful
+ move logical condition predicates even inference rules
+ With inference rules infer interesting derived facts text useful
+ unfortunately level representation even less robust make mistakes ca time kinds sentences
+ Finally speech acts add yet another level repetition intent saying sentence
+ case might request
+ knowing allow analyze even interesting things observer author sentence
+ What intention saying What scenarios What kind actions made another level analysis interesting
+ picture shows move generally sophisticated natural language processing techniques used
+ Unfortunately techniques require human effort less accurate
+ That means mistakes
+ add texts levels representing deeper analysis language tolerate errors
+ means still necessary combine deep analysis shallow analysis based example sequence words
+ On right side arrow points indicate
+ As go representation text closer knowledge representation mind need solving lot problems
+ desirable represent text level knowledge easily extract knowledge
+ That purpose text-mining
+ trade-off deeper analysis might errors give direct knowledge extracted text
+ Doing shallow analysis robust actually give necessary deeper representation knowledge
+ say text data generated humans meant consumed humans
+ result text data analysis text-mining humans play important role always loop
+ Meaning optimize collaboration humans computers
+ sense okay computers may able compute accurately representation text data patterns extracted text data interpreted humans humans guide computers accurate analysis annotating data providing features guide machine learning programs make work effectively

@@ -1,0 +1,150 @@
+ discriminative classifiers text categorization
+ talking text categorization cover discriminative approaches
+ slide seen discussion Naive Bayes Classifier shown although Naive Bayes Classifier tries model generation text data categories actually use Bayes ' rule eventually rewrite scoring function slide
+ scoring function basically weighted combination lot word features feature values word counts feature weights log probability ratios word given two distributions
+ kind scoring function actually general scoring function general present text data feature vector
+ Of course features words
+ Their features signals want use
+ mentioned precisely similar logistic regression
+ introduce discriminative classifiers
+ They try model conditional distribution labels given data directly rather using Bayes ' rule compute interactively seen naive Bayes
+ general idea logistic regression model dependency binary response variable Y predictors denoted X
+ changed notation X future values
+ may recall previous slides used FI represent future values
+ use notation X factor common introduce discriminative algorithms
+ X input
+ vector n features feature value x sub
+ go model dependency binary response variable features
+ categorization problem two categories theta 1 theta 2 use Y value denote two categories Y 1 means category document first class theta 1
+ goal model conditional property Y given X directly opposed model generation X Y case Naive Bayes
+ another advantage kind approach allow many features words used vector since modeling generation vector
+ plug signals want
+ potentially advantageous text categorization
+ specifically logistic regression assume functional form Y depending X following
+ closely related log odds introduced Naive Bayes log probability ratio two categories seen previous slide
+ meant
+ case Naive Bayes compute using words eventually reached formula looks
+ actually assume explicitly model probability Y given X directly function features
+ specifically assume ratio probability Y equals 1 probability Y equals 0 function X
+ All right function x linear combination feature values controlled theta values
+ seems know probability Y equals zero one minus probability Y equals one written way
+ log ratio
+ logistic regression basically assuming probability Y equals 1
+ Okay X dependent linear combination features
+ one many possible ways assuming dependency
+ particular form quite useful nice properties
+ rewrite equation actually express probability Y given X
+ terms X getting rid logarithm get functional form called logistical function
+ transformation X Y right side X map range values 0
+
+ precisely want since probability
+ function form looks
+ basic idea logistic regression
+ useful classifier used lot classification tasks including text categorization
+ cases model interested estimating parameters
+ fact machine running programs set model set object function model file next step compute parameter values
+ general adjust parameter values
+ Optimize performance classify training data
+ case assume training data xi yi pair basically future vector x known label
+ Y either 1 0
+ case interested maximize conditional likelihood
+ conditional likelihood basically model given observe x moderate x rather model
+ Note conditional probability Y given X precisely wanted For classification
+ likelihood function product training cases
+ case model probability observing particular training case
+ given particular Xi likely observe corresponding Yi Of course Yi could 1 0 fact function found vary depending whether Yi 1 0
+ 1 taking form
+ basically logistic regression function
+ 0 Well 0 use different form one
+ get one Well 1 minus probability Y=1 right easily
+ key point function form depends observer Yi 1 different form 0
+ think want maximize probability basically want probability high possible
+ When label 1 means document probability 1
+ document maximize value happen actually make value small possible sum 1
+ When maximize one equivalent minimize one
+ basically maximize conditional likelihood basically try make prediction training data accurate possible
+ another occasion compute maximum likelihood data basically find beta value set beta values maximize conditional likelihood
+ gives standard optimization problem
+ case solved many ways
+ Newton method popular way solve problem methods well
+ end look set data values
+ Once beta values way find scoring function help classify document
+ function Well one
+ See beta values known All need compute Xi document plug values
+ That give estimated probability document category one
+ Okay much logistical regression
+ Let introduce another discriminative classifier called K-Nearest Neighbors
+ general say many approaches thorough introduction clearly beyond scope course
+ take machine learning course read machine learning know
+ Here want include basic introduction commonly used classifiers since might use often text calculation
+ second classifier called K-Nearest Neighbors
+ approach estimate conditional probability label given data different way
+ idea keep training examples text object want classify find K examples training set similar text object
+ Basically find neighbors text objector training data set
+ found neighborhood found object close object interested classifying let say found K-Nearest Neighbors
+ That method called K-Nearest Neighbors
+ Then assign category common neighbors
+ Basically allow neighbors vote category objective interested classifying
+ means particular category category one say current object category one
+ approach improved considering distance neighbor current object
+ Basically assume closed neighbor say category subject
+ give neighbor influence vote
+ take away votes based distances
+ general idea look neighborhood try assess category based categories neighbors
+ Intuitively makes lot sense
+ mathematically regarded way directly estimate conditional probability label given data p Y given X
+ 'm explain intuition moment proceed let emphasize need similarity function order work
+ Note naive base class five need similarity function
+ logistical regression talk similarity function either explicitly require similarity function
+ similarity function actually good opportunity inject insights features
+ Basically effective features make objects category look similar distinguishing objects different categories
+ design similarity function closely tied design features logistical regression classifiers
+ let illustrate K-NN works
+ suppose lot training instances
+ colored differently show different categories
+ suppose new object center want classify
+ according approach work finding neighbors
+ let first think special case finding one neighbor closest neighbor
+ case let assume closest neighbor box filled diamonds
+ say well since object category diamonds let say
+ Then say well assign category text object
+ let look another possibility finding larger neighborhood let think four neighbors
+ case include lot solid field boxes red pink right case notice among four neighbors three neighbors different category
+ take vote conclude object actually different category
+ illustrates nearest neighbor works illustrates potential problems classifier
+ Basically results might depend K indeed k important parameter optimize
+ intuitively imagine lot neighbors around object okay lot neighbors help decide categories
+ decision may reliable
+ one hand want find neighbor right votes
+ hand try find neighbors actually could risk getting neighbors really similar instance
+ They might actually far away try get neighbors
+ although get neighbors neighbors necessarily helpful similar object
+ parameter still set empirically
+ typically optimize parameter using cross validation
+ Basically separate training data two parts use one part actually help choose parameter k parameters class files
+ assume number works well training actually best future data
+ mentioned K-NN actually regarded estimate conditional problem within given x put category discriminative approaches
+ key assumption made approach distribution label given document probability category given example probability theta given document locally smooth
+ means assume probability documents region R
+ suppose draw neighborhood assume neighborhood since data instances similar assume conditional distribution label given data roughly
+ different assume probability c doc given similar
+ key assumption
+ actually important assumption allow lot machinery
+ reality whether true course depend define similarity
+ Because neighborhood largely determined similarity function
+ similarity function captures objects follow similar distributions assumptions okay similarity function could capture obviously assumption problem classifier accurate
+ Okay let proceed assumption
+ Then saying order estimate probability category given document
+ try estimate probability category given entire region
+ benefit course bringing additional data points help estimate probability
+ precisely idea K-NN
+ Basically use known categories documents region estimate probability
+ even given formula count topics region normalize total number documents region
+ numerator c theta r counter documents region R category theta
+ Since training document know categories
+ simply count many times since
+ How many times signs etc
+ denominator total number training documents region
+ gives rough estimate categories popular neighborhood
+ assign popular category data object since falls region
+ [ MUSIC ]

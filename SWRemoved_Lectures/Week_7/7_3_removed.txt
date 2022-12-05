@@ -1,0 +1,110 @@
+ natural language content analysis
+ Natural language content analysis foundation text mining
+ first talk
+ particular natural language processing factor present text data
+ determines algorithms used analyze mine text data
+ take look basic concepts natural language first
+ 'm explain concepts using similar example seen
+ dog chasing boy playground
+ simple sentence
+ When read sentence think get meaning
+ computer understand sentence computer go several steps
+ First computer needs know words segment words English
+ easy look space
+ computer need know categories words syntactical categories
+ example dog noun chasing verb boy another noun etc
+ called Lexical analysis
+ particular tagging words syntactic categories called part-of-speech tagging
+ After computer needs figure relationship words
+ dog form noun phrase
+ On playground prepositional phrase etc
+ certain way connected together order create meaning
+ Some combinations may make sense
+ called syntactical parsing syntactical analysis parsing natural language sentence
+ outcome parse tree seeing
+ That tells structure sentence know interpret sentence
+ semantics yet
+ order get meaning map phrases structures real world antithesis mind
+ dog concept know boy concept know
+ connecting phrases know understanding
+ computer formally represent entities using symbols
+ dog d1 means d1 dog
+ Boy b1 means b1 refers boy etc
+ represents chasing action predicate
+ chasing predicate three arguments d1 b1 p1
+ Which playground
+ formal rendition semantics sentence
+ Once reach level understanding might make inferences
+ For example assume rule says someone chased person get scared infer boy might scared
+ inferred meaning based additional knowledge
+ finally might even infer sentence requesting person say sentence saying sentence
+ purpose saying sentence
+ called speech act analysis pragmatic analysis
+ Which first use language
+ case person saying may reminding another person bring back dog
+ means saying sentence person actually takes action
+ action make request
+ slide clearly shows order really understand sentence lot things computer
+ general hard computer everything especially want everything correctly
+ difficult
+ main reason natural language processing difficult designed make human communications efficient
+ As result example lot common sense knowledge
+ Because assume knowledge need encode knowledge
+ That makes communication efficient
+ keep lot ambiguities ambiguities words
+ assume ability disambiguate word
+ problem word mean possibly different things different context
+ Yet computer difficult computer common sense knowledge
+ computer confused indeed
+ makes hard natural language processing
+ Indeed makes hard every step slide showed earlier
+ Ambiguity main killer
+ Meaning every step multiple choices computer decide whats right choice decision difficult moment
+ general need common sense reasoning order fully understand natural language
+ computers yet
+ That hard computers precisely understand natural language point
+ specific examples challenges
+ Think world-level ambiguity
+ word design noun verb got ambiguous part speech tag
+ Root multiple meanings mathematical sense square root plant
+ Syntactic ambiguity refers different interpretations sentence terms structures
+ example natural language processing actually interpreted two ways
+ one ordinary meaning getting talking topic
+ processing natural language
+ another possible interpretation say language processing natural
+ generally problem imagine computer determine structure computer make choice two
+ Another classic example man saw boy telescope
+ ambiguity lies question telescope called prepositional phrase attachment ambiguity
+ Meaning attach prepositional phrase telescope
+ Should modify boy Or modifying saw verb
+ Another problem anaphora resolution
+ John persuaded Bill buy TV
+ Does refer John Bill Presupposition another difficulty
+ He quit smoking implies smoked need knowledge order understand languages
+ Because problems state art natural language processing techniques anything perfectly
+ Even simplest part speech tagging still solve whole problem
+ accuracy listed 97 % taken studies earlier
+ studies obviously using particular data sets numbers really meaningful take context data set used evaluation
+ show numbers mainly give sense accuracy well things
+ mean data set accuracy precisely 97 %
+ general parsing speech tagging fairly well although perfect
+ Parsing difficult partial parsing meaning get phrases correct probably achieve 90 % better accuracy
+ get complete parse tree correctly still difficult
+ For semantic analysis aspects semantic analysis particularly extraction entities relations
+ For example recognizing person location person person met place etc
+ word sense extent
+ occurrence root sentence refers mathematical sense etc
+ Sentiment analysis another aspect semantic analysis
+ That means tag senses generally positive talking product talking person
+ Inference however hard generally big domain feasible limited domain
+ generally difficult problem artificial intelligence
+ Speech act analysis difficult probably specialized cases
+ lot help humans annotate enough data computers learn
+ slide shows computers far able understand natural language precisely
+ explains text mining problem difficult
+ Because rely mechanical approaches computational methods understand language precisely
+ Therefore use whatever
+ particular statistical machine learning method statistical analysis methods try get much meaning text possible
+ later actually many algorithms indeed extract interesting model text even though really fully understand
+ Meaning natural language sentences precisely
+ [ MUSIC ]

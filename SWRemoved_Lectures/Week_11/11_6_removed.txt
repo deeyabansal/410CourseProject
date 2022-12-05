@@ -1,0 +1,76 @@
+ sentiment classification
+ assume elements opinion representation ready known task may sentiment classification shown case
+ suppose know opinion holder opinion target know content context opinion mainly need decide opinion sentiment review
+ case using sentiment classification understanding opinion
+ Sentiment classification defined specifically follows
+ input opinionated text object output typically sentiment label sentiment tag designed two ways
+ One polarity analysis categories positive negative neutral
+ emotion analysis go beyond polarity characterize feeling opinion holder
+ case polarity analysis sometimes numerical ratings often reviews web
+ Five might denote positive one maybe negative example
+ general disk holder categories characterize sentiment
+ emotion analysis course different ways design categories
+ six frequently used categories happy sad fearful angry surprised disgusted
+ task essentially classification task categorization task seen special case text categorization
+ means textual categorization method used sentiment classification
+ course accuracy may good sentiment classification requires improvement regular text categorization technique simple text categorization technique
+ particular needs two kind improvements
+ One use sophisticated features may appropriate sentiment tagging discuss moment
+ consider order categories especially polarity analysis clear order categories independent
+ There order among useful consider order
+ For example could use ordinal regression something talk later
+ let talk features often useful text categorization text mining general especially needed sentiment analysis
+ let start simplest one character n-grams
+ sequence characters unit mixed different n different lengths
+ All right general way robust way represent text data
+ could language pretty much
+ robust spelling errors recognition errors right misspell word one character representation actually allow match word occurs text correctly
+ Right misspell word correct form matched contain common n-grams characters
+ course recommendation discriminating words
+ next word n-grams sequence words mix different n
+ Unigram actually often effective lot text processing tasks mostly words word designed features humans communication often good enough many tasks
+ good sufficient sentiment analysis clearly
+ For example might sentence good good something else right case take good suggest positive good right accurate
+ take bigram good together accurate
+ longer n-grams generally discriminative specific
+ match says lot accurate unlikely ambiguous
+ may cause overfitting unique features machine oriented program easily pick features training set rely unique features distinguish categories
+ obviously kind classify one generalize word future discriminative features necessarily occur
+ problem overfitting desirable
+ consider part speech tag n-grams part speech tagging example adjective noun could form pair
+ mix n-grams words n-grams part speech tags
+ For example word great might followed noun could become feature hybrid feature could useful sentiment analysis
+ next word classes
+ classes syntactic part speech tags could semantic might represent concepts thesaurus ontology WordNet
+ Or recognized name entities people place categories used enrich presentation additional features
+ learn word clusters parodically example talked mining associations words
+ cluster paradigmatically related words syntaxmatically related words clusters features supplement word base representation
+ Furthermore frequent pattern syntax could frequent word set words form pattern necessarily occur together next
+ locations words occur closely together patterns provide discriminative features words obviously
+ may generalize better regular n-grams frequent
+ expected occur tested data
+ lot advantages might still face problem overfeeding features become complex
+ problem general true parse tree-based features use parse tree derive features frequent subtrees paths even discriminating likely cause fitting
+ general pattern discovery algorithm useful feature construction allow search large space possible features complex words sometimes useful
+ general natural language processing important derive complex features enrich text representation
+ example simple sentence showed long time ago another
+ words derive simple word n-grams representations character n-grams
+ NLP enrich representation lot information part speech tags parse trees entities even speech act
+ enriching information course generate lot features complex features mixed grams word part speech tags even part parse tree
+ general feature design actually affects categorization accuracy significantly important part machine learning application
+ general think effective combine machine learning error analysis domain knowledge design features
+ first want use main knowledge understanding problem design seed features define basic feature space lot possible features machine learning program work machine applied select effective features construct new features
+ That feature learning features analyzed humans error analysis
+ look categorization errors analyze features help recover errors features cause overfitting cause errors
+ lead feature validation revised feature set iterate
+ might consider using different features space
+ NLP enriches text recognition said enriches feature space allows much larger space features many many features useful lot tasks
+ careful use lot category features cause overfitting otherwise training careful let overflow happen
+ main challenge design features common challenge optimize trade exhaustivity specificity trade turns difficult
+ exhaustivity means want features actually high coverage lot documents
+ sense want features frequent
+ Specifity requires feature discriminative naturally infrequent features tend discriminative
+ really cause trade frequent versus infrequent features
+ featured design usually odd
+ probably important part machine learning problem particularly case text categoration specifically senitment classification
+ [ MUSIC ]

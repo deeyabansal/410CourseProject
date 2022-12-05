@@ -1,0 +1,79 @@
+ general use empirical count events observed data estimate probabilities
+ commonly used technique called maximum likelihood estimate simply normalize observe accounts
+ compute probabilities follows
+ For estimating probability water current segment simply normalize count segments contain word
+ let first take look data
+ On right side list hypothesizes data
+ segments
+ segments words occur indicated ones columns
+ cases one occur column one column zero
+ course cases none words occur zeros
+ estimating probabilities simply need collect three counts
+ three counts first count W1
+ total number segments contain word W1
+ ones column W1
+ count many ones seen
+ segment count word 2 count ones second column
+ give total number segments contain W2
+ third count words occur
+ time count sentence columns ones
+ give total number segments seen W1 W2
+ Once counts normalize counts N total number segments give probabilities need compute original information
+ small problem zero counts sometimes
+ case want zero probability data may small sample general believe potentially possible [ INAUDIBLE ] avoid context
+ address problem use technique called smoothing
+ basically add small constant counts get zero probability case
+ best way understand smoothing imagine actually observed data actually pretend observed pseudo-segments
+ illustrated top right side slide
+ pseudo-segments contribute additional counts words event zero probability
+ particular introduce four pseudo-segments
+ Each weighted one quarter
+ represent four different combinations occurrences word
+ event combination least one count least non-zero count pseudo-segment
+ actual segments observe okay observed combinations
+ specifically
+ comes two ones two pseudo-segments weighted one quarter
+ add get
+
+ similar
+ comes one single pseudo-segment indicates two words occur together
+ course denominator add total number pseudo-segments add case added four pseudo-segments
+ Each weighed one quarter total sum one
+ denominator one
+ basically concludes discussion compute four syntagmatic relation discoveries
+ summarize syntagmatic relation generally discovered measuring correlations occurrences two words
+ introduced three concepts information theory
+ Entropy measures uncertainty random variable X
+ Conditional entropy measures entropy X given know Y
+ mutual information X Y matches entropy reduction X due knowing Y entropy reduction Y due knowing X
+ They
+ three concepts actually useful applications well
+ That spent time explain detail
+ particular useful discovering syntagmatic relations
+ particular mutual information principal way discovering relation
+ allows values computed different pairs words comparable rank pairs discover strongest syntagmatic collection documents
+ note relation syntagmatic relation discovery [ INAUDIBLE ] relation discovery
+ already discussed possibility using BM25 achieve waiting terms context potentially suggest candidates syntagmatic relations candidate word
+ use mutual information discover syntagmatic relations represent context mutual information weights
+ give another way represent context word cat
+ words cluster words compare similarity words based context similarity
+ provides yet another way term weighting paradigmatic relation discovery
+ summarize whole part word association mining
+ introduce two basic associations called paradigmatic syntagmatic relations
+ fairly general apply items language units words phrases entities
+ introduced multiple statistical approaches discovering mainly showing pure statistical approaches visible variable discovering kind relations
+ combined perform joint analysis well
+ approaches applied text human effort mostly based counting words yet actually discover interesting relations words
+ use different ways defining context segment lead interesting variations applications
+ For example context narrow words around word sentence maybe paragraphs using differing contexts allows discover different flavors paradigmatical relations
+ similarly counting co-occurrences using let say visual information discover syntagmatical relations
+ define segment segment defined narrow text window longer text article
+ give different kinds associations
+ discovery associations support many applications information retrieval text data mining
+ recommended readings want know topic
+ first book chapter collocations quite relevant topic lectures
+ second article using various statistical measures discover lexical atoms
+ Those phrases non-compositional
+ For example hot dog really dog hot blue chip chip blue
+ paper discussion techniques discovering phrases
+ third one new paper unified way discover paradigmatical relations syntagmatical relations using random works word graphs

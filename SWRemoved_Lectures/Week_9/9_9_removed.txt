@@ -1,0 +1,76 @@
+ Latent Dirichlet Allocation LDA
+ talking topic models
+ particular talk extension PLSA one LDA Latent Dirichlet Allocation
+ plan cover two things
+ One extend PLSA prior knowledge allow sense user-controlled PLSA apply listen data listen needs
+ second extend PLSA generative model fully generative model
+ led development Latent Dirichlet Allocation LDA
+ first let talk PLSA prior knowledge
+ practice apply PLSA analyze text data might additional knowledge want inject guide analysis
+ standard PLSA blindly listen data using maximum [ inaudible ]
+ fit data much get insight data
+ useful sometimes user might expectations topics analyze
+ For example might expect retrieval models topic information retrieval may interesting certain aspects battery memory looking opinions laptop user particularly interested aspects
+ user may knowledge topic coverage may know topic definitely covering document covering document
+ For example might seen tags topic tags assigned documents
+ tags could treated topics
+ document account generated using topics corresponding tags already assigned document
+ document assigned tag say way using topic generate document
+ document must generated using topics corresponding assigned tags
+ question incorporate knowledge PLSA
+ turns elegant way incorporate knowledge priors models
+ may recall Bayesian inference use prior together data estimate parameters precisely happen
+ case use maximum posteriori estimate called MAP estimate formula given
+ Basically maximize posteriori distribution probability
+ combination likelihood data prior
+ happen estimate listens data listens prior preferences
+ use prior denoted p lambda encode kinds preferences constraints
+ example use encode need precise background topic
+ could encoded prior say prior parameters non-zero parameters contain one topic equivalent background language model
+ words cases say prior says impossible
+ probability kind models think zero according prior
+ example use prior force particular choice topic probability certain number
+ For example force document D choose topic one probability one half prevent topic used generating document
+ say third topic used generating document D set Pi zero topic
+ use prior favor set parameters topics assign high probability particular words
+ case say impossible strongly favor certain kind distributions example later
+ MAP computed using similar EM algorithm used maximum likelihood estimate
+ With modifications parameters reflect prior preferences estimate use special form prior code conjugate prior functional form prior similar data
+ As result combine two consequence basically convert inference prior inference additional pseudo data two functional forms combined
+ effect data convenient computation
+ mean conjugate prior best way define prior
+ let look specific example
+ Suppose user particularly interested battery life laptop analyzing reviews
+ prior says distribution contain one distribution assign high probability battery life
+ could say well distribution kind concentrated battery life prior says one distributions similar
+ use MAP estimate conjugate prior original prior original distribution based preference difference EM re-estimate words distributions add additional counts reflect prior
+ pseudo counts defined based probability words prior
+ battery obviously high pseudo counts similarly life high pseudo counts
+ All words zero pseudo counts probability zero prior controlled parameter mu add mu much probability W given prior distribution connected accounts re-estimate word distribution
+ step changed change happening
+ connect counts words believe generated topic force distribution give probabilities words adding pseudo counts
+ fact artificially inflated probabilities
+ To make distribution need add many pseudo counts denominator
+ total sum pseudo counts added words make gamma distribution
+ intuitively reasonable way modifying EM theoretically speaking works computes MAP estimate
+ useful think two specific extreme cases mu
+ [ inaudible ] picture
+ Think happen set mu zero
+ Well essentially remove prior
+ mu sense indicates strengths prior
+ happen set mu positive infinity
+ Well say prior strong listen data
+ end case make one distributions fixed prior
+ When mu infinitive basically let one dominate
+ fact set one precise distribution
+ case distribution
+ said background language model fact way impose prior force one distribution exactly give background distribution
+ case even force distribution entirely focus battery life
+ course work well attract words
+ affect accuracy counting topics battery life
+ practice mu set somewhere course
+ one way impose prior
+ impose constraints
+ For example set parameters constantly include zero needed
+ For example may want set one Pi zero mean allow topic participate generating document
+ reasonable course prior analogy strongly suggests

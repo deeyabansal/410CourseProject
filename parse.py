@@ -71,11 +71,19 @@ if __name__ == '__main__':
             delete_timings("Lectures/Week_" + str(j) + "/" + str(j) + "_" + str(i) + ".txt")
     for i in range(1, 8):
         delete_timings("Lectures/Week_4/4_" + str(i) + ".txt")
+        delete_timings("Lectures/Week_11/11_" + str(i) + ".txt")
+        delete_timings("Lectures/Week_12/12_" + str(i) + ".txt")
+
     for i in range(1, 9):
         delete_timings("Lectures/Week_5/5_" + str(i) + ".txt")
+    for i in range(1, 10):
+        delete_timings("Lectures/Week_7/7_" + str(i) + ".txt")
+        delete_timings("Lectures/Week_10/10_" + str(i) + ".txt")
     for i in range(1, 11):
         delete_timings("Lectures/Week_6/6_" + str(i) + ".txt")
-        
+        delete_timings("Lectures/Week_8/8_" + str(i) + ".txt")
+        delete_timings("Lectures/Week_9/9_" + str(i) + ".txt")
+
     print("Removing Stop Words of Lectures")
     sevens = [1, 2, 3]
     for j in sevens :
@@ -83,10 +91,18 @@ if __name__ == '__main__':
             delete_stop_words("Parsed_Lectures/Week_" + str(j) + "/" + str(j) + "_" + str(i) + "_parsed.txt")
     for i in range(1, 8):
         delete_stop_words("Parsed_Lectures/Week_4/4_" + str(i) + "_parsed.txt")
+        delete_stop_words("Parsed_Lectures/Week_11/11_" + str(i) + "_parsed.txt")
+        delete_stop_words("Parsed_Lectures/Week_12/12_" + str(i) + "_parsed.txt")
+    for i in range(1, 10):
+        delete_stop_words("Parsed_Lectures/Week_7/7_" + str(i) + "_parsed.txt")
+        delete_stop_words("Parsed_Lectures/Week_10/10_" + str(i) + "_parsed.txt")
     for i in range(1, 9):
         delete_stop_words("Parsed_Lectures/Week_5/5_" + str(i) + "_parsed.txt")
     for i in range(1, 11):
         delete_stop_words("Parsed_Lectures/Week_6/6_" + str(i) + "_parsed.txt")
+        delete_stop_words("Parsed_Lectures/Week_8/8_" + str(i) + "_parsed.txt")
+        delete_stop_words("Parsed_Lectures/Week_9/9_" + str(i) + "_parsed.txt")
+
 
     print("Removing Stop Words from MPs")
     mps = [1, 3, 4]

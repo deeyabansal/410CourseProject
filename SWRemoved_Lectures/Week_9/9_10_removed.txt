@@ -1,0 +1,114 @@
+ let talk exchanging PLSA LDA motivate need talk deficiencies PLSA
+ First really generative model compute probability new document
+ pis needed generate document pis tied document training data
+ ca compute pis future document
+ heuristic workaround though
+ Secondly many parameters asked compute many parameters exactly PLSA many parameters
+ That means model complex
+ means many local maxima prone overfitting
+ means hard find good local maximum
+ representing global maximum
+ terms explaining future data might find overfit training data complexity model
+ model flexible fit precisely training data looks
+ allow generalize model using data
+ however necessary problem text mining often interested hitting training documents
+ always interested modern future data cases care generality worry overfitting
+ LDA proposing improve basically make PLSA generative model imposing Dirichlet prior model parameters
+ Dirichlet special distribution use specify product
+ sense LDA Bayesian version PLSA parameters much regularized
+ many parameters achieve goal PLSA text mining
+ means compute top coverage topic word distributions PLSA
+ However
+ Why parameters PLSA much fewer fewer parameters order compute topic coverage word distributions face problem influence variables parameters model
+ influence part face local maximum problem
+ essentially something similar theoretically LDA elegant way looking top bottom problem
+ let generalize PLSA LDA standard PLSA LDA
+ full treatment LDA beyond scope course time go depth talking
+ want give brief idea extending enables right
+ picture LDA
+ remove background model simplicity
+ model parameters free change impose prior
+ word distributions represented theta vectors
+ word distributions
+ set parameters pis
+ present vector
+ convenient introduce LDA
+ one vector document
+ case theta one vector topic
+ difference LDA PLSA LDA allow free chain
+ Instead force drawn another distribution
+ specifically drawn two Dirichlet distributions respectively Dirichlet distribution distribution vectors
+ gives probability four particular choice vector
+ Take example pis right
+ Dirichlet distribution tells vectors pi likely
+ distribution controlled another vector parameters alphas
+ Depending alphas characterize distribution different ways full certain choices pis likely others
+ For example might favor choice relatively uniform distribution topics
+ Or might favor generating skewed coverage topics controlled alpha
+ similarly topic word distributions drawn another Dirichlet distribution beta parameters
+ note alpha k parameters corresponding inference k values pis document
+ Whereas beta n values corresponding controlling words vocabulary
+ impose price generation process different
+ start joined pis Dirichlet distribution pi tell probabilities
+ use pi choose topic use course similar PLSA model
+ similar distributions free
+ Instead draw one Dirichlet distribution
+ sample word
+ rest similar
+ likelihood function complicated LDA
+ close connection likelihood function LDA PLSA
+ 'm illustrate difference
+ top PLSA likelihood function already seen
+ copied previous slide
+ Only dropped background simplicity
+ LDA formulas similar things
+ first equation essentially
+ probability generating word multiple word distributions
+ formula sum possibilities generating word
+ Inside sum product probability choosing topic multiplied probability observing word topic
+ important formula stressed multiple times
+ actually core assumption topic models
+ might topic models extensions LDA PLSA
+ rely
+ important understand
+ gives probability getting word mixture model
+ next probability document PLSA component LDA formula LDA formula add sum integral
+ account fact pis fixed
+ drawn original distribution shown
+ That take integral consider possible pis could possibly draw Dirichlet distribution
+ similarly likelihood whole collection components added another integral
+ Right basically area adding integrals account uncertainties added course Dirichlet distributions cover choice parameters pis theta
+ likelihood function LDA
+ next let talk parameter estimation inferences
+ parameters estimated using exactly approach maximum likelihood estimate LDA
+ might think many parameters LDA versus PLSA
+ fewer parameters LDA case parameters alphas betas
+ use maximum likelihood estimator compute
+ Of course complicated form likelihood function complicated
+ important notice parameters interested name topics coverage longer parameters LDA
+ case use basic inference posterior inference compute based parameters alpha beta
+ Unfortunately computation intractable
+ generally resort approximate inference
+ many methods available 'm sure use different tool kits LDA read papers different extensions LDA
+ course ca give in-depth instruction know computed based inference using parameters alphas betas
+ math [ INAUDIBLE ] actually end math list similar PLSA
+ especially use algorithm called class assembly algorithm looks similar Algorithm
+ end something similar
+ summarize discussion properties topic models models provide general principle way mining analyzing topics text many applications
+ best basic task setup take test data input output k topics
+ Each topic characterized word distribution
+ output proportions topics covered document
+ PLSA basic topic model fact basic topic model
+ often adequate applications
+ That spend lot time explain PLSA detail
+ LDA improves PLSA imposing priors
+ led theoretically appealing models
+ However practice LDA PLSA tend give similar performance practice PLSA LDA work equally well tasks
+ suggested readings want know topic
+ First nice review probabilistic topic models
+ second discussion automatically label topic model
+ shown distributions intuitively suggest topic
+ exactly topic Can use phrases label topic To make easy understand paper techniques
+ third one empirical comparison LDA PLSA various tasks
+ conclusion tend perform similarly
+ [ MUSIC ]

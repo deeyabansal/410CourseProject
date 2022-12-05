@@ -1,0 +1,61 @@
+ showed empirically likelihood converge theoretically proved EM algorithm converge local maximum
+ illustration happened detailed explanation
+ required knowledge inequalities really covered yet
+ X dimension c0 value
+ parameter
+ On axis likelihood function
+ curve original likelihood function one hope maximize
+ hope find c0 value point maximize
+ case Mitsumoto easily find analytic solution problem
+ resolve numerical errors EM algorithm algorithm
+ Hill-Climb algorithm
+ That mean start random guess
+ Let say start starting point
+ try improve moving another point higher likelihood
+ ideal hill climbing
+ EM algorithm way achieve two things
+ First fix lower bound likelihood function
+ lower bound
+ See
+ fit lower bound maximize lower bound
+ course reason works lower bound much easier optimize
+ know current guess
+ maximizing lower bound move point top
+ To
+ Right map original likelihood function find point
+ Because lower bound guaranteed improve guess right Because improve lower bound original likelihood curve lower bound definitely improved well
+ already know improving lower bound
+ definitely improve original likelihood function lower bound
+ example current guess parameter value given current generation
+ next guess re-estimated parameter values
+ From illustration next guess always better current guess
+ Unless reached maximum stuck
+ two equal
+ E-step basically compute lower bound
+ directly compute likelihood function compute length variable values basically part lower bound
+ helps determine lower bound
+ M-step hand maximize lower bound
+ allows move parameters new point
+ EM algorithm guaranteed converge local maximum
+ imagine many local maxima repeat EM algorithm multiple times
+ order figure one actual global maximum
+ actually general difficult problem numeral optimization
+ example started gradually climb top
+ optimal climb way way climb gear start somewhere
+ EM algorithm generally start different points way determine good initial starting point
+ To summarize introduced EM algorithm
+ general algorithm computing maximum maximum likelihood estimate kinds models simple model
+ hill-climbing algorithm converge local maximum depend initial points
+ general idea two steps improve estimate
+ E-step roughly [ INAUDIBLE ] many predicting values useful hidden variables use simplify estimation
+ case distribution used generate word
+ M-step exploit augmented data make easier estimate distribution improve estimate parameters
+ Here improve guaranteed terms likelihood function
+ Note necessary stable convergence parameter value even though likelihood function ensured increase
+ There properties satisfied order parameters convert stable value
+ data augmentation done probabilistically
+ That means say exactly value hidden variable
+ probability distribution possible values hidden variables
+ causes split counts events probabilistically
+ case split word counts two distributions
+ [ MUSIC ]

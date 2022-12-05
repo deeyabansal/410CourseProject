@@ -1,0 +1,134 @@
+ discussing Paradigmatical Relation Discovery
+ Earlier introduced method called Expected Overlap Words Context
+ method represent context word vector represents probability word context
+ measure similarity using
+ interpreted probability two randomly picked words two contexts identical
+ discussed two problems method
+ first favors matching one frequent term well matching distinct terms
+ put much emphasis matching one term well
+ second treats every word equally
+ Even common word contribute equally content word eats
+ talk solve problems
+ More specifically introduce retrieval heuristics used text retrieval
+ heuristics effectively solve problems problems occur text retrieval match query though document vector
+ address first problem use sublinear transformation tone frequency
+ That use raw frequency count term represent context
+ transform form emphasize much raw frequency
+ To address synchronous problem put weight rare terms
+ That reward matching real-world
+ heuristic called IDF term weighting text retrieval
+ IDF stands Inverse Document Frequency
+ talk two heuristics detail
+ First let talk TF Transformation
+ That convert raw count word document weight reflects belief important word document
+ denoted TF w
+ That shown y-axis
+ general many ways map
+ Let first look simple way mapping
+ case say well non-zero counts mapped one zero count mapped zero
+ mapping frequencies mapped two values ; zero one
+ mapping function shown flat line
+ naive frequency words
+ However actually advantage emphasizing matching words context
+ allow frequency word dominate matching
+ approach taken earlier expected overlap count approach linear transformation
+ basically take x
+ use raw count representation
+ That created problem talked namely ; emphasize much matching one frequent term
+ Matching one frequent term contribute lot
+ lot interesting transformations two extremes generally form sublinear transformation
+ example one possibility take logarithm raw count give curve looks seeing
+ case high frequency counts
+ high counts penalize little bit curve sublinear curve brings weight really high counts
+ want prevents terms dominating scoring function
+ another interesting transformation called BM25 transformation shown effective retrieval
+ transformation form looks
+ k plus one multiplied x divided x plus k k parameter x count raw count word
+ transformation interesting actually go one extreme extreme varying
+ interesting upper bound k plus one case
+ puts strict constraint high frequency terms weight never exceed k plus one
+ As vary k simulate two extremes
+ k set zero roughly 0,1 vector
+ Whereas set k large value behave linear transformation
+ transformation function far effective transformation function text retrieval makes sense problem setup
+ talked solve problem overemphasizing frequency term let look second problem penalize popular terms
+ Matching `` '' surprising `` '' occurs everywhere
+ matching `` eats '' count lot
+ address problem case use IDF weighting
+ That commonly used retrieval
+ IDF stands Inverse Document Frequency
+ Document frequency means count total number documents contain particular word
+ show IDF measure defined logarithm function number documents match term document frequency
+ K number documents containing word document frequency M total number documents collection
+ IDF function giving higher value lower K meaning rewards rare term
+ maximum value log M plus one
+ That word occurred context
+ rare term rare term whole collection
+ lowest value K reaches maximum
+ low value close zero fact
+ course measure used search naturally collection
+ case collection Well use context collect words collection
+ That say word popular collection general low IDF
+ Because depending dataset construct context vectors different ways
+ end term frequent original dataset still frequent collective context documents
+ add heuristics improve similarity function Well one way many ways possible
+ reasonable way adapt BM25 retrieval model paradigmatical relation mining
+ case define document vector containing elements representing normalized BM25 values
+ normalization function take sum words normalize weight word sum weights words
+ ensure xi sum one vector
+ similar vector actually something similar word distribution xi sum one
+ weight BM25 word defined
+ compare old definition normalized count one right one document lens total counts words context document
+ BM25 transformation introduced something else
+ First course extra occurrence count achieve sub-linear normalization
+ introduced parameter k parameter generally non-active number although zero possible
+ controls upper bound controls extent simulates linear transformation
+ one parameter another parameter b within zero one
+ parameter control lens normalization
+ case normalization formula average document lens
+ computed taking average lenses documents collection
+ case lenses context documents considering
+ average documents constant given collection
+ actually affecting effect parameter b constant
+ kept constant used retrieval give stabilized interpretation parameter b
+ purpose constant affecting lens normalization together parameter b
+ definition new way define document vectors compute vector d2 way
+ difference high-frequency terms somewhat lower weights
+ help control inference high-frequency terms
+ idea added scoring function
+ That means introduce weight matching term
+ may recall sum indicates possible words overlap two contexts
+ x_i y_i probabilities picking word contexts
+ Therefore indicates likely match word
+ IDF give importance matching word
+ common word worth less rare word
+ emphasize matching rare words
+ modification new function likely address two problems
+ interestingly use approach discover syntagmatic relations
+ general re-brand context term vector likely terms high weights terms low weights
+ Depending assign weights terms might able use weights discover words strongly associated candidate word context
+ let take look term vector detail
+ x_i defined normalized weight BM25
+ weight alone reflects frequent word occurs context
+ ca say frequent term context correlated candidate word many common words 'the ' occur frequently context
+ apply IDF weighting re-weight terms based IDF
+ That means words common 'the ' get penalized
+ highest weighted terms common terms lower IDFs
+ Instead terms terms frequent context frequent collection
+ clearly words tend occur context candidate word example cat
+ reason highly weighted terms idea weighted vector assumed candidates syntagmatic relations
+ course by-product approach discovering paradigmatic relations
+ next talk discover syntagmatic relations
+ clearly shows relation discovering two relations
+ Indeed discovered joint manner leveraging associations
+ summarize main idea discovering paradigmatic relations collect context candidate word form pseudo document
+ typically represented bag words
+ Then compute similarity corresponding context documents two candidate words
+ Then take highly similar word pairs treat paradigmatic relations
+ words share similar contexts
+ There many different ways implement general idea
+ talked approaches
+ More specifically talked using text retrieval models help design effective similarity function compute paradigmatic relations
+ More specifically used BM25 IDF weighting discover paradigmatic relation
+ approaches represent state art text retrieval techniques
+ Finally syntagmatic relations discovered by-product discover paradigmatic relations

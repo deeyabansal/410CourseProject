@@ -1,0 +1,87 @@
+ Overview Statistical Language Models cover proper models special cases
+ give overview Statical Language Models
+ models general models cover probabilistic topic models special cases
+ first Statistical Language Model Statistical Language Model basically probability distribution word sequences
+ example might distribution gives Wednesday probability
+
+ might give Wednesday non-grammatical sentence small probability shown
+ similarly another sentence eigenvalue positive might get probability
+
+ distribution clearly Context Dependent
+ depends Context Discussion
+ Some Word Sequences might higher probabilities others Sequence Words might different probability different context
+ suggests distribution actually categorize topic model regarded Probabilistic Mechanism generating text
+ means view text data data observed model
+ For reason call model Generating Model
+ given model assemble sequences words
+ example based distribution shown slide matter say assemble sequence Wednesday relative high probability
+ might often get sequence
+ might get item value positive sometimes smaller probability occasionally might get Wednesday probability small
+ general order categorize distribution must specify probability values different sequences words
+ Obviously impossible specify impossible enumerate possible sequences words
+ practice simplify model way
+ simplest language model called Unigram Language Model
+ case simply text generated generating word independently
+ general words may generated independently
+ make assumption significantly simplify language
+ Basically probability sequence words w1 wn product probability word
+ model many parameters number words vocabulary
+ assume n words n probabilities
+ One word
+ 1
+ assume text sample drawn according word distribution
+ That means draw word time eventually get text
+ example try assemble words according distribution
+ might get Wednesday often often
+ words eigenvalue might small probability etcetera
+ actually compute probability every sequence even though model specify probabilities words
+ independence
+ specifically compute probability Wednesday
+ Because product probability probability probability Wednesday
+ For example show fake numbers multiply numbers together get probability Wednesday
+ N probabilities one word actually characterize probability situation kinds sequences words
+ simple model
+ Ignore word order
+ may fact problems speech recognition may care order words
+ turns quite sufficient many tasks involve topic analysis
+ interested
+ model generally two problems think
+ One given model likely observe certain kind data points That interested Sampling Process
+ Estimation Process
+ think parameters model given observe data talk moment
+ Let first talk sampling
+ show two examples Water Distributions Unigram Language Models
+ first one higher probabilities words text mining association separate
+ signals topic text mining assemble words distribution tend words often occur text mining contest
+ case ask question probability generating particular document
+ Then likely text looks text mining paper
+ Of course text generate drawing words
+ distribution unlikely coherent
+ Although probability generating attacks mine [ INAUDIBLE ] publishing top conference non-zero assuming word zero probability distribution
+ means essentially generate kinds text documents including meaningful text documents
+ second distribution show bottom different high probabilities
+ food [ INAUDIBLE ] healthy [ INAUDIBLE ] etcetera
+ clearly indicates different topic
+ case probably health
+ sample word distribution probability observing text mining paper small
+ On hand probability observing text looks food nutrition paper high relatively higher
+ means given particular distribution different text
+ let look estimation problem
+ case assume observed data
+ know exactly text data looks
+ case let assume text mining paper
+ fact abstract paper total number words 100
+ shown counts individual words
+ ask question likely Language Model used generate text data Assuming text observed Language Model best guess Language Model Okay problem estimate probabilities words
+ As shown
+ think What guess Would guess text small probability relatively large probability What query Well guess probably dependent many times observed word text data right think moment
+ many others guessed well text probability 10 100 observed text 10 times text total 100 words
+ similarly mining 5 100
+ query relatively small probability observed
+ 1 100
+ Right intuitively reasonable guess
+ question best guess best estimate parameters Of course order answer question define mean best case turns guesses indeed best
+ sense called Maximum Likelihood Estimate
+ best thing give observer data maximum probability
+ Meaning change estimate somehow even slightly probability observed text data somewhat smaller
+ called Maximum Likelihood Estimate

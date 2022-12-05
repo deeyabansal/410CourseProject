@@ -1,0 +1,120 @@
+ generating probabilistic models text clustering
+ discussing text clustering introduce generating probabilistic models way text clustering
+ overall plan covering text clustering
+ previous talked text clustering text clustering interesting
+ talk text clustering
+ general slide two kinds approaches
+ One generating probabilistic models topic
+ later discuss similarity-based approaches
+ talk generating models text clustering useful revisit topic mining problem using topic models two problems similar
+ slide seen earlier topic model
+ Here show input text collection C number topics k vocabulary
+ hope generate output two things
+ One set topics denoted Theta awarded distribution pi j
+ probabilities document covers topic
+ topic coverage visualized slide
+ get using topic model
+ main difference text clustering problem document assumed possibly cover multiple topics
+ indeed general document covering one topic nonzero probabilities
+ text clustering however allow document cover one topic assume one topic cluster
+ means change problem definition slightly assuming document generated using precisely one topic
+ Then definition clustering problem hear
+ output changed longer detailed coverage distributions pi j
+ instead cluster assignment decisions Ci
+ Ci decision document
+ C sub take value 1 k indicate one k clusters
+ basically tells cluster
+ As illustrated longer multiple topics covered document
+ precisely one topic
+ Although topic still uncertain
+ There connection problem mining one topic discussed earlier
+ slide seen hope estimate topic model distribution based precisely one document
+ assume document covers precisely one topic
+ consider variations problem
+ For example consider N documents covers different topic N documents topics
+ Of course case documents independent topics independent
+ allow documents share topics assume assume fewer topics number documents documents must share topics
+ N documents share k topics precisely document clustering problem
+ connections naturally think use probabilistically generative model solve problem text clustering
+ question generative model used clustering As cases designing generative model hope generative model adopt output hope generate structure hope model
+ case clustering structure topics document covers one topic
+ hope embed preferences generative model
+ think main difference problem topic model talked earlier
+ main requirement force every document generated precisely one topic instead k topics topic model let revisit topic model detail
+ detailed view two component mixture model
+ When k components looks similar
+ generate document generate word independent
+ generate word first make choice distributions
+ decide use one probability
+ p theta 1 probability choosing distribution top
+ first make decision regarding distribution used generate word
+ use distribution sample word
+ note generative model decision distribution use word independent
+ means example could generated second distribution theta 2 whereas text likely generated first one top
+ That means words document could generated general multiple distributions
+ want said text clustering document clustering hoped document generated precisely one topic
+ means need modify model
+ Well let first think model used clustering
+ said reason allowed multiple topics contribute word document
+ causes confusion know cluster document
+ importantly violating assumption partitioning documents clusters
+ really one topic correspond one cluster documents document generate precisely one topic
+ That means words document must generated precisely one distribution
+ true topic model seeing
+ used clustering ensure one distribution used generate words one document
+ realize problem naturally design alternative mixture model clustering
+ seeing
+ make decision regarding distribution use generate document document could potentially generated k word distributions
+ time made decision choose one topics stay regime generate words document
+ means made choice distribution generating first word go stay distribution generating words document
+ words make choice basically make decision document state generate words
+ Similarly choosing second distribution theta sub 2 state one
+ generate entire document
+ compare picture previous one decision using particular distribution made document case document clustering
+ case topic model make many decisions number words document
+ Because word make potentially different decision
+ key difference two models
+ obviously mixed model group together one box show model give probability document
+ inside model switch choosing different distribution
+ observe mixture model
+ course main problem document clustering infer distribution used generate document allow recover cluster identity document
+ useful think difference topic model mentioned multiple times
+ mainly two differences one choice using particular distribution made document clustering
+ Whereas topic model made multiple times different words
+ second word distribution used regenerate words document
+ case one distribution generate words document
+ Multiple distribution could used generate words document
+ Let think special case one probability choosing particular distribution equal 1
+ means uncertainty
+ stick one particular distribution
+ case clearly longer mixture model uncertainty use precisely one distributions generating document
+ back case estimating one order distribution based one document
+ connection discussed earlier
+ clearly
+ cases using generative model solve problem first look data think design model
+ design model next step write likelihood function
+ look estimate parameters
+ case likelihood function similar seen topic models different
+ still recall likelihood function looks realize general probability observing data point mixture model sum possibilities generating data
+ case sum k topics every one user generated document
+ inside sum still recall formula looks product two probabilities
+ One probability choosing distribution probability observing particular datapoint distribution
+ map kind formula problem probability observing document basically sum case two different distributions simplified situation two clusters
+ case sum two cases
+ case indeed probability choosing distribution either theta 1 theta 2
+ probability multiplied probability observing document particular distribution
+ expanded probability observing whole document product observing word X sub
+ made assumption word generated independently probability whole document product probability word document
+ form similar topic model
+ useful think difference purpose copying probability topic model two components
+ formula looks similar many ways similar
+ difference
+ particular difference top
+ mixture model document clustering first take product take sum
+ corresponding assumption first make choice choosing one distribution stay distribution generate words
+ product inside sum
+ sum corresponds choice
+ topic model sum actually inside product
+ generated word independently
+ product outside generate word make decision regarding distribution use sum word
+ general mixture models estimate models using Algorithm discuss later

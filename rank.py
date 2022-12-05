@@ -55,10 +55,10 @@ def ranking(mp_num):
     doc_scores = bm25.get_scores(tokenized_query)
     ordered_doc_scores = sorted(doc_scores, reverse=True)
 
-    print(doc_scores)
-    print(ordered_doc_scores)
+  
     order = sort_order(doc_scores, ordered_doc_scores)
-    print_lecture(order, start, end)
+    pairs = sorted_pairs(order, start, end)
+    print_lectures(pairs)
     file.close
 
 
@@ -72,14 +72,43 @@ def sort_order(doc_scores, ordered_doc_scores):
         num_order[i] += 1
     return num_order
 
-def print_lecture(order, start, end):
-    print(order)
-    #for j in range(start, end + 1):
-    for i in range(len(order)):
-        order[i] += 1
-        print("Lecture " + str(start) + "." + str(order[i]))
+
+
+def sorted_pairs(order, start, end):
+    pairs = []
+    begin = 0
+    for week in range(start, end+1):
+        dir_path = 'SWRemoved_Lectures/Week_'+ str(week)
+        lecture_count = 0
+        
+        for path in os.listdir(dir_path):
+            if os.path.isfile(os.path.join(dir_path, path)):
+                lecture_count += 1
+        curr = 1
+        for x in range(begin, begin + lecture_count):
+            pairs.append((order[x], "Lecture " + str(week) + "_" + str(curr)))
+            curr += 1
+        begin += lecture_count
+    pairs.sort()
+    return pairs
+    
+
+def print_lectures(pairs):
+    result = [tup[1] for tup in pairs]
+    for i in result:
+        print(i)
+
+
+
+def check_valid_input(inp):
+    if len(inp) == 1 and (inp == "1" or inp == "3" or inp == "4"):
+        return True
+    parts = inp.split("_")
+    if len(parts) == 2 and int(parts[0]) == 2 and 1 <= int(parts[1]) <= 4:
+        return True
+    return False
 
 
 if __name__ == '__main__':
     print("---------------------------------------------------------------------------------------------------------------------------------")
-    ranking('2_1')
+    ranking('4')

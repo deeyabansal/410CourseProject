@@ -1,0 +1,76 @@
+ explained different text representation tends enable different analysis
+ particular gradually add deeper analysis results represent text data
+ open interesting representation opportunities analysis capacities
+ table summarizes seen
+ first column shows text representation
+ second visualizes generality representation
+ Meaning whether kind representation accurately text data
+ third column shows enabled analysis techniques
+ final column shows examples application achieved level representation
+ let take look
+ stream text processed stream processing algorithms
+ robust general
+ still interesting applications level
+ For example compression text
+ Does necessarily need know word boundaries
+ Although knowing word boundaries might actually help
+ Word base repetition important level representation
+ quite general relatively robust indicating lot analysis techniques
+ Such word relation analysis topic analysis sentiment analysis
+ many applications enabled kind analysis
+ For example thesaurus discovery discovering related words
+ topic opinion related applications abounded
+ example people might interesting knowing major topics covered collection texts
+ case research literature
+ scientists want know important research topics
+ Or customer service people might want know major complaints customers mining e-mail messages
+ business intelligence people might interested understanding consumers ' opinions products competitors ' products figure winning features products
+ general many applications enabled representation level
+ moving gradually add additional representations
+ By adding syntactical structures enable course syntactical graph analysis
+ use graph mining algorithms analyze syntactic graphs
+ applications related kind representation
+ For example stylistic analysis generally requires syntactical structure representation
+ generate structure based features
+ features might help classify text objects different categories looking structures sometimes classification
+ accurate
+ For example want classify articles different categories corresponding different authors
+ want figure k authors actually written article generally need look syntactic structures
+ When add entities relations enable techniques knowledge graph answers information network answers general
+ analysis enable applications entities
+ For example discovery knowledge opinions real world entities
+ use level representation integrate everything anything scaled resources
+ Finally add logical predicates enable large inference course
+ useful integrating analysis scattered knowledge
+ For example add ontology top extracted information text make inferences
+ good example application enabled level representation knowledge assistant biologists
+ program help biologist manage relevant knowledge literature research problem understanding functions genes
+ computer make inferences hypothesis biologist might interesting
+ For example whether gene certain function intelligent program read literature extract relevant facts compiling information extracting
+ using logic system actually track answers researchers questioning genes related functions
+ order support level application need go far logical representation
+ course covering techniques mainly based word based representation
+ techniques general robust widely used various applications
+ fact virtually text mining applications need level representation techniques support analysis text level
+ obviously levels combined combined order support sophisticated applications
+ summarize major takeaway points
+ Text representation determines kind mining algorithms applied
+ multiple ways represent text strings words syntactic structures entity-relation graphs knowledge predicates etc
+ different representations general combined real applications extent
+ For example even accurate representations syntactic structures state partial structures strictly
+ recognize entities great
+ general want much
+ different levels combined together enable richer analysis powerful analysis
+ course however focuses word-based representation
+ Such techniques several advantage first general robust applicable natural language
+ That big advantage approaches rely fragile natural language processing techniques
+ Secondly require much manual effort sometimes require manual effort
+ important benefit means apply directly application
+ Third techniques actually surprisingly powerful effective form implications
+ Although course explained
+ effective partly words invented humans basically units communications
+ actually quite sufficient representing kinds semantics
+ makes kind word-based representation powerful
+ finally word-based representation techniques enable representation combined many sophisticated approaches
+ competing
+ [ MUSIC ]

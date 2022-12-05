@@ -1,0 +1,65 @@
+ mixture model estimation
+ discussing probabilistic topic models
+ particular talk estimate parameters mixture model
+ let first look motivation using mixture model hope effect background words topic word distribution
+ idea assume text data actually contain two kinds words
+ One kind background `` '' `` '' etc
+ kind topic word distribution interested
+ order solve problem factoring background words set mixture model follows
+ assume already know parameters values parameters mixture model except word distribution Theta sub target
+ case customizing probably model embedded unknown variables interested simplify things
+ assume knowledge others powerful way customizing model particular need
+ imagine could assumed know background word distribution case goal affect precisely high probability background words
+ assume background model already fixed
+ problem adjust Theta sub order maximize probability observed document assume parameters known although designed modal heuristically try factor background words unclear whether use maximum likelihood estimator actually end word distribution common words `` '' indeed smaller probabilities
+ case turns answer yes
+ When set probabilistic modeling way use maximum likelihood estimator end word distribution common words factored use background distribution
+ understand useful examine behavior mixture model
+ look simple case
+ order understand interesting behaviors mixture model observed patterns actually generalizable mixture model general much easier understand behavior use simple case seeing
+ specifically case let assume probability choosing two models exactly
+ flip fair coin decide model use
+ Furthermore assume precisely words `` '' `` text
+ '' Obviously naive oversimplification actual text useful examine behavior special case
+ assume background model gives probability
+ word `` '' `` text ''
+
+ let assume data extremely simple
+ document two words `` text '' ``
+ '' let write likelihood function case
+ First probability `` text '' probability `` '' hope point able write
+ probability `` text '' basically sum two cases case corresponds water distribution accounts two ways generating text
+ Inside case probability choosing model
+ multiplied probability observing `` text '' model
+ Similarly `` '' probability form different exactly probabilities
+ naturally likelihood function product two
+ easy understand probability word important understand exactly probability observing word mixture model
+ interesting question optimize likelihood Well notice two variables
+ They precisely two probabilities two words `` text '' `` '' given Theta sub
+ assumed parameters known
+ question simple algebra question
+ simple expression two variables hope choose values two variables maximize function
+ exercises seen simple algebra problems note two probabilities must sum one
+ constraint
+ constraint course set probabilities maximum value one maximize ca `` text '' `` '' must sum one
+ ca give probability one
+ question allocate probability mass two words What think useful look formula moment intuitively order set probabilities maximize value function
+ look interesting behavior two component models collaborating maximize probability observed data dictated maximum likelihood estimator competing way
+ particular competing words tend bet high probabilities different words avoid competition sense gain advantage competition
+ looking objective function constraint two probabilities look formula intuitively might feel want set probability `` text '' somewhat larger `` ''
+ intuition well-supported mathematical fact sum two variables constant product maximum equal fact know algebra
+ plug mean make two probabilities equal
+ When make equal consider constraint easily solve problem solution probability `` text ''
+ probability `` ''
+
+ As indeed probability text much larger probability `` '' case one distribution
+ clearly use background model assign high probability `` '' low probability `` text ''
+ look equation obviously interaction two distributions
+ particular order make equal probability assigned Theta sub must higher word smaller probability given background
+ obvious examining equation `` '' background part weak `` text '' small
+ order compensate must make probability `` text '' given Theta sub somewhat larger two sides balanced
+ fact general behavior mixture model
+ That one distribution assigns high probability one word another distribution tend opposite
+ Basically discourage distributions balance account words
+ means using background model fixed assign high probabilities background words indeed encourage unknown topic word distribution assign smaller probabilities common words
+ Instead put probability mass content words explained well background model meaning small probability background model `` text ''

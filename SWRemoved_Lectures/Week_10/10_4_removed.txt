@@ -1,0 +1,119 @@
+ continuing discussion generative probabilistic models tax classroom
+ finishing discussion generative probabilistic models text crossing
+ slide seen show define mixture model text crossing likelihood function looks
+ compute maximum likelihood estimate estimate parameters
+ talk exactly compute maximum likelihood estimate
+ As cases Algorithm used solve problem mixture models
+ detail Algorithm document clustering
+ understood Algorithm works topic models TRSA think similar
+ need adapt little bit new mixture model
+ may recall Algorithm starts initialization parameters
+ happened topic models
+ repeat likelihood converges step E step M step
+ M step infer distribution used generate document
+ introduce hidden variable Zd document variable could take value range 1 k representing k different distributions
+ More specifically basically apply base rules infer distribution likely generated document computing posterior probability distribution given document
+ know proportional probability selecting distribution p Z
+ probability generating whole document distribution product probabilities world document
+ clear use kind remember normalizer constraint probability
+ case know constraint probability E-Step probabilities Z equals must sum 1
+ Because documented must generated precisely one k topics
+ probability generated sum 1
+ know constraint easily compute distribution long know proportional
+ compute product simply normalize probabilities make sum 1 topics
+ E-Step E-Step want know distribution likely generated document unlikely
+ M-Step re-estimate parameters based z values knowledge distribution used generate document
+ re-estimation involves two kinds parameters 1 p theta probability selecting particular distribution
+ Before observe anything knowledge cluster likely
+ observed documents crack evidence infer cluster likely
+ proportional sum probability Z sub j equal
+ gives evidence using topic theta generate document
+ Pull together normalize probabilities
+ key theta sub
+ kind parameters probabilities words distribution cluster
+ similar case piz report kinds words documents inferred generated particular topic theta
+ allows estimate many words actually generated theta
+ normalize accounts probabilities probabilities words sum
+ Note important understand constraints precisely normalizing formulas
+ important know distribution For example probability theta k topics k probabilities sum 1
+ Whereas probability word given theta probability distribution words
+ many probabilities sum 1
+ let take look simple example two clusters
+ two clusters assumed initialized values two distributions
+ let assume randomly initialize two probability selecting cluster
+ equally likely
+ let consider one document seen
+ There two occurrences text two occurrences mining
+ four words together medical health occur document
+ let think hidden variable
+ document much use hidden variable
+ piz used one hidden variable work output one mixture model
+ case output mixture model observation mixture model document word
+ one hidden variable attached document
+ hidden variable must tell distribution used generate document
+ take two values one two indicate two topics
+ infer distribution used generally Well used base rule looks
+ order first topic theta 1 generate document two things must happen
+ First theta sub 1 must selected
+ given p theta 1
+ Second must generating four words document
+ Namely two occurrences text two occurrences sub mining
+ numerator product probability selecting theta 1 probability generating document theta 1
+ denominator sum two possibilities generality document
+ plug numerical values verify indeed case document likely generated theta 1 much likely theta 2
+ probability easily compute probability Z equals 2 given document
+ How Well use constraint
+ That 1 minus 100 101
+ important note computation potential problem underflow
+ look original numerator denominator involves competition product many small probabilities
+ Imagine document many words small value cause problem underflow
+ solve problem use normalize
+ take average two math solutions compute average screen called theta bar
+ average distribution comparable distributions terms quantities magnitude
+ divide numerator denominator normalizer
+ basically normalizes probability generating document using average word distribution
+ normalizer
+ since used exactly normalizer numerator denominator
+ whole value expression changed normalization make numerators denominators manageable overall value small
+ thus avoid underflow problem
+ times sometimes use logarithm product convert sum log probabilities
+ help preserve precision well case use algorithm solve problem
+ Because sum denominator kind normalizes effective solving problem
+ technique sometimes useful situations situations well
+ let look M-Step
+ E-Step estimate distribution likely generated document
+ d1 got first topic d2 second topic etc
+ let think need compute M-step well basically need re-estimate parameters
+ First look p theta 1 p theta 2
+ How estimate Intuitively pool together z probabilities E-step
+ documents say well likely theta 1 intuitively give higher probability theta 1
+ case take average probabilities obtain
+ theta 1
+ 01 likely theta 2
+ probability 02 natural
+
+ What word probabilities Well intuition
+ order estimate probabilities words theta 1 look documents generated theta 1
+ pull together words documents normalize
+ basically said
+ More specifically example use kinds text documents estimating probability text given theta 1
+ use raw count total accounts
+ Instead discount probabilities document likely generated theta 1
+ gives fractional accounts
+ accounts normalized order get probability
+ normalize Well probability words must assign 1
+ summarize discussion generative models clustering
+ Well show slight variation topic model used clustering documents
+ shows power generating models general
+ By changing generation assumption changing model slightly achieve different goals capture different patterns types data
+ case cluster represented unigram language model word distribution similar topic model
+ word distribution actually generates term cluster by-product
+ document generated first choosing unigram language model
+ generating words document using single language model
+ different copy model generate words document using multiple unigram language models
+ estimated model parameters given topic characterization cluster probabilistic assignment document cluster
+ probabilistic assignment sometimes useful applications
+ want achieve harder clusters mainly partition documents disjointed clusters
+ Then force document cluster corresponding words distribution likely generated document
+ shown Algorithm used compute maximum likelihood estimate
+ case need use special number addition technique avoid underflow

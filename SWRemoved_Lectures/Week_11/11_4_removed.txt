@@ -1,0 +1,73 @@
+ continued discussion evaluation text categorization
+ Earlier introduced measures used computer provision recall
+ For category document examine combine performance different categories different documents aggregate take average title indicated called macro average contrast micro average talk later
+ category compute precision require f1 example category c1 precision p1 recall r1 F value f1
+ similarly category 2 categories
+ compute aggregate example aggregate precision values
+ For categories computing overall precision
+ often useful summarize seen whole data set
+ aggregation done many different ways
+ Again said case need aggregate different values always good think best way aggregation
+ For example consider arithmetic mean commonly used use geometric mean different behavior
+ Depending way aggregate might got different conclusions
+ terms method works better important consider differences choosing right one suitable one task
+ difference fore example arithmetically geometrically arithmetically dominated high values whereas geometrically affected low values
+ Base whether want emphasis low values high values question relate similar recal F score
+ generate overall precision recall F score
+ aggregation document All right
+ exactly situation document computer
+ Precision recall
+ completed computation documents aggregate generate overall precision overall recall overall F score
+ examining results different angles
+ Which one useful depend application
+ general beneficial look results perspectives
+ especially compare different methods different dimensions might reveal method Is better measure situations provides insightful
+ Understanding strands method weakness provides insight improving
+ mentioned micro-average contrast macro average talked earlier
+ case pool together decisions compute precision recall
+ compute overall precision recall counting many cases true positive many cases false positive etc computing values contingency table compute precision recall
+ contrast macro-averaging category first
+ aggregate categories document aggregate documents pooled together
+ similar classification accuracy used earlier one problem course treat instances decisions equally
+ may desirable
+ may property applications especially associate example cost combination
+ Then actually compute example weighted classification accuracy
+ Where associate different cost utility specific decision could variations methods useful
+ general macro average tends information micro average might reflect need understanding performance category performance document needed applications
+ macro averaging micro averaging common might reported research papers Categorization
+ sometimes categorization results might actually evaluated ranking prospective
+ categorization results sometimes often indeed passed human various purposes
+ For example might passed humans editing
+ For example news articles tempted categorized using system human editors correct
+ email messages might throughout right person handling help desk
+ case categorizations help prioritizing task particular customer service person
+ case results prioritized system ca give score categorization decision confidence use scores rank decisions evaluate results rank list search engine
+ Evaluation rank documents responsible query
+ example discovery spam emails evaluated based ranking emails spam category
+ useful want people verify whether really spam right person take rank To check one one verify whether indeed spam
+ reflect utility humans task better evaluate Ranking Chris basically similar search
+ case often problem better formulated ranking problem instead categorization problem
+ example ranking documents search engine framed binary categorization problem distinguish relevant documents useful users useful typically frame ranking problem evaluate rank list
+ That people tend examine results ranking evaluation reflects utility user perspective
+ summarize categorization evaluation first evaluation always important tasks
+ get right
+ get right might get misleading results
+ might misled believe one method better fact true
+ important get right
+ Measures must reflect intended use results particular application
+ For example spam filtering news categorization results used maybe different ways
+ need consider difference design measures appropriately
+ generally need consider results processed user think user perspective
+ What quality important What aspect quality important Sometimes trade offs multiple aspects precision recall need know application high recall important high precision important
+ Ideally associate different cost different decision arrow
+ course designed application specific way
+ Some commonly used measures relative comparison methods following
+ Classification accuracy commonly used especially balance
+ [ INAUDIBLE ] preceding [ INAUDIBLE ] Scores common report characterizing performances given angles give [ INAUDIBLE ] [ INAUDIBLE ] Per document basis [ INAUDIBLE ] take average different ways micro versus macro [ INAUDIBLE ]
+ general want look results multiple perspectives particular applications perspectives important others diagnoses analysis categorization methods
+ generally useful look many perspectives possible subtle differences methods tow method might weak obtain sight improving method
+ Finally sometimes ranking may appropriate careful sometimes categorization got may better frame ranking tasks machine running methods optimizing ranking measures well
+ two suggested readings
+ One chapters book find discussion evaluation measures
+ second paper comparison different approaches text categorization excellent discussion evaluate textual categorization
+ [ MUSIC ]

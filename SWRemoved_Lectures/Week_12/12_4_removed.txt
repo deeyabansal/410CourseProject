@@ -1,0 +1,61 @@
+ contextual text mining
+ Contextual text mining related multiple kinds knowledge mine text data 'm showing
+ related topic mining make topics associated context time location
+ similarly make opinion mining contextualized making opinions connected context
+ related text based prediction allows combine non-text data text data derive sophisticated predictors prediction problem
+ specifically interested contextual text mining Well first text often rich context information
+ include direct context meta-data indirect context
+ direct context grow meta-data time location authors source text data
+ almost always available
+ Indirect context refers additional data related meta-data
+ example office obtain additional context social network author author age
+ Such information general directly related text yet process connect
+ There could text data source one text connected text well
+ general related data regarded context
+ could removed rated context
+ use What text context used Well context used partition text data many interesting ways
+ almost allow partition text data ways need
+ important allows interesting comparative analyses
+ general provides meaning discovered topics associate text context
+ illustration context regarded interesting ways partitioning text data
+ showed research papers published different years
+ On different venues different conference names listed bottom SIGIR ACL etc
+ text data partitioned many interesting ways context
+ context includes time conference venues
+ perhaps include variables well
+ let partition interesting ways
+ First treat paper separate unit
+ case paper ID paper context
+ independent
+ treat papers within 1998 one group possible availability time
+ partition data way
+ allow compare topics example different years
+ Similarly partition data based menus
+ get SIGIR papers compare papers rest
+ Or compare SIGIR papers KDD papers ACL papers
+ partition data obtain papers written authors
+ course uses additional context authors
+ allow compare subset another set papers written seen countries
+ Or obtain set papers text mining compared papers another topic
+ note partitionings intersected generate even complicated partitions
+ general enables discovery knowledge associated different context needed
+ particular compare different contexts
+ often gives lot useful knowledge
+ For example comparing topics time trends topics
+ Comparing topics different contexts reveal differences two contexts
+ many interesting questions require contextual text mining
+ Here list specific ones
+ For example topics getting increasing attention recently data mining research answer question obviously need analyze text context time
+ time context case
+ Is difference responses people different regions event event broad answer question
+ case course location context
+ What common research interests two researchers case authors context
+ Is difference research topics published authors USA outside case context include authors affiliation location
+ beyond author
+ need look additional information connected author
+ Is difference opinions topics expressed one social network another case social network authors topic context
+ Other topics news data correlated sudden changes stock prices
+ case use time series stock prices context
+ What issues mattered 2012 presidential campaign presidential election case time serves context
+ list go
+ Basically contextual text mining many applications
