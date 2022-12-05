@@ -140,14 +140,14 @@ if __name__ == '__main__':
             print("Good luck!")
             break
         
-        # change how many relevant lectures are shown
-        if var.lower() == "help":
-            uh = input("How many lectures would you like to see? ")
-            if int(uh) < len(yo):
-                end = int(uh)
-            else:
-                end = len(yo)
-            continue
+        # # change how many relevant lectures are shown
+        # if var.lower() == "help":
+        #     uh = input("How many lectures would you like to see? ")
+        #     if int(uh) < len(yo):
+        #         end = int(uh)
+        #     else:
+        #         end = len(yo)
+        #     continue
         
         # check if valid MP
         if check_valid_input(var) == False:
@@ -158,5 +158,6 @@ if __name__ == '__main__':
         print("The most relevant lectures are: ")
         # call ranking function and print names
         yo = ranking(var)
-        for i in yo:
-            print(i)
+        end = len(yo)
+        for i in range(0, end):
+            print(yo[i])
