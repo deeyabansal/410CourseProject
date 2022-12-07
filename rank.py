@@ -45,11 +45,13 @@ def ranking(mp_num):
     # ordering them by highest number (most relevance) to lowest number (least relevance)
     ordered_doc_scores = sorted(doc_scores, reverse=True)
 
+    # print(doc_scores)
+    # print(ordered_doc_scores)
     # Call sort_order and sorted_pairs to match the lectures to their rankings and then print them in order of relevance 
     order = sort_order(doc_scores, ordered_doc_scores)
     pairs = sorted_pairs(order, start, end)
     file.close
-    print(print_lectures(pairs))
+    #print(print_lectures(pairs))
     return print_lectures(pairs)
 
 
@@ -67,6 +69,7 @@ def sort_order(doc_scores, ordered_doc_scores):
     # Add 1 to each number in list to eliminate 0
     for i in range(len(num_order)):
         num_order[i] += 1
+    #print(num_order)
     return num_order
 
 
@@ -94,6 +97,7 @@ def sorted_pairs(order, start, end):
             curr += 1
         begin += lecture_count
     pairs.sort()
+    #print(pairs)
     return pairs
     
 
@@ -171,35 +175,35 @@ def check_valid_input(inp):
 
 if __name__ == '__main__':
     print("---------------------------------------------------------------------------------------------------------------------------------")
-    ranking('3')
+    #ranking('3')
 
-    # yo = []
-    # end = math.inf
-    # while True:
-    #     var = input("Enter MP: ")
-    #     # check if they want to exit
-    #     if var.lower() == "done":
-    #         print("Good luck!")
-    #         break
+    yo = []
+    end = math.inf
+    while True:
+        var = input("Enter MP: ")
+        # check if they want to exit
+        if var.lower() == "done":
+            print("Good luck!")
+            break
         
-    #     # change how many relevant lectures are shown
-    #     if var.lower() == "number":
-    #         uh = input("How many lectures would you like to see? ")
-    #         end = int(uh)
-    #         continue
+        # change how many relevant lectures are shown
+        if var.lower() == "number":
+            uh = input("How many lectures would you like to see? ")
+            end = int(uh)
+            continue
         
-    #     # check if valid MP
-    #     if check_valid_input(var) == False:
-    #         print("That MP does not exist.")
-    #         continue
+        # check if valid MP
+        if check_valid_input(var) == False:
+            print("That MP does not exist.")
+            continue
 
-    #     # print out relevant lecture
-    #     print("The most relevant lectures are: ")
-    #     # call ranking function and print names
-    #     yo = ranking(var)
-    #     if end > len(yo):
-    #         last = len(yo)
-    #     else:
-    #         last = end
-    #     for i in range(0, last):
-    #         print(yo[i])
+        # print out relevant lecture
+        print("The most relevant lectures are: ")
+        # call ranking function and print names
+        yo = ranking(var)
+        if end > len(yo):
+            last = len(yo)
+        else:
+            last = end
+        for i in range(0, last):
+            print(yo[i])

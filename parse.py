@@ -91,7 +91,7 @@ def delete_mp_stop_words(filename):
 def remove_lecture_timings(weeks, end):
     for j in weeks:
         for i in range(1, end):
-            delete_timings("Lectures/Week_" + j + "/" + j + "_" + i + ".txt")
+            delete_timings("Lectures/Week_" + j + "/" + j + "_" + str(i) + ".txt")
 
 # Calls delete_stop_words for all imported lectures
 # Input
@@ -100,7 +100,7 @@ def remove_lecture_timings(weeks, end):
 def remove_lecture_stopwords(weeks, end):
     for j in weeks:
         for i in range(1, end):
-            delete_stop_words("Parsed_Lectures/Week_" + j + "/" + j + "_" + i + "_parsed.txt")
+            delete_stop_words("Parsed_Lectures/Week_" + j + "/" + j + "_" + str(i) + "_parsed.txt")
 
 # Calls delete_mp_stop_words for all imported MP ReadMes
 # Input
@@ -108,6 +108,7 @@ def remove_lecture_stopwords(weeks, end):
 def remove_mp_stopwords(mps):
     for i in mps:
         delete_mp_stop_words("MPs/MP" + i + ".txt")
+
 
 
 if __name__ == '__main__':
@@ -134,7 +135,7 @@ if __name__ == '__main__':
 
 
     print("Removing Stop Words from MPs")
-    mps = ["1", "2_1", "2_2", "2_3", "2_4", "2_5", "3", "4"]
+    mps = ["1", "2_1", "2_2", "2_3", "2_4", "3", "4"]
     remove_mp_stopwords(mps)
 
     
