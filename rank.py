@@ -69,7 +69,7 @@ def sort_order(doc_scores, ordered_doc_scores):
     # Add 1 to each number in list to eliminate 0
     for i in range(len(num_order)):
         num_order[i] += 1
-    #print(num_order)
+    # print(num_order)
     return num_order
 
 
@@ -97,7 +97,7 @@ def sorted_pairs(order, start, end):
             curr += 1
         begin += lecture_count
     pairs.sort()
-    #print(pairs)
+    # print(pairs)
     return pairs
     
 
