@@ -16,7 +16,7 @@ In our implementation, we utilized the nltk library to access the stop words dat
 ## Usage 
 After running the program, give an MP(eg. MP1, MP2.2) as the input. For MP 1, MP 3, and MP 4, the input should just be given as an integer (1, 3 or 4). For MP 2.1 - 2.4, the input should be given as 2_1, 2_2, 2_3, or 2_4. The program will give an ranked list of relevant lecutres in the course. 
 
-Before running our program, make sure you have cloned our repository. Make sure to have meta.py installed as well. We ran our code using python 3.7.10.
+Before running our program, make sure you have cloned our repository. Make sure to have meta.py and python installed as well. We ran our code using python 3.7.10.
 ```
 # Ensure your pip is up to date
 pip install --upgrade pip
